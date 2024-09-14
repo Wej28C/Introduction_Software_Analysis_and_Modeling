@@ -1,0 +1,155 @@
+.TH "error.h" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+error.h \- Definition of the error management\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPROGRAM_NAME\fP   'ASCQ_ME'"
+.br
+.RI "The name of the program\&. "
+.ti -1c
+.RI "#define \fBPROGRAM_VERSION\fP   '1\&.0\&.6'"
+.br
+.RI "The current version of the program\&. "
+.ti -1c
+.RI "#define \fBIO_ERROR\fP   1"
+.br
+.RI "The first type of error\&. "
+.ti -1c
+.RI "#define \fBUSAGE_ERROR\fP   2"
+.br
+.RI "The second type of error\&. "
+.ti -1c
+.RI "#define \fBEXECUTION_ERROR\fP   3"
+.br
+.RI "The third type of error\&. "
+.ti -1c
+.RI "#define \fBMEMORY_ALLOCATION_ERROR\fP   4"
+.br
+.RI "The fourth type of error\&. "
+.ti -1c
+.RI "#define \fBFREE_MEMORY_ERROR\fP   5"
+.br
+.RI "The fifth type of error\&. "
+.ti -1c
+.RI "#define \fBWARNING\fP   10"
+.br
+.RI "Definition that allows to indicate that something strange happens\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBerror\fP (int error_code, const char *user_msg, const char *dev_msg)"
+.br
+.RI "procedure which allows to throw an error\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition of the error management\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jean-Charles BOISSON (2006-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&.
+.RE
+.PP
+Each type of error is associated to a value and 2 types of messages are used one for the user and the other for the developper\&. 
+.PP
+Definition in file \fBerror\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define EXECUTION_ERROR   3"
+
+.PP
+The third type of error\&. Error corresponding to unexpected error during the traitment\&. 
+.PP
+Definition at line 85 of file error\&.h\&.
+.SS "#define FREE_MEMORY_ERROR   5"
+
+.PP
+The fifth type of error\&. Error corresponding to try to call the free method on a struct that is NULL\&. 
+.PP
+Definition at line 99 of file error\&.h\&.
+.SS "#define IO_ERROR   1"
+
+.PP
+The first type of error\&. Error corresponding to in/out errors (generally during the file using)\&. 
+.PP
+Definition at line 71 of file error\&.h\&.
+.SS "#define MEMORY_ALLOCATION_ERROR   4"
+
+.PP
+The fourth type of error\&. Error corresponding to the failure of a malloc or a equivalent method (NULL has been returned)\&. 
+.PP
+Definition at line 92 of file error\&.h\&.
+.SS "#define PROGRAM_NAME   'ASCQ_ME'"
+
+.PP
+The name of the program\&. 
+.PP
+Definition at line 59 of file error\&.h\&.
+.SS "#define PROGRAM_VERSION   '1\&.0\&.6'"
+
+.PP
+The current version of the program\&. 
+.PP
+Definition at line 64 of file error\&.h\&.
+.SS "#define USAGE_ERROR   2"
+
+.PP
+The second type of error\&. Error corresponding to user errors (generally bad values for the method parameters)\&. 
+.PP
+Definition at line 78 of file error\&.h\&.
+.SS "#define WARNING   10"
+
+.PP
+Definition that allows to indicate that something strange happens\&. This definition corresponds to something that is not a error (the program is not stopped) but it can be interesting to the user to know the detail\&. 
+.PP
+Definition at line 107 of file error\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "void error (int error_code, const char * user_msg, const char * dev_msg)"
+
+.PP
+procedure which allows to throw an error\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIerror_code\fP the error code\&. 
+.br
+\fIuser_msg\fP the message for the user\&. 
+.br
+\fIdev_msg\fP the message for the developer\&. 
+.RE
+.PP
+
+.PP
+Definition at line 54 of file error\&.cpp\&.
+.PP
+References EXECUTION_ERROR, FREE_MEMORY_ERROR, IO_ERROR, MEMORY_ALLOCATION_ERROR, PROGRAM_NAME, PROGRAM_VERSION, USAGE_ERROR, and WARNING\&.
+.PP
+Referenced by activate_full_digestion(), add_chains(), add_formula(), add_modification(), add_peptide_modification(), add_protein(), affect_atom(), apply_global_modification(), apply_modification(), can_be_used_on(), can_be_used_on_for_digestion(), compare_peptide_score_from_indices(), compare_peptide_scores(), compute_equivalent_peptides(), compute_post_traductional_modifications_global(), compute_post_traductional_modifications_one_peptide(), copy_composition(), copy_double_array(), copy_formula(), copy_isotop(), copy_one_element(), copy_peptide(), copy_spectrum(), delete_final_blanks(), digest(), digestion_modification_initialization(), enzym_load(), fastafopen(), fastafwrite(), fastafwrite_way(), fprint_peptide(), fprint_peptide_index(), free_amino_acid_table(), free_composition(), free_cplt(), free_cpt(), free_element(), free_element_table(), free_enzt(), free_enzym_table(), free_formula(), free_n_formula(), free_peptide(), free_peptide_link(), fusion_peptide(), get_activated_modification_name(), get_activated_modification_symbol(), get_amino_acid(), get_amino_acid_table(), get_configuration_file_name(), get_copie_of_digestion_result(), get_element(), get_element_table(), get_exp_protein_mass(), get_formula_from_sequence(), get_formula_to_add(), get_formula_to_sub(), get_formulae_of_peptides(), get_global_modification_index(), get_modification_amino_acids(), get_modification_formula_to_add(), get_modification_formula_to_sub(), get_modification_name(), get_modification_side(), get_modification_symbol(), get_modification_type(), get_peptide_formula_from_another_protein(), get_peptide_formula_from_index(), get_peptide_sequence(), get_reversed_sequence(), get_util_formula(), get_weight(), init_ascq_me_display(), init_distrib(), is_a_wanted_protein(), is_simulated_wanted_protein(), jump_blanks(), load_boolean_keyword(), load_configuration(), load_float_keyword(), load_int_keyword(), load_modification_configuration(), load_modifications(), load_string_keyword(), load_unsigned_int_keyword(), main(), new_peptides_with_missed_cleavages(), next_simulated_spectrum(), nextEntry(), optimized_isotopic_distribution(), peptide_charge_weight(), print_peptide(), print_peptide_index(), read_formula(), read_simulated_spectrum(), read_spectrum(), read_until(), real_digest(), save_partial_peptide_scoring(), set_C_atom_quantity(), set_exp_spectrum(), set_gaussian_value(), set_maximum_mass(), set_maximum_peptide_length(), set_minimum_mass(), set_minimum_matched_peptide_number(), set_minimum_peptide_number(), set_peptide_maximum_mass(), set_peptide_precision(), set_precision(), set_scoring_sensitivity(), set_specie(), set_spectrum_maximum_mass(), sort_and_init_with_peptide_scoring(), stringToCpl(), and sub_formula()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

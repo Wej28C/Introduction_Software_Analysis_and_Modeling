@@ -1,0 +1,194 @@
+\doxysection{complex.\+cpp File Reference}
+\label{complex_8cpp}\index{complex.cpp@{complex.cpp}}
+
+
+Implementation of the methods defined in \doxyref{complex.\+h}{p.}{complex_8h}.  
+
+
+{\ttfamily \#include \char`\"{}complex.\+h\char`\"{}}\newline
+Include dependency graph for complex.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=123pt]{complex_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ complex\+\_\+t} \textbf{ complex\+\_\+multiplication} (\textbf{ complex\+\_\+t} z1, \textbf{ complex\+\_\+t} z2)
+\begin{DoxyCompactList}\small\item\em Function which makes the multiplication of 2 complex numbers. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} \textbf{ complex\+\_\+addition} (\textbf{ complex\+\_\+t} z1, \textbf{ complex\+\_\+t} z2)
+\begin{DoxyCompactList}\small\item\em Function which makes the addition of 2 complex numbers. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} \textbf{ complex\+\_\+subtraction} (\textbf{ complex\+\_\+t} z1, \textbf{ complex\+\_\+t} z2)
+\begin{DoxyCompactList}\small\item\em Function which makes the subtraction of 2 complex numbers. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} \textbf{ complex\+\_\+power} (\textbf{ complex\+\_\+t} z, int n)
+\begin{DoxyCompactList}\small\item\em Function which calculates the power of a complex number. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} \textbf{ complex\+\_\+conjugate} (\textbf{ complex\+\_\+t} z)
+\begin{DoxyCompactList}\small\item\em Function which produces the conjugate complex number of one complex number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the methods defined in \doxyref{complex.\+h}{p.}{complex_8h}. 
+
+\begin{DoxyAuthor}{Author}
+Jean-\/\+Charles BOISSON (2006-\/2008). 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{complex_8cpp_a8fc6e0fb3467c763f855031259ccb810}} 
+\index{complex.cpp@{complex.cpp}!complex\_addition@{complex\_addition}}
+\index{complex\_addition@{complex\_addition}!complex.cpp@{complex.cpp}}
+\doxysubsubsection{complex\_addition()}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} complex\+\_\+addition (\begin{DoxyParamCaption}\item[{\textbf{ complex\+\_\+t}}]{z1,  }\item[{\textbf{ complex\+\_\+t}}]{z2 }\end{DoxyParamCaption})}
+
+
+
+Function which makes the addition of 2 complex numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z1} & The first complex number. \\
+\hline
+{\em z2} & The second complex number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The addition of the 2 complex numbers. 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file complex.\+cpp.
+
+
+
+References complex\+::\+Im, and complex\+::\+Re.
+
+\mbox{\label{complex_8cpp_a0d9d33f4fd7e16d73706cd867dca5b64}} 
+\index{complex.cpp@{complex.cpp}!complex\_conjugate@{complex\_conjugate}}
+\index{complex\_conjugate@{complex\_conjugate}!complex.cpp@{complex.cpp}}
+\doxysubsubsection{complex\_conjugate()}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} complex\+\_\+conjugate (\begin{DoxyParamCaption}\item[{\textbf{ complex\+\_\+t}}]{z }\end{DoxyParamCaption})}
+
+
+
+Function which produces the conjugate complex number of one complex number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & The complex number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The conjugate complex number. 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file complex.\+cpp.
+
+
+
+References complex\+::\+Im, and complex\+::\+Re.
+
+\mbox{\label{complex_8cpp_a0f222462fb28e0970e119cf2815a61f6}} 
+\index{complex.cpp@{complex.cpp}!complex\_multiplication@{complex\_multiplication}}
+\index{complex\_multiplication@{complex\_multiplication}!complex.cpp@{complex.cpp}}
+\doxysubsubsection{complex\_multiplication()}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} complex\+\_\+multiplication (\begin{DoxyParamCaption}\item[{\textbf{ complex\+\_\+t}}]{z1,  }\item[{\textbf{ complex\+\_\+t}}]{z2 }\end{DoxyParamCaption})}
+
+
+
+Function which makes the multiplication of 2 complex numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z1} & The first complex number. \\
+\hline
+{\em z2} & The second complex number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The multiplication of the 2 complex numbers. 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file complex.\+cpp.
+
+
+
+References complex\+::\+Im, and complex\+::\+Re.
+
+
+
+Referenced by complex\+\_\+power(), init\+\_\+distrib(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{complex_8cpp_addcae1f6c4cf2afa75032b88439e60c0}} 
+\index{complex.cpp@{complex.cpp}!complex\_power@{complex\_power}}
+\index{complex\_power@{complex\_power}!complex.cpp@{complex.cpp}}
+\doxysubsubsection{complex\_power()}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} complex\+\_\+power (\begin{DoxyParamCaption}\item[{\textbf{ complex\+\_\+t}}]{z,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Function which calculates the power of a complex number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & The complex number. \\
+\hline
+{\em n} & The power level. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The complex number at the good power level. 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file complex.\+cpp.
+
+
+
+References complex\+\_\+multiplication(), complex\+::\+Im, and complex\+::\+Re.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{complex_8cpp_addcae1f6c4cf2afa75032b88439e60c0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{complex_8cpp_ad204013bddd31eb96b08e1fd30e77434}} 
+\index{complex.cpp@{complex.cpp}!complex\_subtraction@{complex\_subtraction}}
+\index{complex\_subtraction@{complex\_subtraction}!complex.cpp@{complex.cpp}}
+\doxysubsubsection{complex\_subtraction()}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} complex\+\_\+subtraction (\begin{DoxyParamCaption}\item[{\textbf{ complex\+\_\+t}}]{z1,  }\item[{\textbf{ complex\+\_\+t}}]{z2 }\end{DoxyParamCaption})}
+
+
+
+Function which makes the subtraction of 2 complex numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z1} & The first complex number. \\
+\hline
+{\em z2} & The second complex number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The subtraction of the 2 complex numbers. 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file complex.\+cpp.
+
+
+
+References complex\+::\+Im, and complex\+::\+Re.
+

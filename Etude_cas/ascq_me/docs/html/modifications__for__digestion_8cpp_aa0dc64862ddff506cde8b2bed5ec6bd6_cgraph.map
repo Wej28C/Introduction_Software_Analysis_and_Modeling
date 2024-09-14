@@ -1,0 +1,5 @@
+<map id="print_modification_configuration" name="print_modification_configuration">
+<area shape="rect" id="node1" title="Procedure which prints the current configuration of activated modifications on the stdout." alt="" coords="5,5,145,47"/>
+<area shape="rect" id="node2" href="$modification__table_8h.html#a2033f5c347fcf58f8897cf4f9de9bf56" title="Function which allows to get the complete name of a modification." alt="" coords="193,13,368,39"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="416,13,469,39"/>
+</map>

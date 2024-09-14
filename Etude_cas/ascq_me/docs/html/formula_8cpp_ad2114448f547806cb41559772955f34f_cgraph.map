@@ -1,0 +1,11 @@
+<map id="sub_formula" name="sub_formula">
+<area shape="rect" id="node1" title="Substrate two formula." alt="" coords="5,240,108,267"/>
+<area shape="rect" id="node2" href="$formula_8cpp.html#ab26f1f1f23fc5eecbf139fe58e3f310a" title="Get the copy of a formula." alt="" coords="156,75,267,102"/>
+<area shape="rect" id="node4" href="$formula_8cpp.html#a1b353bcd70fedc65de083af2d954e594" title="Local function that allows to gain the copy of an element structure." alt="" coords="503,126,648,152"/>
+<area shape="rect" id="node6" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="844,190,897,216"/>
+<area shape="rect" id="node7" href="$formula_8cpp.html#a6a81bdde62cda8c4d6ed43d9b16b4c26" title="Procedure which frees the memory allocated for a composition." alt="" coords="317,316,452,343"/>
+<area shape="rect" id="node8" href="$formula_8cpp.html#aa924d9fff6ed2c0d2168efc91d41e03a" title="Local procedure that frees the memory allocated for an element structure." alt="" coords="521,266,630,292"/>
+<area shape="rect" id="node9" href="$formula_8cpp.html#a4c746199d04b732d41c72f52bb05cdd9" title="Free the memory allocated for a formula." alt="" coords="158,367,265,394"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#a7abb70e00923aee6b3fecac10731042c" title="Get the copy of a composition." alt="" coords="315,75,455,102"/>
+<area shape="rect" id="node5" href="$formula_8cpp.html#aa2cff9d5e8bd11bacae69d478368fde7" title="Local function that allows to gain the copy of an isotop structure." alt="" coords="696,114,796,140"/>
+</map>

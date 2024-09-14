@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/ascq_me.dir/aa.cpp.o"
+  "CMakeFiles/ascq_me.dir/aa.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/ascq_me.cpp.o"
+  "CMakeFiles/ascq_me.dir/ascq_me.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/ascq_me_configuration.cpp.o"
+  "CMakeFiles/ascq_me.dir/ascq_me_configuration.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/ascq_me_display.cpp.o"
+  "CMakeFiles/ascq_me.dir/ascq_me_display.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/cleavage.cpp.o"
+  "CMakeFiles/ascq_me.dir/cleavage.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/complex.cpp.o"
+  "CMakeFiles/ascq_me.dir/complex.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/digest.cpp.o"
+  "CMakeFiles/ascq_me.dir/digest.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/error.cpp.o"
+  "CMakeFiles/ascq_me.dir/error.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/fft4g.cpp.o"
+  "CMakeFiles/ascq_me.dir/fft4g.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/formula.cpp.o"
+  "CMakeFiles/ascq_me.dir/formula.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/isodistrib.cpp.o"
+  "CMakeFiles/ascq_me.dir/isodistrib.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/modification_table.cpp.o"
+  "CMakeFiles/ascq_me.dir/modification_table.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/modifications_for_digestion.cpp.o"
+  "CMakeFiles/ascq_me.dir/modifications_for_digestion.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/seqio.cpp.o"
+  "CMakeFiles/ascq_me.dir/seqio.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/tables.cpp.o"
+  "CMakeFiles/ascq_me.dir/tables.cpp.o.d"
+  "CMakeFiles/ascq_me.dir/util.cpp.o"
+  "CMakeFiles/ascq_me.dir/util.cpp.o.d"
+  "ascq_me"
+  "ascq_me.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/ascq_me.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,5 @@
+<map id="read_until" name="read_until">
+<area shape="rect" id="node1" title="Function which allows to read a char* until a special separator, EOF or the end of the line." alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="293,5,347,32"/>
+<area shape="rect" id="node3" href="$util_8cpp.html#a8deed219368df958f27871ec0d0d45e8" title="Function which allows to not take the blanks of a file." alt="" coords="140,31,245,57"/>
+</map>

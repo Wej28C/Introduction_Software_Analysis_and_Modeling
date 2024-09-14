@@ -1,0 +1,4 @@
+<map id="delete_final_blanks" name="delete_final_blanks">
+<area shape="rect" id="node1" title="Procedure which deletes all the final blanks of a char*." alt="" coords="5,5,153,32"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="201,5,255,32"/>
+</map>

@@ -1,0 +1,435 @@
+\doxysection{ascq\+\_\+me\+\_\+configuration.\+h File Reference}
+\label{ascq__me__configuration_8h}\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+
+
+Definition of the useful things to configure ASCQ\+\_\+\+ME.  
+
+
+{\ttfamily \#include \char`\"{}isodistrib.\+h\char`\"{}}\newline
+Include dependency graph for ascq\+\_\+me\+\_\+configuration.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ascq__me__configuration_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ascq__me__configuration_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \textbf{ get\+\_\+configuration\+\_\+file\+\_\+name} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the name of the configuration file used. \end{DoxyCompactList}\item 
+void \textbf{ load\+\_\+configuration} (char $\ast$configuration\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to load the wanted configuration $<$=$>$ set all the parameters of the application. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+nb\+\_\+displayed\+\_\+proteins} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the number of displayed proteins. \end{DoxyCompactList}\item 
+void \textbf{ ascq\+\_\+me\+\_\+configuration\+\_\+cleaning} ()
+\begin{DoxyCompactList}\small\item\em Procedure which frees all the memory allocated for ascq\+\_\+me configuration. \end{DoxyCompactList}\item 
+int \textbf{ is\+\_\+fasta\+\_\+chosen} ()
+\begin{DoxyCompactList}\small\item\em Function which indicates if the chosen file type is fasta or spectra. \end{DoxyCompactList}\item 
+void \textbf{ print\+\_\+configuration} ()
+\begin{DoxyCompactList}\small\item\em Procedure which allows to print the current configuration on the stdout. \end{DoxyCompactList}\item 
+void \textbf{ fprint\+\_\+configuration} (FILE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to print the current configuration in a file. \end{DoxyCompactList}\item 
+void \textbf{ fprint\+\_\+configuration\+\_\+xml} (FILE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to print in a xml format the current configuration in a file. \end{DoxyCompactList}\item 
+void \textbf{ activate\+\_\+decoy\+\_\+mode} ()
+\begin{DoxyCompactList}\small\item\em Procedure which allows to activate the decoy mode. \end{DoxyCompactList}\item 
+int \textbf{ is\+\_\+decoy\+\_\+mode\+\_\+activated} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to know if the decoy mode has been activated or not. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+decoy\+\_\+score} (double score)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to set the decoy\+\_\+score. \end{DoxyCompactList}\item 
+double \textbf{ get\+\_\+decoy\+\_\+score} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the decoy score. \end{DoxyCompactList}\item 
+const char $\ast$ \textbf{ get\+\_\+base\+\_\+name} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the base name of the result file of ASCQ\+\_\+\+ME. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition of the useful things to configure ASCQ\+\_\+\+ME. 
+
+\begin{DoxyAuthor}{Author}
+Jean-\/\+Charles BOISSON (2005-\/2008). 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{ascq__me__configuration_8h_aa426710e30089aadcae6af01c3fdb462}} 
+\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}!activate\_decoy\_mode@{activate\_decoy\_mode}}
+\index{activate\_decoy\_mode@{activate\_decoy\_mode}!ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+\doxysubsubsection{activate\_decoy\_mode()}
+{\footnotesize\ttfamily void activate\+\_\+decoy\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to activate the decoy mode. 
+
+
+
+Definition at line 1008 of file ascq\+\_\+me\+\_\+configuration.\+cpp.
+
+
+
+References decoy\+\_\+mode\+\_\+activation, and TRUE.
+
+
+
+Referenced by load\+\_\+boolean\+\_\+keyword().
+
+\mbox{\label{ascq__me__configuration_8h_a2270f9601d02271f50d855f6d657bbb1}} 
+\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}!ascq\_me\_configuration\_cleaning@{ascq\_me\_configuration\_cleaning}}
+\index{ascq\_me\_configuration\_cleaning@{ascq\_me\_configuration\_cleaning}!ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+\doxysubsubsection{ascq\_me\_configuration\_cleaning()}
+{\footnotesize\ttfamily void ascq\+\_\+me\+\_\+configuration\+\_\+cleaning (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which frees all the memory allocated for ascq\+\_\+me configuration. 
+
+
+
+Definition at line 771 of file ascq\+\_\+me\+\_\+configuration.\+cpp.
+
+
+
+References base\+\_\+name, configuration\+\_\+file\+\_\+name, fasta\+\_\+format, fastafclose(), free\+\_\+activated\+\_\+modification(), free\+\_\+all\+\_\+modifications(), free\+\_\+isodistrib(), free\+\_\+tables(), free\+\_\+util\+\_\+digestion(), and TRUE.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ascq__me__configuration_8h_a2270f9601d02271f50d855f6d657bbb1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__configuration_8h_a5c85fc24fc5120af0bd177643422a2cd}} 
+\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}!fprint\_configuration@{fprint\_configuration}}
+\index{fprint\_configuration@{fprint\_configuration}!ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+\doxysubsubsection{fprint\_configuration()}
+{\footnotesize\ttfamily void fprint\+\_\+configuration (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to print the current configuration in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file where the current will be put. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 871 of file ascq\+\_\+me\+\_\+configuration.\+cpp.
+
+
+
+References configuration\+\_\+file\+\_\+name, formula\+\_\+tochar(), fprint\+\_\+modification\+\_\+configuration(), get\+\_\+activation\+\_\+full\+\_\+digest(), get\+\_\+atom\+\_\+quantity(), get\+\_\+exp\+\_\+protein\+\_\+mass(), get\+\_\+experimental\+\_\+filename(), get\+\_\+fasta\+\_\+filename(), get\+\_\+gaussian\+\_\+value(), get\+\_\+maximum\+\_\+mass(), get\+\_\+maximum\+\_\+peptide\+\_\+length(), get\+\_\+minimum\+\_\+mass(), get\+\_\+minimum\+\_\+matched\+\_\+peptide\+\_\+number(), get\+\_\+minimum\+\_\+peptide\+\_\+number(), get\+\_\+nb\+\_\+displayed\+\_\+proteins(), get\+\_\+nb\+\_\+missed\+\_\+cleavages(), get\+\_\+number\+\_\+of\+\_\+activated\+\_\+modifications(), get\+\_\+peptide\+\_\+charge\+\_\+formula(), get\+\_\+peptide\+\_\+maximum\+\_\+mass(), get\+\_\+peptide\+\_\+precision(), get\+\_\+scoring\+\_\+sensitivity(), get\+\_\+simulated\+\_\+spectra\+\_\+filename(), get\+\_\+specie(), get\+\_\+spectrum\+\_\+maximum\+\_\+mass(), get\+\_\+spectrum\+\_\+precision(), get\+\_\+threshold(), get\+\_\+used\+\_\+enzyme(), is\+\_\+decoy\+\_\+mode\+\_\+activated(), is\+\_\+exp\+\_\+protein\+\_\+mass\+\_\+activated(), is\+\_\+fasta\+\_\+chosen(), PROGRAM\+\_\+\+NAME, PROGRAM\+\_\+\+VERSION, and TRUE.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{ascq__me__configuration_8h_a5c85fc24fc5120af0bd177643422a2cd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__configuration_8h_afa90666305f39b14771a9437f35ef7d9}} 
+\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}!fprint\_configuration\_xml@{fprint\_configuration\_xml}}
+\index{fprint\_configuration\_xml@{fprint\_configuration\_xml}!ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+\doxysubsubsection{fprint\_configuration\_xml()}
+{\footnotesize\ttfamily void fprint\+\_\+configuration\+\_\+xml (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to print in a xml format the current configuration in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file where the current configuration in a xml format will be put. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 946 of file ascq\+\_\+me\+\_\+configuration.\+cpp.
+
+
+
+References configuration\+\_\+file\+\_\+name, formula\+\_\+tochar(), fprint\+\_\+xml\+\_\+modification\+\_\+configuration(), get\+\_\+activation\+\_\+full\+\_\+digest(), get\+\_\+atom\+\_\+quantity(), get\+\_\+experimental\+\_\+filename(), get\+\_\+fasta\+\_\+filename(), get\+\_\+gaussian\+\_\+value(), get\+\_\+maximum\+\_\+mass(), get\+\_\+maximum\+\_\+peptide\+\_\+length(), get\+\_\+minimum\+\_\+mass(), get\+\_\+minimum\+\_\+matched\+\_\+peptide\+\_\+number(), get\+\_\+minimum\+\_\+peptide\+\_\+number(), get\+\_\+nb\+\_\+displayed\+\_\+proteins(), get\+\_\+nb\+\_\+missed\+\_\+cleavages(), get\+\_\+number\+\_\+of\+\_\+activated\+\_\+modifications(), get\+\_\+peptide\+\_\+charge\+\_\+formula(), get\+\_\+peptide\+\_\+maximum\+\_\+mass(), get\+\_\+peptide\+\_\+precision(), get\+\_\+scoring\+\_\+sensitivity(), get\+\_\+simulated\+\_\+spectra\+\_\+filename(), get\+\_\+specie(), get\+\_\+spectrum\+\_\+maximum\+\_\+mass(), get\+\_\+spectrum\+\_\+precision(), get\+\_\+threshold(), get\+\_\+used\+\_\+enzyme(), is\+\_\+decoy\+\_\+mode\+\_\+activated(), is\+\_\+fasta\+\_\+chosen(), PROGRAM\+\_\+\+VERSION, and TRUE.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{ascq__me__configuration_8h_afa90666305f39b14771a9437f35ef7d9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__configuration_8h_a65f54af5b6fc6f949caebc55ae18afc1}} 
+\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}!get\_base\_name@{get\_base\_name}}
+\index{get\_base\_name@{get\_base\_name}!ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+\doxysubsubsection{get\_base\_name()}
+{\footnotesize\ttfamily const char$\ast$ get\+\_\+base\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the base name of the result file of ASCQ\+\_\+\+ME. 
+
+\begin{DoxyReturn}{Returns}
+The base name. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+This function directly returns a pointer (not a copy), do not modified it 
+\end{DoxyWarning}
+
+
+Definition at line 1038 of file ascq\+\_\+me\+\_\+configuration.\+cpp.
+
+
+
+References base\+\_\+name.
+
+
+
+Referenced by main().
+
+\mbox{\label{ascq__me__configuration_8h_a39debc533bc00a3d68dcf62795757d26}} 
+\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}!get\_configuration\_file\_name@{get\_configuration\_file\_name}}
+\index{get\_configuration\_file\_name@{get\_configuration\_file\_name}!ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+\doxysubsubsection{get\_configuration\_file\_name()}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+configuration\+\_\+file\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the name of the configuration file used. 
+
+\begin{DoxyReturn}{Returns}
+The configuration file name. 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file ascq\+\_\+me\+\_\+configuration.\+cpp.
+
+
+
+References configuration\+\_\+file\+\_\+name, error(), and USAGE\+\_\+\+ERROR.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{ascq__me__configuration_8h_a39debc533bc00a3d68dcf62795757d26_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__configuration_8h_a323a10ff636140cd1d2f4d2e62b01ae9}} 
+\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}!get\_decoy\_score@{get\_decoy\_score}}
+\index{get\_decoy\_score@{get\_decoy\_score}!ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+\doxysubsubsection{get\_decoy\_score()}
+{\footnotesize\ttfamily double get\+\_\+decoy\+\_\+score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the decoy score. 
+
+\begin{DoxyReturn}{Returns}
+The decoy score. 
+\end{DoxyReturn}
+
+
+Definition at line 1026 of file ascq\+\_\+me\+\_\+configuration.\+cpp.
+
+
+
+References decoy\+\_\+score.
+
+
+
+Referenced by fprintf\+\_\+ascq\+\_\+me\+\_\+results(), fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+xml(), and printf\+\_\+ascq\+\_\+me\+\_\+results().
+
+\mbox{\label{ascq__me__configuration_8h_ab3bd3d4a93114c7d13ac56c790d562fb}} 
+\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}!get\_nb\_displayed\_proteins@{get\_nb\_displayed\_proteins}}
+\index{get\_nb\_displayed\_proteins@{get\_nb\_displayed\_proteins}!ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+\doxysubsubsection{get\_nb\_displayed\_proteins()}
+{\footnotesize\ttfamily int get\+\_\+nb\+\_\+displayed\+\_\+proteins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the number of displayed proteins. 
+
+\begin{DoxyReturn}{Returns}
+The number. 
+\end{DoxyReturn}
+
+
+Definition at line 1032 of file ascq\+\_\+me\+\_\+configuration.\+cpp.
+
+
+
+References nb\+\_\+displayed\+\_\+proteins.
+
+
+
+Referenced by add\+\_\+protein(), fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), init\+\_\+ascq\+\_\+me\+\_\+display(), and print\+\_\+configuration().
+
+\mbox{\label{ascq__me__configuration_8h_a84dc869a8a397c2a4b8474bf20811f2f}} 
+\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}!is\_decoy\_mode\_activated@{is\_decoy\_mode\_activated}}
+\index{is\_decoy\_mode\_activated@{is\_decoy\_mode\_activated}!ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+\doxysubsubsection{is\_decoy\_mode\_activated()}
+{\footnotesize\ttfamily int is\+\_\+decoy\+\_\+mode\+\_\+activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to know if the decoy mode has been activated or not. 
+
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE (according to \doxyref{util.\+h}{p.}{util_8h}). 
+\end{DoxyReturn}
+
+
+Definition at line 1014 of file ascq\+\_\+me\+\_\+configuration.\+cpp.
+
+
+
+References decoy\+\_\+mode\+\_\+activation.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), fprintf\+\_\+ascq\+\_\+me\+\_\+results(), main(), print\+\_\+configuration(), and printf\+\_\+ascq\+\_\+me\+\_\+results().
+
+\mbox{\label{ascq__me__configuration_8h_a4415adbbeeb4e09514b3c276acc2987c}} 
+\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}!is\_fasta\_chosen@{is\_fasta\_chosen}}
+\index{is\_fasta\_chosen@{is\_fasta\_chosen}!ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+\doxysubsubsection{is\_fasta\_chosen()}
+{\footnotesize\ttfamily int is\+\_\+fasta\+\_\+chosen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which indicates if the chosen file type is fasta or spectra. 
+
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE (see \doxyref{util.\+h}{p.}{util_8h}). 
+\end{DoxyReturn}
+
+
+Definition at line 798 of file ascq\+\_\+me\+\_\+configuration.\+cpp.
+
+
+
+References fasta\+\_\+format.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), main(), and print\+\_\+configuration().
+
+\mbox{\label{ascq__me__configuration_8h_a5c887a50d8549bfccecaf3925fc62ac7}} 
+\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}!load\_configuration@{load\_configuration}}
+\index{load\_configuration@{load\_configuration}!ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+\doxysubsubsection{load\_configuration()}
+{\footnotesize\ttfamily void load\+\_\+configuration (\begin{DoxyParamCaption}\item[{char $\ast$}]{configuration\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to load the wanted configuration $<$=$>$ set all the parameters of the application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em configuration\+\_\+file} & The configuration file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 130 of file ascq\+\_\+me\+\_\+configuration.\+cpp.
+
+
+
+References configuration\+\_\+file\+\_\+name, error(), FALSE, get\+\_\+distribution\+\_\+activation(), init\+\_\+util\+\_\+digestion(), IO\+\_\+\+ERROR, jump\+\_\+commentaries(), load\+\_\+boolean\+\_\+keyword(), load\+\_\+float\+\_\+keyword(), load\+\_\+int\+\_\+keyword(), load\+\_\+modifications(), load\+\_\+string\+\_\+keyword(), load\+\_\+unsigned\+\_\+int\+\_\+keyword(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, MODIFICATION\+\_\+\+FILENAME, tables\+\_\+initialisation(), and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ascq__me__configuration_8h_a5c887a50d8549bfccecaf3925fc62ac7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__configuration_8h_a65b2dadc0411e43874ec8ed7f73bc62a}} 
+\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}!print\_configuration@{print\_configuration}}
+\index{print\_configuration@{print\_configuration}!ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+\doxysubsubsection{print\_configuration()}
+{\footnotesize\ttfamily void print\+\_\+configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to print the current configuration on the stdout. 
+
+
+
+Definition at line 804 of file ascq\+\_\+me\+\_\+configuration.\+cpp.
+
+
+
+References configuration\+\_\+file\+\_\+name, formula\+\_\+tochar(), get\+\_\+activation\+\_\+full\+\_\+digest(), get\+\_\+atom\+\_\+quantity(), get\+\_\+exp\+\_\+protein\+\_\+mass(), get\+\_\+experimental\+\_\+filename(), get\+\_\+fasta\+\_\+filename(), get\+\_\+gaussian\+\_\+value(), get\+\_\+maximum\+\_\+mass(), get\+\_\+maximum\+\_\+peptide\+\_\+length(), get\+\_\+minimum\+\_\+mass(), get\+\_\+minimum\+\_\+matched\+\_\+peptide\+\_\+number(), get\+\_\+minimum\+\_\+peptide\+\_\+number(), get\+\_\+nb\+\_\+displayed\+\_\+proteins(), get\+\_\+nb\+\_\+missed\+\_\+cleavages(), get\+\_\+number\+\_\+of\+\_\+activated\+\_\+modifications(), get\+\_\+peptide\+\_\+charge\+\_\+formula(), get\+\_\+peptide\+\_\+maximum\+\_\+mass(), get\+\_\+peptide\+\_\+precision(), get\+\_\+scoring\+\_\+sensitivity(), get\+\_\+simulated\+\_\+spectra\+\_\+filename(), get\+\_\+specie(), get\+\_\+spectrum\+\_\+maximum\+\_\+mass(), get\+\_\+spectrum\+\_\+precision(), get\+\_\+threshold(), get\+\_\+used\+\_\+enzyme(), is\+\_\+decoy\+\_\+mode\+\_\+activated(), is\+\_\+exp\+\_\+protein\+\_\+mass\+\_\+activated(), is\+\_\+fasta\+\_\+chosen(), print\+\_\+modification\+\_\+configuration(), PROGRAM\+\_\+\+NAME, PROGRAM\+\_\+\+VERSION, and TRUE.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{ascq__me__configuration_8h_a65b2dadc0411e43874ec8ed7f73bc62a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__configuration_8h_a0e991c063a8464c065b8397bf1bb06d9}} 
+\index{ascq\_me\_configuration.h@{ascq\_me\_configuration.h}!set\_decoy\_score@{set\_decoy\_score}}
+\index{set\_decoy\_score@{set\_decoy\_score}!ascq\_me\_configuration.h@{ascq\_me\_configuration.h}}
+\doxysubsubsection{set\_decoy\_score()}
+{\footnotesize\ttfamily void set\+\_\+decoy\+\_\+score (\begin{DoxyParamCaption}\item[{double}]{score }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to set the decoy\+\_\+score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & The decoy score. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1020 of file ascq\+\_\+me\+\_\+configuration.\+cpp.
+
+
+
+References decoy\+\_\+score.
+
+
+
+Referenced by main().
+

@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/AskmeLib.dir/aa.cpp.o"
+  "CMakeFiles/AskmeLib.dir/aa.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/ascq_me.cpp.o"
+  "CMakeFiles/AskmeLib.dir/ascq_me.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/ascq_me_configuration.cpp.o"
+  "CMakeFiles/AskmeLib.dir/ascq_me_configuration.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/ascq_me_display.cpp.o"
+  "CMakeFiles/AskmeLib.dir/ascq_me_display.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/cleavage.cpp.o"
+  "CMakeFiles/AskmeLib.dir/cleavage.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/complex.cpp.o"
+  "CMakeFiles/AskmeLib.dir/complex.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/digest.cpp.o"
+  "CMakeFiles/AskmeLib.dir/digest.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/error.cpp.o"
+  "CMakeFiles/AskmeLib.dir/error.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/fft4g.cpp.o"
+  "CMakeFiles/AskmeLib.dir/fft4g.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/formula.cpp.o"
+  "CMakeFiles/AskmeLib.dir/formula.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/isodistrib.cpp.o"
+  "CMakeFiles/AskmeLib.dir/isodistrib.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/modification_table.cpp.o"
+  "CMakeFiles/AskmeLib.dir/modification_table.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/modifications_for_digestion.cpp.o"
+  "CMakeFiles/AskmeLib.dir/modifications_for_digestion.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/seqio.cpp.o"
+  "CMakeFiles/AskmeLib.dir/seqio.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/tables.cpp.o"
+  "CMakeFiles/AskmeLib.dir/tables.cpp.o.d"
+  "CMakeFiles/AskmeLib.dir/util.cpp.o"
+  "CMakeFiles/AskmeLib.dir/util.cpp.o.d"
+  "libAskmeLib.a"
+  "libAskmeLib.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/AskmeLib.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

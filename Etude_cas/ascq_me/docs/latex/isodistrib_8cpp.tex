@@ -1,0 +1,2802 @@
+\doxysection{isodistrib.\+cpp File Reference}
+\label{isodistrib_8cpp}\index{isodistrib.cpp@{isodistrib.cpp}}
+
+
+Implementation of the methods defined in \doxyref{isodistrib.\+h}{p.}{isodistrib_8h}.  
+
+
+{\ttfamily \#include \char`\"{}isodistrib.\+h\char`\"{}}\newline
+Include dependency graph for isodistrib.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{isodistrib_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ complex\+\_\+t} $\ast$$\ast$ \textbf{ get\+\_\+\+X\+\_\+atom} (char $\ast$\textbf{ symbol})
+\begin{DoxyCompactList}\small\item\em Tool function which returns the complex\+\_\+t$\ast$$\ast$ X\+\_\+atom associated to a symbol or NULL if the symbol has not an associated X\+\_\+atom. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ get\+\_\+t\+\_\+\+X\+\_\+atom} (char $\ast$\textbf{ symbol})
+\begin{DoxyCompactList}\small\item\em Tool function which returns the complex\+\_\+t$\ast$ t\+\_\+\+X\+\_\+atom associated to a symbol or NULL if the symbol has not a associated t\+\_\+\+X\+\_\+atom. \end{DoxyCompactList}\item 
+void \textbf{ cdft} (int, int, double $\ast$, int $\ast$, double $\ast$)
+\begin{DoxyCompactList}\small\item\em Complex Discrete Fourier Transform. \end{DoxyCompactList}\item 
+void \textbf{ init\+\_\+distrib} ()
+\begin{DoxyCompactList}\small\item\em Procedure which initializes the parameters and allocates the useful structures. \end{DoxyCompactList}\item 
+double \textbf{ optimized\+\_\+isotopic\+\_\+distribution} (\textbf{ formula\+\_\+t} $\ast$\textbf{ peptides}, int nb\+\_\+peptides)
+\begin{DoxyCompactList}\small\item\em Function which calculates the isotopic distribution of a peptide list. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+atom\+\_\+quantity} (const char $\ast$\textbf{ symbol})
+\begin{DoxyCompactList}\small\item\em Tool function which returns the atom quantity linked to a symbol or -\/1 if the symbol has not an associated atom quantity. \end{DoxyCompactList}\item 
+void \textbf{ integral\+\_\+normalization} (double integral\+\_\+value, int size, \textbf{ complex\+\_\+t} $\ast$t\+\_\+complex)
+\begin{DoxyCompactList}\small\item\em Procedure which makes a normalization of a data array. \end{DoxyCompactList}\item 
+void \textbf{ write\+\_\+spectrum\+\_\+cplx} (FILE $\ast$f, \textbf{ complex\+\_\+t} $\ast$t\+\_\+complex, char $\ast$entry)
+\begin{DoxyCompactList}\small\item\em Procedure which writes a module of data in a complex spectrum file. \end{DoxyCompactList}\item 
+void \textbf{ write\+\_\+spectrum} (FILE $\ast$f, \textbf{ complex\+\_\+t} $\ast$t\+\_\+complex, char $\ast$entry)
+\begin{DoxyCompactList}\small\item\em Procedure which writes a spectrum in a file. \end{DoxyCompactList}\item 
+void \textbf{ read\+\_\+spectrum} (const char $\ast$spectrum\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Procedure which loads a spectrum from a file. \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+isodistrib} ()
+\begin{DoxyCompactList}\small\item\em Procedure which frees the memory allocated for all the structures useful for the isotopic distribution computation. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ get\+\_\+exp\+\_\+spectrum} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to gain access to the experimental spectrum. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ copy\+\_\+spectrum} (\textbf{ complex\+\_\+t} $\ast$spectrum)
+\begin{DoxyCompactList}\small\item\em Function which makes the copie of a spectrum. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+exp\+\_\+spectrum} (\textbf{ complex\+\_\+t} $\ast$spectrum)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to set manually the experimental spectrum. \end{DoxyCompactList}\item 
+void \textbf{ write\+\_\+spectrum\+\_\+peak\+\_\+only} (FILE $\ast$file, \textbf{ complex\+\_\+t} $\ast$spectrum, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Procedure which writes only the spectrum peaks in a file. \end{DoxyCompactList}\item 
+void \textbf{ read\+\_\+simulated\+\_\+spectrum} (const char $\ast$spectrum\+\_\+file)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to open the file which contains theoretical spectra. \end{DoxyCompactList}\item 
+int \textbf{ next\+\_\+simulated\+\_\+spectrum} ()
+\begin{DoxyCompactList}\small\item\em Function which loads the next simulated spectrum. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ get\+\_\+theo\+\_\+spectrum} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to gain access to the simulated spectrum. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+threshold} (double new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to set the threshold useful for the procedure write\+\_\+spectrum\+\_\+peak\+\_\+only and the scoring. \end{DoxyCompactList}\item 
+double \textbf{ get\+\_\+threshold} ()
+\begin{DoxyCompactList}\small\item\em Function to obtain the threshold. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+spectrum\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the size of the array that contains the spectrum. \end{DoxyCompactList}\item 
+double \textbf{ get\+\_\+step} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the spectra array step (distance between two spectrum points). \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+spectrum\+\_\+original\+\_\+description} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the original description of the current spectrum. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+spectrum\+\_\+original\+\_\+sequence} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the original sequence of the current spectrum. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+\+C\+\_\+atom\+\_\+quantity} (int new\+\_\+quantity)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to modify the quantity of C atom for the initialisation process. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+spectrum\+\_\+maximum\+\_\+mass} (int new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to modify the spectrum maximum mass. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+gaussian\+\_\+value} (double new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to modify the gaussian value. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+precision} (int new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to modify the spectrum precision. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+simulated\+\_\+spectra\+\_\+filename} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the name of file containing the simulated spectra. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+spectrum\+\_\+maximum\+\_\+mass} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the maximum mass authorized for the spectrum. \end{DoxyCompactList}\item 
+double \textbf{ get\+\_\+gaussian\+\_\+value} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the gaussian value. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+spectrum\+\_\+precision} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the spetrum precision. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+experimental\+\_\+filename} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the file name of the experimental spectrum. \end{DoxyCompactList}\item 
+int \textbf{ is\+\_\+simulated\+\_\+wanted\+\_\+protein} ()
+\begin{DoxyCompactList}\small\item\em Function which indicates if the current loaded protein corresponding to the specie. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+scoring\+\_\+sensitivity} (double new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to modify the score sensitivity. \end{DoxyCompactList}\item 
+double \textbf{ get\+\_\+scoring\+\_\+sensitivity} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the score sensitivity. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+minimum\+\_\+mass} (double new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to modify the minimum mass for the peptides. \end{DoxyCompactList}\item 
+double \textbf{ get\+\_\+minimum\+\_\+mass} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the minimum mass authorized for the peptides. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+maximum\+\_\+mass} (double new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to modify the maximum mass for the peptides. \end{DoxyCompactList}\item 
+double \textbf{ get\+\_\+maximum\+\_\+mass} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the maximum mass authorized for the peptides. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+peptide\+\_\+maximum\+\_\+mass} (int new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to modify the peptide maximum mass. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+peptide\+\_\+precision} (int new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to modify the peptide precision. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+peptide\+\_\+maximum\+\_\+mass} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the peptide maximum mass. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+peptide\+\_\+precision} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the peptide precision. \end{DoxyCompactList}\item 
+double \textbf{ compute\+\_\+correlation} (int index, \textbf{ complex\+\_\+t} $\ast$spectrum)
+\begin{DoxyCompactList}\small\item\em Function which gives the correlation between the two spectra (experimental and simulated) according to an index on a peptide (global = FALSE) or on the complete spectrum (global = TRUE). \end{DoxyCompactList}\item 
+double \textbf{ penalization\+\_\+factor} ()
+\begin{DoxyCompactList}\small\item\em Function which gives a penalize factor corresponding to all the no need data from the simulated spectrum. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+minimum\+\_\+peptide\+\_\+number} (unsigned int new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to modify the minimum peptide number needed to a protein to be considered. \end{DoxyCompactList}\item 
+unsigned int \textbf{ get\+\_\+minimum\+\_\+peptide\+\_\+number} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the minimum peptide number for a protein to be considered. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+minimum\+\_\+matched\+\_\+peptide\+\_\+number} (unsigned int new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to modify the minimum matched peptide number needed to a protein to be considered. \end{DoxyCompactList}\item 
+unsigned int \textbf{ get\+\_\+minimum\+\_\+matched\+\_\+peptide\+\_\+number} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the minimum matched peptide number for a protein to be considered. \end{DoxyCompactList}\item 
+double \textbf{ get\+\_\+peptide\+\_\+score\+\_\+threshold} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the peptide score threshold to make difference between \char`\"{}good\char`\"{} and \char`\"{}bad\char`\"{} peptides. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+distribution\+\_\+activation} ()
+\item 
+double $\ast$ \textbf{ get\+\_\+current\+\_\+peptide\+\_\+score\+\_\+save} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the peptide scores of the last protein considered. \end{DoxyCompactList}\item 
+unsigned int \textbf{ get\+\_\+current\+\_\+peptide\+\_\+score\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the peptide score array size of the last protein considered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ is\+\_\+distribution\+\_\+initialised} =\textbf{ FALSE}
+\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ t\+\_\+atom}
+\begin{DoxyCompactList}\small\item\em Complex array for the atom spectrum. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ result}
+\begin{DoxyCompactList}\small\item\em Complex array for the theoretical spectrum. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ gauss}
+\begin{DoxyCompactList}\small\item\em Complex array for the gaussian convolution. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ t\+\_\+peptide}
+\begin{DoxyCompactList}\small\item\em Complex array for one peptide spectrum. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ t\+\_\+shifted\+\_\+peptide}
+\begin{DoxyCompactList}\small\item\em Complex array for one peptide spectrum with a shifted mass. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ t\+\_\+exp\+\_\+spec}
+\begin{DoxyCompactList}\small\item\em Complex array for the experimental spectrum. \end{DoxyCompactList}\item 
+double \textbf{ gaussian} =0.\+30
+\begin{DoxyCompactList}\small\item\em The gaussian value. \end{DoxyCompactList}\item 
+int \textbf{ N\+\_\+\+SPEC} =65536
+\begin{DoxyCompactList}\small\item\em The spectrum precision. \end{DoxyCompactList}\item 
+int \textbf{ N\+\_\+\+PEPT} =0
+\begin{DoxyCompactList}\small\item\em The peptide spectrum precision. \end{DoxyCompactList}\item 
+int \textbf{ spectrum\+\_\+maximum\+\_\+mass} =4096
+\begin{DoxyCompactList}\small\item\em The spectrum maximum mass. \end{DoxyCompactList}\item 
+int \textbf{ peptide\+\_\+maximum\+\_\+mass} =16
+\begin{DoxyCompactList}\small\item\em The peptide spectrum maximum mass. \end{DoxyCompactList}\item 
+int \textbf{ peptide\+\_\+precision} =8
+\begin{DoxyCompactList}\small\item\em The peptide precision. \end{DoxyCompactList}\item 
+unsigned int \textbf{ minimum\+\_\+peptide\+\_\+number} =5
+\begin{DoxyCompactList}\small\item\em The minimum number of peptides that the digestion has to produced for a protein to be considered. \end{DoxyCompactList}\item 
+unsigned int \textbf{ minimum\+\_\+matched\+\_\+peptide\+\_\+number} =3
+\begin{DoxyCompactList}\small\item\em The minimum number of peptides belonging to the \char`\"{}good\char`\"{} peptides for a protein to be considered. \end{DoxyCompactList}\item 
+double \textbf{ min\+\_\+experimental\+\_\+mass} =700
+\begin{DoxyCompactList}\small\item\em The minimum authorized peptide mass. \end{DoxyCompactList}\item 
+double \textbf{ max\+\_\+experimental\+\_\+mass} =2500
+\begin{DoxyCompactList}\small\item\em The maximum authorized peptide mass. \end{DoxyCompactList}\item 
+double \textbf{ threshold} =0.\+0000001
+\begin{DoxyCompactList}\small\item\em The spectrum threshold. \end{DoxyCompactList}\item 
+double \textbf{ sensitivity} =0.\+5
+\begin{DoxyCompactList}\small\item\em The sensitivity. \end{DoxyCompactList}\item 
+double \textbf{ variation\+\_\+threshold} =-\/1.\+0
+\begin{DoxyCompactList}\small\item\em The varation threshold. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ experimental\+\_\+file} =NULL
+\begin{DoxyCompactList}\small\item\em The experimental spectrum fime. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ spectrum\+\_\+original\+\_\+description} =NULL
+\begin{DoxyCompactList}\small\item\em The theoretical spectrum description (from FASTA database). \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ spectrum\+\_\+original\+\_\+sequence} =NULL
+\begin{DoxyCompactList}\small\item\em The theoretical spectrum original sequence (from FASTA database). \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ simulated\+\_\+spectra\+\_\+file} =NULL
+\begin{DoxyCompactList}\small\item\em The name of the file that contains the spectum database. \end{DoxyCompactList}\item 
+FILE $\ast$ \textbf{ simulated\+\_\+spectra} =NULL
+\begin{DoxyCompactList}\small\item\em The file that contains the simulated spectrum database. \end{DoxyCompactList}\item 
+double \textbf{ step}
+\begin{DoxyCompactList}\small\item\em The step between two points in a complete spectrum. \end{DoxyCompactList}\item 
+double \textbf{ atom\+\_\+step}
+\begin{DoxyCompactList}\small\item\em The step between two points in the atom spectrum. \end{DoxyCompactList}\item 
+double \textbf{ gauss\+\_\+param}
+\begin{DoxyCompactList}\small\item\em The gaussian parameter. \end{DoxyCompactList}\item 
+int \textbf{ nb\+\_\+data\+\_\+amu}
+\begin{DoxyCompactList}\small\item\em Number of points between each mass unit of a complete spectrum. \end{DoxyCompactList}\item 
+int \textbf{ atom\+\_\+nb\+\_\+data\+\_\+amu}
+\begin{DoxyCompactList}\small\item\em Number of points between each mass unit in the atom spectrum. \end{DoxyCompactList}\item 
+double \textbf{ peptide\+\_\+score\+\_\+threshold} =0.\+0
+\begin{DoxyCompactList}\small\item\em The score threshold for consider a peptide has a good peptide or a bad peptide. \end{DoxyCompactList}\item 
+int $\ast$ \textbf{ ip} =NULL
+\begin{DoxyCompactList}\small\item\em A first variable needed for the fast fourier transform process. \end{DoxyCompactList}\item 
+double $\ast$ \textbf{ w} =NULL
+\begin{DoxyCompactList}\small\item\em A second variable needed for the fast fourier transform process. \end{DoxyCompactList}\item 
+int \textbf{ C\+\_\+atom\+\_\+quantity} =1000
+\begin{DoxyCompactList}\small\item\em Maximum quantity of C atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation. \end{DoxyCompactList}\item 
+int \textbf{ H\+\_\+atom\+\_\+quantity} =4000
+\begin{DoxyCompactList}\small\item\em Maximum quantity of H atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation. \end{DoxyCompactList}\item 
+int \textbf{ O\+\_\+atom\+\_\+quantity} =250
+\begin{DoxyCompactList}\small\item\em Maximum quantity of O atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation. \end{DoxyCompactList}\item 
+int \textbf{ S\+\_\+atom\+\_\+quantity} =125
+\begin{DoxyCompactList}\small\item\em Maximum quantity of S atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation. \end{DoxyCompactList}\item 
+int \textbf{ N\+\_\+atom\+\_\+quantity} =500
+\begin{DoxyCompactList}\small\item\em Maximum quantity of N atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation. \end{DoxyCompactList}\item 
+int \textbf{ Se\+\_\+atom\+\_\+quantity} =100
+\begin{DoxyCompactList}\small\item\em Maximum quantity of Se atoms (due to the U amino acid), the corresponding distributions from 1 to this value will be computed during the distribution initialisation. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$$\ast$ \textbf{ C\+\_\+atom} =NULL
+\begin{DoxyCompactList}\small\item\em All the saved distribution of the C atom. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$$\ast$ \textbf{ H\+\_\+atom} =NULL
+\begin{DoxyCompactList}\small\item\em All the saved distribution of the H atom. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$$\ast$ \textbf{ O\+\_\+atom} =NULL
+\begin{DoxyCompactList}\small\item\em All the saved distribution of the O atom. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$$\ast$ \textbf{ S\+\_\+atom} =NULL
+\begin{DoxyCompactList}\small\item\em All the saved distribution of the S atom. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$$\ast$ \textbf{ N\+\_\+atom} =NULL
+\begin{DoxyCompactList}\small\item\em All the saved distribution of the N atom. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$$\ast$ \textbf{ Se\+\_\+atom} =NULL
+\begin{DoxyCompactList}\small\item\em All the saved distribution of the Se atom. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ t\+\_\+\+C\+\_\+atom} =NULL
+\begin{DoxyCompactList}\small\item\em The distribution of C1. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ t\+\_\+\+H\+\_\+atom} =NULL
+\begin{DoxyCompactList}\small\item\em The distribution of H1. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ t\+\_\+\+O\+\_\+atom} =NULL
+\begin{DoxyCompactList}\small\item\em The distribution of O1. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ t\+\_\+\+S\+\_\+atom} =NULL
+\begin{DoxyCompactList}\small\item\em The distribution of S1. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ t\+\_\+\+N\+\_\+atom} =NULL
+\begin{DoxyCompactList}\small\item\em The distribution of N1. \end{DoxyCompactList}\item 
+\textbf{ complex\+\_\+t} $\ast$ \textbf{ t\+\_\+\+Se\+\_\+atom} =NULL
+\begin{DoxyCompactList}\small\item\em The distribution of Se1. \end{DoxyCompactList}\item 
+double $\ast$ \textbf{ current\+\_\+peptide\+\_\+score\+\_\+save} =NULL
+\begin{DoxyCompactList}\small\item\em The score of the peptide of the last protein considered. \end{DoxyCompactList}\item 
+unsigned int \textbf{ current\+\_\+peptide\+\_\+score\+\_\+size} =0
+\begin{DoxyCompactList}\small\item\em Size the of the current\+\_\+peptide\+\_\+score\+\_\+save array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the methods defined in \doxyref{isodistrib.\+h}{p.}{isodistrib_8h}. 
+
+\begin{DoxyAuthor}{Author}
+Nicolas GRUSZCZYNSKA and Nicolas DOLET (2005).~\newline
+ Modified and updated by Jean-\/\+Charles BOISSON and Christian ROLANDO (2005-\/2008). 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{isodistrib_8cpp_add439be0f19853cd7568299e4e9f2043}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!cdft@{cdft}}
+\index{cdft@{cdft}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{cdft()}
+{\footnotesize\ttfamily void cdft (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{isgn,  }\item[{double $\ast$}]{a,  }\item[{int $\ast$}]{ip,  }\item[{double $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+Complex Discrete Fourier Transform. 
+
+
+
+Definition at line 328 of file fft4g.\+cpp.
+
+
+
+References bitrv2(), bitrv2conj(), cftbsub(), cftfsub(), ip, makewt(), and w.
+
+
+
+Referenced by init\+\_\+distrib(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{isodistrib_8cpp_add439be0f19853cd7568299e4e9f2043_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_ac209fd72bc2cade5626c088a12624a81}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!compute\_correlation@{compute\_correlation}}
+\index{compute\_correlation@{compute\_correlation}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{compute\_correlation()}
+{\footnotesize\ttfamily double compute\+\_\+correlation (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{\textbf{ complex\+\_\+t} $\ast$}]{spectrum }\end{DoxyParamCaption})}
+
+
+
+Function which gives the correlation between the two spectra (experimental and simulated) according to an index on a peptide (global = FALSE) or on the complete spectrum (global = TRUE). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index. \\
+\hline
+{\em spectrum} & The spectrum to compare with the experimental spectrum. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The correlation score between the two points. 
+\end{DoxyReturn}
+
+
+Definition at line 2315 of file isodistrib.\+cpp.
+
+
+
+References N\+\_\+\+SPEC, complex\+::\+Re, t\+\_\+exp\+\_\+spec, threshold, and variation\+\_\+threshold.
+
+
+
+Referenced by fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+table\+\_\+form(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{isodistrib_8cpp_af876db07c66ceb45cee8a327641ef7de}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!copy\_spectrum@{copy\_spectrum}}
+\index{copy\_spectrum@{copy\_spectrum}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{copy\_spectrum()}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t}$\ast$ copy\+\_\+spectrum (\begin{DoxyParamCaption}\item[{\textbf{ complex\+\_\+t} $\ast$}]{spectrum }\end{DoxyParamCaption})}
+
+
+
+Function which makes the copie of a spectrum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spectrum} & The spectrum to copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copie. 
+\end{DoxyReturn}
+
+
+Definition at line 1741 of file isodistrib.\+cpp.
+
+
+
+References error(), complex\+::\+Im, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, N\+\_\+\+SPEC, complex\+::\+Re, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by add\+\_\+protein().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{isodistrib_8cpp_af876db07c66ceb45cee8a327641ef7de_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a84bd314aa69768c30e02b712096f0061}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!free\_isodistrib@{free\_isodistrib}}
+\index{free\_isodistrib@{free\_isodistrib}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{free\_isodistrib()}
+{\footnotesize\ttfamily void free\+\_\+isodistrib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which frees the memory allocated for all the structures useful for the isotopic distribution computation. 
+
+
+
+Definition at line 1651 of file isodistrib.\+cpp.
+
+
+
+References C\+\_\+atom, C\+\_\+atom\+\_\+quantity, current\+\_\+peptide\+\_\+score\+\_\+save, current\+\_\+peptide\+\_\+score\+\_\+size, experimental\+\_\+file, gauss, H\+\_\+atom, H\+\_\+atom\+\_\+quantity, ip, N\+\_\+atom, N\+\_\+atom\+\_\+quantity, O\+\_\+atom, O\+\_\+atom\+\_\+quantity, result, S\+\_\+atom, S\+\_\+atom\+\_\+quantity, Se\+\_\+atom, Se\+\_\+atom\+\_\+quantity, simulated\+\_\+spectra\+\_\+file, spectrum\+\_\+original\+\_\+description, spectrum\+\_\+original\+\_\+sequence, t\+\_\+atom, t\+\_\+\+C\+\_\+atom, t\+\_\+exp\+\_\+spec, t\+\_\+\+H\+\_\+atom, t\+\_\+\+N\+\_\+atom, t\+\_\+\+O\+\_\+atom, t\+\_\+peptide, t\+\_\+\+S\+\_\+atom, t\+\_\+\+Se\+\_\+atom, t\+\_\+shifted\+\_\+peptide, and w.
+
+
+
+Referenced by ascq\+\_\+me\+\_\+configuration\+\_\+cleaning().
+
+\mbox{\label{isodistrib_8cpp_a280ffab2d02998e01a44184845b596f0}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_atom\_quantity@{get\_atom\_quantity}}
+\index{get\_atom\_quantity@{get\_atom\_quantity}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_atom\_quantity()}
+{\footnotesize\ttfamily int get\+\_\+atom\+\_\+quantity (\begin{DoxyParamCaption}\item[{const char $\ast$}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Tool function which returns the atom quantity linked to a symbol or -\/1 if the symbol has not an associated atom quantity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The associated atom quantity or -\/1. 
+\end{DoxyReturn}
+
+
+Definition at line 1350 of file isodistrib.\+cpp.
+
+
+
+References C\+\_\+atom\+\_\+quantity, H\+\_\+atom\+\_\+quantity, N\+\_\+atom\+\_\+quantity, O\+\_\+atom\+\_\+quantity, S\+\_\+atom\+\_\+quantity, Se\+\_\+atom\+\_\+quantity, and symbol.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), optimized\+\_\+isotopic\+\_\+distribution(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_a7b6ec235abcb9ef2b45adadd4f73c219}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_current\_peptide\_score\_save@{get\_current\_peptide\_score\_save}}
+\index{get\_current\_peptide\_score\_save@{get\_current\_peptide\_score\_save}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_current\_peptide\_score\_save()}
+{\footnotesize\ttfamily double$\ast$ get\+\_\+current\+\_\+peptide\+\_\+score\+\_\+save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the peptide scores of the last protein considered. 
+
+\begin{DoxyWarning}{Warning}
+This function returns a direct pointer. 
+\end{DoxyWarning}
+
+
+Definition at line 2425 of file isodistrib.\+cpp.
+
+
+
+References current\+\_\+peptide\+\_\+score\+\_\+save.
+
+
+
+Referenced by main().
+
+\mbox{\label{isodistrib_8cpp_aef9016cced894bb6f1c473a38f0662ad}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_current\_peptide\_score\_size@{get\_current\_peptide\_score\_size}}
+\index{get\_current\_peptide\_score\_size@{get\_current\_peptide\_score\_size}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_current\_peptide\_score\_size()}
+{\footnotesize\ttfamily unsigned int get\+\_\+current\+\_\+peptide\+\_\+score\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the peptide score array size of the last protein considered. 
+
+
+
+Definition at line 2431 of file isodistrib.\+cpp.
+
+
+
+References current\+\_\+peptide\+\_\+score\+\_\+size.
+
+
+
+Referenced by main().
+
+\mbox{\label{isodistrib_8cpp_a276facbe926ddf3d1fb564a5c0377b36}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_distribution\_activation@{get\_distribution\_activation}}
+\index{get\_distribution\_activation@{get\_distribution\_activation}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_distribution\_activation()}
+{\footnotesize\ttfamily int get\+\_\+distribution\+\_\+activation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 2419 of file isodistrib.\+cpp.
+
+
+
+References is\+\_\+distribution\+\_\+initialised.
+
+
+
+Referenced by load\+\_\+configuration(), load\+\_\+float\+\_\+keyword(), and load\+\_\+int\+\_\+keyword().
+
+\mbox{\label{isodistrib_8cpp_a1ebe121a5cd950feafb9f822990b30b3}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_exp\_spectrum@{get\_exp\_spectrum}}
+\index{get\_exp\_spectrum@{get\_exp\_spectrum}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_exp\_spectrum()}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t}$\ast$ get\+\_\+exp\+\_\+spectrum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to gain access to the experimental spectrum. 
+
+\begin{DoxyReturn}{Returns}
+The experimental spectrum. 
+\end{DoxyReturn}
+
+
+Definition at line 1735 of file isodistrib.\+cpp.
+
+
+
+References t\+\_\+exp\+\_\+spec.
+
+
+
+Referenced by fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+table\+\_\+form().
+
+\mbox{\label{isodistrib_8cpp_ad0c520b64809a9197043a394f5a91210}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_experimental\_filename@{get\_experimental\_filename}}
+\index{get\_experimental\_filename@{get\_experimental\_filename}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_experimental\_filename()}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+experimental\+\_\+filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the file name of the experimental spectrum. 
+
+\begin{DoxyReturn}{Returns}
+The file name. 
+\end{DoxyReturn}
+
+
+Definition at line 2176 of file isodistrib.\+cpp.
+
+
+
+References experimental\+\_\+file.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_a38b2baeea98ea70c204d2434b8dc31c9}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_gaussian\_value@{get\_gaussian\_value}}
+\index{get\_gaussian\_value@{get\_gaussian\_value}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_gaussian\_value()}
+{\footnotesize\ttfamily double get\+\_\+gaussian\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the gaussian value. 
+
+\begin{DoxyReturn}{Returns}
+The gaussian value. 
+\end{DoxyReturn}
+
+
+Definition at line 2164 of file isodistrib.\+cpp.
+
+
+
+References gaussian.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_aa5d0bbdac85d016ad27a4f529a4e692d}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_maximum\_mass@{get\_maximum\_mass}}
+\index{get\_maximum\_mass@{get\_maximum\_mass}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_maximum\_mass()}
+{\footnotesize\ttfamily double get\+\_\+maximum\+\_\+mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the maximum mass authorized for the peptides. 
+
+\begin{DoxyReturn}{Returns}
+The maximum mass. 
+\end{DoxyReturn}
+
+
+Definition at line 2262 of file isodistrib.\+cpp.
+
+
+
+References max\+\_\+experimental\+\_\+mass.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+table\+\_\+form(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_a59044c8d77e53bd0c22ef860fdf3501a}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_minimum\_mass@{get\_minimum\_mass}}
+\index{get\_minimum\_mass@{get\_minimum\_mass}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_minimum\_mass()}
+{\footnotesize\ttfamily double get\+\_\+minimum\+\_\+mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the minimum mass authorized for the peptides. 
+
+\begin{DoxyReturn}{Returns}
+The minimum mass. 
+\end{DoxyReturn}
+
+
+Definition at line 2236 of file isodistrib.\+cpp.
+
+
+
+References min\+\_\+experimental\+\_\+mass.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+table\+\_\+form(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_aa74882bb3f8fdc045dbbfe3816ce1970}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_minimum\_matched\_peptide\_number@{get\_minimum\_matched\_peptide\_number}}
+\index{get\_minimum\_matched\_peptide\_number@{get\_minimum\_matched\_peptide\_number}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_minimum\_matched\_peptide\_number()}
+{\footnotesize\ttfamily unsigned int get\+\_\+minimum\+\_\+matched\+\_\+peptide\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the minimum matched peptide number for a protein to be considered. 
+
+\begin{DoxyReturn}{Returns}
+The minimum matched peptide number. 
+\end{DoxyReturn}
+
+
+Definition at line 2407 of file isodistrib.\+cpp.
+
+
+
+References minimum\+\_\+matched\+\_\+peptide\+\_\+number.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_ad628b2f2734fb64109c33bfc08f0cfed}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_minimum\_peptide\_number@{get\_minimum\_peptide\_number}}
+\index{get\_minimum\_peptide\_number@{get\_minimum\_peptide\_number}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_minimum\_peptide\_number()}
+{\footnotesize\ttfamily unsigned int get\+\_\+minimum\+\_\+peptide\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the minimum peptide number for a protein to be considered. 
+
+\begin{DoxyReturn}{Returns}
+The minimum peptide number. 
+\end{DoxyReturn}
+
+
+Definition at line 2386 of file isodistrib.\+cpp.
+
+
+
+References minimum\+\_\+peptide\+\_\+number.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_a5627442fd2144d785918fa5ece0be3a1}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_peptide\_maximum\_mass@{get\_peptide\_maximum\_mass}}
+\index{get\_peptide\_maximum\_mass@{get\_peptide\_maximum\_mass}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_peptide\_maximum\_mass()}
+{\footnotesize\ttfamily int get\+\_\+peptide\+\_\+maximum\+\_\+mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the peptide maximum mass. 
+
+\begin{DoxyReturn}{Returns}
+The peptide maximum mass. 
+\end{DoxyReturn}
+
+
+Definition at line 2303 of file isodistrib.\+cpp.
+
+
+
+References peptide\+\_\+maximum\+\_\+mass.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_a309726b2dec37dc12d125d74111563f3}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_peptide\_precision@{get\_peptide\_precision}}
+\index{get\_peptide\_precision@{get\_peptide\_precision}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_peptide\_precision()}
+{\footnotesize\ttfamily int get\+\_\+peptide\+\_\+precision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the peptide precision. 
+
+\begin{DoxyReturn}{Returns}
+The peptide precision. 
+\end{DoxyReturn}
+
+
+Definition at line 2309 of file isodistrib.\+cpp.
+
+
+
+References peptide\+\_\+precision.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_aa54b53cc86db402cb7fa07ab12a0327f}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_peptide\_score\_threshold@{get\_peptide\_score\_threshold}}
+\index{get\_peptide\_score\_threshold@{get\_peptide\_score\_threshold}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_peptide\_score\_threshold()}
+{\footnotesize\ttfamily double get\+\_\+peptide\+\_\+score\+\_\+threshold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the peptide score threshold to make difference between \char`\"{}good\char`\"{} and \char`\"{}bad\char`\"{} peptides. 
+
+\begin{DoxyReturn}{Returns}
+The peptide score threshold. 
+\end{DoxyReturn}
+
+
+Definition at line 2413 of file isodistrib.\+cpp.
+
+
+
+References peptide\+\_\+score\+\_\+threshold.
+
+
+
+Referenced by fprintf\+\_\+ascq\+\_\+me\+\_\+results().
+
+\mbox{\label{isodistrib_8cpp_ab945fa5b633a6771b6000253a604a6cf}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_scoring\_sensitivity@{get\_scoring\_sensitivity}}
+\index{get\_scoring\_sensitivity@{get\_scoring\_sensitivity}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_scoring\_sensitivity()}
+{\footnotesize\ttfamily double get\+\_\+scoring\+\_\+sensitivity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the score sensitivity. 
+
+\begin{DoxyReturn}{Returns}
+The sensitivity. 
+\end{DoxyReturn}
+
+
+Definition at line 2214 of file isodistrib.\+cpp.
+
+
+
+References sensitivity.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_a71e0bd8b2e384b0aed8b380aa450ff24}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_simulated\_spectra\_filename@{get\_simulated\_spectra\_filename}}
+\index{get\_simulated\_spectra\_filename@{get\_simulated\_spectra\_filename}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_simulated\_spectra\_filename()}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+simulated\+\_\+spectra\+\_\+filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the name of file containing the simulated spectra. 
+
+\begin{DoxyReturn}{Returns}
+The file name. 
+\end{DoxyReturn}
+
+
+Definition at line 2152 of file isodistrib.\+cpp.
+
+
+
+References simulated\+\_\+spectra\+\_\+file.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_a5072600af7f4fb91db3b553dad5f1a97}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_spectrum\_maximum\_mass@{get\_spectrum\_maximum\_mass}}
+\index{get\_spectrum\_maximum\_mass@{get\_spectrum\_maximum\_mass}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_spectrum\_maximum\_mass()}
+{\footnotesize\ttfamily int get\+\_\+spectrum\+\_\+maximum\+\_\+mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the maximum mass authorized for the spectrum. 
+
+\begin{DoxyReturn}{Returns}
+The maximum mass. 
+\end{DoxyReturn}
+
+
+Definition at line 2158 of file isodistrib.\+cpp.
+
+
+
+References spectrum\+\_\+maximum\+\_\+mass.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_af32525b8ecc53ed672df8269aac9a3e4}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_spectrum\_original\_description@{get\_spectrum\_original\_description}}
+\index{get\_spectrum\_original\_description@{get\_spectrum\_original\_description}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_spectrum\_original\_description()}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+spectrum\+\_\+original\+\_\+description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the original description of the current spectrum. 
+
+\begin{DoxyReturn}{Returns}
+The original description. 
+\end{DoxyReturn}
+
+
+Definition at line 2050 of file isodistrib.\+cpp.
+
+
+
+References spectrum\+\_\+original\+\_\+description.
+
+
+
+Referenced by main().
+
+\mbox{\label{isodistrib_8cpp_a032ad17e19c5297a301aeec924e51bef}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_spectrum\_original\_sequence@{get\_spectrum\_original\_sequence}}
+\index{get\_spectrum\_original\_sequence@{get\_spectrum\_original\_sequence}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_spectrum\_original\_sequence()}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+spectrum\+\_\+original\+\_\+sequence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the original sequence of the current spectrum. 
+
+\begin{DoxyReturn}{Returns}
+The original sequence. 
+\end{DoxyReturn}
+
+
+Definition at line 2056 of file isodistrib.\+cpp.
+
+
+
+References spectrum\+\_\+original\+\_\+sequence.
+
+
+
+Referenced by main().
+
+\mbox{\label{isodistrib_8cpp_a58be87f6a9f200f0782a96c0590c2900}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_spectrum\_precision@{get\_spectrum\_precision}}
+\index{get\_spectrum\_precision@{get\_spectrum\_precision}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_spectrum\_precision()}
+{\footnotesize\ttfamily int get\+\_\+spectrum\+\_\+precision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the spetrum precision. 
+
+\begin{DoxyReturn}{Returns}
+The precision. 
+\end{DoxyReturn}
+
+
+Definition at line 2170 of file isodistrib.\+cpp.
+
+
+
+References N\+\_\+\+SPEC.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_a542c05d42fd715458dd9ad0966c3c66d}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_spectrum\_size@{get\_spectrum\_size}}
+\index{get\_spectrum\_size@{get\_spectrum\_size}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_spectrum\_size()}
+{\footnotesize\ttfamily int get\+\_\+spectrum\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the size of the array that contains the spectrum. 
+
+\begin{DoxyReturn}{Returns}
+The size. 
+\end{DoxyReturn}
+
+
+Definition at line 2038 of file isodistrib.\+cpp.
+
+
+
+References N\+\_\+\+SPEC.
+
+\mbox{\label{isodistrib_8cpp_a76cc0d8f9acfd53a238f9f065c0a8e63}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_step@{get\_step}}
+\index{get\_step@{get\_step}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_step()}
+{\footnotesize\ttfamily double get\+\_\+step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the spectra array step (distance between two spectrum points). 
+
+\begin{DoxyReturn}{Returns}
+The step. 
+\end{DoxyReturn}
+
+
+Definition at line 2044 of file isodistrib.\+cpp.
+
+
+
+References step.
+
+
+
+Referenced by fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+table\+\_\+form().
+
+\mbox{\label{isodistrib_8cpp_a6240ae796878a15e2a1ac6d466ccd932}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_t\_X\_atom@{get\_t\_X\_atom}}
+\index{get\_t\_X\_atom@{get\_t\_X\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_t\_X\_atom()}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$ get\+\_\+t\+\_\+\+X\+\_\+atom (\begin{DoxyParamCaption}\item[{char $\ast$}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Tool function which returns the complex\+\_\+t$\ast$ t\+\_\+\+X\+\_\+atom associated to a symbol or NULL if the symbol has not a associated t\+\_\+\+X\+\_\+atom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The associated t\+\_\+\+X\+\_\+atom or NULL. 
+\end{DoxyReturn}
+
+
+Definition at line 1416 of file isodistrib.\+cpp.
+
+
+
+References symbol, t\+\_\+\+C\+\_\+atom, t\+\_\+\+H\+\_\+atom, t\+\_\+\+N\+\_\+atom, t\+\_\+\+O\+\_\+atom, t\+\_\+\+S\+\_\+atom, and t\+\_\+\+Se\+\_\+atom.
+
+
+
+Referenced by optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{isodistrib_8cpp_ac00cd46f88ed040300cab2ede62d9dea}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_theo\_spectrum@{get\_theo\_spectrum}}
+\index{get\_theo\_spectrum@{get\_theo\_spectrum}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_theo\_spectrum()}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t}$\ast$ get\+\_\+theo\+\_\+spectrum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to gain access to the simulated spectrum. 
+
+\begin{DoxyReturn}{Returns}
+The theoretical spectrum. 
+\end{DoxyReturn}
+
+
+Definition at line 2020 of file isodistrib.\+cpp.
+
+
+
+References result.
+
+
+
+Referenced by main().
+
+\mbox{\label{isodistrib_8cpp_a557f7a689615e673776adb76de5a96c7}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_threshold@{get\_threshold}}
+\index{get\_threshold@{get\_threshold}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_threshold()}
+{\footnotesize\ttfamily double get\+\_\+threshold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to obtain the threshold. 
+
+\begin{DoxyReturn}{Returns}
+The threshold. 
+\end{DoxyReturn}
+
+
+Definition at line 2032 of file isodistrib.\+cpp.
+
+
+
+References threshold.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{isodistrib_8cpp_a68d824f98b6ededcc81485dc6eb8b4a2}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!get\_X\_atom@{get\_X\_atom}}
+\index{get\_X\_atom@{get\_X\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{get\_X\_atom()}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$$\ast$ get\+\_\+\+X\+\_\+atom (\begin{DoxyParamCaption}\item[{char $\ast$}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Tool function which returns the complex\+\_\+t$\ast$$\ast$ X\+\_\+atom associated to a symbol or NULL if the symbol has not an associated X\+\_\+atom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The associated X\+\_\+atom or NULL. 
+\end{DoxyReturn}
+
+
+Definition at line 1383 of file isodistrib.\+cpp.
+
+
+
+References C\+\_\+atom, H\+\_\+atom, N\+\_\+atom, O\+\_\+atom, S\+\_\+atom, Se\+\_\+atom, and symbol.
+
+
+
+Referenced by optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{isodistrib_8cpp_a2007c301010fc4d9262edfe7242bdf9d}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!init\_distrib@{init\_distrib}}
+\index{init\_distrib@{init\_distrib}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{init\_distrib()}
+{\footnotesize\ttfamily void init\+\_\+distrib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which initializes the parameters and allocates the useful structures. 
+
+
+
+Definition at line 336 of file isodistrib.\+cpp.
+
+
+
+References atom\+\_\+nb\+\_\+data\+\_\+amu, atom\+\_\+step, C\+\_\+atom, C\+\_\+atom\+\_\+quantity, cdft(), complex\+\_\+multiplication(), formula\+::comps, composition\+::element, error(), free\+\_\+formula(), gauss, gauss\+\_\+param, gaussian, get\+\_\+element\+\_\+table(), get\+\_\+element\+\_\+table\+\_\+size(), H\+\_\+atom, H\+\_\+atom\+\_\+quantity, complex\+::\+Im, ip, is\+\_\+distribution\+\_\+initialised, is\+\_\+verbose\+\_\+mode\+\_\+activated(), isotop\+::isotopic\+\_\+composition, element\+::isotops, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, N\+\_\+atom, N\+\_\+atom\+\_\+quantity, N\+\_\+\+PEPT, N\+\_\+\+SPEC, nb\+\_\+data\+\_\+amu, element\+::nb\+\_\+isotops, O\+\_\+atom, O\+\_\+atom\+\_\+quantity, peptide\+\_\+maximum\+\_\+mass, peptide\+\_\+precision, complex\+::\+Re, read\+\_\+formula(), isotop\+::relative\+\_\+mass, result, S\+\_\+atom, S\+\_\+atom\+\_\+quantity, Se\+\_\+atom, Se\+\_\+atom\+\_\+quantity, spectrum\+\_\+maximum\+\_\+mass, step, t\+\_\+atom, t\+\_\+\+C\+\_\+atom, t\+\_\+exp\+\_\+spec, t\+\_\+\+H\+\_\+atom, t\+\_\+\+N\+\_\+atom, t\+\_\+\+O\+\_\+atom, t\+\_\+peptide, t\+\_\+\+S\+\_\+atom, t\+\_\+\+Se\+\_\+atom, t\+\_\+shifted\+\_\+peptide, TRUE, and w.
+
+
+
+Referenced by load\+\_\+string\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{isodistrib_8cpp_a2007c301010fc4d9262edfe7242bdf9d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a5c39c88fa3c8878e0b6b847f0bd04dad}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!integral\_normalization@{integral\_normalization}}
+\index{integral\_normalization@{integral\_normalization}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{integral\_normalization()}
+{\footnotesize\ttfamily void integral\+\_\+normalization (\begin{DoxyParamCaption}\item[{double}]{integral\+\_\+value,  }\item[{int}]{size,  }\item[{\textbf{ complex\+\_\+t} $\ast$}]{t\+\_\+complex }\end{DoxyParamCaption})}
+
+
+
+Procedure which makes a normalization of a data array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em integral\+\_\+value} & The used integral value. \\
+\hline
+{\em size} & The t\+\_\+complex structure size. \\
+\hline
+{\em t\+\_\+complex} & The data to normalize. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1449 of file isodistrib.\+cpp.
+
+
+
+References complex\+::\+Re.
+
+
+
+Referenced by optimized\+\_\+isotopic\+\_\+distribution(), and read\+\_\+spectrum().
+
+\mbox{\label{isodistrib_8cpp_a34823e33bc7a8505b63c96fa711892be}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!is\_simulated\_wanted\_protein@{is\_simulated\_wanted\_protein}}
+\index{is\_simulated\_wanted\_protein@{is\_simulated\_wanted\_protein}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{is\_simulated\_wanted\_protein()}
+{\footnotesize\ttfamily int is\+\_\+simulated\+\_\+wanted\+\_\+protein (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which indicates if the current loaded protein corresponding to the specie. 
+
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE (see \doxyref{util.\+h}{p.}{util_8h}). 
+\end{DoxyReturn}
+
+
+Definition at line 2182 of file isodistrib.\+cpp.
+
+
+
+References error(), get\+\_\+specie(), spectrum\+\_\+original\+\_\+description, TRUE, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{isodistrib_8cpp_a34823e33bc7a8505b63c96fa711892be_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a1db5b73f1db315b3a7f4aad7af292a6f}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!next\_simulated\_spectrum@{next\_simulated\_spectrum}}
+\index{next\_simulated\_spectrum@{next\_simulated\_spectrum}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{next\_simulated\_spectrum()}
+{\footnotesize\ttfamily int next\+\_\+simulated\+\_\+spectrum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which loads the next simulated spectrum. 
+
+\begin{DoxyWarning}{Warning}
+This function must be called after read\+\_\+simulated\+\_\+spectrum, not before. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE, Does a protein have been loaded ? 
+\end{DoxyReturn}
+
+
+Definition at line 1813 of file isodistrib.\+cpp.
+
+
+
+References error(), FALSE, complex\+::\+Im, IO\+\_\+\+ERROR, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, N\+\_\+\+SPEC, complex\+::\+Re, result, simulated\+\_\+spectra, spectrum\+\_\+original\+\_\+description, spectrum\+\_\+original\+\_\+sequence, step, TRUE, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{isodistrib_8cpp_a1db5b73f1db315b3a7f4aad7af292a6f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_aceaafa0029b035baca9dc94264091bad}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!optimized\_isotopic\_distribution@{optimized\_isotopic\_distribution}}
+\index{optimized\_isotopic\_distribution@{optimized\_isotopic\_distribution}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{optimized\_isotopic\_distribution()}
+{\footnotesize\ttfamily double optimized\+\_\+isotopic\+\_\+distribution (\begin{DoxyParamCaption}\item[{\textbf{ formula\+\_\+t} $\ast$}]{peptides,  }\item[{int}]{nb\+\_\+peptides }\end{DoxyParamCaption})}
+
+
+
+Function which calculates the isotopic distribution of a peptide list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em peptides} & The peptide list. \\
+\hline
+{\em nb\+\_\+peptides} & The peptide number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total score of the protein corresponding to the peptide list. 
+\end{DoxyReturn}
+!!! The 2 last mass are thought to belong the main isotopic peak !!!!
+
+!!! The 2 last mass are thought to belong the main isotopic peak !!!!
+
+Definition at line 1029 of file isodistrib.\+cpp.
+
+
+
+References atom\+\_\+step, cdft(), complex\+\_\+multiplication(), compute\+\_\+correlation(), copy\+\_\+composition(), current\+\_\+peptide\+\_\+score\+\_\+save, current\+\_\+peptide\+\_\+score\+\_\+size, composition\+::element, error(), EXECUTION\+\_\+\+ERROR, free\+\_\+composition(), gauss, get\+\_\+atom\+\_\+quantity(), get\+\_\+t\+\_\+\+X\+\_\+atom(), get\+\_\+weight(), get\+\_\+\+X\+\_\+atom(), complex\+::\+Im, integral\+\_\+normalization(), ip, is\+\_\+equivalent\+\_\+to\+\_\+another(), is\+\_\+verbose\+\_\+mode\+\_\+activated(), isotop\+::isotopic\+\_\+composition, element\+::isotops, max\+\_\+experimental\+\_\+mass, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, min\+\_\+experimental\+\_\+mass, minimum\+\_\+matched\+\_\+peptide\+\_\+number, minimum\+\_\+peptide\+\_\+number, N\+\_\+\+PEPT, N\+\_\+\+SPEC, nb\+\_\+data\+\_\+amu, element\+::nb\+\_\+isotops, peptide\+\_\+maximum\+\_\+mass, peptide\+\_\+precision, peptide\+\_\+score\+\_\+threshold, peptides, composition\+::quantity, complex\+::\+Re, isotop\+::relative\+\_\+mass, result, step, element\+::symbol, t\+\_\+atom, t\+\_\+peptide, t\+\_\+shifted\+\_\+peptide, threshold, TRUE, and w.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{isodistrib_8cpp_aceaafa0029b035baca9dc94264091bad_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a568b20a29dcf5b8c763eceb09e8ff45a}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!penalization\_factor@{penalization\_factor}}
+\index{penalization\_factor@{penalization\_factor}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{penalization\_factor()}
+{\footnotesize\ttfamily double penalization\+\_\+factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which gives a penalize factor corresponding to all the no need data from the simulated spectrum. 
+
+\begin{DoxyReturn}{Returns}
+The penalization score. 
+\end{DoxyReturn}
+
+
+Definition at line 2351 of file isodistrib.\+cpp.
+
+
+
+References max\+\_\+experimental\+\_\+mass, min\+\_\+experimental\+\_\+mass, complex\+::\+Re, result, step, t\+\_\+exp\+\_\+spec, threshold, and variation\+\_\+threshold.
+
+\mbox{\label{isodistrib_8cpp_a7c337dbc36b35dca41d3ca7c7d09b66f}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!read\_simulated\_spectrum@{read\_simulated\_spectrum}}
+\index{read\_simulated\_spectrum@{read\_simulated\_spectrum}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{read\_simulated\_spectrum()}
+{\footnotesize\ttfamily void read\+\_\+simulated\+\_\+spectrum (\begin{DoxyParamCaption}\item[{const char $\ast$}]{spectrum\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to open the file which contains theoretical spectra. 
+
+\begin{DoxyWarning}{Warning}
+This procedure opens only the file and don\textquotesingle{}t load any data. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em spectrum\+\_\+file} & The name of the file which contains simulated spectra. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1795 of file isodistrib.\+cpp.
+
+
+
+References error(), IO\+\_\+\+ERROR, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, simulated\+\_\+spectra, and simulated\+\_\+spectra\+\_\+file.
+
+
+
+Referenced by load\+\_\+string\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{isodistrib_8cpp_a7c337dbc36b35dca41d3ca7c7d09b66f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a37c6db29ca449b3a6f88792a6c8189e0}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!read\_spectrum@{read\_spectrum}}
+\index{read\_spectrum@{read\_spectrum}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{read\_spectrum()}
+{\footnotesize\ttfamily void read\+\_\+spectrum (\begin{DoxyParamCaption}\item[{const char $\ast$}]{spectrum\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Procedure which loads a spectrum from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spectrum\+\_\+file} & The spectrum file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1514 of file isodistrib.\+cpp.
+
+
+
+References error(), experimental\+\_\+file, FALSE, complex\+::\+Im, integral\+\_\+normalization(), IO\+\_\+\+ERROR, is\+\_\+verbose\+\_\+mode\+\_\+activated(), jump\+\_\+commentaries(), max\+\_\+experimental\+\_\+mass, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, min\+\_\+experimental\+\_\+mass, N\+\_\+\+SPEC, complex\+::\+Re, step, t\+\_\+exp\+\_\+spec, TRUE, USAGE\+\_\+\+ERROR, variation\+\_\+threshold, and WARNING.
+
+
+
+Referenced by load\+\_\+string\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{isodistrib_8cpp_a37c6db29ca449b3a6f88792a6c8189e0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_ac45d49a9241f2d73d4e4dd775c990da0}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!set\_C\_atom\_quantity@{set\_C\_atom\_quantity}}
+\index{set\_C\_atom\_quantity@{set\_C\_atom\_quantity}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{set\_C\_atom\_quantity()}
+{\footnotesize\ttfamily void set\+\_\+\+C\+\_\+atom\+\_\+quantity (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+quantity }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to modify the quantity of C atom for the initialisation process. 
+
+\begin{DoxyWarning}{Warning}
+The call to this procedure will change the H, O, N and S quantities with the corresponding factor $\ast$4, /4, /2 and /8.~\newline
+ The call is refused if the distribution has already been initialised. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+quantity} & The new atom C quantity. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2062 of file isodistrib.\+cpp.
+
+
+
+References C\+\_\+atom, C\+\_\+atom\+\_\+quantity, error(), H\+\_\+atom\+\_\+quantity, N\+\_\+atom\+\_\+quantity, O\+\_\+atom\+\_\+quantity, S\+\_\+atom\+\_\+quantity, Se\+\_\+atom\+\_\+quantity, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by load\+\_\+int\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{isodistrib_8cpp_ac45d49a9241f2d73d4e4dd775c990da0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_abc823b4b4a27ec3970f9171a32d65b22}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!set\_exp\_spectrum@{set\_exp\_spectrum}}
+\index{set\_exp\_spectrum@{set\_exp\_spectrum}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{set\_exp\_spectrum()}
+{\footnotesize\ttfamily void set\+\_\+exp\+\_\+spectrum (\begin{DoxyParamCaption}\item[{\textbf{ complex\+\_\+t} $\ast$}]{spectrum }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to set manually the experimental spectrum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spectrum} & The experimental spectrum. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1765 of file isodistrib.\+cpp.
+
+
+
+References error(), complex\+::\+Im, N\+\_\+\+SPEC, complex\+::\+Re, t\+\_\+exp\+\_\+spec, and USAGE\+\_\+\+ERROR.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{isodistrib_8cpp_abc823b4b4a27ec3970f9171a32d65b22_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a74145f64a708f96625f7e46c90d2b823}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!set\_gaussian\_value@{set\_gaussian\_value}}
+\index{set\_gaussian\_value@{set\_gaussian\_value}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{set\_gaussian\_value()}
+{\footnotesize\ttfamily void set\+\_\+gaussian\+\_\+value (\begin{DoxyParamCaption}\item[{double}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to modify the gaussian value. 
+
+\begin{DoxyWarning}{Warning}
+The call is refused if the procedure init\+\_\+distrib has been already used. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new gaussian value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2120 of file isodistrib.\+cpp.
+
+
+
+References error(), gaussian, N\+\_\+\+PEPT, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by load\+\_\+float\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{isodistrib_8cpp_a74145f64a708f96625f7e46c90d2b823_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a18bc0989ef001e5b3db821a38738f21a}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!set\_maximum\_mass@{set\_maximum\_mass}}
+\index{set\_maximum\_mass@{set\_maximum\_mass}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{set\_maximum\_mass()}
+{\footnotesize\ttfamily void set\+\_\+maximum\+\_\+mass (\begin{DoxyParamCaption}\item[{double}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to modify the maximum mass for the peptides. 
+
+\begin{DoxyWarning}{Warning}
+The call is refused if the procedure init\+\_\+distrib has been already used. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new maximum mass. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2242 of file isodistrib.\+cpp.
+
+
+
+References error(), max\+\_\+experimental\+\_\+mass, N\+\_\+\+PEPT, spectrum\+\_\+maximum\+\_\+mass, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by load\+\_\+float\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{isodistrib_8cpp_a18bc0989ef001e5b3db821a38738f21a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_ae5def3be3b71b0591b0e792edea41cbd}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!set\_minimum\_mass@{set\_minimum\_mass}}
+\index{set\_minimum\_mass@{set\_minimum\_mass}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{set\_minimum\_mass()}
+{\footnotesize\ttfamily void set\+\_\+minimum\+\_\+mass (\begin{DoxyParamCaption}\item[{double}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to modify the minimum mass for the peptides. 
+
+\begin{DoxyWarning}{Warning}
+The call is refused if the procedure init\+\_\+distrib has been already used. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new minimum mass. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2220 of file isodistrib.\+cpp.
+
+
+
+References error(), min\+\_\+experimental\+\_\+mass, N\+\_\+\+PEPT, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by load\+\_\+float\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{isodistrib_8cpp_ae5def3be3b71b0591b0e792edea41cbd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a40762cc263af59ee19b2fe266e90a820}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!set\_minimum\_matched\_peptide\_number@{set\_minimum\_matched\_peptide\_number}}
+\index{set\_minimum\_matched\_peptide\_number@{set\_minimum\_matched\_peptide\_number}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{set\_minimum\_matched\_peptide\_number()}
+{\footnotesize\ttfamily void set\+\_\+minimum\+\_\+matched\+\_\+peptide\+\_\+number (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to modify the minimum matched peptide number needed to a protein to be considered. 
+
+\begin{DoxyWarning}{Warning}
+The call is refused if the procedure is\+\_\+parsing\+\_\+started (see \doxyref{seqio.\+h}{p.}{seqio_8h}/.cpp) return TRUE. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new minimum matched peptide number. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2392 of file isodistrib.\+cpp.
+
+
+
+References error(), is\+\_\+parsing\+\_\+started(), minimum\+\_\+matched\+\_\+peptide\+\_\+number, TRUE, and WARNING.
+
+
+
+Referenced by load\+\_\+unsigned\+\_\+int\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{isodistrib_8cpp_a40762cc263af59ee19b2fe266e90a820_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a3e34ebba1c23dc688b02d93662f2b39c}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!set\_minimum\_peptide\_number@{set\_minimum\_peptide\_number}}
+\index{set\_minimum\_peptide\_number@{set\_minimum\_peptide\_number}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{set\_minimum\_peptide\_number()}
+{\footnotesize\ttfamily void set\+\_\+minimum\+\_\+peptide\+\_\+number (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to modify the minimum peptide number needed to a protein to be considered. 
+
+\begin{DoxyWarning}{Warning}
+The call is refused if the procedure is\+\_\+parsing\+\_\+started (see \doxyref{seqio.\+h}{p.}{seqio_8h}/.cpp) return TRUE. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new minimum peptide number. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2371 of file isodistrib.\+cpp.
+
+
+
+References error(), is\+\_\+parsing\+\_\+started(), minimum\+\_\+peptide\+\_\+number, TRUE, and WARNING.
+
+
+
+Referenced by load\+\_\+unsigned\+\_\+int\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{isodistrib_8cpp_a3e34ebba1c23dc688b02d93662f2b39c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_acc24be590f61c9cd63c3370db57d5386}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!set\_peptide\_maximum\_mass@{set\_peptide\_maximum\_mass}}
+\index{set\_peptide\_maximum\_mass@{set\_peptide\_maximum\_mass}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{set\_peptide\_maximum\_mass()}
+{\footnotesize\ttfamily void set\+\_\+peptide\+\_\+maximum\+\_\+mass (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to modify the peptide maximum mass. 
+
+\begin{DoxyWarning}{Warning}
+The call is refused if the procedure init\+\_\+distrib has been already used. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new peptide maximum mass. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2268 of file isodistrib.\+cpp.
+
+
+
+References error(), N\+\_\+\+PEPT, peptide\+\_\+maximum\+\_\+mass, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by load\+\_\+int\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{isodistrib_8cpp_acc24be590f61c9cd63c3370db57d5386_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a3a73796c6c68c9a716a277ad852c2f91}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!set\_peptide\_precision@{set\_peptide\_precision}}
+\index{set\_peptide\_precision@{set\_peptide\_precision}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{set\_peptide\_precision()}
+{\footnotesize\ttfamily void set\+\_\+peptide\+\_\+precision (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to modify the peptide precision. 
+
+\begin{DoxyWarning}{Warning}
+The call is refused if the procedure init\+\_\+distrib has been already used. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new peptide precision. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2284 of file isodistrib.\+cpp.
+
+
+
+References error(), N\+\_\+\+PEPT, peptide\+\_\+precision, USAGE\+\_\+\+ERROR, and WARNING.
+
+
+
+Referenced by load\+\_\+int\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{isodistrib_8cpp_a3a73796c6c68c9a716a277ad852c2f91_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a9288cdfca8bb7bda77082a96aeccdffc}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!set\_precision@{set\_precision}}
+\index{set\_precision@{set\_precision}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{set\_precision()}
+{\footnotesize\ttfamily void set\+\_\+precision (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to modify the spectrum precision. 
+
+\begin{DoxyWarning}{Warning}
+The call is refused if the procedure init\+\_\+distrib has been already used. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new precision. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2136 of file isodistrib.\+cpp.
+
+
+
+References error(), N\+\_\+\+PEPT, N\+\_\+\+SPEC, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by load\+\_\+int\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{isodistrib_8cpp_a9288cdfca8bb7bda77082a96aeccdffc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a49ebf622a74b3d3d0552737f3bea487a}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!set\_scoring\_sensitivity@{set\_scoring\_sensitivity}}
+\index{set\_scoring\_sensitivity@{set\_scoring\_sensitivity}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{set\_scoring\_sensitivity()}
+{\footnotesize\ttfamily void set\+\_\+scoring\+\_\+sensitivity (\begin{DoxyParamCaption}\item[{double}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to modify the score sensitivity. 
+
+\begin{DoxyWarning}{Warning}
+The call is refused if the procedure init\+\_\+distrib has been already used. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new sensitivity. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2198 of file isodistrib.\+cpp.
+
+
+
+References error(), N\+\_\+\+PEPT, sensitivity, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by load\+\_\+float\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{isodistrib_8cpp_a49ebf622a74b3d3d0552737f3bea487a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a9afe717f063001dc81c4fdb96cd71b26}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!set\_spectrum\_maximum\_mass@{set\_spectrum\_maximum\_mass}}
+\index{set\_spectrum\_maximum\_mass@{set\_spectrum\_maximum\_mass}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{set\_spectrum\_maximum\_mass()}
+{\footnotesize\ttfamily void set\+\_\+spectrum\+\_\+maximum\+\_\+mass (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to modify the spectrum maximum mass. 
+
+\begin{DoxyWarning}{Warning}
+The call is refused if the procedure init\+\_\+distrib has been already used. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new maximum mass. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2104 of file isodistrib.\+cpp.
+
+
+
+References error(), N\+\_\+\+PEPT, spectrum\+\_\+maximum\+\_\+mass, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by load\+\_\+int\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{isodistrib_8cpp_a9afe717f063001dc81c4fdb96cd71b26_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{isodistrib_8cpp_a71e2228db775fe3946ad8561ff9c91fe}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!set\_threshold@{set\_threshold}}
+\index{set\_threshold@{set\_threshold}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{set\_threshold()}
+{\footnotesize\ttfamily void set\+\_\+threshold (\begin{DoxyParamCaption}\item[{double}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to set the threshold useful for the procedure write\+\_\+spectrum\+\_\+peak\+\_\+only and the scoring. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 2026 of file isodistrib.\+cpp.
+
+
+
+References threshold.
+
+
+
+Referenced by load\+\_\+float\+\_\+keyword().
+
+\mbox{\label{isodistrib_8cpp_a4ed631d1ffb3411481e66653c003b1de}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!write\_spectrum@{write\_spectrum}}
+\index{write\_spectrum@{write\_spectrum}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{write\_spectrum()}
+{\footnotesize\ttfamily void write\+\_\+spectrum (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{f,  }\item[{\textbf{ complex\+\_\+t} $\ast$}]{t\+\_\+complex,  }\item[{char $\ast$}]{entry }\end{DoxyParamCaption})}
+
+
+
+Procedure which writes a spectrum in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The file where the spectrum will be write. \\
+\hline
+{\em t\+\_\+complex} & The spectrum to save. \\
+\hline
+{\em entry} & The spectrum name. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1502 of file isodistrib.\+cpp.
+
+
+
+References N\+\_\+\+SPEC, and step.
+
+\mbox{\label{isodistrib_8cpp_afd25066aaa6f9bac326c3f3358f565ee}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!write\_spectrum\_cplx@{write\_spectrum\_cplx}}
+\index{write\_spectrum\_cplx@{write\_spectrum\_cplx}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{write\_spectrum\_cplx()}
+{\footnotesize\ttfamily void write\+\_\+spectrum\+\_\+cplx (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{f,  }\item[{\textbf{ complex\+\_\+t} $\ast$}]{t\+\_\+complex,  }\item[{char $\ast$}]{entry }\end{DoxyParamCaption})}
+
+
+
+Procedure which writes a module of data in a complex spectrum file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The file. \\
+\hline
+{\em t\+\_\+complex} & The spectrum. \\
+\hline
+{\em entry} & The spectrum name. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1490 of file isodistrib.\+cpp.
+
+
+
+References N\+\_\+\+SPEC, and step.
+
+\mbox{\label{isodistrib_8cpp_acd2f8223c679b9df1e38e029cedd0d0c}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!write\_spectrum\_peak\_only@{write\_spectrum\_peak\_only}}
+\index{write\_spectrum\_peak\_only@{write\_spectrum\_peak\_only}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{write\_spectrum\_peak\_only()}
+{\footnotesize\ttfamily void write\+\_\+spectrum\+\_\+peak\+\_\+only (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file,  }\item[{\textbf{ complex\+\_\+t} $\ast$}]{spectrum,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Procedure which writes only the spectrum peaks in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file where the spectrum will be save. \\
+\hline
+{\em spectrum} & The spectrum. \\
+\hline
+{\em name} & The spectrum name. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1781 of file isodistrib.\+cpp.
+
+
+
+References N\+\_\+\+SPEC, step, and threshold.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{isodistrib_8cpp_a6aa7c428218fe589d0c167bde6c7b218}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!atom\_nb\_data\_amu@{atom\_nb\_data\_amu}}
+\index{atom\_nb\_data\_amu@{atom\_nb\_data\_amu}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{atom\_nb\_data\_amu}
+{\footnotesize\ttfamily int atom\+\_\+nb\+\_\+data\+\_\+amu}
+
+
+
+Number of points between each mass unit in the atom spectrum. 
+
+
+
+Definition at line 202 of file isodistrib.\+cpp.
+
+
+
+Referenced by init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_a661596f2f29b4b946ff0d8f485530c0a}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!atom\_step@{atom\_step}}
+\index{atom\_step@{atom\_step}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{atom\_step}
+{\footnotesize\ttfamily double atom\+\_\+step}
+
+
+
+The step between two points in the atom spectrum. 
+
+
+
+Definition at line 187 of file isodistrib.\+cpp.
+
+
+
+Referenced by init\+\_\+distrib(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{isodistrib_8cpp_af2da0133f587e75eda3570849c675515}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!C\_atom@{C\_atom}}
+\index{C\_atom@{C\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{C\_atom}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$$\ast$ C\+\_\+atom =NULL}
+
+
+
+All the saved distribution of the C atom. 
+
+
+
+Definition at line 252 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+\+X\+\_\+atom(), init\+\_\+distrib(), and set\+\_\+\+C\+\_\+atom\+\_\+quantity().
+
+\mbox{\label{isodistrib_8cpp_a158cbe28e4567195b1a9ce1d5a9c047e}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!C\_atom\_quantity@{C\_atom\_quantity}}
+\index{C\_atom\_quantity@{C\_atom\_quantity}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{C\_atom\_quantity}
+{\footnotesize\ttfamily int C\+\_\+atom\+\_\+quantity =1000}
+
+
+
+Maximum quantity of C atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation. 
+
+
+
+Definition at line 222 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+atom\+\_\+quantity(), init\+\_\+distrib(), and set\+\_\+\+C\+\_\+atom\+\_\+quantity().
+
+\mbox{\label{isodistrib_8cpp_afa42bfa872c3fe07b93489110fdebef0}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!current\_peptide\_score\_save@{current\_peptide\_score\_save}}
+\index{current\_peptide\_score\_save@{current\_peptide\_score\_save}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{current\_peptide\_score\_save}
+{\footnotesize\ttfamily double $\ast$ current\+\_\+peptide\+\_\+score\+\_\+save =NULL}
+
+
+
+The score of the peptide of the last protein considered. 
+
+
+
+Definition at line 312 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+current\+\_\+peptide\+\_\+score\+\_\+save(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{isodistrib_8cpp_a693c3913e270ffb9a514a55cfc0a7359}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!current\_peptide\_score\_size@{current\_peptide\_score\_size}}
+\index{current\_peptide\_score\_size@{current\_peptide\_score\_size}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{current\_peptide\_score\_size}
+{\footnotesize\ttfamily unsigned int current\+\_\+peptide\+\_\+score\+\_\+size =0}
+
+
+
+Size the of the current\+\_\+peptide\+\_\+score\+\_\+save array. 
+
+
+
+Definition at line 317 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+current\+\_\+peptide\+\_\+score\+\_\+size(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{isodistrib_8cpp_a31703737283c6aa2ba1b98365d6d2d08}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!experimental\_file@{experimental\_file}}
+\index{experimental\_file@{experimental\_file}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{experimental\_file}
+{\footnotesize\ttfamily char $\ast$ experimental\+\_\+file =NULL}
+
+
+
+The experimental spectrum fime. 
+
+
+
+Definition at line 157 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+experimental\+\_\+filename(), and read\+\_\+spectrum().
+
+\mbox{\label{isodistrib_8cpp_ade9f86083859fc1f4c1a512d85b915a5}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!gauss@{gauss}}
+\index{gauss@{gauss}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{gauss}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$ gauss}
+
+
+
+Complex array for the gaussian convolution. 
+
+
+
+Definition at line 72 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), init\+\_\+distrib(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{isodistrib_8cpp_ad8edf1f1b44041359328b6efe79e51ba}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!gauss\_param@{gauss\_param}}
+\index{gauss\_param@{gauss\_param}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{gauss\_param}
+{\footnotesize\ttfamily double gauss\+\_\+param}
+
+
+
+The gaussian parameter. 
+
+
+
+Definition at line 192 of file isodistrib.\+cpp.
+
+
+
+Referenced by init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_a89bbbc276db41d1c78209093ab95dbf4}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!gaussian@{gaussian}}
+\index{gaussian@{gaussian}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{gaussian}
+{\footnotesize\ttfamily double gaussian =0.\+30}
+
+
+
+The gaussian value. 
+
+
+
+Definition at line 92 of file isodistrib.\+cpp.
+
+
+
+Referenced by get\+\_\+gaussian\+\_\+value(), init\+\_\+distrib(), and set\+\_\+gaussian\+\_\+value().
+
+\mbox{\label{isodistrib_8cpp_aa45ae7fb1afd6be6e384224fdf226598}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!H\_atom@{H\_atom}}
+\index{H\_atom@{H\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{H\_atom}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$$\ast$ H\+\_\+atom =NULL}
+
+
+
+All the saved distribution of the H atom. 
+
+
+
+Definition at line 257 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+\+X\+\_\+atom(), and init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_a0ed7f52c5ef53dbe7678373633a06e7c}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!H\_atom\_quantity@{H\_atom\_quantity}}
+\index{H\_atom\_quantity@{H\_atom\_quantity}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{H\_atom\_quantity}
+{\footnotesize\ttfamily int H\+\_\+atom\+\_\+quantity =4000}
+
+
+
+Maximum quantity of H atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation. 
+
+
+
+Definition at line 227 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+atom\+\_\+quantity(), init\+\_\+distrib(), and set\+\_\+\+C\+\_\+atom\+\_\+quantity().
+
+\mbox{\label{isodistrib_8cpp_aa8edb34792a7f912fa1d51904941b7e7}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!ip@{ip}}
+\index{ip@{ip}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{ip}
+{\footnotesize\ttfamily int $\ast$ ip =NULL}
+
+
+
+A first variable needed for the fast fourier transform process. 
+
+
+
+Definition at line 212 of file isodistrib.\+cpp.
+
+
+
+Referenced by bitrv2(), bitrv2conj(), cdft(), ddct(), ddst(), dfct(), dfst(), free\+\_\+isodistrib(), init\+\_\+distrib(), makect(), makewt(), optimized\+\_\+isotopic\+\_\+distribution(), and rdft().
+
+\mbox{\label{isodistrib_8cpp_a1ee8e036c60c6ebc07404383c3beab79}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!is\_distribution\_initialised@{is\_distribution\_initialised}}
+\index{is\_distribution\_initialised@{is\_distribution\_initialised}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{is\_distribution\_initialised}
+{\footnotesize\ttfamily int is\+\_\+distribution\+\_\+initialised =\textbf{ FALSE}}
+
+
+
+Definition at line 57 of file isodistrib.\+cpp.
+
+
+
+Referenced by get\+\_\+distribution\+\_\+activation(), and init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_ab969a95f443f5a477b20a7c20b73b169}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!max\_experimental\_mass@{max\_experimental\_mass}}
+\index{max\_experimental\_mass@{max\_experimental\_mass}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{max\_experimental\_mass}
+{\footnotesize\ttfamily double max\+\_\+experimental\+\_\+mass =2500}
+
+
+
+The maximum authorized peptide mass. 
+
+
+
+Definition at line 137 of file isodistrib.\+cpp.
+
+
+
+Referenced by get\+\_\+maximum\+\_\+mass(), optimized\+\_\+isotopic\+\_\+distribution(), penalization\+\_\+factor(), read\+\_\+spectrum(), and set\+\_\+maximum\+\_\+mass().
+
+\mbox{\label{isodistrib_8cpp_a74ae0a79ef1e419dd2e93f333f470884}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!min\_experimental\_mass@{min\_experimental\_mass}}
+\index{min\_experimental\_mass@{min\_experimental\_mass}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{min\_experimental\_mass}
+{\footnotesize\ttfamily double min\+\_\+experimental\+\_\+mass =700}
+
+
+
+The minimum authorized peptide mass. 
+
+
+
+Definition at line 132 of file isodistrib.\+cpp.
+
+
+
+Referenced by get\+\_\+minimum\+\_\+mass(), optimized\+\_\+isotopic\+\_\+distribution(), penalization\+\_\+factor(), read\+\_\+spectrum(), and set\+\_\+minimum\+\_\+mass().
+
+\mbox{\label{isodistrib_8cpp_a6556faeaf48b0e14d08e66eb4093db28}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!minimum\_matched\_peptide\_number@{minimum\_matched\_peptide\_number}}
+\index{minimum\_matched\_peptide\_number@{minimum\_matched\_peptide\_number}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{minimum\_matched\_peptide\_number}
+{\footnotesize\ttfamily unsigned int minimum\+\_\+matched\+\_\+peptide\+\_\+number =3}
+
+
+
+The minimum number of peptides belonging to the \char`\"{}good\char`\"{} peptides for a protein to be considered. 
+
+
+
+Definition at line 127 of file isodistrib.\+cpp.
+
+
+
+Referenced by get\+\_\+minimum\+\_\+matched\+\_\+peptide\+\_\+number(), optimized\+\_\+isotopic\+\_\+distribution(), and set\+\_\+minimum\+\_\+matched\+\_\+peptide\+\_\+number().
+
+\mbox{\label{isodistrib_8cpp_a1e4ef0ceb80e0774ed5ffedcf35b6f1e}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!minimum\_peptide\_number@{minimum\_peptide\_number}}
+\index{minimum\_peptide\_number@{minimum\_peptide\_number}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{minimum\_peptide\_number}
+{\footnotesize\ttfamily unsigned int minimum\+\_\+peptide\+\_\+number =5}
+
+
+
+The minimum number of peptides that the digestion has to produced for a protein to be considered. 
+
+
+
+Definition at line 122 of file isodistrib.\+cpp.
+
+
+
+Referenced by get\+\_\+minimum\+\_\+peptide\+\_\+number(), optimized\+\_\+isotopic\+\_\+distribution(), and set\+\_\+minimum\+\_\+peptide\+\_\+number().
+
+\mbox{\label{isodistrib_8cpp_aae8b1579fe1057b65e2d88b767cf3cd0}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!N\_atom@{N\_atom}}
+\index{N\_atom@{N\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{N\_atom}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$$\ast$ N\+\_\+atom =NULL}
+
+
+
+All the saved distribution of the N atom. 
+
+
+
+Definition at line 272 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+\+X\+\_\+atom(), and init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_ac164701707f108ea3db13cf90cb24c1f}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!N\_atom\_quantity@{N\_atom\_quantity}}
+\index{N\_atom\_quantity@{N\_atom\_quantity}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{N\_atom\_quantity}
+{\footnotesize\ttfamily int N\+\_\+atom\+\_\+quantity =500}
+
+
+
+Maximum quantity of N atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation. 
+
+
+
+Definition at line 242 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+atom\+\_\+quantity(), init\+\_\+distrib(), and set\+\_\+\+C\+\_\+atom\+\_\+quantity().
+
+\mbox{\label{isodistrib_8cpp_a639f379ee08efaa41f65b75c4a7df8d7}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!N\_PEPT@{N\_PEPT}}
+\index{N\_PEPT@{N\_PEPT}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{N\_PEPT}
+{\footnotesize\ttfamily int N\+\_\+\+PEPT =0}
+
+
+
+The peptide spectrum precision. 
+
+
+
+Definition at line 102 of file isodistrib.\+cpp.
+
+
+
+Referenced by init\+\_\+distrib(), optimized\+\_\+isotopic\+\_\+distribution(), set\+\_\+gaussian\+\_\+value(), set\+\_\+maximum\+\_\+mass(), set\+\_\+minimum\+\_\+mass(), set\+\_\+peptide\+\_\+maximum\+\_\+mass(), set\+\_\+peptide\+\_\+precision(), set\+\_\+precision(), set\+\_\+scoring\+\_\+sensitivity(), and set\+\_\+spectrum\+\_\+maximum\+\_\+mass().
+
+\mbox{\label{isodistrib_8cpp_a1c4e4c76935bf27b39257837e5f6952f}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!N\_SPEC@{N\_SPEC}}
+\index{N\_SPEC@{N\_SPEC}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{N\_SPEC}
+{\footnotesize\ttfamily int N\+\_\+\+SPEC =65536}
+
+
+
+The spectrum precision. 
+
+
+
+Definition at line 97 of file isodistrib.\+cpp.
+
+
+
+Referenced by compute\+\_\+correlation(), copy\+\_\+spectrum(), get\+\_\+spectrum\+\_\+precision(), get\+\_\+spectrum\+\_\+size(), init\+\_\+distrib(), next\+\_\+simulated\+\_\+spectrum(), optimized\+\_\+isotopic\+\_\+distribution(), read\+\_\+spectrum(), set\+\_\+exp\+\_\+spectrum(), set\+\_\+precision(), write\+\_\+spectrum(), write\+\_\+spectrum\+\_\+cplx(), and write\+\_\+spectrum\+\_\+peak\+\_\+only().
+
+\mbox{\label{isodistrib_8cpp_a30bcabed76a0072fc648661db24d3d24}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!nb\_data\_amu@{nb\_data\_amu}}
+\index{nb\_data\_amu@{nb\_data\_amu}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{nb\_data\_amu}
+{\footnotesize\ttfamily int nb\+\_\+data\+\_\+amu}
+
+
+
+Number of points between each mass unit of a complete spectrum. 
+
+
+
+Definition at line 197 of file isodistrib.\+cpp.
+
+
+
+Referenced by init\+\_\+distrib(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{isodistrib_8cpp_ad0b70d229a426ea28900bc4206b18028}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!O\_atom@{O\_atom}}
+\index{O\_atom@{O\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{O\_atom}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$$\ast$ O\+\_\+atom =NULL}
+
+
+
+All the saved distribution of the O atom. 
+
+
+
+Definition at line 262 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+\+X\+\_\+atom(), and init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_a7e321eea538bd6cb6e94ac65df653ef5}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!O\_atom\_quantity@{O\_atom\_quantity}}
+\index{O\_atom\_quantity@{O\_atom\_quantity}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{O\_atom\_quantity}
+{\footnotesize\ttfamily int O\+\_\+atom\+\_\+quantity =250}
+
+
+
+Maximum quantity of O atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation. 
+
+
+
+Definition at line 232 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+atom\+\_\+quantity(), init\+\_\+distrib(), and set\+\_\+\+C\+\_\+atom\+\_\+quantity().
+
+\mbox{\label{isodistrib_8cpp_a89bf5e755d6b0fa4499c2b56e1223b97}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!peptide\_maximum\_mass@{peptide\_maximum\_mass}}
+\index{peptide\_maximum\_mass@{peptide\_maximum\_mass}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{peptide\_maximum\_mass}
+{\footnotesize\ttfamily int peptide\+\_\+maximum\+\_\+mass =16}
+
+
+
+The peptide spectrum maximum mass. 
+
+
+
+Definition at line 112 of file isodistrib.\+cpp.
+
+
+
+Referenced by get\+\_\+peptide\+\_\+maximum\+\_\+mass(), init\+\_\+distrib(), optimized\+\_\+isotopic\+\_\+distribution(), and set\+\_\+peptide\+\_\+maximum\+\_\+mass().
+
+\mbox{\label{isodistrib_8cpp_aca5086929cd9aaa87aba0e68d5b65f97}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!peptide\_precision@{peptide\_precision}}
+\index{peptide\_precision@{peptide\_precision}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{peptide\_precision}
+{\footnotesize\ttfamily int peptide\+\_\+precision =8}
+
+
+
+The peptide precision. 
+
+
+
+Definition at line 117 of file isodistrib.\+cpp.
+
+
+
+Referenced by get\+\_\+peptide\+\_\+precision(), init\+\_\+distrib(), optimized\+\_\+isotopic\+\_\+distribution(), and set\+\_\+peptide\+\_\+precision().
+
+\mbox{\label{isodistrib_8cpp_aa6d8e56293fb34cf361b6d3bd25bc6d9}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!peptide\_score\_threshold@{peptide\_score\_threshold}}
+\index{peptide\_score\_threshold@{peptide\_score\_threshold}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{peptide\_score\_threshold}
+{\footnotesize\ttfamily double peptide\+\_\+score\+\_\+threshold =0.\+0}
+
+
+
+The score threshold for consider a peptide has a good peptide or a bad peptide. 
+
+
+
+Definition at line 207 of file isodistrib.\+cpp.
+
+
+
+Referenced by get\+\_\+peptide\+\_\+score\+\_\+threshold(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{isodistrib_8cpp_a4b922a3ea1c05189f7c085174b811cbe}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!result@{result}}
+\index{result@{result}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{result}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$ result}
+
+
+
+Complex array for the theoretical spectrum. 
+
+
+
+Definition at line 67 of file isodistrib.\+cpp.
+
+
+
+Referenced by add\+\_\+chains(), free\+\_\+isodistrib(), get\+\_\+reversed\+\_\+sequence(), get\+\_\+theo\+\_\+spectrum(), init\+\_\+distrib(), next\+\_\+simulated\+\_\+spectrum(), optimized\+\_\+isotopic\+\_\+distribution(), and penalization\+\_\+factor().
+
+\mbox{\label{isodistrib_8cpp_a6b52c8ef208dc8a7b0c42bd532d70572}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!S\_atom@{S\_atom}}
+\index{S\_atom@{S\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{S\_atom}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$$\ast$ S\+\_\+atom =NULL}
+
+
+
+All the saved distribution of the S atom. 
+
+
+
+Definition at line 267 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+\+X\+\_\+atom(), and init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_a42958990f2676e4da5b7449a9a3d6573}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!S\_atom\_quantity@{S\_atom\_quantity}}
+\index{S\_atom\_quantity@{S\_atom\_quantity}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{S\_atom\_quantity}
+{\footnotesize\ttfamily int S\+\_\+atom\+\_\+quantity =125}
+
+
+
+Maximum quantity of S atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation. 
+
+
+
+Definition at line 237 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+atom\+\_\+quantity(), init\+\_\+distrib(), and set\+\_\+\+C\+\_\+atom\+\_\+quantity().
+
+\mbox{\label{isodistrib_8cpp_a876e8c563ba176193c69e8234894d6d9}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!Se\_atom@{Se\_atom}}
+\index{Se\_atom@{Se\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{Se\_atom}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$$\ast$ Se\+\_\+atom =NULL}
+
+
+
+All the saved distribution of the Se atom. 
+
+
+
+Definition at line 277 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+\+X\+\_\+atom(), and init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_a90af8d0835ad37556858d036e4d5d689}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!Se\_atom\_quantity@{Se\_atom\_quantity}}
+\index{Se\_atom\_quantity@{Se\_atom\_quantity}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{Se\_atom\_quantity}
+{\footnotesize\ttfamily int Se\+\_\+atom\+\_\+quantity =100}
+
+
+
+Maximum quantity of Se atoms (due to the U amino acid), the corresponding distributions from 1 to this value will be computed during the distribution initialisation. 
+
+
+
+Definition at line 247 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+atom\+\_\+quantity(), init\+\_\+distrib(), and set\+\_\+\+C\+\_\+atom\+\_\+quantity().
+
+\mbox{\label{isodistrib_8cpp_a3db15570a79682b98819ebfded08596b}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!sensitivity@{sensitivity}}
+\index{sensitivity@{sensitivity}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{sensitivity}
+{\footnotesize\ttfamily double sensitivity =0.\+5}
+
+
+
+The sensitivity. 
+
+
+
+Definition at line 147 of file isodistrib.\+cpp.
+
+
+
+Referenced by get\+\_\+scoring\+\_\+sensitivity(), and set\+\_\+scoring\+\_\+sensitivity().
+
+\mbox{\label{isodistrib_8cpp_a8759b3c0a848539e5abe5e5f40ad54cb}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!simulated\_spectra@{simulated\_spectra}}
+\index{simulated\_spectra@{simulated\_spectra}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{simulated\_spectra}
+{\footnotesize\ttfamily FILE $\ast$ simulated\+\_\+spectra =NULL}
+
+
+
+The file that contains the simulated spectrum database. 
+
+
+
+Definition at line 177 of file isodistrib.\+cpp.
+
+
+
+Referenced by next\+\_\+simulated\+\_\+spectrum(), and read\+\_\+simulated\+\_\+spectrum().
+
+\mbox{\label{isodistrib_8cpp_a6264098ddda63baaa7a73a3f2f7b5d1f}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!simulated\_spectra\_file@{simulated\_spectra\_file}}
+\index{simulated\_spectra\_file@{simulated\_spectra\_file}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{simulated\_spectra\_file}
+{\footnotesize\ttfamily char $\ast$ simulated\+\_\+spectra\+\_\+file =NULL}
+
+
+
+The name of the file that contains the spectum database. 
+
+
+
+Definition at line 172 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+simulated\+\_\+spectra\+\_\+filename(), and read\+\_\+simulated\+\_\+spectrum().
+
+\mbox{\label{isodistrib_8cpp_a61a8752e91d64bc923e493dc94dda749}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!spectrum\_maximum\_mass@{spectrum\_maximum\_mass}}
+\index{spectrum\_maximum\_mass@{spectrum\_maximum\_mass}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{spectrum\_maximum\_mass}
+{\footnotesize\ttfamily int spectrum\+\_\+maximum\+\_\+mass =4096}
+
+
+
+The spectrum maximum mass. 
+
+
+
+Definition at line 107 of file isodistrib.\+cpp.
+
+
+
+Referenced by get\+\_\+spectrum\+\_\+maximum\+\_\+mass(), init\+\_\+distrib(), set\+\_\+maximum\+\_\+mass(), and set\+\_\+spectrum\+\_\+maximum\+\_\+mass().
+
+\mbox{\label{isodistrib_8cpp_a9aed5f0f2d38ced36857eecc73e60509}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!spectrum\_original\_description@{spectrum\_original\_description}}
+\index{spectrum\_original\_description@{spectrum\_original\_description}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{spectrum\_original\_description}
+{\footnotesize\ttfamily char $\ast$ spectrum\+\_\+original\+\_\+description =NULL}
+
+
+
+The theoretical spectrum description (from FASTA database). 
+
+
+
+Definition at line 162 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+spectrum\+\_\+original\+\_\+description(), is\+\_\+simulated\+\_\+wanted\+\_\+protein(), and next\+\_\+simulated\+\_\+spectrum().
+
+\mbox{\label{isodistrib_8cpp_a722655b72d4a7194fc1927b4a9efaf61}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!spectrum\_original\_sequence@{spectrum\_original\_sequence}}
+\index{spectrum\_original\_sequence@{spectrum\_original\_sequence}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{spectrum\_original\_sequence}
+{\footnotesize\ttfamily char $\ast$ spectrum\+\_\+original\+\_\+sequence =NULL}
+
+
+
+The theoretical spectrum original sequence (from FASTA database). 
+
+
+
+Definition at line 167 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+spectrum\+\_\+original\+\_\+sequence(), and next\+\_\+simulated\+\_\+spectrum().
+
+\mbox{\label{isodistrib_8cpp_abc16e65f240ed0c8f3e876e8732c0a33}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!step@{step}}
+\index{step@{step}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{step}
+{\footnotesize\ttfamily int step}
+
+
+
+The step between two points in a complete spectrum. 
+
+
+
+Definition at line 182 of file isodistrib.\+cpp.
+
+
+
+Referenced by get\+\_\+step(), init\+\_\+distrib(), next\+\_\+simulated\+\_\+spectrum(), optimized\+\_\+isotopic\+\_\+distribution(), penalization\+\_\+factor(), read\+\_\+spectrum(), write\+\_\+spectrum(), write\+\_\+spectrum\+\_\+cplx(), and write\+\_\+spectrum\+\_\+peak\+\_\+only().
+
+\mbox{\label{isodistrib_8cpp_a6067f7e2d5ba17528c57079da5a4ee44}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!t\_atom@{t\_atom}}
+\index{t\_atom@{t\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{t\_atom}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$ t\+\_\+atom}
+
+
+
+Complex array for the atom spectrum. 
+
+
+
+Definition at line 62 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), init\+\_\+distrib(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{isodistrib_8cpp_a6215d7210bd095107c16080ef40d726b}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!t\_C\_atom@{t\_C\_atom}}
+\index{t\_C\_atom@{t\_C\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{t\_C\_atom}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$ t\+\_\+\+C\+\_\+atom =NULL}
+
+
+
+The distribution of C1. 
+
+
+
+Definition at line 282 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+t\+\_\+\+X\+\_\+atom(), and init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_a8030604eb6fa28814dd78588b40f9e87}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!t\_exp\_spec@{t\_exp\_spec}}
+\index{t\_exp\_spec@{t\_exp\_spec}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{t\_exp\_spec}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$ t\+\_\+exp\+\_\+spec}
+
+
+
+Complex array for the experimental spectrum. 
+
+
+
+Definition at line 87 of file isodistrib.\+cpp.
+
+
+
+Referenced by compute\+\_\+correlation(), free\+\_\+isodistrib(), get\+\_\+exp\+\_\+spectrum(), init\+\_\+distrib(), penalization\+\_\+factor(), read\+\_\+spectrum(), and set\+\_\+exp\+\_\+spectrum().
+
+\mbox{\label{isodistrib_8cpp_a009f782f57c6be0ccd947457b56b3b4c}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!t\_H\_atom@{t\_H\_atom}}
+\index{t\_H\_atom@{t\_H\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{t\_H\_atom}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$ t\+\_\+\+H\+\_\+atom =NULL}
+
+
+
+The distribution of H1. 
+
+
+
+Definition at line 287 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+t\+\_\+\+X\+\_\+atom(), and init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_ae139bd6ecb14362c5c69cab908048dc7}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!t\_N\_atom@{t\_N\_atom}}
+\index{t\_N\_atom@{t\_N\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{t\_N\_atom}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$ t\+\_\+\+N\+\_\+atom =NULL}
+
+
+
+The distribution of N1. 
+
+
+
+Definition at line 302 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+t\+\_\+\+X\+\_\+atom(), and init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_a4b68af9147f8c9fd67dfce87b852f010}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!t\_O\_atom@{t\_O\_atom}}
+\index{t\_O\_atom@{t\_O\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{t\_O\_atom}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$ t\+\_\+\+O\+\_\+atom =NULL}
+
+
+
+The distribution of O1. 
+
+
+
+Definition at line 292 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+t\+\_\+\+X\+\_\+atom(), and init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_aebc97ab067689dcbd5d31b35ae328c98}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!t\_peptide@{t\_peptide}}
+\index{t\_peptide@{t\_peptide}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{t\_peptide}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$ t\+\_\+peptide}
+
+
+
+Complex array for one peptide spectrum. 
+
+
+
+Definition at line 77 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), init\+\_\+distrib(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{isodistrib_8cpp_abe0bd7770183c0381b593cce22392b4f}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!t\_S\_atom@{t\_S\_atom}}
+\index{t\_S\_atom@{t\_S\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{t\_S\_atom}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$ t\+\_\+\+S\+\_\+atom =NULL}
+
+
+
+The distribution of S1. 
+
+
+
+Definition at line 297 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+t\+\_\+\+X\+\_\+atom(), and init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_a55ecfdd90cbba522c7a2c25410ee9f4b}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!t\_Se\_atom@{t\_Se\_atom}}
+\index{t\_Se\_atom@{t\_Se\_atom}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{t\_Se\_atom}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$ t\+\_\+\+Se\+\_\+atom =NULL}
+
+
+
+The distribution of Se1. 
+
+
+
+Definition at line 307 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), get\+\_\+t\+\_\+\+X\+\_\+atom(), and init\+\_\+distrib().
+
+\mbox{\label{isodistrib_8cpp_a2d5fda6c7afa9ae0c3e10e96b55c39eb}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!t\_shifted\_peptide@{t\_shifted\_peptide}}
+\index{t\_shifted\_peptide@{t\_shifted\_peptide}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{t\_shifted\_peptide}
+{\footnotesize\ttfamily \textbf{ complex\+\_\+t} $\ast$ t\+\_\+shifted\+\_\+peptide}
+
+
+
+Complex array for one peptide spectrum with a shifted mass. 
+
+
+
+Definition at line 82 of file isodistrib.\+cpp.
+
+
+
+Referenced by free\+\_\+isodistrib(), init\+\_\+distrib(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{isodistrib_8cpp_afcfbedec6ebde62c6a091ce335836ef1}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!threshold@{threshold}}
+\index{threshold@{threshold}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{threshold}
+{\footnotesize\ttfamily double threshold =0.\+0000001}
+
+
+
+The spectrum threshold. 
+
+
+
+Definition at line 142 of file isodistrib.\+cpp.
+
+
+
+Referenced by compute\+\_\+correlation(), get\+\_\+threshold(), optimized\+\_\+isotopic\+\_\+distribution(), penalization\+\_\+factor(), set\+\_\+threshold(), and write\+\_\+spectrum\+\_\+peak\+\_\+only().
+
+\mbox{\label{isodistrib_8cpp_a8fcb95d3063c78f8f020e5591d05ab28}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!variation\_threshold@{variation\_threshold}}
+\index{variation\_threshold@{variation\_threshold}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{variation\_threshold}
+{\footnotesize\ttfamily double variation\+\_\+threshold =-\/1.\+0}
+
+
+
+The varation threshold. 
+
+
+
+Definition at line 152 of file isodistrib.\+cpp.
+
+
+
+Referenced by compute\+\_\+correlation(), penalization\+\_\+factor(), and read\+\_\+spectrum().
+
+\mbox{\label{isodistrib_8cpp_ad0d8550e9536fb0765f01846ce1c59b9}} 
+\index{isodistrib.cpp@{isodistrib.cpp}!w@{w}}
+\index{w@{w}!isodistrib.cpp@{isodistrib.cpp}}
+\doxysubsubsection{w}
+{\footnotesize\ttfamily double $\ast$ w =NULL}
+
+
+
+A second variable needed for the fast fourier transform process. 
+
+
+
+Definition at line 217 of file isodistrib.\+cpp.
+
+
+
+Referenced by cdft(), cft1st(), cftbsub(), cftfsub(), cftmdl(), ddct(), ddst(), dfct(), dfst(), free\+\_\+isodistrib(), init\+\_\+distrib(), makewt(), optimized\+\_\+isotopic\+\_\+distribution(), and rdft().
+

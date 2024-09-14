@@ -1,0 +1,494 @@
+.TH "formula.h" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+formula.h \- Definition of a chemical formula\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'util\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBisotop\fP"
+.br
+.RI "An isotopic structure represents the isotop of an element\&. "
+.ti -1c
+.RI "struct \fBelement\fP"
+.br
+.RI "Structure representing an element in the NIST table\&. "
+.ti -1c
+.RI "struct \fBcomposition\fP"
+.br
+.RI "Structure representing an element with its quantity, for example: C2\&. "
+.ti -1c
+.RI "struct \fBformula\fP"
+.br
+.RI "Structure representing a formula made of compositions, for example : C2H4\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBisotop\fP \fBisotop_t\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBelement\fP \fBelement_t\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBcomposition\fP \fBcomposition_t\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBformula\fP \fBformula_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBelement_t\fP * \fBget_element_table\fP (const char *filename, int *\fBnb_elements\fP)"
+.br
+.ti -1c
+.RI "\fBformula_t\fP * \fBread_formula\fP (const char *c, \fBelement_t\fP *elem_table, int elem_table_size)"
+.br
+.RI "Allocate and read a formula from a string\&. "
+.ti -1c
+.RI "void \fBadd_formula\fP (\fBformula_t\fP *dest, \fBformula_t\fP *src)"
+.br
+.RI "Add two formula\&. "
+.ti -1c
+.RI "int \fBsub_formula\fP (\fBformula_t\fP *dest, \fBformula_t\fP *src)"
+.br
+.RI "Substrate two formula\&. "
+.ti -1c
+.RI "\fBelement_t\fP * \fBget_element\fP (char *sym, \fBelement_t\fP *elem_table, int elem_table_size)"
+.br
+.RI "Returns an element for element table\&. "
+.ti -1c
+.RI "char * \fBformula_tochar\fP (\fBformula_t\fP *f)"
+.br
+.RI "Returns a string representing a formula\&. "
+.ti -1c
+.RI "void \fBfree_element_table\fP (\fBelement_t\fP *e, int tsize)"
+.br
+.RI "Free the memory allocated for the element table\&. "
+.ti -1c
+.RI "void \fBfree_formula\fP (\fBformula_t\fP *f)"
+.br
+.RI "Free the memory allocated for a formula\&. "
+.ti -1c
+.RI "void \fBfree_composition\fP (\fBcomposition_t\fP *\fBcomposition\fP, int number)"
+.br
+.RI "Procedure which frees the memory allocated for a composition\&. "
+.ti -1c
+.RI "void \fBfree_n_formula\fP (\fBformula_t\fP *\fBformula\fP, int number)"
+.br
+.RI "Free the memory for n formula\&. "
+.ti -1c
+.RI "double \fBget_weight\fP (\fBformula_t\fP *f)"
+.br
+.RI "Get the weight of a formula\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBcopy_formula\fP (\fBformula_t\fP *\fBformula\fP)"
+.br
+.RI "Get the copy of a formula\&. "
+.ti -1c
+.RI "\fBcomposition_t\fP * \fBcopy_composition\fP (\fBcomposition_t\fP *\fBcomposition\fP, int number)"
+.br
+.RI "Get the copy of a composition\&. "
+.ti -1c
+.RI "void \fBprint_formula\fP (\fBformula_t\fP *\fBformula\fP, int number)"
+.br
+.RI "Print the formula on the screen\&. "
+.ti -1c
+.RI "void \fBfprint_formula\fP (FILE *file, \fBformula_t\fP *\fBformula\fP, int number)"
+.br
+.RI "Print the formula in a file\&. "
+.ti -1c
+.RI "void \fBprint_element_table\fP (\fBelement_t\fP *\fBelement_table\fP, int size)"
+.br
+.RI "Print the element table on the screen\&. "
+.ti -1c
+.RI "void \fBfprint_element_table\fP (FILE *file, \fBelement_t\fP *\fBelement_table\fP, int size)"
+.br
+.RI "Print the element table in a file\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition of a chemical formula\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Nicolas GRUSZCZYNSKA and Nicolas DOLET (2005)\&.
+.br
+ Modified and updated by Jean-Charles BOISSON (2005-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBformula\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBcomposition\fP \fBcomposition_t\fP"
+
+.SS "typedef struct \fBelement\fP \fBelement_t\fP"
+
+.SS "typedef struct \fBformula\fP \fBformula_t\fP"
+
+.SS "typedef struct \fBisotop\fP \fBisotop_t\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "void add_formula (\fBformula_t\fP * dest, \fBformula_t\fP * src)"
+
+.PP
+Add two formula\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdest\fP The first formula before/after the addition\&. 
+.br
+\fIsrc\fP The second formula\&. 
+.RE
+.PP
+
+.PP
+Definition at line 481 of file formula\&.cpp\&.
+.PP
+References add_element(), formula::comps, error(), formula::nb_comp, and USAGE_ERROR\&.
+.PP
+Referenced by apply_global_modification(), apply_modification(), get_formula_from_sequence(), get_formulae_of_peptides(), get_peptide_formula_from_another_protein(), and get_peptide_formula_from_index()\&.
+.SS "\fBcomposition_t\fP* copy_composition (\fBcomposition_t\fP * composition, int number)"
+
+.PP
+Get the copy of a composition\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcomposition\fP The original composition\&. 
+.br
+\fInumber\fP The number of elements\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The copy\&. 
+.RE
+.PP
+
+.PP
+Definition at line 722 of file formula\&.cpp\&.
+.PP
+References copy_one_element(), composition::element, error(), MEMORY_ALLOCATION_ERROR, composition::quantity, and USAGE_ERROR\&.
+.PP
+Referenced by copy_formula(), and optimized_isotopic_distribution()\&.
+.SS "\fBformula_t\fP* copy_formula (\fBformula_t\fP * formula)"
+
+.PP
+Get the copy of a formula\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIformula\fP The original formula\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the copy\&. 
+.RE
+.PP
+
+.PP
+Definition at line 746 of file formula\&.cpp\&.
+.PP
+References formula::comps, copy_composition(), error(), MEMORY_ALLOCATION_ERROR, formula::nb_comp, and USAGE_ERROR\&.
+.PP
+Referenced by add_protein(), get_amino_acid_table(), get_formula_from_sequence(), get_formulae_of_peptides(), get_peptide_formula_from_another_protein(), get_peptide_formula_from_index(), and sub_formula()\&.
+.SS "char* formula_tochar (\fBformula_t\fP * f)"
+
+.PP
+Returns a string representing a formula\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP The formula\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The string corresponding to f\&. 
+.RE
+.PP
+
+.PP
+Definition at line 564 of file formula\&.cpp\&.
+.PP
+References formula::comps, composition::element, formula::nb_comp, composition::quantity, and element::symbol\&.
+.PP
+Referenced by fprint_amino_acid_table(), fprint_configuration(), fprint_configuration_xml(), fprint_formula(), fprint_result_of_digestion(), fprint_result_of_digestion_table_format(), print_amino_acid_table(), print_configuration(), print_formula(), and print_result_of_digestion()\&.
+.SS "void fprint_element_table (FILE * file, \fBelement_t\fP * element_table, int size)"
+
+.PP
+Print the element table in a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP the file\&. 
+.br
+\fIelement_table\fP The element table\&. 
+.br
+\fIsize\fP The size of the element table\&. 
+.RE
+.PP
+
+.PP
+Definition at line 813 of file formula\&.cpp\&.
+.PP
+References element_table, element::nb_isotops, and symbol\&.
+.SS "void fprint_formula (FILE * file, \fBformula_t\fP * formula, int number)"
+
+.PP
+Print the formula in a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file\&. 
+.br
+\fIformula\fP The formula we want to print\&. 
+.br
+\fInumber\fP The number of formula\&. 
+.RE
+.PP
+
+.PP
+Definition at line 781 of file formula\&.cpp\&.
+.PP
+References formula_tochar()\&.
+.SS "void free_composition (\fBcomposition_t\fP * composition, int number)"
+
+.PP
+Procedure which frees the memory allocated for a composition\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcomposition\fP The composition to free 
+.br
+\fInumber\fP The number of element 
+.RE
+.PP
+
+.PP
+Definition at line 598 of file formula\&.cpp\&.
+.PP
+References error(), free_element(), and FREE_MEMORY_ERROR\&.
+.PP
+Referenced by free_all_modifications(), free_formula(), free_n_formula(), optimized_isotopic_distribution(), and sub_formula()\&.
+.SS "void free_element_table (\fBelement_t\fP * e, int tsize)"
+
+.PP
+Free the memory allocated for the element table\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIe\fP The element table table\&. 
+.br
+\fItsize\fP the size of e 
+.RE
+.PP
+
+.PP
+Definition at line 642 of file formula\&.cpp\&.
+.PP
+References error(), and FREE_MEMORY_ERROR\&.
+.PP
+Referenced by free_tables()\&.
+.SS "void free_formula (\fBformula_t\fP * f)"
+
+.PP
+Free the memory allocated for a formula\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP The formula\&. 
+.RE
+.PP
+
+.PP
+Definition at line 614 of file formula\&.cpp\&.
+.PP
+References formula::comps, error(), free_composition(), FREE_MEMORY_ERROR, and formula::nb_comp\&.
+.PP
+Referenced by fprintf_ascq_me_results(), fprintf_ascq_me_results_table_form(), fprintf_ascq_me_results_xml(), free_amino_acid_table(), free_peptide_link(), free_util_digestion(), init_distrib(), is_a_wanted_protein(), printf_ascq_me_results(), set_peptide_charge(), and sub_formula()\&.
+.SS "void free_n_formula (\fBformula_t\fP * formula, int number)"
+
+.PP
+Free the memory for n formula\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIformula\fP The formulae\&. 
+.br
+\fInumber\fP The number of formulae\&. 
+.RE
+.PP
+
+.PP
+Definition at line 626 of file formula\&.cpp\&.
+.PP
+References error(), free_composition(), and FREE_MEMORY_ERROR\&.
+.PP
+Referenced by add_protein(), ascq_me_cleaning(), fprint_result_of_digestion(), fprint_result_of_digestion_table_format(), main(), and print_result_of_digestion()\&.
+.SS "\fBelement_t\fP* get_element (char * sym, \fBelement_t\fP * elem_table, int elem_table_size)"
+
+.PP
+Returns an element for element table\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsym\fP The atom symbol\&. 
+.br
+\fIelem_table\fP The element table\&. 
+.br
+\fIelem_table_size\fP The number of elements in the table\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the element_t structure corresponding to sym 
+.RE
+.PP
+
+.PP
+Definition at line 464 of file formula\&.cpp\&.
+.PP
+References error(), symbol, and USAGE_ERROR\&.
+.SS "\fBelement_t\fP* get_element_table (const char * filename, int * nb_elements)"
+
+.PP
+Definition at line 294 of file formula\&.cpp\&.
+.PP
+References error(), EXECUTION_ERROR, IO_ERROR, isotop::isotopic_composition, element::isotops, jump_a_line(), jump_commentaries(), MEMORY_ALLOCATION_ERROR, element::nb_isotops, read_line(), read_until(), isotop::relative_mass, and symbol\&.
+.PP
+Referenced by init_distrib(), load_modifications(), and set_peptide_charge()\&.
+.SS "double get_weight (\fBformula_t\fP * f)"
+
+.PP
+Get the weight of a formula\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP The formula from which we want the weight\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The wanted weight\&. 
+.RE
+.PP
+
+.PP
+Definition at line 660 of file formula\&.cpp\&.
+.PP
+References formula::comps, composition::element, error(), element::isotops, formula::nb_comp, composition::quantity, isotop::relative_mass, and USAGE_ERROR\&.
+.PP
+Referenced by add_peptide_modification(), digest(), fprint_amino_acid_table(), fprintf_ascq_me_peptide_scoring(), fprintf_ascq_me_results(), fprintf_ascq_me_results_table_form(), fprintf_ascq_me_results_xml(), fusion_peptide(), is_a_wanted_protein(), optimized_isotopic_distribution(), peptide_charge_weight(), and printf_ascq_me_results()\&.
+.SS "void print_element_table (\fBelement_t\fP * element_table, int size)"
+
+.PP
+Print the element table on the screen\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelement_table\fP The element table\&. 
+.br
+\fIsize\fP the size of the element table\&. 
+.RE
+.PP
+
+.PP
+Definition at line 796 of file formula\&.cpp\&.
+.PP
+References element_table, element::nb_isotops, and symbol\&.
+.SS "void print_formula (\fBformula_t\fP * formula, int number)"
+
+.PP
+Print the formula on the screen\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIformula\fP The formula we want to print\&. 
+.br
+\fInumber\fP Their number\&. 
+.RE
+.PP
+
+.PP
+Definition at line 766 of file formula\&.cpp\&.
+.PP
+References formula_tochar()\&.
+.SS "\fBformula_t\fP* read_formula (const char * c, \fBelement_t\fP * elem_table, int elem_table_size)"
+
+.PP
+Allocate and read a formula from a string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP The string containing formula : CH3\&.\&.\&. 
+.br
+\fIelem_table\fP The element table\&. 
+.br
+\fIelem_table_size\fP The number of elements in the table\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the read formula_t structure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 176 of file formula\&.cpp\&.
+.PP
+References affect_atom(), formula::comps, error(), FALSE, MEMORY_ALLOCATION_ERROR, formula::nb_comp, and USAGE_ERROR\&.
+.PP
+Referenced by get_amino_acid_table(), init_distrib(), init_peptid_link(), load_modifications(), and set_peptide_charge()\&.
+.SS "int sub_formula (\fBformula_t\fP * dest, \fBformula_t\fP * src)"
+
+.PP
+Substrate two formula\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdest\fP The first formula before/after the substraction\&. 
+.br
+\fIsrc\fP The second formula\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+1 if possible, 0 else\&. 
+.RE
+.PP
+
+.PP
+Definition at line 495 of file formula\&.cpp\&.
+.PP
+References formula::comps, copy_formula(), copy_one_element(), composition::element, error(), FALSE, free_composition(), free_element(), free_formula(), MEMORY_ALLOCATION_ERROR, formula::nb_comp, composition::quantity, element::symbol, TRUE, and USAGE_ERROR\&.
+.PP
+Referenced by apply_global_modification(), and apply_modification()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

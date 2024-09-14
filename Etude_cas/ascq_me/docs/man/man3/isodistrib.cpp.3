@@ -1,0 +1,1886 @@
+.TH "isodistrib.cpp" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+isodistrib.cpp \- Implementation of the methods defined in \fBisodistrib\&.h\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'isodistrib\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcomplex_t\fP ** \fBget_X_atom\fP (char *\fBsymbol\fP)"
+.br
+.RI "Tool function which returns the complex_t** X_atom associated to a symbol or NULL if the symbol has not an associated X_atom\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBget_t_X_atom\fP (char *\fBsymbol\fP)"
+.br
+.RI "Tool function which returns the complex_t* t_X_atom associated to a symbol or NULL if the symbol has not a associated t_X_atom\&. "
+.ti -1c
+.RI "void \fBcdft\fP (int, int, double *, int *, double *)"
+.br
+.RI "Complex Discrete Fourier Transform\&. "
+.ti -1c
+.RI "void \fBinit_distrib\fP ()"
+.br
+.RI "Procedure which initializes the parameters and allocates the useful structures\&. "
+.ti -1c
+.RI "double \fBoptimized_isotopic_distribution\fP (\fBformula_t\fP *\fBpeptides\fP, int nb_peptides)"
+.br
+.RI "Function which calculates the isotopic distribution of a peptide list\&. "
+.ti -1c
+.RI "int \fBget_atom_quantity\fP (const char *\fBsymbol\fP)"
+.br
+.RI "Tool function which returns the atom quantity linked to a symbol or -1 if the symbol has not an associated atom quantity\&. "
+.ti -1c
+.RI "void \fBintegral_normalization\fP (double integral_value, int size, \fBcomplex_t\fP *t_complex)"
+.br
+.RI "Procedure which makes a normalization of a data array\&. "
+.ti -1c
+.RI "void \fBwrite_spectrum_cplx\fP (FILE *f, \fBcomplex_t\fP *t_complex, char *entry)"
+.br
+.RI "Procedure which writes a module of data in a complex spectrum file\&. "
+.ti -1c
+.RI "void \fBwrite_spectrum\fP (FILE *f, \fBcomplex_t\fP *t_complex, char *entry)"
+.br
+.RI "Procedure which writes a spectrum in a file\&. "
+.ti -1c
+.RI "void \fBread_spectrum\fP (const char *spectrum_file)"
+.br
+.RI "Procedure which loads a spectrum from a file\&. "
+.ti -1c
+.RI "void \fBfree_isodistrib\fP ()"
+.br
+.RI "Procedure which frees the memory allocated for all the structures useful for the isotopic distribution computation\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBget_exp_spectrum\fP ()"
+.br
+.RI "Function which allows to gain access to the experimental spectrum\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBcopy_spectrum\fP (\fBcomplex_t\fP *spectrum)"
+.br
+.RI "Function which makes the copie of a spectrum\&. "
+.ti -1c
+.RI "void \fBset_exp_spectrum\fP (\fBcomplex_t\fP *spectrum)"
+.br
+.RI "Procedure which allows to set manually the experimental spectrum\&. "
+.ti -1c
+.RI "void \fBwrite_spectrum_peak_only\fP (FILE *file, \fBcomplex_t\fP *spectrum, char *name)"
+.br
+.RI "Procedure which writes only the spectrum peaks in a file\&. "
+.ti -1c
+.RI "void \fBread_simulated_spectrum\fP (const char *spectrum_file)"
+.br
+.RI "Procedure which allows to open the file which contains theoretical spectra\&. "
+.ti -1c
+.RI "int \fBnext_simulated_spectrum\fP ()"
+.br
+.RI "Function which loads the next simulated spectrum\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBget_theo_spectrum\fP ()"
+.br
+.RI "Function which allows to gain access to the simulated spectrum\&. "
+.ti -1c
+.RI "void \fBset_threshold\fP (double new_value)"
+.br
+.RI "Procedure which allows to set the threshold useful for the procedure write_spectrum_peak_only and the scoring\&. "
+.ti -1c
+.RI "double \fBget_threshold\fP ()"
+.br
+.RI "Function to obtain the threshold\&. "
+.ti -1c
+.RI "int \fBget_spectrum_size\fP ()"
+.br
+.RI "Function which returns the size of the array that contains the spectrum\&. "
+.ti -1c
+.RI "double \fBget_step\fP ()"
+.br
+.RI "Function which returns the spectra array step (distance between two spectrum points)\&. "
+.ti -1c
+.RI "char * \fBget_spectrum_original_description\fP ()"
+.br
+.RI "Function which returns the original description of the current spectrum\&. "
+.ti -1c
+.RI "char * \fBget_spectrum_original_sequence\fP ()"
+.br
+.RI "Function which returns the original sequence of the current spectrum\&. "
+.ti -1c
+.RI "void \fBset_C_atom_quantity\fP (int new_quantity)"
+.br
+.RI "Procedure which allows to modify the quantity of C atom for the initialisation process\&. "
+.ti -1c
+.RI "void \fBset_spectrum_maximum_mass\fP (int new_value)"
+.br
+.RI "Procedure which allows to modify the spectrum maximum mass\&. "
+.ti -1c
+.RI "void \fBset_gaussian_value\fP (double new_value)"
+.br
+.RI "Procedure which allows to modify the gaussian value\&. "
+.ti -1c
+.RI "void \fBset_precision\fP (int new_value)"
+.br
+.RI "Procedure which allows to modify the spectrum precision\&. "
+.ti -1c
+.RI "char * \fBget_simulated_spectra_filename\fP ()"
+.br
+.RI "Function which returns the name of file containing the simulated spectra\&. "
+.ti -1c
+.RI "int \fBget_spectrum_maximum_mass\fP ()"
+.br
+.RI "Function which allows to get the maximum mass authorized for the spectrum\&. "
+.ti -1c
+.RI "double \fBget_gaussian_value\fP ()"
+.br
+.RI "Function which allows to get the gaussian value\&. "
+.ti -1c
+.RI "int \fBget_spectrum_precision\fP ()"
+.br
+.RI "Function which allows to get the spetrum precision\&. "
+.ti -1c
+.RI "char * \fBget_experimental_filename\fP ()"
+.br
+.RI "Function which returns the file name of the experimental spectrum\&. "
+.ti -1c
+.RI "int \fBis_simulated_wanted_protein\fP ()"
+.br
+.RI "Function which indicates if the current loaded protein corresponding to the specie\&. "
+.ti -1c
+.RI "void \fBset_scoring_sensitivity\fP (double new_value)"
+.br
+.RI "Procedure which allows to modify the score sensitivity\&. "
+.ti -1c
+.RI "double \fBget_scoring_sensitivity\fP ()"
+.br
+.RI "Function which returns the score sensitivity\&. "
+.ti -1c
+.RI "void \fBset_minimum_mass\fP (double new_value)"
+.br
+.RI "Procedure which allows to modify the minimum mass for the peptides\&. "
+.ti -1c
+.RI "double \fBget_minimum_mass\fP ()"
+.br
+.RI "Function which returns the minimum mass authorized for the peptides\&. "
+.ti -1c
+.RI "void \fBset_maximum_mass\fP (double new_value)"
+.br
+.RI "Procedure which allows to modify the maximum mass for the peptides\&. "
+.ti -1c
+.RI "double \fBget_maximum_mass\fP ()"
+.br
+.RI "Function which returns the maximum mass authorized for the peptides\&. "
+.ti -1c
+.RI "void \fBset_peptide_maximum_mass\fP (int new_value)"
+.br
+.RI "Procedure which allows to modify the peptide maximum mass\&. "
+.ti -1c
+.RI "void \fBset_peptide_precision\fP (int new_value)"
+.br
+.RI "Procedure which allows to modify the peptide precision\&. "
+.ti -1c
+.RI "int \fBget_peptide_maximum_mass\fP ()"
+.br
+.RI "Function which allows to get the peptide maximum mass\&. "
+.ti -1c
+.RI "int \fBget_peptide_precision\fP ()"
+.br
+.RI "Function which allows to get the peptide precision\&. "
+.ti -1c
+.RI "double \fBcompute_correlation\fP (int index, \fBcomplex_t\fP *spectrum)"
+.br
+.RI "Function which gives the correlation between the two spectra (experimental and simulated) according to an index on a peptide (global = FALSE) or on the complete spectrum (global = TRUE)\&. "
+.ti -1c
+.RI "double \fBpenalization_factor\fP ()"
+.br
+.RI "Function which gives a penalize factor corresponding to all the no need data from the simulated spectrum\&. "
+.ti -1c
+.RI "void \fBset_minimum_peptide_number\fP (unsigned int new_value)"
+.br
+.RI "Procedure which allows to modify the minimum peptide number needed to a protein to be considered\&. "
+.ti -1c
+.RI "unsigned int \fBget_minimum_peptide_number\fP ()"
+.br
+.RI "Function which allows to get the minimum peptide number for a protein to be considered\&. "
+.ti -1c
+.RI "void \fBset_minimum_matched_peptide_number\fP (unsigned int new_value)"
+.br
+.RI "Procedure which allows to modify the minimum matched peptide number needed to a protein to be considered\&. "
+.ti -1c
+.RI "unsigned int \fBget_minimum_matched_peptide_number\fP ()"
+.br
+.RI "Function which allows to get the minimum matched peptide number for a protein to be considered\&. "
+.ti -1c
+.RI "double \fBget_peptide_score_threshold\fP ()"
+.br
+.RI "Function which allows to get the peptide score threshold to make difference between 'good' and 'bad' peptides\&. "
+.ti -1c
+.RI "int \fBget_distribution_activation\fP ()"
+.br
+.ti -1c
+.RI "double * \fBget_current_peptide_score_save\fP ()"
+.br
+.RI "Function which allows to get the peptide scores of the last protein considered\&. "
+.ti -1c
+.RI "unsigned int \fBget_current_peptide_score_size\fP ()"
+.br
+.RI "Function which allows to get the peptide score array size of the last protein considered\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBis_distribution_initialised\fP =\fBFALSE\fP"
+.br
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBt_atom\fP"
+.br
+.RI "Complex array for the atom spectrum\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBresult\fP"
+.br
+.RI "Complex array for the theoretical spectrum\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBgauss\fP"
+.br
+.RI "Complex array for the gaussian convolution\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBt_peptide\fP"
+.br
+.RI "Complex array for one peptide spectrum\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBt_shifted_peptide\fP"
+.br
+.RI "Complex array for one peptide spectrum with a shifted mass\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBt_exp_spec\fP"
+.br
+.RI "Complex array for the experimental spectrum\&. "
+.ti -1c
+.RI "double \fBgaussian\fP =0\&.30"
+.br
+.RI "The gaussian value\&. "
+.ti -1c
+.RI "int \fBN_SPEC\fP =65536"
+.br
+.RI "The spectrum precision\&. "
+.ti -1c
+.RI "int \fBN_PEPT\fP =0"
+.br
+.RI "The peptide spectrum precision\&. "
+.ti -1c
+.RI "int \fBspectrum_maximum_mass\fP =4096"
+.br
+.RI "The spectrum maximum mass\&. "
+.ti -1c
+.RI "int \fBpeptide_maximum_mass\fP =16"
+.br
+.RI "The peptide spectrum maximum mass\&. "
+.ti -1c
+.RI "int \fBpeptide_precision\fP =8"
+.br
+.RI "The peptide precision\&. "
+.ti -1c
+.RI "unsigned int \fBminimum_peptide_number\fP =5"
+.br
+.RI "The minimum number of peptides that the digestion has to produced for a protein to be considered\&. "
+.ti -1c
+.RI "unsigned int \fBminimum_matched_peptide_number\fP =3"
+.br
+.RI "The minimum number of peptides belonging to the 'good' peptides for a protein to be considered\&. "
+.ti -1c
+.RI "double \fBmin_experimental_mass\fP =700"
+.br
+.RI "The minimum authorized peptide mass\&. "
+.ti -1c
+.RI "double \fBmax_experimental_mass\fP =2500"
+.br
+.RI "The maximum authorized peptide mass\&. "
+.ti -1c
+.RI "double \fBthreshold\fP =0\&.0000001"
+.br
+.RI "The spectrum threshold\&. "
+.ti -1c
+.RI "double \fBsensitivity\fP =0\&.5"
+.br
+.RI "The sensitivity\&. "
+.ti -1c
+.RI "double \fBvariation_threshold\fP =\-1\&.0"
+.br
+.RI "The varation threshold\&. "
+.ti -1c
+.RI "char * \fBexperimental_file\fP =NULL"
+.br
+.RI "The experimental spectrum fime\&. "
+.ti -1c
+.RI "char * \fBspectrum_original_description\fP =NULL"
+.br
+.RI "The theoretical spectrum description (from FASTA database)\&. "
+.ti -1c
+.RI "char * \fBspectrum_original_sequence\fP =NULL"
+.br
+.RI "The theoretical spectrum original sequence (from FASTA database)\&. "
+.ti -1c
+.RI "char * \fBsimulated_spectra_file\fP =NULL"
+.br
+.RI "The name of the file that contains the spectum database\&. "
+.ti -1c
+.RI "FILE * \fBsimulated_spectra\fP =NULL"
+.br
+.RI "The file that contains the simulated spectrum database\&. "
+.ti -1c
+.RI "double \fBstep\fP"
+.br
+.RI "The step between two points in a complete spectrum\&. "
+.ti -1c
+.RI "double \fBatom_step\fP"
+.br
+.RI "The step between two points in the atom spectrum\&. "
+.ti -1c
+.RI "double \fBgauss_param\fP"
+.br
+.RI "The gaussian parameter\&. "
+.ti -1c
+.RI "int \fBnb_data_amu\fP"
+.br
+.RI "Number of points between each mass unit of a complete spectrum\&. "
+.ti -1c
+.RI "int \fBatom_nb_data_amu\fP"
+.br
+.RI "Number of points between each mass unit in the atom spectrum\&. "
+.ti -1c
+.RI "double \fBpeptide_score_threshold\fP =0\&.0"
+.br
+.RI "The score threshold for consider a peptide has a good peptide or a bad peptide\&. "
+.ti -1c
+.RI "int * \fBip\fP =NULL"
+.br
+.RI "A first variable needed for the fast fourier transform process\&. "
+.ti -1c
+.RI "double * \fBw\fP =NULL"
+.br
+.RI "A second variable needed for the fast fourier transform process\&. "
+.ti -1c
+.RI "int \fBC_atom_quantity\fP =1000"
+.br
+.RI "Maximum quantity of C atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation\&. "
+.ti -1c
+.RI "int \fBH_atom_quantity\fP =4000"
+.br
+.RI "Maximum quantity of H atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation\&. "
+.ti -1c
+.RI "int \fBO_atom_quantity\fP =250"
+.br
+.RI "Maximum quantity of O atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation\&. "
+.ti -1c
+.RI "int \fBS_atom_quantity\fP =125"
+.br
+.RI "Maximum quantity of S atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation\&. "
+.ti -1c
+.RI "int \fBN_atom_quantity\fP =500"
+.br
+.RI "Maximum quantity of N atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation\&. "
+.ti -1c
+.RI "int \fBSe_atom_quantity\fP =100"
+.br
+.RI "Maximum quantity of Se atoms (due to the U amino acid), the corresponding distributions from 1 to this value will be computed during the distribution initialisation\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP ** \fBC_atom\fP =NULL"
+.br
+.RI "All the saved distribution of the C atom\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP ** \fBH_atom\fP =NULL"
+.br
+.RI "All the saved distribution of the H atom\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP ** \fBO_atom\fP =NULL"
+.br
+.RI "All the saved distribution of the O atom\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP ** \fBS_atom\fP =NULL"
+.br
+.RI "All the saved distribution of the S atom\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP ** \fBN_atom\fP =NULL"
+.br
+.RI "All the saved distribution of the N atom\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP ** \fBSe_atom\fP =NULL"
+.br
+.RI "All the saved distribution of the Se atom\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBt_C_atom\fP =NULL"
+.br
+.RI "The distribution of C1\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBt_H_atom\fP =NULL"
+.br
+.RI "The distribution of H1\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBt_O_atom\fP =NULL"
+.br
+.RI "The distribution of O1\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBt_S_atom\fP =NULL"
+.br
+.RI "The distribution of S1\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBt_N_atom\fP =NULL"
+.br
+.RI "The distribution of N1\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP * \fBt_Se_atom\fP =NULL"
+.br
+.RI "The distribution of Se1\&. "
+.ti -1c
+.RI "double * \fBcurrent_peptide_score_save\fP =NULL"
+.br
+.RI "The score of the peptide of the last protein considered\&. "
+.ti -1c
+.RI "unsigned int \fBcurrent_peptide_score_size\fP =0"
+.br
+.RI "Size the of the current_peptide_score_save array\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of the methods defined in \fBisodistrib\&.h\fP\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Nicolas GRUSZCZYNSKA and Nicolas DOLET (2005)\&.
+.br
+ Modified and updated by Jean-Charles BOISSON and Christian ROLANDO (2005-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBisodistrib\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void cdft (int n, int isgn, double * a, int * ip, double * w)"
+
+.PP
+Complex Discrete Fourier Transform\&. 
+.PP
+Definition at line 328 of file fft4g\&.cpp\&.
+.PP
+References bitrv2(), bitrv2conj(), cftbsub(), cftfsub(), ip, makewt(), and w\&.
+.PP
+Referenced by init_distrib(), and optimized_isotopic_distribution()\&.
+.SS "double compute_correlation (int index, \fBcomplex_t\fP * spectrum)"
+
+.PP
+Function which gives the correlation between the two spectra (experimental and simulated) according to an index on a peptide (global = FALSE) or on the complete spectrum (global = TRUE)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP The index\&. 
+.br
+\fIspectrum\fP The spectrum to compare with the experimental spectrum\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The correlation score between the two points\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2315 of file isodistrib\&.cpp\&.
+.PP
+References N_SPEC, complex::Re, t_exp_spec, threshold, and variation_threshold\&.
+.PP
+Referenced by fprintf_ascq_me_results_table_form(), and optimized_isotopic_distribution()\&.
+.SS "\fBcomplex_t\fP* copy_spectrum (\fBcomplex_t\fP * spectrum)"
+
+.PP
+Function which makes the copie of a spectrum\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspectrum\fP The spectrum to copy\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The copie\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1741 of file isodistrib\&.cpp\&.
+.PP
+References error(), complex::Im, MEMORY_ALLOCATION_ERROR, N_SPEC, complex::Re, and USAGE_ERROR\&.
+.PP
+Referenced by add_protein()\&.
+.SS "void free_isodistrib ()"
+
+.PP
+Procedure which frees the memory allocated for all the structures useful for the isotopic distribution computation\&. 
+.PP
+Definition at line 1651 of file isodistrib\&.cpp\&.
+.PP
+References C_atom, C_atom_quantity, current_peptide_score_save, current_peptide_score_size, experimental_file, gauss, H_atom, H_atom_quantity, ip, N_atom, N_atom_quantity, O_atom, O_atom_quantity, result, S_atom, S_atom_quantity, Se_atom, Se_atom_quantity, simulated_spectra_file, spectrum_original_description, spectrum_original_sequence, t_atom, t_C_atom, t_exp_spec, t_H_atom, t_N_atom, t_O_atom, t_peptide, t_S_atom, t_Se_atom, t_shifted_peptide, and w\&.
+.PP
+Referenced by ascq_me_configuration_cleaning()\&.
+.SS "int get_atom_quantity (const char * symbol)"
+
+.PP
+Tool function which returns the atom quantity linked to a symbol or -1 if the symbol has not an associated atom quantity\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsymbol\fP The symbol\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The associated atom quantity or -1\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1350 of file isodistrib\&.cpp\&.
+.PP
+References C_atom_quantity, H_atom_quantity, N_atom_quantity, O_atom_quantity, S_atom_quantity, Se_atom_quantity, and symbol\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), optimized_isotopic_distribution(), and print_configuration()\&.
+.SS "double* get_current_peptide_score_save ()"
+
+.PP
+Function which allows to get the peptide scores of the last protein considered\&. 
+.PP
+\fBWarning\fP
+.RS 4
+This function returns a direct pointer\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2425 of file isodistrib\&.cpp\&.
+.PP
+References current_peptide_score_save\&.
+.PP
+Referenced by main()\&.
+.SS "unsigned int get_current_peptide_score_size ()"
+
+.PP
+Function which allows to get the peptide score array size of the last protein considered\&. 
+.PP
+Definition at line 2431 of file isodistrib\&.cpp\&.
+.PP
+References current_peptide_score_size\&.
+.PP
+Referenced by main()\&.
+.SS "int get_distribution_activation ()"
+
+.PP
+Definition at line 2419 of file isodistrib\&.cpp\&.
+.PP
+References is_distribution_initialised\&.
+.PP
+Referenced by load_configuration(), load_float_keyword(), and load_int_keyword()\&.
+.SS "\fBcomplex_t\fP* get_exp_spectrum ()"
+
+.PP
+Function which allows to gain access to the experimental spectrum\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The experimental spectrum\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1735 of file isodistrib\&.cpp\&.
+.PP
+References t_exp_spec\&.
+.PP
+Referenced by fprintf_ascq_me_results_table_form()\&.
+.SS "char* get_experimental_filename ()"
+
+.PP
+Function which returns the file name of the experimental spectrum\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The file name\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2176 of file isodistrib\&.cpp\&.
+.PP
+References experimental_file\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "double get_gaussian_value ()"
+
+.PP
+Function which allows to get the gaussian value\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The gaussian value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2164 of file isodistrib\&.cpp\&.
+.PP
+References gaussian\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "double get_maximum_mass ()"
+
+.PP
+Function which returns the maximum mass authorized for the peptides\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The maximum mass\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2262 of file isodistrib\&.cpp\&.
+.PP
+References max_experimental_mass\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), fprintf_ascq_me_results_table_form(), and print_configuration()\&.
+.SS "double get_minimum_mass ()"
+
+.PP
+Function which returns the minimum mass authorized for the peptides\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The minimum mass\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2236 of file isodistrib\&.cpp\&.
+.PP
+References min_experimental_mass\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), fprintf_ascq_me_results_table_form(), and print_configuration()\&.
+.SS "unsigned int get_minimum_matched_peptide_number ()"
+
+.PP
+Function which allows to get the minimum matched peptide number for a protein to be considered\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The minimum matched peptide number\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2407 of file isodistrib\&.cpp\&.
+.PP
+References minimum_matched_peptide_number\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "unsigned int get_minimum_peptide_number ()"
+
+.PP
+Function which allows to get the minimum peptide number for a protein to be considered\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The minimum peptide number\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2386 of file isodistrib\&.cpp\&.
+.PP
+References minimum_peptide_number\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "int get_peptide_maximum_mass ()"
+
+.PP
+Function which allows to get the peptide maximum mass\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The peptide maximum mass\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2303 of file isodistrib\&.cpp\&.
+.PP
+References peptide_maximum_mass\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "int get_peptide_precision ()"
+
+.PP
+Function which allows to get the peptide precision\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The peptide precision\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2309 of file isodistrib\&.cpp\&.
+.PP
+References peptide_precision\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "double get_peptide_score_threshold ()"
+
+.PP
+Function which allows to get the peptide score threshold to make difference between 'good' and 'bad' peptides\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The peptide score threshold\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2413 of file isodistrib\&.cpp\&.
+.PP
+References peptide_score_threshold\&.
+.PP
+Referenced by fprintf_ascq_me_results()\&.
+.SS "double get_scoring_sensitivity ()"
+
+.PP
+Function which returns the score sensitivity\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The sensitivity\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2214 of file isodistrib\&.cpp\&.
+.PP
+References sensitivity\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "char* get_simulated_spectra_filename ()"
+
+.PP
+Function which returns the name of file containing the simulated spectra\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The file name\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2152 of file isodistrib\&.cpp\&.
+.PP
+References simulated_spectra_file\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "int get_spectrum_maximum_mass ()"
+
+.PP
+Function which allows to get the maximum mass authorized for the spectrum\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The maximum mass\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2158 of file isodistrib\&.cpp\&.
+.PP
+References spectrum_maximum_mass\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "char* get_spectrum_original_description ()"
+
+.PP
+Function which returns the original description of the current spectrum\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The original description\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2050 of file isodistrib\&.cpp\&.
+.PP
+References spectrum_original_description\&.
+.PP
+Referenced by main()\&.
+.SS "char* get_spectrum_original_sequence ()"
+
+.PP
+Function which returns the original sequence of the current spectrum\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The original sequence\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2056 of file isodistrib\&.cpp\&.
+.PP
+References spectrum_original_sequence\&.
+.PP
+Referenced by main()\&.
+.SS "int get_spectrum_precision ()"
+
+.PP
+Function which allows to get the spetrum precision\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The precision\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2170 of file isodistrib\&.cpp\&.
+.PP
+References N_SPEC\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "int get_spectrum_size ()"
+
+.PP
+Function which returns the size of the array that contains the spectrum\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The size\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2038 of file isodistrib\&.cpp\&.
+.PP
+References N_SPEC\&.
+.SS "double get_step ()"
+
+.PP
+Function which returns the spectra array step (distance between two spectrum points)\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The step\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2044 of file isodistrib\&.cpp\&.
+.PP
+References step\&.
+.PP
+Referenced by fprintf_ascq_me_results_table_form()\&.
+.SS "\fBcomplex_t\fP * get_t_X_atom (char * symbol)"
+
+.PP
+Tool function which returns the complex_t* t_X_atom associated to a symbol or NULL if the symbol has not a associated t_X_atom\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsymbol\fP The symbol\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The associated t_X_atom or NULL\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1416 of file isodistrib\&.cpp\&.
+.PP
+References symbol, t_C_atom, t_H_atom, t_N_atom, t_O_atom, t_S_atom, and t_Se_atom\&.
+.PP
+Referenced by optimized_isotopic_distribution()\&.
+.SS "\fBcomplex_t\fP* get_theo_spectrum ()"
+
+.PP
+Function which allows to gain access to the simulated spectrum\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The theoretical spectrum\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2020 of file isodistrib\&.cpp\&.
+.PP
+References result\&.
+.PP
+Referenced by main()\&.
+.SS "double get_threshold ()"
+
+.PP
+Function to obtain the threshold\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The threshold\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2032 of file isodistrib\&.cpp\&.
+.PP
+References threshold\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "\fBcomplex_t\fP ** get_X_atom (char * symbol)"
+
+.PP
+Tool function which returns the complex_t** X_atom associated to a symbol or NULL if the symbol has not an associated X_atom\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsymbol\fP The symbol\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The associated X_atom or NULL\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1383 of file isodistrib\&.cpp\&.
+.PP
+References C_atom, H_atom, N_atom, O_atom, S_atom, Se_atom, and symbol\&.
+.PP
+Referenced by optimized_isotopic_distribution()\&.
+.SS "void init_distrib ()"
+
+.PP
+Procedure which initializes the parameters and allocates the useful structures\&. 
+.PP
+Definition at line 336 of file isodistrib\&.cpp\&.
+.PP
+References atom_nb_data_amu, atom_step, C_atom, C_atom_quantity, cdft(), complex_multiplication(), formula::comps, composition::element, error(), free_formula(), gauss, gauss_param, gaussian, get_element_table(), get_element_table_size(), H_atom, H_atom_quantity, complex::Im, ip, is_distribution_initialised, is_verbose_mode_activated(), isotop::isotopic_composition, element::isotops, MEMORY_ALLOCATION_ERROR, N_atom, N_atom_quantity, N_PEPT, N_SPEC, nb_data_amu, element::nb_isotops, O_atom, O_atom_quantity, peptide_maximum_mass, peptide_precision, complex::Re, read_formula(), isotop::relative_mass, result, S_atom, S_atom_quantity, Se_atom, Se_atom_quantity, spectrum_maximum_mass, step, t_atom, t_C_atom, t_exp_spec, t_H_atom, t_N_atom, t_O_atom, t_peptide, t_S_atom, t_Se_atom, t_shifted_peptide, TRUE, and w\&.
+.PP
+Referenced by load_string_keyword()\&.
+.SS "void integral_normalization (double integral_value, int size, \fBcomplex_t\fP * t_complex)"
+
+.PP
+Procedure which makes a normalization of a data array\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIintegral_value\fP The used integral value\&. 
+.br
+\fIsize\fP The t_complex structure size\&. 
+.br
+\fIt_complex\fP The data to normalize\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1449 of file isodistrib\&.cpp\&.
+.PP
+References complex::Re\&.
+.PP
+Referenced by optimized_isotopic_distribution(), and read_spectrum()\&.
+.SS "int is_simulated_wanted_protein ()"
+
+.PP
+Function which indicates if the current loaded protein corresponding to the specie\&. 
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE (see \fButil\&.h\fP)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2182 of file isodistrib\&.cpp\&.
+.PP
+References error(), get_specie(), spectrum_original_description, TRUE, and USAGE_ERROR\&.
+.PP
+Referenced by main()\&.
+.SS "int next_simulated_spectrum ()"
+
+.PP
+Function which loads the next simulated spectrum\&. 
+.PP
+\fBWarning\fP
+.RS 4
+This function must be called after read_simulated_spectrum, not before\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE, Does a protein have been loaded ? 
+.RE
+.PP
+
+.PP
+Definition at line 1813 of file isodistrib\&.cpp\&.
+.PP
+References error(), FALSE, complex::Im, IO_ERROR, MEMORY_ALLOCATION_ERROR, N_SPEC, complex::Re, result, simulated_spectra, spectrum_original_description, spectrum_original_sequence, step, TRUE, and USAGE_ERROR\&.
+.PP
+Referenced by main()\&.
+.SS "double optimized_isotopic_distribution (\fBformula_t\fP * peptides, int nb_peptides)"
+
+.PP
+Function which calculates the isotopic distribution of a peptide list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpeptides\fP The peptide list\&. 
+.br
+\fInb_peptides\fP The peptide number\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The total score of the protein corresponding to the peptide list\&. 
+.RE
+.PP
+!!! The 2 last mass are thought to belong the main isotopic peak !!!!
+.PP
+!!! The 2 last mass are thought to belong the main isotopic peak !!!!
+.PP
+Definition at line 1029 of file isodistrib\&.cpp\&.
+.PP
+References atom_step, cdft(), complex_multiplication(), compute_correlation(), copy_composition(), current_peptide_score_save, current_peptide_score_size, composition::element, error(), EXECUTION_ERROR, free_composition(), gauss, get_atom_quantity(), get_t_X_atom(), get_weight(), get_X_atom(), complex::Im, integral_normalization(), ip, is_equivalent_to_another(), is_verbose_mode_activated(), isotop::isotopic_composition, element::isotops, max_experimental_mass, MEMORY_ALLOCATION_ERROR, min_experimental_mass, minimum_matched_peptide_number, minimum_peptide_number, N_PEPT, N_SPEC, nb_data_amu, element::nb_isotops, peptide_maximum_mass, peptide_precision, peptide_score_threshold, peptides, composition::quantity, complex::Re, isotop::relative_mass, result, step, element::symbol, t_atom, t_peptide, t_shifted_peptide, threshold, TRUE, and w\&.
+.PP
+Referenced by main()\&.
+.SS "double penalization_factor ()"
+
+.PP
+Function which gives a penalize factor corresponding to all the no need data from the simulated spectrum\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The penalization score\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2351 of file isodistrib\&.cpp\&.
+.PP
+References max_experimental_mass, min_experimental_mass, complex::Re, result, step, t_exp_spec, threshold, and variation_threshold\&.
+.SS "void read_simulated_spectrum (const char * spectrum_file)"
+
+.PP
+Procedure which allows to open the file which contains theoretical spectra\&. 
+.PP
+\fBWarning\fP
+.RS 4
+This procedure opens only the file and don't load any data\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIspectrum_file\fP The name of the file which contains simulated spectra\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1795 of file isodistrib\&.cpp\&.
+.PP
+References error(), IO_ERROR, MEMORY_ALLOCATION_ERROR, simulated_spectra, and simulated_spectra_file\&.
+.PP
+Referenced by load_string_keyword()\&.
+.SS "void read_spectrum (const char * spectrum_file)"
+
+.PP
+Procedure which loads a spectrum from a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspectrum_file\fP The spectrum file\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1514 of file isodistrib\&.cpp\&.
+.PP
+References error(), experimental_file, FALSE, complex::Im, integral_normalization(), IO_ERROR, is_verbose_mode_activated(), jump_commentaries(), max_experimental_mass, MEMORY_ALLOCATION_ERROR, min_experimental_mass, N_SPEC, complex::Re, step, t_exp_spec, TRUE, USAGE_ERROR, variation_threshold, and WARNING\&.
+.PP
+Referenced by load_string_keyword()\&.
+.SS "void set_C_atom_quantity (int new_quantity)"
+
+.PP
+Procedure which allows to modify the quantity of C atom for the initialisation process\&. 
+.PP
+\fBWarning\fP
+.RS 4
+The call to this procedure will change the H, O, N and S quantities with the corresponding factor *4, /4, /2 and /8\&.
+.br
+ The call is refused if the distribution has already been initialised\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_quantity\fP The new atom C quantity\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2062 of file isodistrib\&.cpp\&.
+.PP
+References C_atom, C_atom_quantity, error(), H_atom_quantity, N_atom_quantity, O_atom_quantity, S_atom_quantity, Se_atom_quantity, and USAGE_ERROR\&.
+.PP
+Referenced by load_int_keyword()\&.
+.SS "void set_exp_spectrum (\fBcomplex_t\fP * spectrum)"
+
+.PP
+Procedure which allows to set manually the experimental spectrum\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspectrum\fP The experimental spectrum\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1765 of file isodistrib\&.cpp\&.
+.PP
+References error(), complex::Im, N_SPEC, complex::Re, t_exp_spec, and USAGE_ERROR\&.
+.SS "void set_gaussian_value (double new_value)"
+
+.PP
+Procedure which allows to modify the gaussian value\&. 
+.PP
+\fBWarning\fP
+.RS 4
+The call is refused if the procedure init_distrib has been already used\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_value\fP The new gaussian value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2120 of file isodistrib\&.cpp\&.
+.PP
+References error(), gaussian, N_PEPT, and USAGE_ERROR\&.
+.PP
+Referenced by load_float_keyword()\&.
+.SS "void set_maximum_mass (double new_value)"
+
+.PP
+Procedure which allows to modify the maximum mass for the peptides\&. 
+.PP
+\fBWarning\fP
+.RS 4
+The call is refused if the procedure init_distrib has been already used\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_value\fP The new maximum mass\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2242 of file isodistrib\&.cpp\&.
+.PP
+References error(), max_experimental_mass, N_PEPT, spectrum_maximum_mass, and USAGE_ERROR\&.
+.PP
+Referenced by load_float_keyword()\&.
+.SS "void set_minimum_mass (double new_value)"
+
+.PP
+Procedure which allows to modify the minimum mass for the peptides\&. 
+.PP
+\fBWarning\fP
+.RS 4
+The call is refused if the procedure init_distrib has been already used\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_value\fP The new minimum mass\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2220 of file isodistrib\&.cpp\&.
+.PP
+References error(), min_experimental_mass, N_PEPT, and USAGE_ERROR\&.
+.PP
+Referenced by load_float_keyword()\&.
+.SS "void set_minimum_matched_peptide_number (unsigned int new_value)"
+
+.PP
+Procedure which allows to modify the minimum matched peptide number needed to a protein to be considered\&. 
+.PP
+\fBWarning\fP
+.RS 4
+The call is refused if the procedure is_parsing_started (see \fBseqio\&.h\fP/\&.cpp) return TRUE\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_value\fP The new minimum matched peptide number\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2392 of file isodistrib\&.cpp\&.
+.PP
+References error(), is_parsing_started(), minimum_matched_peptide_number, TRUE, and WARNING\&.
+.PP
+Referenced by load_unsigned_int_keyword()\&.
+.SS "void set_minimum_peptide_number (unsigned int new_value)"
+
+.PP
+Procedure which allows to modify the minimum peptide number needed to a protein to be considered\&. 
+.PP
+\fBWarning\fP
+.RS 4
+The call is refused if the procedure is_parsing_started (see \fBseqio\&.h\fP/\&.cpp) return TRUE\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_value\fP The new minimum peptide number\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2371 of file isodistrib\&.cpp\&.
+.PP
+References error(), is_parsing_started(), minimum_peptide_number, TRUE, and WARNING\&.
+.PP
+Referenced by load_unsigned_int_keyword()\&.
+.SS "void set_peptide_maximum_mass (int new_value)"
+
+.PP
+Procedure which allows to modify the peptide maximum mass\&. 
+.PP
+\fBWarning\fP
+.RS 4
+The call is refused if the procedure init_distrib has been already used\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_value\fP The new peptide maximum mass\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2268 of file isodistrib\&.cpp\&.
+.PP
+References error(), N_PEPT, peptide_maximum_mass, and USAGE_ERROR\&.
+.PP
+Referenced by load_int_keyword()\&.
+.SS "void set_peptide_precision (int new_value)"
+
+.PP
+Procedure which allows to modify the peptide precision\&. 
+.PP
+\fBWarning\fP
+.RS 4
+The call is refused if the procedure init_distrib has been already used\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_value\fP The new peptide precision\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2284 of file isodistrib\&.cpp\&.
+.PP
+References error(), N_PEPT, peptide_precision, USAGE_ERROR, and WARNING\&.
+.PP
+Referenced by load_int_keyword()\&.
+.SS "void set_precision (int new_value)"
+
+.PP
+Procedure which allows to modify the spectrum precision\&. 
+.PP
+\fBWarning\fP
+.RS 4
+The call is refused if the procedure init_distrib has been already used\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_value\fP The new precision\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2136 of file isodistrib\&.cpp\&.
+.PP
+References error(), N_PEPT, N_SPEC, and USAGE_ERROR\&.
+.PP
+Referenced by load_int_keyword()\&.
+.SS "void set_scoring_sensitivity (double new_value)"
+
+.PP
+Procedure which allows to modify the score sensitivity\&. 
+.PP
+\fBWarning\fP
+.RS 4
+The call is refused if the procedure init_distrib has been already used\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_value\fP The new sensitivity\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2198 of file isodistrib\&.cpp\&.
+.PP
+References error(), N_PEPT, sensitivity, and USAGE_ERROR\&.
+.PP
+Referenced by load_float_keyword()\&.
+.SS "void set_spectrum_maximum_mass (int new_value)"
+
+.PP
+Procedure which allows to modify the spectrum maximum mass\&. 
+.PP
+\fBWarning\fP
+.RS 4
+The call is refused if the procedure init_distrib has been already used\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_value\fP The new maximum mass\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2104 of file isodistrib\&.cpp\&.
+.PP
+References error(), N_PEPT, spectrum_maximum_mass, and USAGE_ERROR\&.
+.PP
+Referenced by load_int_keyword()\&.
+.SS "void set_threshold (double new_value)"
+
+.PP
+Procedure which allows to set the threshold useful for the procedure write_spectrum_peak_only and the scoring\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_value\fP The new value\&. 
+.RE
+.PP
+
+.PP
+Definition at line 2026 of file isodistrib\&.cpp\&.
+.PP
+References threshold\&.
+.PP
+Referenced by load_float_keyword()\&.
+.SS "void write_spectrum (FILE * f, \fBcomplex_t\fP * t_complex, char * entry)"
+
+.PP
+Procedure which writes a spectrum in a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP The file where the spectrum will be write\&. 
+.br
+\fIt_complex\fP The spectrum to save\&. 
+.br
+\fIentry\fP The spectrum name\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1502 of file isodistrib\&.cpp\&.
+.PP
+References N_SPEC, and step\&.
+.SS "void write_spectrum_cplx (FILE * f, \fBcomplex_t\fP * t_complex, char * entry)"
+
+.PP
+Procedure which writes a module of data in a complex spectrum file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP The file\&. 
+.br
+\fIt_complex\fP The spectrum\&. 
+.br
+\fIentry\fP The spectrum name\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1490 of file isodistrib\&.cpp\&.
+.PP
+References N_SPEC, and step\&.
+.SS "void write_spectrum_peak_only (FILE * file, \fBcomplex_t\fP * spectrum, char * name)"
+
+.PP
+Procedure which writes only the spectrum peaks in a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file where the spectrum will be save\&. 
+.br
+\fIspectrum\fP The spectrum\&. 
+.br
+\fIname\fP The spectrum name\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1781 of file isodistrib\&.cpp\&.
+.PP
+References N_SPEC, step, and threshold\&.
+.SH "Variable Documentation"
+.PP 
+.SS "int atom_nb_data_amu"
+
+.PP
+Number of points between each mass unit in the atom spectrum\&. 
+.PP
+Definition at line 202 of file isodistrib\&.cpp\&.
+.PP
+Referenced by init_distrib()\&.
+.SS "double atom_step"
+
+.PP
+The step between two points in the atom spectrum\&. 
+.PP
+Definition at line 187 of file isodistrib\&.cpp\&.
+.PP
+Referenced by init_distrib(), and optimized_isotopic_distribution()\&.
+.SS "\fBcomplex_t\fP ** C_atom =NULL"
+
+.PP
+All the saved distribution of the C atom\&. 
+.PP
+Definition at line 252 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_X_atom(), init_distrib(), and set_C_atom_quantity()\&.
+.SS "int C_atom_quantity =1000"
+
+.PP
+Maximum quantity of C atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation\&. 
+.PP
+Definition at line 222 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_atom_quantity(), init_distrib(), and set_C_atom_quantity()\&.
+.SS "double * current_peptide_score_save =NULL"
+
+.PP
+The score of the peptide of the last protein considered\&. 
+.PP
+Definition at line 312 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_current_peptide_score_save(), and optimized_isotopic_distribution()\&.
+.SS "unsigned int current_peptide_score_size =0"
+
+.PP
+Size the of the current_peptide_score_save array\&. 
+.PP
+Definition at line 317 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_current_peptide_score_size(), and optimized_isotopic_distribution()\&.
+.SS "char * experimental_file =NULL"
+
+.PP
+The experimental spectrum fime\&. 
+.PP
+Definition at line 157 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_experimental_filename(), and read_spectrum()\&.
+.SS "\fBcomplex_t\fP * gauss"
+
+.PP
+Complex array for the gaussian convolution\&. 
+.PP
+Definition at line 72 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), init_distrib(), and optimized_isotopic_distribution()\&.
+.SS "double gauss_param"
+
+.PP
+The gaussian parameter\&. 
+.PP
+Definition at line 192 of file isodistrib\&.cpp\&.
+.PP
+Referenced by init_distrib()\&.
+.SS "double gaussian =0\&.30"
+
+.PP
+The gaussian value\&. 
+.PP
+Definition at line 92 of file isodistrib\&.cpp\&.
+.PP
+Referenced by get_gaussian_value(), init_distrib(), and set_gaussian_value()\&.
+.SS "\fBcomplex_t\fP ** H_atom =NULL"
+
+.PP
+All the saved distribution of the H atom\&. 
+.PP
+Definition at line 257 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_X_atom(), and init_distrib()\&.
+.SS "int H_atom_quantity =4000"
+
+.PP
+Maximum quantity of H atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation\&. 
+.PP
+Definition at line 227 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_atom_quantity(), init_distrib(), and set_C_atom_quantity()\&.
+.SS "int * ip =NULL"
+
+.PP
+A first variable needed for the fast fourier transform process\&. 
+.PP
+Definition at line 212 of file isodistrib\&.cpp\&.
+.PP
+Referenced by bitrv2(), bitrv2conj(), cdft(), ddct(), ddst(), dfct(), dfst(), free_isodistrib(), init_distrib(), makect(), makewt(), optimized_isotopic_distribution(), and rdft()\&.
+.SS "int is_distribution_initialised =\fBFALSE\fP"
+
+.PP
+Definition at line 57 of file isodistrib\&.cpp\&.
+.PP
+Referenced by get_distribution_activation(), and init_distrib()\&.
+.SS "double max_experimental_mass =2500"
+
+.PP
+The maximum authorized peptide mass\&. 
+.PP
+Definition at line 137 of file isodistrib\&.cpp\&.
+.PP
+Referenced by get_maximum_mass(), optimized_isotopic_distribution(), penalization_factor(), read_spectrum(), and set_maximum_mass()\&.
+.SS "double min_experimental_mass =700"
+
+.PP
+The minimum authorized peptide mass\&. 
+.PP
+Definition at line 132 of file isodistrib\&.cpp\&.
+.PP
+Referenced by get_minimum_mass(), optimized_isotopic_distribution(), penalization_factor(), read_spectrum(), and set_minimum_mass()\&.
+.SS "unsigned int minimum_matched_peptide_number =3"
+
+.PP
+The minimum number of peptides belonging to the 'good' peptides for a protein to be considered\&. 
+.PP
+Definition at line 127 of file isodistrib\&.cpp\&.
+.PP
+Referenced by get_minimum_matched_peptide_number(), optimized_isotopic_distribution(), and set_minimum_matched_peptide_number()\&.
+.SS "unsigned int minimum_peptide_number =5"
+
+.PP
+The minimum number of peptides that the digestion has to produced for a protein to be considered\&. 
+.PP
+Definition at line 122 of file isodistrib\&.cpp\&.
+.PP
+Referenced by get_minimum_peptide_number(), optimized_isotopic_distribution(), and set_minimum_peptide_number()\&.
+.SS "\fBcomplex_t\fP ** N_atom =NULL"
+
+.PP
+All the saved distribution of the N atom\&. 
+.PP
+Definition at line 272 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_X_atom(), and init_distrib()\&.
+.SS "int N_atom_quantity =500"
+
+.PP
+Maximum quantity of N atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation\&. 
+.PP
+Definition at line 242 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_atom_quantity(), init_distrib(), and set_C_atom_quantity()\&.
+.SS "int N_PEPT =0"
+
+.PP
+The peptide spectrum precision\&. 
+.PP
+Definition at line 102 of file isodistrib\&.cpp\&.
+.PP
+Referenced by init_distrib(), optimized_isotopic_distribution(), set_gaussian_value(), set_maximum_mass(), set_minimum_mass(), set_peptide_maximum_mass(), set_peptide_precision(), set_precision(), set_scoring_sensitivity(), and set_spectrum_maximum_mass()\&.
+.SS "int N_SPEC =65536"
+
+.PP
+The spectrum precision\&. 
+.PP
+Definition at line 97 of file isodistrib\&.cpp\&.
+.PP
+Referenced by compute_correlation(), copy_spectrum(), get_spectrum_precision(), get_spectrum_size(), init_distrib(), next_simulated_spectrum(), optimized_isotopic_distribution(), read_spectrum(), set_exp_spectrum(), set_precision(), write_spectrum(), write_spectrum_cplx(), and write_spectrum_peak_only()\&.
+.SS "int nb_data_amu"
+
+.PP
+Number of points between each mass unit of a complete spectrum\&. 
+.PP
+Definition at line 197 of file isodistrib\&.cpp\&.
+.PP
+Referenced by init_distrib(), and optimized_isotopic_distribution()\&.
+.SS "\fBcomplex_t\fP ** O_atom =NULL"
+
+.PP
+All the saved distribution of the O atom\&. 
+.PP
+Definition at line 262 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_X_atom(), and init_distrib()\&.
+.SS "int O_atom_quantity =250"
+
+.PP
+Maximum quantity of O atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation\&. 
+.PP
+Definition at line 232 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_atom_quantity(), init_distrib(), and set_C_atom_quantity()\&.
+.SS "int peptide_maximum_mass =16"
+
+.PP
+The peptide spectrum maximum mass\&. 
+.PP
+Definition at line 112 of file isodistrib\&.cpp\&.
+.PP
+Referenced by get_peptide_maximum_mass(), init_distrib(), optimized_isotopic_distribution(), and set_peptide_maximum_mass()\&.
+.SS "int peptide_precision =8"
+
+.PP
+The peptide precision\&. 
+.PP
+Definition at line 117 of file isodistrib\&.cpp\&.
+.PP
+Referenced by get_peptide_precision(), init_distrib(), optimized_isotopic_distribution(), and set_peptide_precision()\&.
+.SS "double peptide_score_threshold =0\&.0"
+
+.PP
+The score threshold for consider a peptide has a good peptide or a bad peptide\&. 
+.PP
+Definition at line 207 of file isodistrib\&.cpp\&.
+.PP
+Referenced by get_peptide_score_threshold(), and optimized_isotopic_distribution()\&.
+.SS "\fBcomplex_t\fP * result"
+
+.PP
+Complex array for the theoretical spectrum\&. 
+.PP
+Definition at line 67 of file isodistrib\&.cpp\&.
+.PP
+Referenced by add_chains(), free_isodistrib(), get_reversed_sequence(), get_theo_spectrum(), init_distrib(), next_simulated_spectrum(), optimized_isotopic_distribution(), and penalization_factor()\&.
+.SS "\fBcomplex_t\fP ** S_atom =NULL"
+
+.PP
+All the saved distribution of the S atom\&. 
+.PP
+Definition at line 267 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_X_atom(), and init_distrib()\&.
+.SS "int S_atom_quantity =125"
+
+.PP
+Maximum quantity of S atoms, the corresponding distributions from 1 to this value will be computed during the distribution initialisation\&. 
+.PP
+Definition at line 237 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_atom_quantity(), init_distrib(), and set_C_atom_quantity()\&.
+.SS "\fBcomplex_t\fP ** Se_atom =NULL"
+
+.PP
+All the saved distribution of the Se atom\&. 
+.PP
+Definition at line 277 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_X_atom(), and init_distrib()\&.
+.SS "int Se_atom_quantity =100"
+
+.PP
+Maximum quantity of Se atoms (due to the U amino acid), the corresponding distributions from 1 to this value will be computed during the distribution initialisation\&. 
+.PP
+Definition at line 247 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_atom_quantity(), init_distrib(), and set_C_atom_quantity()\&.
+.SS "double sensitivity =0\&.5"
+
+.PP
+The sensitivity\&. 
+.PP
+Definition at line 147 of file isodistrib\&.cpp\&.
+.PP
+Referenced by get_scoring_sensitivity(), and set_scoring_sensitivity()\&.
+.SS "FILE * simulated_spectra =NULL"
+
+.PP
+The file that contains the simulated spectrum database\&. 
+.PP
+Definition at line 177 of file isodistrib\&.cpp\&.
+.PP
+Referenced by next_simulated_spectrum(), and read_simulated_spectrum()\&.
+.SS "char * simulated_spectra_file =NULL"
+
+.PP
+The name of the file that contains the spectum database\&. 
+.PP
+Definition at line 172 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_simulated_spectra_filename(), and read_simulated_spectrum()\&.
+.SS "int spectrum_maximum_mass =4096"
+
+.PP
+The spectrum maximum mass\&. 
+.PP
+Definition at line 107 of file isodistrib\&.cpp\&.
+.PP
+Referenced by get_spectrum_maximum_mass(), init_distrib(), set_maximum_mass(), and set_spectrum_maximum_mass()\&.
+.SS "char * spectrum_original_description =NULL"
+
+.PP
+The theoretical spectrum description (from FASTA database)\&. 
+.PP
+Definition at line 162 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_spectrum_original_description(), is_simulated_wanted_protein(), and next_simulated_spectrum()\&.
+.SS "char * spectrum_original_sequence =NULL"
+
+.PP
+The theoretical spectrum original sequence (from FASTA database)\&. 
+.PP
+Definition at line 167 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_spectrum_original_sequence(), and next_simulated_spectrum()\&.
+.SS "int step"
+
+.PP
+The step between two points in a complete spectrum\&. 
+.PP
+Definition at line 182 of file isodistrib\&.cpp\&.
+.PP
+Referenced by get_step(), init_distrib(), next_simulated_spectrum(), optimized_isotopic_distribution(), penalization_factor(), read_spectrum(), write_spectrum(), write_spectrum_cplx(), and write_spectrum_peak_only()\&.
+.SS "\fBcomplex_t\fP * t_atom"
+
+.PP
+Complex array for the atom spectrum\&. 
+.PP
+Definition at line 62 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), init_distrib(), and optimized_isotopic_distribution()\&.
+.SS "\fBcomplex_t\fP * t_C_atom =NULL"
+
+.PP
+The distribution of C1\&. 
+.PP
+Definition at line 282 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_t_X_atom(), and init_distrib()\&.
+.SS "\fBcomplex_t\fP * t_exp_spec"
+
+.PP
+Complex array for the experimental spectrum\&. 
+.PP
+Definition at line 87 of file isodistrib\&.cpp\&.
+.PP
+Referenced by compute_correlation(), free_isodistrib(), get_exp_spectrum(), init_distrib(), penalization_factor(), read_spectrum(), and set_exp_spectrum()\&.
+.SS "\fBcomplex_t\fP * t_H_atom =NULL"
+
+.PP
+The distribution of H1\&. 
+.PP
+Definition at line 287 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_t_X_atom(), and init_distrib()\&.
+.SS "\fBcomplex_t\fP * t_N_atom =NULL"
+
+.PP
+The distribution of N1\&. 
+.PP
+Definition at line 302 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_t_X_atom(), and init_distrib()\&.
+.SS "\fBcomplex_t\fP * t_O_atom =NULL"
+
+.PP
+The distribution of O1\&. 
+.PP
+Definition at line 292 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_t_X_atom(), and init_distrib()\&.
+.SS "\fBcomplex_t\fP * t_peptide"
+
+.PP
+Complex array for one peptide spectrum\&. 
+.PP
+Definition at line 77 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), init_distrib(), and optimized_isotopic_distribution()\&.
+.SS "\fBcomplex_t\fP * t_S_atom =NULL"
+
+.PP
+The distribution of S1\&. 
+.PP
+Definition at line 297 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_t_X_atom(), and init_distrib()\&.
+.SS "\fBcomplex_t\fP * t_Se_atom =NULL"
+
+.PP
+The distribution of Se1\&. 
+.PP
+Definition at line 307 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), get_t_X_atom(), and init_distrib()\&.
+.SS "\fBcomplex_t\fP * t_shifted_peptide"
+
+.PP
+Complex array for one peptide spectrum with a shifted mass\&. 
+.PP
+Definition at line 82 of file isodistrib\&.cpp\&.
+.PP
+Referenced by free_isodistrib(), init_distrib(), and optimized_isotopic_distribution()\&.
+.SS "double threshold =0\&.0000001"
+
+.PP
+The spectrum threshold\&. 
+.PP
+Definition at line 142 of file isodistrib\&.cpp\&.
+.PP
+Referenced by compute_correlation(), get_threshold(), optimized_isotopic_distribution(), penalization_factor(), set_threshold(), and write_spectrum_peak_only()\&.
+.SS "double variation_threshold =\-1\&.0"
+
+.PP
+The varation threshold\&. 
+.PP
+Definition at line 152 of file isodistrib\&.cpp\&.
+.PP
+Referenced by compute_correlation(), penalization_factor(), and read_spectrum()\&.
+.SS "double * w =NULL"
+
+.PP
+A second variable needed for the fast fourier transform process\&. 
+.PP
+Definition at line 217 of file isodistrib\&.cpp\&.
+.PP
+Referenced by cdft(), cft1st(), cftbsub(), cftfsub(), cftmdl(), ddct(), ddst(), dfct(), dfst(), free_isodistrib(), init_distrib(), makewt(), optimized_isotopic_distribution(), and rdft()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

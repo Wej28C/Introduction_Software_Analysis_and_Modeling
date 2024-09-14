@@ -1,0 +1,5 @@
+<map id="getEntry" name="getEntry">
+<area shape="rect" id="node1" title="Function to position the cursor on the nearest entry from the offset position." alt="" coords="5,5,83,32"/>
+<area shape="rect" id="node2" href="$seqio_8cpp.html#acade74b2655f64a81053c1a9c43b5c00" title="Function which allows to move until the next entry." alt="" coords="131,5,216,32"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="264,5,317,32"/>
+</map>

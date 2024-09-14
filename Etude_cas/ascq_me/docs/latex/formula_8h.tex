@@ -1,0 +1,721 @@
+\doxysection{formula.\+h File Reference}
+\label{formula_8h}\index{formula.h@{formula.h}}
+
+
+Definition of a chemical formula.  
+
+
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\newline
+Include dependency graph for formula.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{formula_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{formula_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ isotop}
+\begin{DoxyCompactList}\small\item\em An isotopic structure represents the isotop of an element. \end{DoxyCompactList}\item 
+struct \textbf{ element}
+\begin{DoxyCompactList}\small\item\em Structure representing an element in the NIST table. \end{DoxyCompactList}\item 
+struct \textbf{ composition}
+\begin{DoxyCompactList}\small\item\em Structure representing an element with its quantity, for example\+: C2. \end{DoxyCompactList}\item 
+struct \textbf{ formula}
+\begin{DoxyCompactList}\small\item\em Structure representing a formula made of compositions, for example \+: C2\+H4. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \textbf{ isotop} \textbf{ isotop\+\_\+t}
+\item 
+typedef struct \textbf{ element} \textbf{ element\+\_\+t}
+\item 
+typedef struct \textbf{ composition} \textbf{ composition\+\_\+t}
+\item 
+typedef struct \textbf{ formula} \textbf{ formula\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ element\+\_\+t} $\ast$ \textbf{ get\+\_\+element\+\_\+table} (const char $\ast$filename, int $\ast$\textbf{ nb\+\_\+elements})
+\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ read\+\_\+formula} (const char $\ast$c, \textbf{ element\+\_\+t} $\ast$elem\+\_\+table, int elem\+\_\+table\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Allocate and read a formula from a string. \end{DoxyCompactList}\item 
+void \textbf{ add\+\_\+formula} (\textbf{ formula\+\_\+t} $\ast$dest, \textbf{ formula\+\_\+t} $\ast$src)
+\begin{DoxyCompactList}\small\item\em Add two formula. \end{DoxyCompactList}\item 
+int \textbf{ sub\+\_\+formula} (\textbf{ formula\+\_\+t} $\ast$dest, \textbf{ formula\+\_\+t} $\ast$src)
+\begin{DoxyCompactList}\small\item\em Substrate two formula. \end{DoxyCompactList}\item 
+\textbf{ element\+\_\+t} $\ast$ \textbf{ get\+\_\+element} (char $\ast$sym, \textbf{ element\+\_\+t} $\ast$elem\+\_\+table, int elem\+\_\+table\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Returns an element for element table. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ formula\+\_\+tochar} (\textbf{ formula\+\_\+t} $\ast$f)
+\begin{DoxyCompactList}\small\item\em Returns a string representing a formula. \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+element\+\_\+table} (\textbf{ element\+\_\+t} $\ast$e, int tsize)
+\begin{DoxyCompactList}\small\item\em Free the memory allocated for the element table. \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+formula} (\textbf{ formula\+\_\+t} $\ast$f)
+\begin{DoxyCompactList}\small\item\em Free the memory allocated for a formula. \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+composition} (\textbf{ composition\+\_\+t} $\ast$\textbf{ composition}, int number)
+\begin{DoxyCompactList}\small\item\em Procedure which frees the memory allocated for a composition. \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+n\+\_\+formula} (\textbf{ formula\+\_\+t} $\ast$\textbf{ formula}, int number)
+\begin{DoxyCompactList}\small\item\em Free the memory for n formula. \end{DoxyCompactList}\item 
+double \textbf{ get\+\_\+weight} (\textbf{ formula\+\_\+t} $\ast$f)
+\begin{DoxyCompactList}\small\item\em Get the weight of a formula. \end{DoxyCompactList}\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ copy\+\_\+formula} (\textbf{ formula\+\_\+t} $\ast$\textbf{ formula})
+\begin{DoxyCompactList}\small\item\em Get the copy of a formula. \end{DoxyCompactList}\item 
+\textbf{ composition\+\_\+t} $\ast$ \textbf{ copy\+\_\+composition} (\textbf{ composition\+\_\+t} $\ast$\textbf{ composition}, int number)
+\begin{DoxyCompactList}\small\item\em Get the copy of a composition. \end{DoxyCompactList}\item 
+void \textbf{ print\+\_\+formula} (\textbf{ formula\+\_\+t} $\ast$\textbf{ formula}, int number)
+\begin{DoxyCompactList}\small\item\em Print the formula on the screen. \end{DoxyCompactList}\item 
+void \textbf{ fprint\+\_\+formula} (FILE $\ast$file, \textbf{ formula\+\_\+t} $\ast$\textbf{ formula}, int number)
+\begin{DoxyCompactList}\small\item\em Print the formula in a file. \end{DoxyCompactList}\item 
+void \textbf{ print\+\_\+element\+\_\+table} (\textbf{ element\+\_\+t} $\ast$\textbf{ element\+\_\+table}, int size)
+\begin{DoxyCompactList}\small\item\em Print the element table on the screen. \end{DoxyCompactList}\item 
+void \textbf{ fprint\+\_\+element\+\_\+table} (FILE $\ast$file, \textbf{ element\+\_\+t} $\ast$\textbf{ element\+\_\+table}, int size)
+\begin{DoxyCompactList}\small\item\em Print the element table in a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition of a chemical formula. 
+
+\begin{DoxyAuthor}{Author}
+Nicolas GRUSZCZYNSKA and Nicolas DOLET (2005).~\newline
+ Modified and updated by Jean-\/\+Charles BOISSON (2005-\/2008). 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{formula_8h_a7c8b7ce9b0b38eaa56099e0a81414c6d}} 
+\index{formula.h@{formula.h}!composition\_t@{composition\_t}}
+\index{composition\_t@{composition\_t}!formula.h@{formula.h}}
+\doxysubsubsection{composition\_t}
+{\footnotesize\ttfamily typedef struct \textbf{ composition} \textbf{ composition\+\_\+t}}
+
+\mbox{\label{formula_8h_a3578cc557f82ebb906d8224ce230ef38}} 
+\index{formula.h@{formula.h}!element\_t@{element\_t}}
+\index{element\_t@{element\_t}!formula.h@{formula.h}}
+\doxysubsubsection{element\_t}
+{\footnotesize\ttfamily typedef struct \textbf{ element} \textbf{ element\+\_\+t}}
+
+\mbox{\label{formula_8h_a236aa82734ec0009a6eb928b4a24f1d5}} 
+\index{formula.h@{formula.h}!formula\_t@{formula\_t}}
+\index{formula\_t@{formula\_t}!formula.h@{formula.h}}
+\doxysubsubsection{formula\_t}
+{\footnotesize\ttfamily typedef struct \textbf{ formula} \textbf{ formula\+\_\+t}}
+
+\mbox{\label{formula_8h_aee54b3120583a4a33fb0529cb174f50a}} 
+\index{formula.h@{formula.h}!isotop\_t@{isotop\_t}}
+\index{isotop\_t@{isotop\_t}!formula.h@{formula.h}}
+\doxysubsubsection{isotop\_t}
+{\footnotesize\ttfamily typedef struct \textbf{ isotop} \textbf{ isotop\+\_\+t}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{formula_8h_a8e4bdf0442e08288e70dcd8f2464b77c}} 
+\index{formula.h@{formula.h}!add\_formula@{add\_formula}}
+\index{add\_formula@{add\_formula}!formula.h@{formula.h}}
+\doxysubsubsection{add\_formula()}
+{\footnotesize\ttfamily void add\+\_\+formula (\begin{DoxyParamCaption}\item[{\textbf{ formula\+\_\+t} $\ast$}]{dest,  }\item[{\textbf{ formula\+\_\+t} $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+Add two formula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & The first formula before/after the addition. \\
+\hline
+{\em src} & The second formula. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 481 of file formula.\+cpp.
+
+
+
+References add\+\_\+element(), formula\+::comps, error(), formula\+::nb\+\_\+comp, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by apply\+\_\+global\+\_\+modification(), apply\+\_\+modification(), get\+\_\+formula\+\_\+from\+\_\+sequence(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein(), and get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{formula_8h_a8e4bdf0442e08288e70dcd8f2464b77c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{formula_8h_a6698b1c4a88266f4e0916c40944476f1}} 
+\index{formula.h@{formula.h}!copy\_composition@{copy\_composition}}
+\index{copy\_composition@{copy\_composition}!formula.h@{formula.h}}
+\doxysubsubsection{copy\_composition()}
+{\footnotesize\ttfamily \textbf{ composition\+\_\+t}$\ast$ copy\+\_\+composition (\begin{DoxyParamCaption}\item[{\textbf{ composition\+\_\+t} $\ast$}]{composition,  }\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Get the copy of a composition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em composition} & The original composition. \\
+\hline
+{\em number} & The number of elements. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy. 
+\end{DoxyReturn}
+
+
+Definition at line 722 of file formula.\+cpp.
+
+
+
+References copy\+\_\+one\+\_\+element(), composition\+::element, error(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, composition\+::quantity, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by copy\+\_\+formula(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{formula_8h_a6698b1c4a88266f4e0916c40944476f1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{formula_8h_ab665718670d9107facae9751277030ef}} 
+\index{formula.h@{formula.h}!copy\_formula@{copy\_formula}}
+\index{copy\_formula@{copy\_formula}!formula.h@{formula.h}}
+\doxysubsubsection{copy\_formula()}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t}$\ast$ copy\+\_\+formula (\begin{DoxyParamCaption}\item[{\textbf{ formula\+\_\+t} $\ast$}]{formula }\end{DoxyParamCaption})}
+
+
+
+Get the copy of a formula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formula} & The original formula. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the copy. 
+\end{DoxyReturn}
+
+
+Definition at line 746 of file formula.\+cpp.
+
+
+
+References formula\+::comps, copy\+\_\+composition(), error(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, formula\+::nb\+\_\+comp, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by add\+\_\+protein(), get\+\_\+amino\+\_\+acid\+\_\+table(), get\+\_\+formula\+\_\+from\+\_\+sequence(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index(), and sub\+\_\+formula().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{formula_8h_ab665718670d9107facae9751277030ef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{formula_8h_a622db51eb89fbb00e9876f91e054005d}} 
+\index{formula.h@{formula.h}!formula\_tochar@{formula\_tochar}}
+\index{formula\_tochar@{formula\_tochar}!formula.h@{formula.h}}
+\doxysubsubsection{formula\_tochar()}
+{\footnotesize\ttfamily char$\ast$ formula\+\_\+tochar (\begin{DoxyParamCaption}\item[{\textbf{ formula\+\_\+t} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Returns a string representing a formula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The formula. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string corresponding to f. 
+\end{DoxyReturn}
+
+
+Definition at line 564 of file formula.\+cpp.
+
+
+
+References formula\+::comps, composition\+::element, formula\+::nb\+\_\+comp, composition\+::quantity, and element\+::symbol.
+
+
+
+Referenced by fprint\+\_\+amino\+\_\+acid\+\_\+table(), fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), fprint\+\_\+formula(), fprint\+\_\+result\+\_\+of\+\_\+digestion(), fprint\+\_\+result\+\_\+of\+\_\+digestion\+\_\+table\+\_\+format(), print\+\_\+amino\+\_\+acid\+\_\+table(), print\+\_\+configuration(), print\+\_\+formula(), and print\+\_\+result\+\_\+of\+\_\+digestion().
+
+\mbox{\label{formula_8h_a3c91d32c2fdbae5787e5ec1671424304}} 
+\index{formula.h@{formula.h}!fprint\_element\_table@{fprint\_element\_table}}
+\index{fprint\_element\_table@{fprint\_element\_table}!formula.h@{formula.h}}
+\doxysubsubsection{fprint\_element\_table()}
+{\footnotesize\ttfamily void fprint\+\_\+element\+\_\+table (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file,  }\item[{\textbf{ element\+\_\+t} $\ast$}]{element\+\_\+table,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Print the element table in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & the file. \\
+\hline
+{\em element\+\_\+table} & The element table. \\
+\hline
+{\em size} & The size of the element table. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 813 of file formula.\+cpp.
+
+
+
+References element\+\_\+table, element\+::nb\+\_\+isotops, and symbol.
+
+\mbox{\label{formula_8h_a348e392ab75ee111b9dec91bbc7e0e4e}} 
+\index{formula.h@{formula.h}!fprint\_formula@{fprint\_formula}}
+\index{fprint\_formula@{fprint\_formula}!formula.h@{formula.h}}
+\doxysubsubsection{fprint\_formula()}
+{\footnotesize\ttfamily void fprint\+\_\+formula (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file,  }\item[{\textbf{ formula\+\_\+t} $\ast$}]{formula,  }\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Print the formula in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file. \\
+\hline
+{\em formula} & The formula we want to print. \\
+\hline
+{\em number} & The number of formula. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 781 of file formula.\+cpp.
+
+
+
+References formula\+\_\+tochar().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{formula_8h_a348e392ab75ee111b9dec91bbc7e0e4e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{formula_8h_a6a81bdde62cda8c4d6ed43d9b16b4c26}} 
+\index{formula.h@{formula.h}!free\_composition@{free\_composition}}
+\index{free\_composition@{free\_composition}!formula.h@{formula.h}}
+\doxysubsubsection{free\_composition()}
+{\footnotesize\ttfamily void free\+\_\+composition (\begin{DoxyParamCaption}\item[{\textbf{ composition\+\_\+t} $\ast$}]{composition,  }\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Procedure which frees the memory allocated for a composition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em composition} & The composition to free \\
+\hline
+{\em number} & The number of element \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 598 of file formula.\+cpp.
+
+
+
+References error(), free\+\_\+element(), and FREE\+\_\+\+MEMORY\+\_\+\+ERROR.
+
+
+
+Referenced by free\+\_\+all\+\_\+modifications(), free\+\_\+formula(), free\+\_\+n\+\_\+formula(), optimized\+\_\+isotopic\+\_\+distribution(), and sub\+\_\+formula().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{formula_8h_a6a81bdde62cda8c4d6ed43d9b16b4c26_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{formula_8h_a6081a8141b5245d522dcc8f692136ee4}} 
+\index{formula.h@{formula.h}!free\_element\_table@{free\_element\_table}}
+\index{free\_element\_table@{free\_element\_table}!formula.h@{formula.h}}
+\doxysubsubsection{free\_element\_table()}
+{\footnotesize\ttfamily void free\+\_\+element\+\_\+table (\begin{DoxyParamCaption}\item[{\textbf{ element\+\_\+t} $\ast$}]{e,  }\item[{int}]{tsize }\end{DoxyParamCaption})}
+
+
+
+Free the memory allocated for the element table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The element table table. \\
+\hline
+{\em tsize} & the size of e \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 642 of file formula.\+cpp.
+
+
+
+References error(), and FREE\+\_\+\+MEMORY\+\_\+\+ERROR.
+
+
+
+Referenced by free\+\_\+tables().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{formula_8h_a6081a8141b5245d522dcc8f692136ee4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{formula_8h_a4c746199d04b732d41c72f52bb05cdd9}} 
+\index{formula.h@{formula.h}!free\_formula@{free\_formula}}
+\index{free\_formula@{free\_formula}!formula.h@{formula.h}}
+\doxysubsubsection{free\_formula()}
+{\footnotesize\ttfamily void free\+\_\+formula (\begin{DoxyParamCaption}\item[{\textbf{ formula\+\_\+t} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Free the memory allocated for a formula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The formula. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 614 of file formula.\+cpp.
+
+
+
+References formula\+::comps, error(), free\+\_\+composition(), FREE\+\_\+\+MEMORY\+\_\+\+ERROR, and formula\+::nb\+\_\+comp.
+
+
+
+Referenced by fprintf\+\_\+ascq\+\_\+me\+\_\+results(), fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+table\+\_\+form(), fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+xml(), free\+\_\+amino\+\_\+acid\+\_\+table(), free\+\_\+peptide\+\_\+link(), free\+\_\+util\+\_\+digestion(), init\+\_\+distrib(), is\+\_\+a\+\_\+wanted\+\_\+protein(), printf\+\_\+ascq\+\_\+me\+\_\+results(), set\+\_\+peptide\+\_\+charge(), and sub\+\_\+formula().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{formula_8h_a4c746199d04b732d41c72f52bb05cdd9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{formula_8h_a8502fa8cafb1220f0592a32d0e040117}} 
+\index{formula.h@{formula.h}!free\_n\_formula@{free\_n\_formula}}
+\index{free\_n\_formula@{free\_n\_formula}!formula.h@{formula.h}}
+\doxysubsubsection{free\_n\_formula()}
+{\footnotesize\ttfamily void free\+\_\+n\+\_\+formula (\begin{DoxyParamCaption}\item[{\textbf{ formula\+\_\+t} $\ast$}]{formula,  }\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Free the memory for n formula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formula} & The formulae. \\
+\hline
+{\em number} & The number of formulae. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 626 of file formula.\+cpp.
+
+
+
+References error(), free\+\_\+composition(), and FREE\+\_\+\+MEMORY\+\_\+\+ERROR.
+
+
+
+Referenced by add\+\_\+protein(), ascq\+\_\+me\+\_\+cleaning(), fprint\+\_\+result\+\_\+of\+\_\+digestion(), fprint\+\_\+result\+\_\+of\+\_\+digestion\+\_\+table\+\_\+format(), main(), and print\+\_\+result\+\_\+of\+\_\+digestion().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{formula_8h_a8502fa8cafb1220f0592a32d0e040117_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{formula_8h_aa6766e4963af7eef68ca7edd4b84f6ba}} 
+\index{formula.h@{formula.h}!get\_element@{get\_element}}
+\index{get\_element@{get\_element}!formula.h@{formula.h}}
+\doxysubsubsection{get\_element()}
+{\footnotesize\ttfamily \textbf{ element\+\_\+t}$\ast$ get\+\_\+element (\begin{DoxyParamCaption}\item[{char $\ast$}]{sym,  }\item[{\textbf{ element\+\_\+t} $\ast$}]{elem\+\_\+table,  }\item[{int}]{elem\+\_\+table\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Returns an element for element table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sym} & The atom symbol. \\
+\hline
+{\em elem\+\_\+table} & The element table. \\
+\hline
+{\em elem\+\_\+table\+\_\+size} & The number of elements in the table. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the element\+\_\+t structure corresponding to sym 
+\end{DoxyReturn}
+
+
+Definition at line 464 of file formula.\+cpp.
+
+
+
+References error(), symbol, and USAGE\+\_\+\+ERROR.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{formula_8h_aa6766e4963af7eef68ca7edd4b84f6ba_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{formula_8h_a2e96927511f60e9cad544aaff8bc33f1}} 
+\index{formula.h@{formula.h}!get\_element\_table@{get\_element\_table}}
+\index{get\_element\_table@{get\_element\_table}!formula.h@{formula.h}}
+\doxysubsubsection{get\_element\_table()}
+{\footnotesize\ttfamily \textbf{ element\+\_\+t}$\ast$ get\+\_\+element\+\_\+table (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{int $\ast$}]{nb\+\_\+elements }\end{DoxyParamCaption})}
+
+
+
+Definition at line 294 of file formula.\+cpp.
+
+
+
+References error(), EXECUTION\+\_\+\+ERROR, IO\+\_\+\+ERROR, isotop\+::isotopic\+\_\+composition, element\+::isotops, jump\+\_\+a\+\_\+line(), jump\+\_\+commentaries(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, element\+::nb\+\_\+isotops, read\+\_\+line(), read\+\_\+until(), isotop\+::relative\+\_\+mass, and symbol.
+
+
+
+Referenced by init\+\_\+distrib(), load\+\_\+modifications(), and set\+\_\+peptide\+\_\+charge().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{formula_8h_a2e96927511f60e9cad544aaff8bc33f1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{formula_8h_a77a6756752caf55587c228c4e51b8c7e}} 
+\index{formula.h@{formula.h}!get\_weight@{get\_weight}}
+\index{get\_weight@{get\_weight}!formula.h@{formula.h}}
+\doxysubsubsection{get\_weight()}
+{\footnotesize\ttfamily double get\+\_\+weight (\begin{DoxyParamCaption}\item[{\textbf{ formula\+\_\+t} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Get the weight of a formula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The formula from which we want the weight. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The wanted weight. 
+\end{DoxyReturn}
+
+
+Definition at line 660 of file formula.\+cpp.
+
+
+
+References formula\+::comps, composition\+::element, error(), element\+::isotops, formula\+::nb\+\_\+comp, composition\+::quantity, isotop\+::relative\+\_\+mass, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by add\+\_\+peptide\+\_\+modification(), digest(), fprint\+\_\+amino\+\_\+acid\+\_\+table(), fprintf\+\_\+ascq\+\_\+me\+\_\+peptide\+\_\+scoring(), fprintf\+\_\+ascq\+\_\+me\+\_\+results(), fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+table\+\_\+form(), fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+xml(), fusion\+\_\+peptide(), is\+\_\+a\+\_\+wanted\+\_\+protein(), optimized\+\_\+isotopic\+\_\+distribution(), peptide\+\_\+charge\+\_\+weight(), and printf\+\_\+ascq\+\_\+me\+\_\+results().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{formula_8h_a77a6756752caf55587c228c4e51b8c7e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{formula_8h_a8aae7ad10e65c9fb3cb099f0987ad543}} 
+\index{formula.h@{formula.h}!print\_element\_table@{print\_element\_table}}
+\index{print\_element\_table@{print\_element\_table}!formula.h@{formula.h}}
+\doxysubsubsection{print\_element\_table()}
+{\footnotesize\ttfamily void print\+\_\+element\+\_\+table (\begin{DoxyParamCaption}\item[{\textbf{ element\+\_\+t} $\ast$}]{element\+\_\+table,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Print the element table on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element\+\_\+table} & The element table. \\
+\hline
+{\em size} & the size of the element table. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 796 of file formula.\+cpp.
+
+
+
+References element\+\_\+table, element\+::nb\+\_\+isotops, and symbol.
+
+\mbox{\label{formula_8h_a6374090aeb9f6bfba8426dc790ada0cf}} 
+\index{formula.h@{formula.h}!print\_formula@{print\_formula}}
+\index{print\_formula@{print\_formula}!formula.h@{formula.h}}
+\doxysubsubsection{print\_formula()}
+{\footnotesize\ttfamily void print\+\_\+formula (\begin{DoxyParamCaption}\item[{\textbf{ formula\+\_\+t} $\ast$}]{formula,  }\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Print the formula on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formula} & The formula we want to print. \\
+\hline
+{\em number} & Their number. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 766 of file formula.\+cpp.
+
+
+
+References formula\+\_\+tochar().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{formula_8h_a6374090aeb9f6bfba8426dc790ada0cf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{formula_8h_ace44f5524cc721837db3f1fdd2fb6997}} 
+\index{formula.h@{formula.h}!read\_formula@{read\_formula}}
+\index{read\_formula@{read\_formula}!formula.h@{formula.h}}
+\doxysubsubsection{read\_formula()}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t}$\ast$ read\+\_\+formula (\begin{DoxyParamCaption}\item[{const char $\ast$}]{c,  }\item[{\textbf{ element\+\_\+t} $\ast$}]{elem\+\_\+table,  }\item[{int}]{elem\+\_\+table\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Allocate and read a formula from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The string containing formula \+: CH3... \\
+\hline
+{\em elem\+\_\+table} & The element table. \\
+\hline
+{\em elem\+\_\+table\+\_\+size} & The number of elements in the table. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the read formula\+\_\+t structure. 
+\end{DoxyReturn}
+
+
+Definition at line 176 of file formula.\+cpp.
+
+
+
+References affect\+\_\+atom(), formula\+::comps, error(), FALSE, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, formula\+::nb\+\_\+comp, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by get\+\_\+amino\+\_\+acid\+\_\+table(), init\+\_\+distrib(), init\+\_\+peptid\+\_\+link(), load\+\_\+modifications(), and set\+\_\+peptide\+\_\+charge().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{formula_8h_ace44f5524cc721837db3f1fdd2fb6997_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{formula_8h_ad2114448f547806cb41559772955f34f}} 
+\index{formula.h@{formula.h}!sub\_formula@{sub\_formula}}
+\index{sub\_formula@{sub\_formula}!formula.h@{formula.h}}
+\doxysubsubsection{sub\_formula()}
+{\footnotesize\ttfamily int sub\+\_\+formula (\begin{DoxyParamCaption}\item[{\textbf{ formula\+\_\+t} $\ast$}]{dest,  }\item[{\textbf{ formula\+\_\+t} $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+Substrate two formula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & The first formula before/after the substraction. \\
+\hline
+{\em src} & The second formula. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if possible, 0 else. 
+\end{DoxyReturn}
+
+
+Definition at line 495 of file formula.\+cpp.
+
+
+
+References formula\+::comps, copy\+\_\+formula(), copy\+\_\+one\+\_\+element(), composition\+::element, error(), FALSE, free\+\_\+composition(), free\+\_\+element(), free\+\_\+formula(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, formula\+::nb\+\_\+comp, composition\+::quantity, element\+::symbol, TRUE, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by apply\+\_\+global\+\_\+modification(), and apply\+\_\+modification().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{formula_8h_ad2114448f547806cb41559772955f34f_cgraph}
+\end{center}
+\end{figure}

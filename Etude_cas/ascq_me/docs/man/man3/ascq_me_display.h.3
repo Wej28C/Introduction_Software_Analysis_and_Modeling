@@ -1,0 +1,306 @@
+.TH "ascq_me_display.h" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ascq_me_display.h \- Definition of the methods to use and display ASCQ_ME results\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <sstream>\fP
+.br
+\fC#include 'ascq_me_configuration\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit_ascq_me_display\fP ()"
+.br
+.RI "Procedure which inits all the useful structure for ASCQ_ME display\&. "
+.ti -1c
+.RI "void \fBadd_protein\fP (char *description, char *\fBsequence\fP, \fBcomplex_t\fP *spectrum, double score)"
+.br
+.RI "Procedure which adds and manages a new saved protein\&. "
+.ti -1c
+.RI "void \fBprintf_ascq_me_results\fP ()"
+.br
+.RI "Procedure which prints on the stdout the ASCQ_ME results\&. "
+.ti -1c
+.RI "void \fBfprintf_ascq_me_results\fP (FILE *file)"
+.br
+.RI "Procedure which prints in a file the ASCQ_ME results\&. "
+.ti -1c
+.RI "void \fBascq_me_cleaning\fP ()"
+.br
+.RI "Procedure which frees all the memory allocated for ascq_me (excepted the structures allocated in \fBascq_me\&.cpp\fP)\&. "
+.ti -1c
+.RI "void \fBfree_ascq_me_display\fP ()"
+.br
+.RI "Procedure which frees all the structures useful for the ASCQ_ME display\&. "
+.ti -1c
+.RI "void \fBfprintf_ascq_me_results_table_form\fP (FILE *file)"
+.br
+.RI "Procedure which prints in a file the ASCQ_ME results in order to use them in spreadsheet programs\&. "
+.ti -1c
+.RI "void \fBsave_partial_peptide_scoring\fP (double *peptide_scoring, int nb_peptides)"
+.br
+.RI "Procedure which allows to save the partial peptide scoring of the current protein\&. "
+.ti -1c
+.RI "int \fBcompare_peptide_scores\fP (const void *first, const void *second)"
+.br
+.RI "Procedure which compares two partial_score ==> useful for qsort\&. "
+.ti -1c
+.RI "int \fBcompare_peptide_score_from_indices\fP (const void *first, const void *second)"
+.br
+.RI "Procedure which compares two partial scores from the score indexes in the current peptide scoring array ==> useful for qsort\&. "
+.ti -1c
+.RI "void \fBsort_and_init_with_peptide_scoring\fP ()"
+.br
+.RI "Procedure which allows to sort the peptides_scoring in a decreasing order and initialises the array of peptides sequences\&. "
+.ti -1c
+.RI "void \fBfprintf_ascq_me_peptide_scoring\fP (FILE *file)"
+.br
+.RI "Procedure which prints in a file the ASCQ_ME scoring for the peptides of each result protein in order to use them in a spreadsheet program\&. "
+.ti -1c
+.RI "void \fBfprintf_ascq_me_results_xml\fP (FILE *file)"
+.br
+.RI "Procedure which prints in a file the ASCQ_ME results in a xml format\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition of the methods to use and display ASCQ_ME results\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jean-Charles BOISSON (2006-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBascq_me_display\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void add_protein (char * description, char * sequence, \fBcomplex_t\fP * spectrum, double score)"
+
+.PP
+Procedure which adds and manages a new saved protein\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdescription\fP The protein description\&. 
+.br
+\fIsequence\fP The protein sequence\&. 
+.br
+\fIspectrum\fP The protein simulated spectrum\&. 
+.br
+\fIscore\fP The protein score\&. 
+.RE
+.PP
+
+.PP
+Definition at line 206 of file ascq_me_display\&.cpp\&.
+.PP
+References copy_formula(), copy_spectrum(), current_peptide_formulae, current_peptide_scores, current_peptides, error(), free_n_formula(), get_nb_displayed_proteins(), link_between_score_and_others, MEMORY_ALLOCATION_ERROR, nb_current_peptides, nb_saved_proteins, peptide_formulae, peptide_number, peptide_scores, peptides, protein_descriptions, protein_scores, protein_sequences, protein_spectra, sequence, sort_and_init_with_peptide_scoring(), and USAGE_ERROR\&.
+.PP
+Referenced by main()\&.
+.SS "void ascq_me_cleaning ()"
+
+.PP
+Procedure which frees all the memory allocated for ascq_me (excepted the structures allocated in \fBascq_me\&.cpp\fP)\&. 
+.PP
+Definition at line 481 of file ascq_me_display\&.cpp\&.
+.PP
+References current_peptide_scores, free_n_formula(), link_between_score_and_others, link_between_score_and_peptides, nb_current_peptides, nb_saved_proteins, peptide_formulae, peptide_number, peptide_scores, peptides, protein_descriptions, protein_scores, protein_sequences, and protein_spectra\&.
+.PP
+Referenced by main()\&.
+.SS "int compare_peptide_score_from_indices (const void * first, const void * second)"
+
+.PP
+Procedure which compares two partial scores from the score indexes in the current peptide scoring array ==> useful for qsort\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirst\fP a void pointer that is in reality an index to a peptide score\&. 
+.br
+\fIsecond\fP a void pointer that is also an index to a peptide score\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+1, 0 or -1 <=> the first is inferior,equal or superior to the second\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+It's for a decreasing order\&. 
+.RE
+.PP
+
+.PP
+Definition at line 649 of file ascq_me_display\&.cpp\&.
+.PP
+References current_peptide_scores, error(), and USAGE_ERROR\&.
+.PP
+Referenced by sort_and_init_with_peptide_scoring()\&.
+.SS "int compare_peptide_scores (const void * first, const void * second)"
+
+.PP
+Procedure which compares two partial_score ==> useful for qsort\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirst\fP a void pointer that is in reality a peptide score\&. 
+.br
+\fIsecond\fP a void pointer which is also a peptide score\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+1, 0 or -1 <=> the first is inferior,equal or superior to the second\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+It is for a decreasing order\&. 
+.RE
+.PP
+
+.PP
+Definition at line 622 of file ascq_me_display\&.cpp\&.
+.PP
+References current_peptide_scores, error(), and USAGE_ERROR\&.
+.PP
+Referenced by sort_and_init_with_peptide_scoring()\&.
+.SS "void fprintf_ascq_me_peptide_scoring (FILE * file)"
+
+.PP
+Procedure which prints in a file the ASCQ_ME scoring for the peptides of each result protein in order to use them in a spreadsheet program\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file where the data will be written\&. 
+.RE
+.PP
+
+.PP
+Definition at line 719 of file ascq_me_display\&.cpp\&.
+.PP
+References get_weight(), link_between_score_and_others, nb_saved_proteins, peptide_formulae, peptide_number, peptide_scores, and peptides\&.
+.PP
+Referenced by main()\&.
+.SS "void fprintf_ascq_me_results (FILE * file)"
+
+.PP
+Procedure which prints in a file the ASCQ_ME results\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The considered file\&. 
+.RE
+.PP
+
+.PP
+Definition at line 440 of file ascq_me_display\&.cpp\&.
+.PP
+References free_formula(), get_decoy_score(), get_formula_from_sequence(), get_peptide_score_threshold(), get_weight(), is_decoy_mode_activated(), link_between_score_and_others, nb_saved_proteins, peptide_formulae, peptide_number, peptide_scores, peptides, protein_descriptions, protein_scores, protein_sequences, and TRUE\&.
+.PP
+Referenced by main()\&.
+.SS "void fprintf_ascq_me_results_table_form (FILE * file)"
+
+.PP
+Procedure which prints in a file the ASCQ_ME results in order to use them in spreadsheet programs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file where the results will be written\&. 
+.RE
+.PP
+
+.PP
+Definition at line 517 of file ascq_me_display\&.cpp\&.
+.PP
+References compute_correlation(), free_formula(), get_exp_spectrum(), get_formula_from_sequence(), get_maximum_mass(), get_minimum_mass(), get_step(), get_weight(), link_between_score_and_others, nb_saved_proteins, PROGRAM_LIMITATION, protein_descriptions, protein_scores, protein_sequences, and protein_spectra\&.
+.PP
+Referenced by main()\&.
+.SS "void fprintf_ascq_me_results_xml (FILE * file)"
+
+.PP
+Procedure which prints in a file the ASCQ_ME results in a xml format\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file\&. 
+.RE
+.PP
+
+.PP
+Definition at line 763 of file ascq_me_display\&.cpp\&.
+.PP
+References free_formula(), get_decoy_score(), get_formula_from_sequence(), get_weight(), link_between_score_and_others, nb_saved_proteins, peptide_number, peptide_scores, peptides, protein_descriptions, protein_scores, and protein_sequences\&.
+.PP
+Referenced by main()\&.
+.SS "void free_ascq_me_display ()"
+
+.PP
+Procedure which frees all the structures useful for the ASCQ_ME display\&. 
+.SS "void init_ascq_me_display ()"
+
+.PP
+Procedure which inits all the useful structure for ASCQ_ME display\&. 
+.PP
+Definition at line 132 of file ascq_me_display\&.cpp\&.
+.PP
+References error(), get_nb_displayed_proteins(), link_between_score_and_others, MEMORY_ALLOCATION_ERROR, peptide_formulae, peptide_number, peptide_scores, peptides, protein_descriptions, protein_scores, protein_sequences, and protein_spectra\&.
+.PP
+Referenced by main()\&.
+.SS "void printf_ascq_me_results ()"
+
+.PP
+Procedure which prints on the stdout the ASCQ_ME results\&. 
+.PP
+Definition at line 417 of file ascq_me_display\&.cpp\&.
+.PP
+References free_formula(), get_decoy_score(), get_formula_from_sequence(), get_weight(), is_decoy_mode_activated(), link_between_score_and_others, nb_saved_proteins, protein_descriptions, protein_scores, protein_sequences, and TRUE\&.
+.SS "void save_partial_peptide_scoring (double * peptide_scoring, int nb_peptides)"
+
+.PP
+Procedure which allows to save the partial peptide scoring of the current protein\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpeptide_scoring\fP The current peptide scoring\&. 
+.br
+\fInb_peptides\fP The peptide number\&. 
+.RE
+.PP
+
+.PP
+Definition at line 592 of file ascq_me_display\&.cpp\&.
+.PP
+References current_peptide_scores, error(), link_between_score_and_peptides, MEMORY_ALLOCATION_ERROR, and nb_current_peptides\&.
+.PP
+Referenced by main()\&.
+.SS "void sort_and_init_with_peptide_scoring ()"
+
+.PP
+Procedure which allows to sort the peptides_scoring in a decreasing order and initialises the array of peptides sequences\&. qsort is used thanks to the methods compare_peptides_score and compare_peptides_score_from_indices\&. 
+.PP
+Definition at line 676 of file ascq_me_display\&.cpp\&.
+.PP
+References compare_peptide_score_from_indices(), compare_peptide_scores(), current_peptide_formulae, current_peptide_scores, current_peptides, error(), get_peptide_formula_from_index(), get_peptide_sequence(), link_between_score_and_peptides, MEMORY_ALLOCATION_ERROR, and nb_current_peptides\&.
+.PP
+Referenced by add_protein()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

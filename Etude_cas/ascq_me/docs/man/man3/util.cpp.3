@@ -1,0 +1,347 @@
+.TH "util.cpp" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+util.cpp \- Implementation of the methods defined in \fButil\&.h\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'util\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBjump_commentaries\fP (FILE *file, char commentary)"
+.br
+.RI "Function which allows to jump commentaries in a file\&. "
+.ti -1c
+.RI "int \fBjump_a_line\fP (FILE *file)"
+.br
+.RI "Function which allows to jump a line from a file\&. "
+.ti -1c
+.RI "int \fBjump_blanks\fP (FILE *file)"
+.br
+.RI "Function which allows to not take the blanks of a file\&. "
+.ti -1c
+.RI "char * \fBread_line\fP (FILE *file)"
+.br
+.RI "Function which allows to read a line and put it in a char*\&. "
+.ti -1c
+.RI "char * \fBread_until\fP (FILE *file, char separator)"
+.br
+.RI "Function which allows to read a char* until a special separator, EOF or the end of the line\&. "
+.ti -1c
+.RI "void \fBdelete_final_blanks\fP (char *buffer)"
+.br
+.RI "Procedure which deletes all the final blanks of a char*\&. "
+.ti -1c
+.RI "void \fBactivate_verbose_mode\fP ()"
+.br
+.RI "Procedure which activates the verbose mode\&. "
+.ti -1c
+.RI "int \fBis_verbose_mode_activated\fP ()"
+.br
+.RI "Function which indicates if the verbose mode is activated\&. "
+.ti -1c
+.RI "char * \fBadd_chains\fP (const char *first, const char *second)"
+.br
+.RI "Function which allows to append the second char* to the end of the first char*\&. "
+.ti -1c
+.RI "int \fBequals\fP (double value1, double value2, double delta)"
+.br
+.RI "Tool function which indicates if 2 double are equal or not according to a delta\&. "
+.ti -1c
+.RI "double * \fBcopy_double_array\fP (double *src, int src_size)"
+.br
+.RI "Tool Function which makes the copy of a double array\&. "
+.ti -1c
+.RI "int \fBcompare_doubles\fP (const void *first, const void *second)"
+.br
+.RI "Tool Function which compares two double ==> useful for making qsort\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBverbose_activation\fP =\fBFALSE\fP"
+.br
+.RI "Variable that indicates if the verbose mode is activated or not\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of the methods defined in \fButil\&.h\fP\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jean-Charles BOISSON (2005-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fButil\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void activate_verbose_mode ()"
+
+.PP
+Procedure which activates the verbose mode\&. 
+.PP
+Definition at line 223 of file util\&.cpp\&.
+.PP
+References TRUE, and verbose_activation\&.
+.PP
+Referenced by main()\&.
+.SS "char* add_chains (const char * first, const char * second)"
+
+.PP
+Function which allows to append the second char* to the end of the first char*\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The result char*
+.RE
+.PP
+This method is equivalent to the C++ method '+' for the strings\&. 
+.PP
+Definition at line 235 of file util\&.cpp\&.
+.PP
+References error(), MEMORY_ALLOCATION_ERROR, result, and USAGE_ERROR\&.
+.PP
+Referenced by main()\&.
+.SS "int compare_doubles (const void * first, const void * second)"
+
+.PP
+Tool Function which compares two double ==> useful for making qsort\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirst\fP The first double\&. 
+.br
+\fIsecond\fP The second double\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1, 0 or 1 according to the first <, = or > second\&. 
+.RE
+.PP
+
+.PP
+Definition at line 314 of file util\&.cpp\&.
+.SS "double* copy_double_array (double * src, int src_size)"
+
+.PP
+Tool Function which makes the copy of a double array\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsrc\fP The original double array\&. 
+.br
+\fIsrc_size\fP The size of the array\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The copie\&. 
+.RE
+.PP
+
+.PP
+Definition at line 279 of file util\&.cpp\&.
+.PP
+References error(), MEMORY_ALLOCATION_ERROR, and USAGE_ERROR\&.
+.SS "void delete_final_blanks (char * buffer)"
+
+.PP
+Procedure which deletes all the final blanks of a char*\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbuffer\fP The char* to process\&. 
+.RE
+.PP
+
+.PP
+Definition at line 196 of file util\&.cpp\&.
+.PP
+References error(), MEMORY_ALLOCATION_ERROR, and USAGE_ERROR\&.
+.SS "int equals (double value1, double value2, double delta)"
+
+.PP
+Tool function which indicates if 2 double are equal or not according to a delta\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue1\fP The first value\&. 
+.br
+\fIvalue2\fP The second value\&. 
+.br
+\fIdelta\fP The delta\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE 
+.RE
+.PP
+
+.PP
+Definition at line 273 of file util\&.cpp\&.
+.PP
+References FALSE, and TRUE\&.
+.PP
+Referenced by compute_equivalent_peptides()\&.
+.SS "int is_verbose_mode_activated ()"
+
+.PP
+Function which indicates if the verbose mode is activated\&. 
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE\&. 
+.RE
+.PP
+
+.PP
+Definition at line 229 of file util\&.cpp\&.
+.PP
+References verbose_activation\&.
+.PP
+Referenced by init_distrib(), main(), optimized_isotopic_distribution(), and read_spectrum()\&.
+.SS "int jump_a_line (FILE * file)"
+
+.PP
+Function which allows to jump a line from a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file to read\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The result of the command fscanf <=> number of characters read on the last called or EOF\&. 
+.RE
+.PP
+
+.PP
+Definition at line 83 of file util\&.cpp\&.
+.PP
+Referenced by get_element_table(), jump_commentaries(), and load_modifications()\&.
+.SS "int jump_blanks (FILE * file)"
+
+.PP
+Function which allows to not take the blanks of a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file where we want to avoid the blanks\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The result of the command fscanf <=> number of characters read on the last called or EOF\&. 
+.RE
+.PP
+
+.PP
+Definition at line 96 of file util\&.cpp\&.
+.PP
+References error(), and USAGE_ERROR\&.
+.PP
+Referenced by read_until()\&.
+.SS "int jump_commentaries (FILE * file, char commentary)"
+
+.PP
+Function which allows to jump commentaries in a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file to read\&. 
+.br
+\fIcommentary\fP The character designing a line as a commentary\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The result of the command fscanf <=> number of characters read on the last called or EOF\&.
+.RE
+.PP
+NB: a commentary is a line beginning by a special character or an empty line beginning by ' '\&. 
+.PP
+Definition at line 57 of file util\&.cpp\&.
+.PP
+References jump_a_line()\&.
+.PP
+Referenced by get_element_table(), load_configuration(), load_modifications(), and read_spectrum()\&.
+.SS "char* read_line (FILE * file)"
+
+.PP
+Function which allows to read a line and put it in a char*\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file opened on the line to read\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The char* read\&. 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file util\&.cpp\&.
+.PP
+References read_until()\&.
+.PP
+Referenced by get_element_table(), load_boolean_keyword(), load_float_keyword(), load_int_keyword(), load_string_keyword(), and load_unsigned_int_keyword()\&.
+.SS "char* read_until (FILE * file, char separator)"
+
+.PP
+Function which allows to read a char* until a special separator, EOF or the end of the line\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file where the char* has to be read\&. 
+.br
+\fIseparator\fP The separator\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+the char* read\&. 
+.RE
+.PP
+
+.PP
+Definition at line 124 of file util\&.cpp\&.
+.PP
+References error(), jump_blanks(), MEMORY_ALLOCATION_ERROR, and USAGE_ERROR\&.
+.PP
+Referenced by get_element_table(), load_modifications(), and read_line()\&.
+.SH "Variable Documentation"
+.PP 
+.SS "int verbose_activation =\fBFALSE\fP"
+
+.PP
+Variable that indicates if the verbose mode is activated or not\&. 
+.PP
+Definition at line 54 of file util\&.cpp\&.
+.PP
+Referenced by activate_verbose_mode(), and is_verbose_mode_activated()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

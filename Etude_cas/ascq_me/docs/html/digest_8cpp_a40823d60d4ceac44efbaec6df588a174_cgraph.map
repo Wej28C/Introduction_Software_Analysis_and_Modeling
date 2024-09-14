@@ -1,0 +1,8 @@
+<map id="compute_equivalent_peptides" name="compute_equivalent_peptides">
+<area shape="rect" id="node1" title="Procedure which computes for the current digestion, the peptides which has to be marked has equivalen..." alt="" coords="5,49,160,90"/>
+<area shape="rect" id="node2" href="$util_8h.html#a4325fbfaf09d660ad4441d3587690b59" title="Tool function which indicates if 2 double are equal or not according to a delta." alt="" coords="259,5,325,32"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="905,132,959,159"/>
+<area shape="rect" id="node4" href="$digest_8cpp.html#aae2a512344861d7bb03f3c79dd6ccc01" title="Function which returns the sequence of the wanted peptide, this sequence is only for making saves for..." alt="" coords="208,107,376,133"/>
+<area shape="rect" id="node5" href="$modifications__for__digestion_8h.html#af952fe27d5adf9a8dc045ce553004a79" title="Function which returns the small name (symbol) of a modification." alt="" coords="424,158,623,199"/>
+<area shape="rect" id="node6" href="$modification__table_8h.html#a127d92501b1fadaa59c4ebb89cf4f1e7" title="Function which allows to get the corresponding symbol according a wanted modification." alt="" coords="671,208,857,235"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="get_formula_to_add" name="get_formula_to_add">
+<area shape="rect" id="node1" title="Function which returns the formula to add according to the indicated modification." alt="" coords="5,5,157,32"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="443,5,496,32"/>
+<area shape="rect" id="node3" href="$modification__table_8h.html#a850b2a79e023d1d979f6cc4c26fcfacf" title="Function which returns the formula to add when we want to apply a wanted modification." alt="" coords="205,27,395,69"/>
+</map>

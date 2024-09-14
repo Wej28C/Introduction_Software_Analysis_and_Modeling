@@ -1,0 +1,10 @@
+<map id="load_unsigned_int_keyword" name="load_unsigned_int_keyword">
+<area shape="rect" id="node1" title="Procedure which reads the value of a parameter that requires an unsigned int value." alt="" coords="5,66,208,92"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="823,44,876,71"/>
+<area shape="rect" id="node3" href="$util_8h.html#a1d08e0f99bc95efbc389136a48eac477" title="Function which allows to read a line and put it in a char*." alt="" coords="303,36,385,63"/>
+<area shape="rect" id="node6" href="$isodistrib_8h.html#a40762cc263af59ee19b2fe266e90a820" title="Procedure which allows to modify the minimum matched peptide number needed to a protein to be conside..." alt="" coords="256,88,432,129"/>
+<area shape="rect" id="node8" href="$isodistrib_8h.html#a3e34ebba1c23dc688b02d93662f2b39c" title="Procedure which allows to modify the minimum peptide number needed to a protein to be considered." alt="" coords="260,153,428,194"/>
+<area shape="rect" id="node4" href="$util_8cpp.html#ae77d8b2f8e8bfec6dd7dbb836f5ee2f3" title="Function which allows to read a char* until a special separator, EOF or the end of the line." alt="" coords="507,36,594,63"/>
+<area shape="rect" id="node5" href="$util_8cpp.html#a8deed219368df958f27871ec0d0d45e8" title="Function which allows to not take the blanks of a file." alt="" coords="669,44,775,71"/>
+<area shape="rect" id="node7" href="$seqio_8h.html#ae9f48d8632a96ba0e506432cbd61d6bc" title="Function that indicates if the parsing of the database is started or not i.e. nextEntry has been call..." alt="" coords="480,146,621,172"/>
+</map>

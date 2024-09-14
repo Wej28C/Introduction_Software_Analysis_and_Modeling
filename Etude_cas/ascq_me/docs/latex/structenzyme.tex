@@ -1,0 +1,99 @@
+\doxysection{enzyme Struct Reference}
+\label{structenzyme}\index{enzyme@{enzyme}}
+
+
+Structure that represents an enzyme.  
+
+
+
+
+{\ttfamily \#include $<$cleavage.\+h$>$}
+
+
+
+Collaboration diagram for enzyme\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{structenzyme__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \textbf{ name}
+\begin{DoxyCompactList}\small\item\em The enzyme name. \end{DoxyCompactList}\item 
+int \textbf{ side}
+\begin{DoxyCompactList}\small\item\em The cut side of the enzyme (N-\/terminal or C-\/terminal). \end{DoxyCompactList}\item 
+\textbf{ cpl\+\_\+t} $\ast$ \textbf{ cpl}
+\begin{DoxyCompactList}\small\item\em The cleavage rules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure that represents an enzyme. 
+
+Definition at line 103 of file cleavage.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{structenzyme_af6bef69620e94d2bc4e80ec08cf37c0d}} 
+\index{enzyme@{enzyme}!cpl@{cpl}}
+\index{cpl@{cpl}!enzyme@{enzyme}}
+\doxysubsubsection{cpl}
+{\footnotesize\ttfamily \textbf{ cpl\+\_\+t}$\ast$ enzyme\+::cpl}
+
+
+
+The cleavage rules. 
+
+
+
+Definition at line 110 of file cleavage.\+h.
+
+
+
+Referenced by digest(), enzym\+\_\+load(), and free\+\_\+enzt().
+
+\mbox{\label{structenzyme_aa162caec0a82c9e60651a4dc4cee6c4a}} 
+\index{enzyme@{enzyme}!name@{name}}
+\index{name@{name}!enzyme@{enzyme}}
+\doxysubsubsection{name}
+{\footnotesize\ttfamily char$\ast$ enzyme\+::name}
+
+
+
+The enzyme name. 
+
+
+
+Definition at line 106 of file cleavage.\+h.
+
+
+
+Referenced by enzym\+\_\+load(), free\+\_\+enzt(), get\+\_\+enzyme\+\_\+number(), get\+\_\+used\+\_\+enzyme(), and print\+\_\+enzyme\+\_\+table().
+
+\mbox{\label{structenzyme_a204ab5c3c75d3373635a32a616a13dbb}} 
+\index{enzyme@{enzyme}!side@{side}}
+\index{side@{side}!enzyme@{enzyme}}
+\doxysubsubsection{side}
+{\footnotesize\ttfamily int enzyme\+::side}
+
+
+
+The cut side of the enzyme (N-\/terminal or C-\/terminal). 
+
+
+
+Definition at line 108 of file cleavage.\+h.
+
+
+
+Referenced by digest(), and enzym\+\_\+load().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ cleavage.\+h}\end{DoxyCompactItemize}

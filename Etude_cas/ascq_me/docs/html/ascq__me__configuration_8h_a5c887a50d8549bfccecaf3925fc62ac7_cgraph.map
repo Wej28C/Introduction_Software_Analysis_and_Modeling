@@ -1,0 +1,52 @@
+<map id="load_configuration" name="load_configuration">
+<area shape="rect" id="node1" title="Procedure which allows to load the wanted configuration &lt;=&gt; set all the parameters of the application..." alt="" coords="5,897,148,923"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="1445,1125,1499,1151"/>
+<area shape="rect" id="node3" href="$isodistrib_8h.html#a276facbe926ddf3d1fb564a5c0377b36" title=" " alt="" coords="1162,795,1358,822"/>
+<area shape="rect" id="node4" href="$digest_8cpp.html#a6e9d5ebed70dcc6cc7de741e47e0133d" title="Procedure which initialises all the data useful for digestion (enzyme table for the moment)." alt="" coords="202,998,341,1025"/>
+<area shape="rect" id="node9" href="$util_8h.html#a9ce39f0e4832bfdd973a4715b42df3b3" title="Function which allows to jump commentaries in a file." alt="" coords="1182,2027,1338,2054"/>
+<area shape="rect" id="node16" href="$ascq__me__configuration_8cpp.html#aa197a3009632f50169aacab24774f96a" title="Procedure which reads the value of a parameter that requires a boolean value (in reality it is a char..." alt="" coords="912,339,1083,366"/>
+<area shape="rect" id="node19" href="$ascq__me__configuration_8cpp.html#aaed1da8b1b0c7055faf3de7379062a97" title="Procedure which reads the value of a parameter that requires a float value (or a double value)." alt="" coords="923,618,1071,645"/>
+<area shape="rect" id="node26" href="$ascq__me__configuration_8cpp.html#acd0ab2f4e1aeaf5291392c565932284d" title="Procedure which reads the value of a parameter that requires an int value." alt="" coords="929,1023,1065,1050"/>
+<area shape="rect" id="node35" href="$modification__table_8h.html#a80736596142ca74133cdad9e0517a621" title="Procedure which loads the available modifications from a file." alt="" coords="660,1926,805,1953"/>
+<area shape="rect" id="node36" href="$ascq__me__configuration_8cpp.html#a33e161d910e18d86fa6b5a2c4dd0e72e" title="Procedure which reads the value of a parameter that requires a string value (it is a char* value)." alt="" coords="404,1571,560,1598"/>
+<area shape="rect" id="node46" href="$ascq__me__configuration_8cpp.html#a412eb590eff5c204a2e8bc34e573542e" title="Procedure which reads the value of a parameter that requires an unsigned int value." alt="" coords="896,129,1099,155"/>
+<area shape="rect" id="node49" href="$tables_8h.html#a0d7c4affa06d618641099bd35047add6" title="Procedure which initialises all the useful data : element table, amino acid table,..." alt="" coords="196,2129,347,2155"/>
+<area shape="rect" id="node5" href="$digest_8cpp.html#ab35e8bce9136a8056f8ec9d10abf681f" title="Procedure which sets the atom charge with the default value &lt;=&gt; H formula." alt="" coords="395,1685,569,1711"/>
+<area shape="rect" id="node15" href="$cleavage_8cpp.html#a6ab257f135937e17b411f49ac652a932" title="Procedure which initialized the enztable_t structure from a file." alt="" coords="431,846,533,873"/>
+<area shape="rect" id="node6" href="$digest_8cpp.html#a263ee1d3801a756de1324e3dacfd4ba1" title="Procedure which allows to set the value of the atom charge." alt="" coords="658,1875,807,1902"/>
+<area shape="rect" id="node7" href="$formula_8cpp.html#a2e96927511f60e9cad544aaff8bc33f1" title=" " alt="" coords="925,1825,1069,1851"/>
+<area shape="rect" id="node13" href="$tables_8h.html#a36cb3093f11f7c112626c4668380a974" title="Function which returns the size of the element table." alt="" coords="909,1774,1086,1801"/>
+<area shape="rect" id="node14" href="$formula_8cpp.html#ac758acc73decf9d338119936c70f6794" title="Allocate and read a formula from a string." alt="" coords="943,1723,1052,1750"/>
+<area shape="rect" id="node8" href="$util_8h.html#a0a8fd6188fa02e1d59178d8e88c235c4" title="Function which allows to jump a line from a file." alt="" coords="1209,1825,1311,1851"/>
+<area shape="rect" id="node11" href="$util_8h.html#a1d08e0f99bc95efbc389136a48eac477" title="Function which allows to read a line and put it in a char*." alt="" coords="1219,745,1301,771"/>
+<area shape="rect" id="node12" href="$util_8h.html#a58b9836425eb912a8bbcd5e040e28349" title="Function which allows to read a char* until a special separator, EOF or the end of the line." alt="" coords="1217,1875,1303,1902"/>
+<area shape="rect" id="node10" href="$util_8cpp.html#a0a8fd6188fa02e1d59178d8e88c235c4" title="Function which allows to jump a line from a file." alt="" coords="1421,2027,1523,2054"/>
+<area shape="rect" id="node17" href="$ascq__me__configuration_8cpp.html#aa426710e30089aadcae6af01c3fdb462" title="Procedure which allows to activate the decoy mode." alt="" coords="1177,238,1343,265"/>
+<area shape="rect" id="node18" href="$digest_8cpp.html#a371995da51113e935483196d9522446b" title="Procedure which allows to activate or desactivate the full&#45;digest process i.e. when it is activated,..." alt="" coords="1175,339,1345,366"/>
+<area shape="rect" id="node20" href="$seqio_8h.html#ac5f6ed3fcfd606b6df425aaff112c368" title="Procedure to set a for the experimental protein mass." alt="" coords="1176,390,1344,417"/>
+<area shape="rect" id="node21" href="$isodistrib_8h.html#a74145f64a708f96625f7e46c90d2b823" title="Procedure which allows to modify the gaussian value." alt="" coords="1185,542,1335,569"/>
+<area shape="rect" id="node22" href="$isodistrib_8h.html#a18bc0989ef001e5b3db821a38738f21a" title="Procedure which allows to modify the maximum mass for the peptides." alt="" coords="1181,593,1339,619"/>
+<area shape="rect" id="node23" href="$isodistrib_8h.html#ae5def3be3b71b0591b0e792edea41cbd" title="Procedure which allows to modify the minimum mass for the peptides." alt="" coords="1183,643,1337,670"/>
+<area shape="rect" id="node24" href="$isodistrib_8h.html#a49ebf622a74b3d3d0552737f3bea487a" title="Procedure which allows to modify the score sensitivity." alt="" coords="1175,694,1345,721"/>
+<area shape="rect" id="node25" href="$isodistrib_8h.html#a71e2228db775fe3946ad8561ff9c91fe" title="Procedure which allows to set the threshold useful for the procedure write_spectrum_peak_only and the..." alt="" coords="1205,441,1315,467"/>
+<area shape="rect" id="node27" href="$isodistrib_8h.html#ac45d49a9241f2d73d4e4dd775c990da0" title="Procedure which allows to modify the quantity of C atom for the initialisation process." alt="" coords="1180,1150,1340,1177"/>
+<area shape="rect" id="node28" href="$digest_8cpp.html#af522006c82afda4b8b2e49db270090d6" title="Procedure which sets the maximum allowed length in amino acids for a peptide." alt="" coords="1174,1201,1346,1243"/>
+<area shape="rect" id="node29" href="$digest_8cpp.html#a12ce39cde10ffd53c82533491b70af4c" title="Procedure which allows to set the number of authorized missed cleavage." alt="" coords="1164,947,1356,974"/>
+<area shape="rect" id="node30" href="$isodistrib_8h.html#acc24be590f61c9cd63c3370db57d5386" title="Procedure which allows to modify the peptide maximum mass." alt="" coords="1153,1267,1367,1294"/>
+<area shape="rect" id="node31" href="$isodistrib_8h.html#a3a73796c6c68c9a716a277ad852c2f91" title="Procedure which allows to modify the peptide precision." alt="" coords="1178,1318,1342,1345"/>
+<area shape="rect" id="node32" href="$isodistrib_8h.html#a9288cdfca8bb7bda77082a96aeccdffc" title="Procedure which allows to modify the spectrum precision." alt="" coords="1206,998,1314,1025"/>
+<area shape="rect" id="node33" href="$isodistrib_8h.html#a9afe717f063001dc81c4fdb96cd71b26" title="Procedure which allows to modify the spectrum maximum mass." alt="" coords="1147,1049,1373,1075"/>
+<area shape="rect" id="node34" href="$digest_8cpp.html#aaca1766b9ea71e55b9d815e2622b9139" title="Procedure which sets the chosen enzyme (default is 0 for trypsine see others in enztable...." alt="" coords="1191,897,1329,923"/>
+<area shape="rect" id="node37" href="$seqio_8h.html#a069681ca63db37dd3d2ba68e37249980" title="Function which opens a FASTA file." alt="" coords="951,1369,1043,1395"/>
+<area shape="rect" id="node38" href="$isodistrib_8h.html#a2007c301010fc4d9262edfe7242bdf9d" title="Procedure which initializes the parameters and allocates the useful structures." alt="" coords="687,1723,778,1750"/>
+<area shape="rect" id="node39" href="$modifications__for__digestion_8h.html#a6630b925e5a988c5316512880bc461cb" title="Procedure which loads the configuration for the modifications." alt="" coords="617,1419,848,1446"/>
+<area shape="rect" id="node40" href="$isodistrib_8h.html#a7c337dbc36b35dca41d3ca7c7d09b66f" title="Procedure which allows to open the file which contains theoretical spectra." alt="" coords="637,1470,828,1497"/>
+<area shape="rect" id="node41" href="$isodistrib_8h.html#a37c6db29ca449b3a6f88792a6c8189e0" title="Procedure which loads a spectrum from a file." alt="" coords="938,1622,1057,1649"/>
+<area shape="rect" id="node42" href="$aa_8cpp.html#af95d42915a176fb102be200b4be7927f" title="Procedure which allows to set the amino acid that will be used when B is met in a FASTA file." alt="" coords="703,1673,762,1699"/>
+<area shape="rect" id="node43" href="$seqio_8h.html#aee4efb3e23624a4bcbea642252118ea2" title="Procedure which allows to specifie the wanted specie to study." alt="" coords="687,1521,778,1547"/>
+<area shape="rect" id="node44" href="$aa_8cpp.html#aa518c450b96b78255adbc89f2a0ba4a6" title="Procedure which allows to set the amino acid that will be used when X is met in a FASTA file." alt="" coords="703,1774,762,1801"/>
+<area shape="rect" id="node45" href="$aa_8cpp.html#af3681b4a98a8f1b0c9cc22b20162b26b" title="Procedure which allows to set the amino acid that will be used when Z is met in a FASTA file." alt="" coords="703,1825,762,1851"/>
+<area shape="rect" id="node47" href="$isodistrib_8h.html#a40762cc263af59ee19b2fe266e90a820" title="Procedure which allows to modify the minimum matched peptide number needed to a protein to be conside..." alt="" coords="1172,56,1348,97"/>
+<area shape="rect" id="node48" href="$isodistrib_8h.html#a3e34ebba1c23dc688b02d93662f2b39c" title="Procedure which allows to modify the minimum peptide number needed to a protein to be considered." alt="" coords="1176,121,1344,163"/>
+<area shape="rect" id="node50" href="$tables_8cpp.html#ae5700d8a171b1898a6377e5cb40d31da" title="Function which allows to get the amino acid table." alt="" coords="399,2129,565,2155"/>
+</map>

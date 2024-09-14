@@ -1,0 +1,23 @@
+<map id="ascq_me_display.h" name="ascq_me_display.h">
+<area shape="rect" id="node1" title="Definition of the methods to use and display ASCQ_ME results." alt="" coords="52,5,196,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="11,80,85,107"/>
+<area shape="rect" id="node3" href="$ascq__me__configuration_8h.html" title="Definition of the useful things to configure ASCQ_ME." alt="" coords="109,80,293,107"/>
+<area shape="rect" id="node4" href="$isodistrib_8h.html" title="Definition of the methods to make simulated spectrum computation." alt="" coords="154,155,249,181"/>
+<area shape="rect" id="node5" href="$complex_8h.html" title="Definition of the complex structure and basic methods to use complex numbers." alt="" coords="5,379,96,405"/>
+<area shape="rect" id="node7" href="$digest_8h.html" title="Description of methods allowing to make the digestion of proteins." alt="" coords="164,229,239,256"/>
+<area shape="rect" id="node21" href="$seqio_8h.html" title="Description of methods allowing the using of FASTA files and other useful things linked to them." alt="" coords="317,229,387,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="17,752,85,779"/>
+<area shape="rect" id="node8" href="$cleavage_8h.html" title="Description of methods allowing to know where enzymes can cut proteins." alt="" coords="116,453,209,480"/>
+<area shape="rect" id="node16" href="$modifications__for__digestion_8h.html" title="Definition of the specifications for the post&#45;translation modifications in the digestion case." alt="" coords="171,304,386,331"/>
+<area shape="rect" id="node9" href="$util_8h.html" title="Definition of several useful things." alt="" coords="206,677,261,704"/>
+<area shape="rect" id="node10" title=" " alt="" coords="109,752,173,779"/>
+<area shape="rect" id="node11" title=" " alt="" coords="198,752,269,779"/>
+<area shape="rect" id="node12" title=" " alt="" coords="293,752,363,779"/>
+<area shape="rect" id="node13" href="$error_8h.html" title="Definition of the error management." alt="" coords="388,752,452,779"/>
+<area shape="rect" id="node14" title=" " alt="" coords="340,827,407,853"/>
+<area shape="rect" id="node15" title=" " alt="" coords="431,827,502,853"/>
+<area shape="rect" id="node17" href="$modification__table_8h.html" title="Definition of a lot of things to use post&#45;translational modifications." alt="" coords="201,379,356,405"/>
+<area shape="rect" id="node18" href="$tables_8h.html" title="Description of methods that allows to manipulate amino acids easier." alt="" coords="241,453,316,480"/>
+<area shape="rect" id="node19" href="$aa_8h.html" title="Definition of an amino acid." alt="" coords="248,528,299,555"/>
+<area shape="rect" id="node20" href="$formula_8h.html" title="Definition of a chemical formula." alt="" coords="227,603,312,629"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="get_peptide_sequence" name="get_peptide_sequence">
+<area shape="rect" id="node1" title="Function which returns the sequence of the wanted peptide, this sequence is only for making saves for..." alt="" coords="5,5,173,32"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="703,27,756,53"/>
+<area shape="rect" id="node3" href="$modifications__for__digestion_8h.html#af952fe27d5adf9a8dc045ce553004a79" title="Function which returns the small name (symbol) of a modification." alt="" coords="221,27,420,69"/>
+<area shape="rect" id="node4" href="$modification__table_8h.html#a127d92501b1fadaa59c4ebb89cf4f1e7" title="Function which allows to get the corresponding symbol according a wanted modification." alt="" coords="468,77,655,104"/>
+</map>

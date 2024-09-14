@@ -1,0 +1,9 @@
+<map id="load_boolean_keyword" name="load_boolean_keyword">
+<area shape="rect" id="node1" title="Procedure which reads the value of a parameter that requires a boolean value (in reality it is a char..." alt="" coords="5,81,176,108"/>
+<area shape="rect" id="node2" href="$ascq__me__configuration_8cpp.html#aa426710e30089aadcae6af01c3fdb462" title="Procedure which allows to activate the decoy mode." alt="" coords="224,5,389,32"/>
+<area shape="rect" id="node3" href="$digest_8cpp.html#a371995da51113e935483196d9522446b" title="Procedure which allows to activate or desactivate the full&#45;digest process i.e. when it is activated,..." alt="" coords="437,56,608,83"/>
+<area shape="rect" id="node4" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="809,132,863,159"/>
+<area shape="rect" id="node5" href="$util_8h.html#a1d08e0f99bc95efbc389136a48eac477" title="Function which allows to read a line and put it in a char*." alt="" coords="265,157,348,184"/>
+<area shape="rect" id="node6" href="$util_8cpp.html#ae77d8b2f8e8bfec6dd7dbb836f5ee2f3" title="Function which allows to read a char* until a special separator, EOF or the end of the line." alt="" coords="479,157,566,184"/>
+<area shape="rect" id="node7" href="$util_8cpp.html#a8deed219368df958f27871ec0d0d45e8" title="Function which allows to not take the blanks of a file." alt="" coords="656,208,761,235"/>
+</map>

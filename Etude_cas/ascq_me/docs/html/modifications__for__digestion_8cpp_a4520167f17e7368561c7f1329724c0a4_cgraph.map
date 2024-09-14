@@ -1,0 +1,5 @@
+<map id="add_modification" name="add_modification">
+<area shape="rect" id="node1" title="Procedure which allows to activate a new modification." alt="" coords="5,35,140,61"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="240,5,293,32"/>
+<area shape="rect" id="node3" href="$modification__table_8h.html#a560a3281a425d851c2a80054aca5a05c" title="Function which allows to get the total number of available modifications." alt="" coords="188,57,345,98"/>
+</map>

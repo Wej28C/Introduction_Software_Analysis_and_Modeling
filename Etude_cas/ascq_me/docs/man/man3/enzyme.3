@@ -1,0 +1,62 @@
+.TH "enzyme" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+enzyme \- Structure that represents an enzyme\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cleavage\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "char * \fBname\fP"
+.br
+.RI "The enzyme name\&. "
+.ti -1c
+.RI "int \fBside\fP"
+.br
+.RI "The cut side of the enzyme (N-terminal or C-terminal)\&. "
+.ti -1c
+.RI "\fBcpl_t\fP * \fBcpl\fP"
+.br
+.RI "The cleavage rules\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure that represents an enzyme\&. 
+.PP
+Definition at line 103 of file cleavage\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBcpl_t\fP* enzyme::cpl"
+
+.PP
+The cleavage rules\&. 
+.PP
+Definition at line 110 of file cleavage\&.h\&.
+.PP
+Referenced by digest(), enzym_load(), and free_enzt()\&.
+.SS "char* enzyme::name"
+
+.PP
+The enzyme name\&. 
+.PP
+Definition at line 106 of file cleavage\&.h\&.
+.PP
+Referenced by enzym_load(), free_enzt(), get_enzyme_number(), get_used_enzyme(), and print_enzyme_table()\&.
+.SS "int enzyme::side"
+
+.PP
+The cut side of the enzyme (N-terminal or C-terminal)\&. 
+.PP
+Definition at line 108 of file cleavage\&.h\&.
+.PP
+Referenced by digest(), and enzym_load()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

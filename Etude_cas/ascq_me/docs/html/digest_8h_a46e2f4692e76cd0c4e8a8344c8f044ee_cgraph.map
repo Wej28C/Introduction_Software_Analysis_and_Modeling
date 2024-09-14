@@ -1,0 +1,29 @@
+<map id="print_result_of_digestion" name="print_result_of_digestion">
+<area shape="rect" id="node1" title="Procedure which prints on stdout the result of the digestion." alt="" coords="5,648,188,675"/>
+<area shape="rect" id="node2" href="$formula_8cpp.html#a5447ba10b6180f5df396e0b9adf028ad" title="Returns a string representing a formula." alt="" coords="271,387,393,414"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#a8502fa8cafb1220f0592a32d0e040117" title="Free the memory for n formula." alt="" coords="863,859,984,886"/>
+<area shape="rect" id="node7" href="$digest_8cpp.html#a0dfb82ba8c4fee3f33c8a98b0b8fdd20" title="Function which allows to obtain the result of the digestion in a formulae format." alt="" coords="236,438,428,464"/>
+<area shape="rect" id="node24" href="$digest_8cpp.html#a71b7337a25bc7e539c3e66111a7cd05f" title="Procedure which prints directly on the screen a peptide of the current digestion (thanks to an index)..." alt="" coords="848,960,999,987"/>
+<area shape="rect" id="node4" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="1719,564,1772,591"/>
+<area shape="rect" id="node5" href="$formula_8cpp.html#a6a81bdde62cda8c4d6ed43d9b16b4c26" title="Procedure which frees the memory allocated for a composition." alt="" coords="1049,539,1184,566"/>
+<area shape="rect" id="node6" href="$formula_8cpp.html#aa924d9fff6ed2c0d2168efc91d41e03a" title="Local procedure that frees the memory allocated for an element structure." alt="" coords="1279,590,1389,616"/>
+<area shape="rect" id="node8" href="$formula_8cpp.html#a8e4bdf0442e08288e70dcd8f2464b77c" title="Add two formula." alt="" coords="685,184,789,211"/>
+<area shape="rect" id="node12" href="$modifications__for__digestion_8h.html#a746cf71b9979cbdad3b15746b7687d7e" title="Procedure which applies a modification on a formula." alt="" coords="478,488,625,515"/>
+<area shape="rect" id="node18" href="$formula_8cpp.html#ab26f1f1f23fc5eecbf139fe58e3f310a" title="Get the copy of a formula." alt="" coords="868,438,979,464"/>
+<area shape="rect" id="node21" href="$tables_8h.html#ab1e4cb89e0628c675a7127e6d3618320" title="Function which returns the amino acid structure associated to a given char." alt="" coords="675,910,800,936"/>
+<area shape="rect" id="node22" href="$digest_8cpp.html#a6347f5f049f9632f9edb4bcf88f62e51" title="Function which returns the formula of the atom charge." alt="" coords="476,321,627,362"/>
+<area shape="rect" id="node23" href="$aa_8cpp.html#a7051accbc420772e52a6f065906ef3b0" title="Function which allows to get a already calculated formula." alt="" coords="487,16,616,43"/>
+<area shape="rect" id="node9" href="$formula_8cpp.html#a90fb951ba830f303d192e03a46da3527" title="Procedure which adds an element in a formula." alt="" coords="1063,286,1170,312"/>
+<area shape="rect" id="node10" href="$formula_8cpp.html#a1b353bcd70fedc65de083af2d954e594" title="Local function that allows to gain the copy of an element structure." alt="" coords="1261,336,1407,363"/>
+<area shape="rect" id="node11" href="$formula_8cpp.html#aa2cff9d5e8bd11bacae69d478368fde7" title="Local function that allows to gain the copy of an isotop structure." alt="" coords="1526,286,1626,312"/>
+<area shape="rect" id="node13" href="$modifications__for__digestion_8cpp.html#a1607af4467c9e19848d32d6b99247186" title="Function which returns the formula to add according to the indicated modification." alt="" coords="1258,235,1410,262"/>
+<area shape="rect" id="node15" href="$modifications__for__digestion_8cpp.html#af72c53394a9c35b8d1961e49ae1b919a" title="Function which returns the formula to sub according the indicated modification." alt="" coords="1259,699,1409,726"/>
+<area shape="rect" id="node17" href="$formula_8cpp.html#ad2114448f547806cb41559772955f34f" title="Substrate two formula." alt="" coords="686,488,789,515"/>
+<area shape="rect" id="node14" href="$modification__table_8h.html#a850b2a79e023d1d979f6cc4c26fcfacf" title="Function which returns the formula to add when we want to apply a wanted modification." alt="" coords="1481,169,1671,210"/>
+<area shape="rect" id="node16" href="$modification__table_8h.html#aba646f6f85ed365f229f046b3dfcd568" title="Function which returns the formula to sub when we want to apply a wanted modification." alt="" coords="1481,692,1671,733"/>
+<area shape="rect" id="node20" href="$formula_8cpp.html#a4c746199d04b732d41c72f52bb05cdd9" title="Free the memory allocated for a formula." alt="" coords="870,488,977,515"/>
+<area shape="rect" id="node19" href="$formula_8cpp.html#a7abb70e00923aee6b3fecac10731042c" title="Get the copy of a composition." alt="" coords="1047,387,1187,414"/>
+<area shape="rect" id="node25" href="$digest_8cpp.html#ac5efbe31a9f5aa392b5646084ff0bca6" title="Procedure which allows to print directly a peptide on the stdout." alt="" coords="1063,1011,1171,1038"/>
+<area shape="rect" id="node26" href="$modifications__for__digestion_8h.html#af952fe27d5adf9a8dc045ce553004a79" title="Function which returns the small name (symbol) of a modification." alt="" coords="1235,1062,1433,1104"/>
+<area shape="rect" id="node27" href="$modification__table_8h.html#a127d92501b1fadaa59c4ebb89cf4f1e7" title="Function which allows to get the corresponding symbol according a wanted modification." alt="" coords="1483,1112,1669,1139"/>
+</map>

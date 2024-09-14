@@ -1,0 +1,420 @@
+.TH "seqio.h" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+seqio.h \- Description of methods allowing the using of FASTA files and other useful things linked to them\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'tables\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "char * \fBgetSeq\fP ()"
+.br
+.RI "Function which returns the sequence of the current protein in the FASTA file\&. "
+.ti -1c
+.RI "char * \fBget_reversed_sequence\fP ()"
+.br
+.RI "Function which returns the reverse of the current protein sequence\&. "
+.ti -1c
+.RI "char * \fBgetDesc\fP ()"
+.br
+.RI "Function which returns the description of the current protein in the FASTA file\&. "
+.ti -1c
+.RI "unsigned int \fBis_parsing_started\fP ()"
+.br
+.RI "Function that indicates if the parsing of the database is started or not i\&.e\&. nextEntry has been called at least one time\&. "
+.ti -1c
+.RI "int \fBnextEntry\fP (long *offset)"
+.br
+.RI "Function which allows to move until the next entry\&. "
+.ti -1c
+.RI "int \fBgetEntry\fP (long *offset)"
+.br
+.RI "Function to position the cursor on the nearest entry from the offset position\&. "
+.ti -1c
+.RI "void \fBfastafopen\fP (const char *filename, long *size)"
+.br
+.RI "Function which opens a FASTA file\&. "
+.ti -1c
+.RI "void \fBfastafwrite\fP (FILE *f, char *desc, char *seq)"
+.br
+.RI "Procedure which writes in a file the description and the sequence of a protein\&. "
+.ti -1c
+.RI "void \fBfastafwrite_way\fP (FILE *f, char *desc, char *seq, int way)"
+.br
+.RI "Procedure which writes in a file the description and the sequence of a protein in a reading phase particulary\&. "
+.ti -1c
+.RI "void \fBfastafclose\fP ()"
+.br
+.RI "Function to close the FASTA file currently opened\&. "
+.ti -1c
+.RI "void \fBset_specie\fP (const char *wanted_specie)"
+.br
+.RI "Procedure which allows to specifie the wanted specie to study\&. "
+.ti -1c
+.RI "char * \fBget_specie\fP ()"
+.br
+.RI "Function which allows to get the current specie wanted from the fasta file\&. "
+.ti -1c
+.RI "int \fBis_a_wanted_protein\fP ()"
+.br
+.RI "Function which indicates if the current protein is wanted or not\&. "
+.ti -1c
+.RI "char * \fBget_fasta_filename\fP ()"
+.br
+.RI "Function which allows to get the name of the opened file\&. "
+.ti -1c
+.RI "void \fBset_exp_protein_mass\fP (double mass)"
+.br
+.RI "Procedure to set a for the experimental protein mass\&. "
+.ti -1c
+.RI "int \fBis_exp_protein_mass_activated\fP ()"
+.br
+.RI "Function which allows to know if a experimental protein mass has been already set\&. "
+.ti -1c
+.RI "double \fBget_exp_protein_mass\fP ()"
+.br
+.RI "Function which allows to get the mass given for the protein mass\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Description of methods allowing the using of FASTA files and other useful things linked to them\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Pierre LAURENCE and David BOENS (2003)\&.
+.br
+ Modified and updated by Jean-Charles BOISSON (2005-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBseqio\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void fastafclose ()"
+
+.PP
+Function to close the FASTA file currently opened\&. 
+.PP
+Definition at line 265 of file seqio\&.cpp\&.
+.PP
+References DbFile, DescBuffer, fasta_file_name, SeqBuffer, and specie\&.
+.PP
+Referenced by ascq_me_configuration_cleaning()\&.
+.SS "void fastafopen (const char * filename, long * size)"
+
+.PP
+Function which opens a FASTA file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP The name of the file to open\&. 
+.br
+\fIsize\fP The variable what will contain the FASTA file size\&. 
+.RE
+.PP
+
+.PP
+Definition at line 295 of file seqio\&.cpp\&.
+.PP
+References DbFile, error(), fasta_file_name, IO_ERROR, MEMORY_ALLOCATION_ERROR, and Offset\&.
+.PP
+Referenced by load_string_keyword()\&.
+.SS "void fastafwrite (FILE * f, char * desc, char * seq)"
+
+.PP
+Procedure which writes in a file the description and the sequence of a protein\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP The file where the result will be write\&. 
+.br
+\fIdesc\fP The protein description\&. 
+.br
+\fIseq\fP The protein sequence\&. 
+.RE
+.PP
+
+.PP
+Definition at line 321 of file seqio\&.cpp\&.
+.PP
+References error(), and MEMORY_ALLOCATION_ERROR\&.
+.SS "void fastafwrite_way (FILE * f, char * desc, char * seq, int way)"
+
+.PP
+Procedure which writes in a file the description and the sequence of a protein in a reading phase particulary\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP The file where the result will be written\&. 
+.br
+\fIdesc\fP The protein description\&. 
+.br
+\fIseq\fP The protein sequence\&. 
+.br
+\fIway\fP The way to make the translation\&. 
+.RE
+.PP
+
+.PP
+Definition at line 358 of file seqio\&.cpp\&.
+.PP
+References error(), and MEMORY_ALLOCATION_ERROR\&.
+.SS "double get_exp_protein_mass ()"
+
+.PP
+Function which allows to get the mass given for the protein mass\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The mass\&. 
+.RE
+.PP
+
+.PP
+Definition at line 499 of file seqio\&.cpp\&.
+.PP
+References error(), FALSE, protein_mass, protein_mass_given, and USAGE_ERROR\&.
+.PP
+Referenced by fprint_configuration(), and print_configuration()\&.
+.SS "char * get_fasta_filename ()"
+
+.PP
+Function which allows to get the name of the opened file\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The name of opened fasta file\&. 
+.RE
+.PP
+
+.PP
+Definition at line 480 of file seqio\&.cpp\&.
+.PP
+References fasta_file_name\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "char * get_reversed_sequence ()"
+
+.PP
+Function which returns the reverse of the current protein sequence\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The protein sequence reversed\&. 
+.RE
+.PP
+
+.PP
+Definition at line 115 of file seqio\&.cpp\&.
+.PP
+References error(), MEMORY_ALLOCATION_ERROR, result, and SeqBuffer\&.
+.PP
+Referenced by main()\&.
+.SS "char * get_specie ()"
+
+.PP
+Function which allows to get the current specie wanted from the fasta file\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The current specie\&. 
+.RE
+.PP
+
+.PP
+Definition at line 486 of file seqio\&.cpp\&.
+.PP
+References specie\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), is_simulated_wanted_protein(), and print_configuration()\&.
+.SS "char * getDesc ()"
+
+.PP
+Function which returns the description of the current protein in the FASTA file\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The description\&. 
+.RE
+.PP
+
+.PP
+Definition at line 144 of file seqio\&.cpp\&.
+.PP
+References DescBuffer\&.
+.PP
+Referenced by main()\&.
+.SS "int getEntry (long * offset)"
+
+.PP
+Function to position the cursor on the nearest entry from the offset position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoffset\fP The position\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Int that indicates if the function has worked or not\&. 
+.RE
+.PP
+
+.PP
+Definition at line 398 of file seqio\&.cpp\&.
+.PP
+References DbFile, nextEntry(), and Offset\&.
+.SS "char * getSeq ()"
+
+.PP
+Function which returns the sequence of the current protein in the FASTA file\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The protein sequence\&. 
+.RE
+.PP
+
+.PP
+Definition at line 109 of file seqio\&.cpp\&.
+.PP
+References SeqBuffer\&.
+.PP
+Referenced by main()\&.
+.SS "int is_a_wanted_protein ()"
+
+.PP
+Function which indicates if the current protein is wanted or not\&. 
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE (according to \fButil\&.h\fP)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 434 of file seqio\&.cpp\&.
+.PP
+References DescBuffer, error(), FALSE, free_formula(), get_formula_from_sequence(), get_weight(), mass_tolerance, protein_mass, protein_mass_given, SeqBuffer, specie, TRUE, and USAGE_ERROR\&.
+.PP
+Referenced by main()\&.
+.SS "int is_exp_protein_mass_activated ()"
+
+.PP
+Function which allows to know if a experimental protein mass has been already set\&. 
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE (according to \fButil\&.h\fP)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 511 of file seqio\&.cpp\&.
+.PP
+References protein_mass_given\&.
+.PP
+Referenced by fprint_configuration(), and print_configuration()\&.
+.SS "unsigned int is_parsing_started ()"
+
+.PP
+Function that indicates if the parsing of the database is started or not i\&.e\&. nextEntry has been called at least one time\&. 
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE according to \fButil\&.h\fP\&. 
+.RE
+.PP
+
+.PP
+Definition at line 150 of file seqio\&.cpp\&.
+.PP
+References parsing_is_started\&.
+.PP
+Referenced by set_minimum_matched_peptide_number(), and set_minimum_peptide_number()\&.
+.SS "int nextEntry (long * offset)"
+
+.PP
+Function which allows to move until the next entry\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoffset\fP The current position\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int that indicates if the function has worked correctly or not\&. 
+.RE
+.PP
+
+.PP
+Definition at line 156 of file seqio\&.cpp\&.
+.PP
+References DbFile, DescBuffer, error(), EXECUTION_ERROR, FALSE, MALLOC_STEP_SEQ, Offset, parsing_is_started, SeqBuffer, and TRUE\&.
+.PP
+Referenced by getEntry(), and main()\&.
+.SS "void set_exp_protein_mass (double mass)"
+
+.PP
+Procedure to set a for the experimental protein mass\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImass\fP The weight\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+The mass tolerance is by defaut 10%\&. 
+.RE
+.PP
+
+.PP
+Definition at line 492 of file seqio\&.cpp\&.
+.PP
+References protein_mass, protein_mass_given, and TRUE\&.
+.PP
+Referenced by load_float_keyword()\&.
+.SS "void set_specie (const char * wanted_specie)"
+
+.PP
+Procedure which allows to specifie the wanted specie to study\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwanted_specie\fP The wanted specie\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+This call will be refused if a fasta file is already opened\&. 
+.RE
+.PP
+
+.PP
+Definition at line 406 of file seqio\&.cpp\&.
+.PP
+References DbFile, error(), MEMORY_ALLOCATION_ERROR, specie, USAGE_ERROR, and WARNING\&.
+.PP
+Referenced by load_string_keyword()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

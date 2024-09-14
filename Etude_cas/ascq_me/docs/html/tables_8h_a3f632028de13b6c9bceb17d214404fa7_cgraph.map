@@ -1,0 +1,10 @@
+<map id="free_tables" name="free_tables">
+<area shape="rect" id="node1" title="Procedure which frees the memory allocated for all the useful data : element table,..." alt="" coords="5,151,100,177"/>
+<area shape="rect" id="node2" href="$aa_8cpp.html#a79bc6083d58f52b3d4a9e30e3dfd241d" title="Procedure which frees the memory allocated for an amino acid table." alt="" coords="148,100,319,127"/>
+<area shape="rect" id="node7" href="$formula_8cpp.html#a6081a8141b5245d522dcc8f692136ee4" title="Free the memory allocated for the element table." alt="" coords="367,201,516,228"/>
+<area shape="rect" id="node8" href="$aa_8cpp.html#afd3b9a961e51a417a1335371880ba2c7" title="Procedure which frees the formula of the peptide link and the util formulae." alt="" coords="166,151,301,177"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="904,75,957,101"/>
+<area shape="rect" id="node4" href="$formula_8cpp.html#a4c746199d04b732d41c72f52bb05cdd9" title="Free the memory allocated for a formula." alt="" coords="388,100,495,127"/>
+<area shape="rect" id="node5" href="$formula_8cpp.html#a6a81bdde62cda8c4d6ed43d9b16b4c26" title="Procedure which frees the memory allocated for a composition." alt="" coords="564,49,699,76"/>
+<area shape="rect" id="node6" href="$formula_8cpp.html#aa924d9fff6ed2c0d2168efc91d41e03a" title="Local procedure that frees the memory allocated for an element structure." alt="" coords="747,49,856,76"/>
+</map>

@@ -1,0 +1,240 @@
+.TH "tables.h" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tables.h \- Description of methods that allows to manipulate amino acids easier\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'aa\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBELEMENT_TABLE\fP   '\&./internal/atom_weight\&.a_prot\&.txt'"
+.br
+.RI "Default location of the element table\&. "
+.ti -1c
+.RI "#define \fBAMINO_ACID_TABLE\fP   '\&./internal/aaisotable'"
+.br
+.RI "Default location of the amino acid table\&. "
+.ti -1c
+.RI "#define \fBAMINO_ACID_NUMBER\fP   22"
+.br
+.RI "Number of existing amino acid\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtables_initialisation\fP ()"
+.br
+.RI "Procedure which initialises all the useful data : element table, amino acid table, \&.\&.\&. "
+.ti -1c
+.RI "void \fBfree_tables\fP ()"
+.br
+.RI "Procedure which frees the memory allocated for all the useful data : element table, amino acid table ,\&.\&.\&. "
+.ti -1c
+.RI "\fBelement_t\fP * \fBget_element_table\fP ()"
+.br
+.RI "Function which allows to get the element table\&. "
+.ti -1c
+.RI "int \fBget_element_table_size\fP ()"
+.br
+.RI "Function which returns the size of the element table\&. "
+.ti -1c
+.RI "\fBaa_CF_t\fP \fBget_amino_acid\fP (char aa)"
+.br
+.RI "Function which returns the amino acid structure associated to a given char\&. "
+.ti -1c
+.RI "\fBaa_CF_t\fP * \fBget_amino_acid_table\fP ()"
+.br
+.RI "Function which allows to get the amino acid table\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBget_formula_from_sequence\fP (char *\fBsequence\fP)"
+.br
+.RI "Function which allows to get the formula of the proteic sequence given\&. "
+.ti -1c
+.RI "char \fBget_amino_acid_at_index\fP (int index)"
+.br
+.RI "Function wich returns the amino acid structure associated to an index, it uses the array that contains the amino acids in an increasing order (according to the mass)\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Description of methods that allows to manipulate amino acids easier\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jean-Charles BOISSON (2005-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBtables\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define AMINO_ACID_NUMBER   22"
+
+.PP
+Number of existing amino acid\&. 
+.PP
+Definition at line 67 of file tables\&.h\&.
+.SS "#define AMINO_ACID_TABLE   '\&./internal/aaisotable'"
+
+.PP
+Default location of the amino acid table\&. 
+.PP
+Definition at line 62 of file tables\&.h\&.
+.SS "#define ELEMENT_TABLE   '\&./internal/atom_weight\&.a_prot\&.txt'"
+
+.PP
+Default location of the element table\&. 
+.PP
+Definition at line 57 of file tables\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "void free_tables ()"
+
+.PP
+Procedure which frees the memory allocated for all the useful data : element table, amino acid table ,\&.\&.\&. 
+.PP
+Definition at line 77 of file tables\&.cpp\&.
+.PP
+References amino_acid_table, element_table, free_amino_acid_table(), free_element_table(), free_peptide_link(), and nb_elements\&.
+.PP
+Referenced by ascq_me_configuration_cleaning()\&.
+.SS "\fBaa_CF_t\fP get_amino_acid (char aa)"
+
+.PP
+Function which returns the amino acid structure associated to a given char\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaa\fP The char which corresponding to an amino acid\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The amino acid structure associated (aa_CF_t)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 97 of file tables\&.cpp\&.
+.PP
+References amino_acid_table, error(), EXECUTION_ERROR, amino_acid_CF::form, and USAGE_ERROR\&.
+.PP
+Referenced by digest(), get_formula_from_sequence(), get_formulae_of_peptides(), get_peptide_formula_from_another_protein(), and get_peptide_formula_from_index()\&.
+.SS "char get_amino_acid_at_index (int index)"
+
+.PP
+Function wich returns the amino acid structure associated to an index, it uses the array that contains the amino acids in an increasing order (according to the mass)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP The index\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a char representing an amino acid\&. 
+.RE
+.PP
+
+.PP
+Definition at line 148 of file tables\&.cpp\&.
+.PP
+References sorted_amino_acid_table\&.
+.SS "\fBaa_CF_t\fP * get_amino_acid_table ()"
+
+.PP
+Function which allows to get the amino acid table\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The amino acid table\&. 
+.RE
+.PP
+
+.PP
+Definition at line 117 of file tables\&.cpp\&.
+.PP
+References amino_acid_table\&.
+.PP
+Referenced by tables_initialisation()\&.
+.SS "\fBelement_t\fP * get_element_table ()"
+
+.PP
+Function which allows to get the element table\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The element table\&. 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file tables\&.cpp\&.
+.PP
+References element_table\&.
+.PP
+Referenced by tables_initialisation()\&.
+.SS "int get_element_table_size ()"
+
+.PP
+Function which returns the size of the element table\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The element table size\&. 
+.RE
+.PP
+
+.PP
+Definition at line 91 of file tables\&.cpp\&.
+.PP
+References nb_elements\&.
+.PP
+Referenced by init_distrib(), load_modifications(), set_peptide_charge(), and tables_initialisation()\&.
+.SS "\fBformula_t\fP * get_formula_from_sequence (char * sequence)"
+
+.PP
+Function which allows to get the formula of the proteic sequence given\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The formula\&. 
+.RE
+.PP
+
+.PP
+Definition at line 123 of file tables\&.cpp\&.
+.PP
+References add_formula(), copy_formula(), error(), amino_acid_CF::form, get_amino_acid(), get_util_formula(), sequence, and USAGE_ERROR\&.
+.PP
+Referenced by fprintf_ascq_me_results(), fprintf_ascq_me_results_table_form(), fprintf_ascq_me_results_xml(), is_a_wanted_protein(), and printf_ascq_me_results()\&.
+.SS "void tables_initialisation ()"
+
+.PP
+Procedure which initialises all the useful data : element table, amino acid table, \&.\&.\&. 
+.PP
+Definition at line 69 of file tables\&.cpp\&.
+.PP
+References AMINO_ACID_TABLE, amino_acid_table, ELEMENT_TABLE, element_table, get_amino_acid_table(), get_element_table(), get_element_table_size(), init_peptid_link(), and nb_elements\&.
+.PP
+Referenced by load_configuration()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

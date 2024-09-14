@@ -1,0 +1,169 @@
+\doxysection{peptide Struct Reference}
+\label{structpeptide}\index{peptide@{peptide}}
+
+
+Structure that describes a peptide.  
+
+
+
+
+{\ttfamily \#include $<$digest.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+long \textbf{ start\+Off}
+\begin{DoxyCompactList}\small\item\em Start index of a peptide (according to the protein sequence). \end{DoxyCompactList}\item 
+long \textbf{ end\+Off}
+\begin{DoxyCompactList}\small\item\em End index of a peptide (according to the protein sequence). \end{DoxyCompactList}\item 
+double \textbf{ weight}
+\begin{DoxyCompactList}\small\item\em The peptide mass. \end{DoxyCompactList}\item 
+int \textbf{ nb\+\_\+missed\+\_\+cleavages}
+\begin{DoxyCompactList}\small\item\em The number of missed cleavage of the peptide. \end{DoxyCompactList}\item 
+int $\ast$ \textbf{ nb\+\_\+modif}
+\begin{DoxyCompactList}\small\item\em The number of post-\/transltional modification for each amino acid. \end{DoxyCompactList}\item 
+int $\ast$$\ast$ \textbf{ modifications}
+\begin{DoxyCompactList}\small\item\em All the post-\/translational modifications of the peptide. \end{DoxyCompactList}\item 
+int \textbf{ equivalent\+\_\+to\+\_\+another}
+\begin{DoxyCompactList}\small\item\em Value that indicates if this peptide is equivalent to another one due to post-\/translational modifications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure that describes a peptide. 
+
+Definition at line 65 of file digest.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{structpeptide_ae2766b5c65aa2a45585298d8ff95a268}} 
+\index{peptide@{peptide}!endOff@{endOff}}
+\index{endOff@{endOff}!peptide@{peptide}}
+\doxysubsubsection{endOff}
+{\footnotesize\ttfamily long peptide\+::end\+Off}
+
+
+
+End index of a peptide (according to the protein sequence). 
+
+
+
+Definition at line 70 of file digest.\+h.
+
+
+
+Referenced by add\+\_\+peptide\+\_\+modification(), compute\+\_\+equivalent\+\_\+peptides(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide(), copy\+\_\+peptide(), digest(), fprint\+\_\+peptide(), free\+\_\+peptide(), fusion\+\_\+peptide(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index(), get\+\_\+peptide\+\_\+length\+\_\+at\+\_\+index(), get\+\_\+peptide\+\_\+sequence(), and print\+\_\+peptide().
+
+\mbox{\label{structpeptide_ab966d6d88fbf431e2c8f3816207e605f}} 
+\index{peptide@{peptide}!equivalent\_to\_another@{equivalent\_to\_another}}
+\index{equivalent\_to\_another@{equivalent\_to\_another}!peptide@{peptide}}
+\doxysubsubsection{equivalent\_to\_another}
+{\footnotesize\ttfamily int peptide\+::equivalent\+\_\+to\+\_\+another}
+
+
+
+Value that indicates if this peptide is equivalent to another one due to post-\/translational modifications. 
+
+
+
+Definition at line 80 of file digest.\+h.
+
+
+
+Referenced by compute\+\_\+equivalent\+\_\+peptides(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide(), copy\+\_\+peptide(), digest(), fusion\+\_\+peptide(), and is\+\_\+equivalent\+\_\+to\+\_\+another().
+
+\mbox{\label{structpeptide_ad365b2729cf9d3f51a677fdf9ce05571}} 
+\index{peptide@{peptide}!modifications@{modifications}}
+\index{modifications@{modifications}!peptide@{peptide}}
+\doxysubsubsection{modifications}
+{\footnotesize\ttfamily int$\ast$$\ast$ peptide\+::modifications}
+
+
+
+All the post-\/translational modifications of the peptide. 
+
+
+
+Definition at line 78 of file digest.\+h.
+
+
+
+Referenced by add\+\_\+peptide\+\_\+modification(), copy\+\_\+peptide(), digest(), fprint\+\_\+peptide(), free\+\_\+peptide(), fusion\+\_\+peptide(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein(), new\+\_\+peptides\+\_\+with\+\_\+missed\+\_\+cleavages(), and print\+\_\+peptide().
+
+\mbox{\label{structpeptide_aaa2005501294d4fb879175283d3799e8}} 
+\index{peptide@{peptide}!nb\_missed\_cleavages@{nb\_missed\_cleavages}}
+\index{nb\_missed\_cleavages@{nb\_missed\_cleavages}!peptide@{peptide}}
+\doxysubsubsection{nb\_missed\_cleavages}
+{\footnotesize\ttfamily int peptide\+::nb\+\_\+missed\+\_\+cleavages}
+
+
+
+The number of missed cleavage of the peptide. 
+
+
+
+Definition at line 74 of file digest.\+h.
+
+
+
+Referenced by copy\+\_\+peptide(), digest(), and fusion\+\_\+peptide().
+
+\mbox{\label{structpeptide_a812ce6e0b660774ea0c7f4fc499211c8}} 
+\index{peptide@{peptide}!nb\_modif@{nb\_modif}}
+\index{nb\_modif@{nb\_modif}!peptide@{peptide}}
+\doxysubsubsection{nb\_modif}
+{\footnotesize\ttfamily int$\ast$ peptide\+::nb\+\_\+modif}
+
+
+
+The number of post-\/transltional modification for each amino acid. 
+
+
+
+Definition at line 76 of file digest.\+h.
+
+
+
+Referenced by add\+\_\+peptide\+\_\+modification(), copy\+\_\+peptide(), digest(), fprint\+\_\+peptide(), free\+\_\+peptide(), fusion\+\_\+peptide(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index(), get\+\_\+peptide\+\_\+sequence(), new\+\_\+peptides\+\_\+with\+\_\+missed\+\_\+cleavages(), and print\+\_\+peptide().
+
+\mbox{\label{structpeptide_a4a41a40d6bd3a64f03a667408b848c9a}} 
+\index{peptide@{peptide}!startOff@{startOff}}
+\index{startOff@{startOff}!peptide@{peptide}}
+\doxysubsubsection{startOff}
+{\footnotesize\ttfamily long peptide\+::start\+Off}
+
+
+
+Start index of a peptide (according to the protein sequence). 
+
+
+
+Definition at line 68 of file digest.\+h.
+
+
+
+Referenced by add\+\_\+peptide\+\_\+modification(), compute\+\_\+equivalent\+\_\+peptides(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide(), copy\+\_\+peptide(), digest(), fprint\+\_\+peptide(), free\+\_\+peptide(), fusion\+\_\+peptide(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index(), get\+\_\+peptide\+\_\+length\+\_\+at\+\_\+index(), get\+\_\+peptide\+\_\+sequence(), and print\+\_\+peptide().
+
+\mbox{\label{structpeptide_aff801c76b891f3d02c5c9d71543941dc}} 
+\index{peptide@{peptide}!weight@{weight}}
+\index{weight@{weight}!peptide@{peptide}}
+\doxysubsubsection{weight}
+{\footnotesize\ttfamily double peptide\+::weight}
+
+
+
+The peptide mass. 
+
+
+
+Definition at line 72 of file digest.\+h.
+
+
+
+Referenced by add\+\_\+peptide\+\_\+modification(), compare\+\_\+peptides(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide(), copy\+\_\+peptide(), digest(), fusion\+\_\+peptide(), and new\+\_\+peptides\+\_\+with\+\_\+missed\+\_\+cleavages().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ digest.\+h}\end{DoxyCompactItemize}

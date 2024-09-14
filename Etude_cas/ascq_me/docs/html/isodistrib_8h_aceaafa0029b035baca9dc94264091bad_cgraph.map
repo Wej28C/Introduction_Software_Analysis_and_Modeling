@@ -1,0 +1,26 @@
+<map id="optimized_isotopic_distribution" name="optimized_isotopic_distribution">
+<area shape="rect" id="node1" title="Function which calculates the isotopic distribution of a peptide list." alt="" coords="5,378,151,419"/>
+<area shape="rect" id="node2" href="$isodistrib_8cpp.html#add439be0f19853cd7568299e4e9f2043" title="Complex Discrete Fourier Transform." alt="" coords="277,81,324,108"/>
+<area shape="rect" id="node10" href="$complex_8cpp.html#a0f222462fb28e0970e119cf2815a61f6" title="Function which makes the multiplication of 2 complex numbers." alt="" coords="213,132,388,159"/>
+<area shape="rect" id="node11" href="$isodistrib_8cpp.html#ac209fd72bc2cade5626c088a12624a81" title="Function which gives the correlation between the two spectra (experimental and simulated) according t..." alt="" coords="223,183,379,209"/>
+<area shape="rect" id="node12" href="$formula_8cpp.html#a7abb70e00923aee6b3fecac10731042c" title="Get the copy of a composition." alt="" coords="231,385,371,412"/>
+<area shape="rect" id="node15" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="801,385,855,412"/>
+<area shape="rect" id="node16" href="$formula_8cpp.html#a6a81bdde62cda8c4d6ed43d9b16b4c26" title="Procedure which frees the memory allocated for a composition." alt="" coords="456,335,591,361"/>
+<area shape="rect" id="node18" href="$isodistrib_8cpp.html#a280ffab2d02998e01a44184845b596f0" title="Tool function which returns the atom quantity linked to a symbol or &#45;1 if the symbol has not an assoc..." alt="" coords="228,436,373,463"/>
+<area shape="rect" id="node19" href="$isodistrib_8cpp.html#a6240ae796878a15e2a1ac6d466ccd932" title="Tool function which returns the complex_t* t_X_atom associated to a symbol or NULL if the symbol has ..." alt="" coords="245,487,357,513"/>
+<area shape="rect" id="node20" href="$formula_8cpp.html#a77a6756752caf55587c228c4e51b8c7e" title="Get the weight of a formula." alt="" coords="651,233,746,260"/>
+<area shape="rect" id="node21" href="$isodistrib_8cpp.html#a68d824f98b6ededcc81485dc6eb8b4a2" title="Tool function which returns the complex_t** X_atom associated to a symbol or NULL if the symbol has n..." alt="" coords="251,537,351,564"/>
+<area shape="rect" id="node22" href="$isodistrib_8cpp.html#a5c39c88fa3c8878e0b6b847f0bd04dad" title="Procedure which makes a normalization of a data array." alt="" coords="216,588,385,615"/>
+<area shape="rect" id="node23" href="$digest_8cpp.html#a2d45ab8d8a6f3a67d9ae0370afca50fb" title="Function which indicates if a peptide is equivalent to another one due to variable post&#45;translational..." alt="" coords="207,639,394,665"/>
+<area shape="rect" id="node24" href="$util_8h.html#aeecaa6e13d0fc8e0fdf90adefed0ef92" title="Function which indicates if the verbose mode is activated." alt="" coords="199,689,403,716"/>
+<area shape="rect" id="node3" href="$fft4g_8cpp.html#a797ab524538f313c7556d2ea04c3602a" title="One of the child routines." alt="" coords="669,5,729,32"/>
+<area shape="rect" id="node4" href="$fft4g_8cpp.html#a6ce44e550bfe817f80745375a96a70e6" title="One of the child routines." alt="" coords="480,81,567,108"/>
+<area shape="rect" id="node5" href="$fft4g_8cpp.html#a4c1c506bae9dc84a4f6f0a8588b4c194" title="One of the child routines." alt="" coords="489,132,558,159"/>
+<area shape="rect" id="node8" href="$fft4g_8cpp.html#aebb9cc2fc5808b13bbe1cf0a857a3f73" title="One of the child routines." alt="" coords="490,183,557,209"/>
+<area shape="rect" id="node9" href="$fft4g_8cpp.html#a7c1e1feac8c6a479cce040aae6bc80e8" title="One of the initializing routines." alt="" coords="486,31,561,57"/>
+<area shape="rect" id="node6" href="$fft4g_8cpp.html#ad356c86d9a665e64e85e2a20254c5474" title="One of the child routines." alt="" coords="669,132,728,159"/>
+<area shape="rect" id="node7" href="$fft4g_8cpp.html#a52cfc09e3aa1db914d876ecc317e04c9" title="One of the child routines." alt="" coords="667,183,730,209"/>
+<area shape="rect" id="node13" href="$formula_8cpp.html#a1b353bcd70fedc65de083af2d954e594" title="Local function that allows to gain the copy of an element structure." alt="" coords="451,487,596,513"/>
+<area shape="rect" id="node14" href="$formula_8cpp.html#aa2cff9d5e8bd11bacae69d478368fde7" title="Local function that allows to gain the copy of an isotop structure." alt="" coords="649,537,749,564"/>
+<area shape="rect" id="node17" href="$formula_8cpp.html#aa924d9fff6ed2c0d2168efc91d41e03a" title="Local procedure that frees the memory allocated for an element structure." alt="" coords="644,335,753,361"/>
+</map>

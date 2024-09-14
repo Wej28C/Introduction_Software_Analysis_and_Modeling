@@ -1,0 +1,6 @@
+<map id="read_line" name="read_line">
+<area shape="rect" id="node1" title="Function which allows to read a line and put it in a char*." alt="" coords="5,5,88,32"/>
+<area shape="rect" id="node2" href="$util_8cpp.html#ae77d8b2f8e8bfec6dd7dbb836f5ee2f3" title="Function which allows to read a char* until a special separator, EOF or the end of the line." alt="" coords="136,5,223,32"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="424,5,477,32"/>
+<area shape="rect" id="node4" href="$util_8cpp.html#a8deed219368df958f27871ec0d0d45e8" title="Function which allows to not take the blanks of a file." alt="" coords="271,31,376,57"/>
+</map>

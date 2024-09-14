@@ -1,0 +1,11 @@
+<map id="get_element_table" name="get_element_table">
+<area shape="rect" id="node1" title=" " alt="" coords="5,84,149,111"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="704,110,757,136"/>
+<area shape="rect" id="node3" href="$util_8h.html#a0a8fd6188fa02e1d59178d8e88c235c4" title="Function which allows to jump a line from a file." alt="" coords="225,34,326,60"/>
+<area shape="rect" id="node4" href="$util_8h.html#a9ce39f0e4832bfdd973a4715b42df3b3" title="Function which allows to jump commentaries in a file." alt="" coords="197,84,353,111"/>
+<area shape="rect" id="node6" href="$util_8h.html#a1d08e0f99bc95efbc389136a48eac477" title="Function which allows to read a line and put it in a char*." alt="" coords="234,135,317,162"/>
+<area shape="rect" id="node9" href="$util_8h.html#a58b9836425eb912a8bbcd5e040e28349" title="Function which allows to read a char* until a special separator, EOF or the end of the line." alt="" coords="409,186,495,212"/>
+<area shape="rect" id="node5" href="$util_8cpp.html#a0a8fd6188fa02e1d59178d8e88c235c4" title="Function which allows to jump a line from a file." alt="" coords="401,84,503,111"/>
+<area shape="rect" id="node7" href="$util_8cpp.html#ae77d8b2f8e8bfec6dd7dbb836f5ee2f3" title="Function which allows to read a char* until a special separator, EOF or the end of the line." alt="" coords="409,135,495,162"/>
+<area shape="rect" id="node8" href="$util_8cpp.html#a8deed219368df958f27871ec0d0d45e8" title="Function which allows to not take the blanks of a file." alt="" coords="551,135,656,162"/>
+</map>

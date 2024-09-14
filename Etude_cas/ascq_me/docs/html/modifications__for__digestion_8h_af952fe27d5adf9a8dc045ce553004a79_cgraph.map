@@ -1,0 +1,5 @@
+<map id="get_activated_modification_symbol" name="get_activated_modification_symbol">
+<area shape="rect" id="node1" title="Function which returns the small name (symbol) of a modification." alt="" coords="5,5,204,47"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="487,13,540,39"/>
+<area shape="rect" id="node3" href="$modification__table_8h.html#a127d92501b1fadaa59c4ebb89cf4f1e7" title="Function which allows to get the corresponding symbol according a wanted modification." alt="" coords="252,38,439,65"/>
+</map>

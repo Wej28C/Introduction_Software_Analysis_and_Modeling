@@ -1,0 +1,4 @@
+<map id="sort_peptides" name="sort_peptides">
+<area shape="rect" id="node1" title="Procedure which sorts the current experimental peptides." alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node2" href="$digest_8cpp.html#a0f9932b4e837de7ac9caba80bac79458" title="Procedure which compares two peptides ==&gt; useful for qsort." alt="" coords="164,5,307,32"/>
+</map>

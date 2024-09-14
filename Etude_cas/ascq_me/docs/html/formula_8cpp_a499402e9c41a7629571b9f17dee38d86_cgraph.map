@@ -1,0 +1,7 @@
+<map id="affect_atom" name="affect_atom">
+<area shape="rect" id="node1" title="Local function that affects the quantity of atoms in a composition_t structure." alt="" coords="5,56,105,83"/>
+<area shape="rect" id="node2" href="$formula_8cpp.html#a24b1ac4e1e5e074dbf381e2f5155cca9" title="Local tool function which returns the most close int of a double &lt;=&gt; rint function used because rint ..." alt="" coords="180,5,272,32"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#a1b353bcd70fedc65de083af2d954e594" title="Local function that allows to gain the copy of an element structure." alt="" coords="153,56,299,83"/>
+<area shape="rect" id="node5" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="495,56,548,83"/>
+<area shape="rect" id="node4" href="$formula_8cpp.html#aa2cff9d5e8bd11bacae69d478368fde7" title="Local function that allows to gain the copy of an isotop structure." alt="" coords="347,5,447,32"/>
+</map>

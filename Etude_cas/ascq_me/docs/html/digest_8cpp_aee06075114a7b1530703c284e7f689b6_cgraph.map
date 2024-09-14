@@ -1,0 +1,10 @@
+<map id="new_peptides_with_missed_cleavages" name="new_peptides_with_missed_cleavages">
+<area shape="rect" id="node1" title="Procedure which allows to compute the new peptides gained due to missed cleavages." alt="" coords="5,91,207,132"/>
+<area shape="rect" id="node2" href="$digest_8cpp.html#a80275fa3e1e4d9b11b240cff99b42937" title="Function which makes a copy of a peptide." alt="" coords="453,123,563,150"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="820,174,873,201"/>
+<area shape="rect" id="node4" href="$digest_8cpp.html#a11d3b212638a310c07b9ce18619d9456" title="Procedure which free the memory allocated for the post&#45;translational modifications of a peptide." alt="" coords="655,73,759,99"/>
+<area shape="rect" id="node5" href="$digest_8cpp.html#a3391fe55fd7fb03a9dde992b4235fce7" title="Function which makes the fusion of two CONTIGUOUS (!!!) peptides." alt="" coords="255,199,373,226"/>
+<area shape="rect" id="node6" href="$aa_8cpp.html#a7051accbc420772e52a6f065906ef3b0" title="Function which allows to get a already calculated formula." alt="" coords="643,174,772,201"/>
+<area shape="rect" id="node7" href="$formula_8cpp.html#a77a6756752caf55587c228c4e51b8c7e" title="Get the weight of a formula." alt="" coords="660,225,755,251"/>
+<area shape="rect" id="node8" href="$digest_8cpp.html#ad6dc127f385bbc97c80f50d2f3a98678" title="Function which allows to get the weight of the atom charge." alt="" coords="421,275,595,302"/>
+</map>

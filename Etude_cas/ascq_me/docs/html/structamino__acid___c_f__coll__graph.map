@@ -1,0 +1,7 @@
+<map id="amino_acid_CF" name="amino_acid_CF">
+<area shape="rect" id="node1" title="Structure representing an amino acid." alt="" coords="5,392,127,419"/>
+<area shape="rect" id="node2" href="$structformula.html" title="Structure representing a formula made of compositions, for example : C2H4." alt="" coords="29,273,103,300"/>
+<area shape="rect" id="node3" href="$structcomposition.html" title="Structure representing an element with its quantity, for example: C2." alt="" coords="15,184,117,211"/>
+<area shape="rect" id="node4" href="$structelement.html" title="Structure representing an element in the NIST table." alt="" coords="28,95,104,121"/>
+<area shape="rect" id="node5" href="$structisotop.html" title="An isotopic structure represents the isotop of an element." alt="" coords="35,5,97,32"/>
+</map>

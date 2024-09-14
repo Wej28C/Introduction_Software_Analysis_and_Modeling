@@ -1,0 +1,11 @@
+<map id="seqio.h" name="seqio.h">
+<area shape="rect" id="node1" title="Description of methods allowing the using of FASTA files and other useful things linked to them." alt="" coords="309,5,378,32"/>
+<area shape="rect" id="node2" href="$isodistrib_8h.html" title="Definition of the methods to make simulated spectrum computation." alt="" coords="240,80,335,107"/>
+<area shape="rect" id="node9" href="$seqio_8cpp.html" title="Implementation of the methods defined in seqio.h." alt="" coords="359,80,443,107"/>
+<area shape="rect" id="node3" href="$ascq__me__configuration_8h.html" title="Definition of the useful things to configure ASCQ_ME." alt="" coords="110,155,294,181"/>
+<area shape="rect" id="node8" href="$isodistrib_8cpp.html" title="Implementation of the methods defined in isodistrib.h." alt="" coords="318,155,427,181"/>
+<area shape="rect" id="node4" href="$ascq__me__configuration_8cpp.html" title="Implementation of the methods defined in ascq_me_configuration.h." alt="" coords="5,229,204,256"/>
+<area shape="rect" id="node5" href="$ascq__me__display_8h.html" title="Definition of the methods to use and display ASCQ_ME results." alt="" coords="229,229,373,256"/>
+<area shape="rect" id="node6" href="$ascq__me_8cpp.html" title="ASCQ_ME main program." alt="" coords="169,304,275,331"/>
+<area shape="rect" id="node7" href="$ascq__me__display_8cpp.html" title="Implementation of the methods defined in ascq_me_display.h." alt="" coords="300,304,459,331"/>
+</map>

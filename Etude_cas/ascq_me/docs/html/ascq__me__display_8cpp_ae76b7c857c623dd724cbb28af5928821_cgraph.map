@@ -1,0 +1,22 @@
+<map id="fprintf_ascq_me_results_table_form" name="fprintf_ascq_me_results_table_form">
+<area shape="rect" id="node1" title="Procedure which prints in a file the ASCQ_ME results in order to use them in spreadsheet programs." alt="" coords="5,238,184,280"/>
+<area shape="rect" id="node2" href="$isodistrib_8h.html#ac209fd72bc2cade5626c088a12624a81" title="Function which gives the correlation between the two spectra (experimental and simulated) according t..." alt="" coords="258,43,414,70"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#a4c746199d04b732d41c72f52bb05cdd9" title="Free the memory allocated for a formula." alt="" coords="682,68,789,95"/>
+<area shape="rect" id="node7" href="$isodistrib_8h.html#a90e99fe0d82063be33773dc23462ddcb" title="Function which allows to gain access to the experimental spectrum." alt="" coords="265,170,407,196"/>
+<area shape="rect" id="node8" href="$tables_8h.html#a28f97cf51868c8d3d4bc3a53a0124e8f" title="Function which allows to get the formula of the proteic sequence given." alt="" coords="232,220,440,247"/>
+<area shape="rect" id="node17" href="$isodistrib_8h.html#aa5d0bbdac85d016ad27a4f529a4e692d" title="Function which returns the maximum mass authorized for the peptides." alt="" coords="257,271,415,298"/>
+<area shape="rect" id="node18" href="$isodistrib_8h.html#a59044c8d77e53bd0c22ef860fdf3501a" title="Function which returns the minimum mass authorized for the peptides." alt="" coords="259,322,413,348"/>
+<area shape="rect" id="node19" href="$isodistrib_8h.html#a76cc0d8f9acfd53a238f9f065c0a8e63" title="Function which returns the spectra array step (distance between two spectrum points)." alt="" coords="297,372,375,399"/>
+<area shape="rect" id="node20" href="$formula_8cpp.html#a77a6756752caf55587c228c4e51b8c7e" title="Get the weight of a formula." alt="" coords="879,550,973,576"/>
+<area shape="rect" id="node4" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="1220,271,1273,298"/>
+<area shape="rect" id="node5" href="$formula_8cpp.html#a6a81bdde62cda8c4d6ed43d9b16b4c26" title="Procedure which frees the memory allocated for a composition." alt="" coords="859,68,993,95"/>
+<area shape="rect" id="node6" href="$formula_8cpp.html#aa924d9fff6ed2c0d2168efc91d41e03a" title="Local procedure that frees the memory allocated for an element structure." alt="" coords="1055,94,1164,120"/>
+<area shape="rect" id="node9" href="$formula_8cpp.html#a8e4bdf0442e08288e70dcd8f2464b77c" title="Add two formula." alt="" coords="501,296,605,323"/>
+<area shape="rect" id="node13" href="$formula_8cpp.html#ab26f1f1f23fc5eecbf139fe58e3f310a" title="Get the copy of a formula." alt="" coords="497,423,608,450"/>
+<area shape="rect" id="node15" href="$tables_8cpp.html#ab1e4cb89e0628c675a7127e6d3618320" title="Function which returns the amino acid structure associated to a given char." alt="" coords="1047,144,1172,171"/>
+<area shape="rect" id="node16" href="$aa_8cpp.html#a7051accbc420772e52a6f065906ef3b0" title="Function which allows to get a already calculated formula." alt="" coords="488,195,617,222"/>
+<area shape="rect" id="node10" href="$formula_8cpp.html#a90fb951ba830f303d192e03a46da3527" title="Procedure which adds an element in a formula." alt="" coords="682,359,789,386"/>
+<area shape="rect" id="node11" href="$formula_8cpp.html#a1b353bcd70fedc65de083af2d954e594" title="Local function that allows to gain the copy of an element structure." alt="" coords="853,372,999,399"/>
+<area shape="rect" id="node12" href="$formula_8cpp.html#aa2cff9d5e8bd11bacae69d478368fde7" title="Local function that allows to gain the copy of an isotop structure." alt="" coords="1059,398,1159,424"/>
+<area shape="rect" id="node14" href="$formula_8cpp.html#a7abb70e00923aee6b3fecac10731042c" title="Get the copy of a composition." alt="" coords="665,423,805,450"/>
+</map>

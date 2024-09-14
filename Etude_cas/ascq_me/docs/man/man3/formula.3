@@ -1,0 +1,50 @@
+.TH "formula" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+formula \- Structure representing a formula made of compositions, for example : C2H4\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <formula\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "int \fBnb_comp\fP"
+.br
+.RI "The number of distinct compositions (ie elements)\&. "
+.ti -1c
+.RI "\fBcomposition_t\fP * \fBcomps\fP"
+.br
+.RI "The compositions\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure representing a formula made of compositions, for example : C2H4\&. 
+.PP
+Definition at line 102 of file formula\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBcomposition_t\fP* formula::comps"
+
+.PP
+The compositions\&. 
+.PP
+Definition at line 107 of file formula\&.h\&.
+.PP
+Referenced by add_element(), add_formula(), copy_formula(), formula_tochar(), free_formula(), get_weight(), init_distrib(), load_modifications(), read_formula(), and sub_formula()\&.
+.SS "int formula::nb_comp"
+
+.PP
+The number of distinct compositions (ie elements)\&. 
+.PP
+Definition at line 105 of file formula\&.h\&.
+.PP
+Referenced by add_element(), add_formula(), copy_formula(), formula_tochar(), free_formula(), get_formula_to_add(), get_formula_to_sub(), get_weight(), load_modifications(), read_formula(), and sub_formula()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

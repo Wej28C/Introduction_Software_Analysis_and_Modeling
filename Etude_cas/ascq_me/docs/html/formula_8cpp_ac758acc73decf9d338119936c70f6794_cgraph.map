@@ -1,0 +1,8 @@
+<map id="read_formula" name="read_formula">
+<area shape="rect" id="node1" title="Allocate and read a formula from a string." alt="" coords="5,132,115,159"/>
+<area shape="rect" id="node2" href="$formula_8cpp.html#a499402e9c41a7629571b9f17dee38d86" title="Local function that affects the quantity of atoms in a composition_t structure." alt="" coords="163,81,263,108"/>
+<area shape="rect" id="node6" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="652,81,705,108"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#a24b1ac4e1e5e074dbf381e2f5155cca9" title="Local tool function which returns the most close int of a double &lt;=&gt; rint function used because rint ..." alt="" coords="337,5,429,32"/>
+<area shape="rect" id="node4" href="$formula_8cpp.html#a1b353bcd70fedc65de083af2d954e594" title="Local function that allows to gain the copy of an element structure." alt="" coords="311,56,456,83"/>
+<area shape="rect" id="node5" href="$formula_8cpp.html#aa2cff9d5e8bd11bacae69d478368fde7" title="Local function that allows to gain the copy of an isotop structure." alt="" coords="504,5,604,32"/>
+</map>

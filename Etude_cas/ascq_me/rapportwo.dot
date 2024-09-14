@@ -1,0 +1,23 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="main\n100.00%\n(0.00%)"];
+	1 -> 2 [arrowsize="0.70", color="#0ab413", fontcolor="#0ab413", fontsize="10.00", label="48.60%\n7×", labeldistance="1.94", penwidth="1.94"];
+	1 -> 4 [arrowsize="0.70", color="#0ab414", fontcolor="#0ab414", fontsize="10.00", label="48.55%\n1×", labeldistance="1.94", penwidth="1.94"];
+	1 -> 9 [arrowsize="0.35", color="#0d1976", fontcolor="#0d1976", fontsize="10.00", label="2.86%\n1×", labeldistance="0.50", penwidth="0.50"];
+	2 [color="#0ab413", fontcolor="#ffffff", fontsize="10.00", label="optimized_isotopic_distribution(formula*, int)\n48.60%\n(25.71%)\n7×"];
+	2 -> 6 [arrowsize="0.45", color="#0c738d", fontcolor="#0c738d", fontsize="10.00", label="19.93%\n280×", labeldistance="0.80", penwidth="0.80"];
+	2 -> 7 [arrowsize="0.35", color="#0d1977", fontcolor="#0d1977", fontsize="10.00", label="2.95%\n2545664×", labeldistance="0.50", penwidth="0.50"];
+	3 [color="#0ab414", fontcolor="#ffffff", fontsize="10.00", label="load_string_keyword(_IO_FILE*, char const*)\n48.55%\n(0.00%)\n10×"];
+	3 -> 5 [arrowsize="0.70", color="#0ab414", fontcolor="#0ab414", fontsize="10.00", label="48.48%\n1×", labeldistance="1.94", penwidth="1.94"];
+	4 [color="#0ab414", fontcolor="#ffffff", fontsize="10.00", label="load_configuration(char*)\n48.55%\n(0.00%)\n1×"];
+	4 -> 3 [arrowsize="0.70", color="#0ab414", fontcolor="#0ab414", fontsize="10.00", label="48.55%\n10×", labeldistance="1.94", penwidth="1.94"];
+	5 [color="#0ab414", fontcolor="#ffffff", fontsize="10.00", label="init_distrib()\n48.48%\n(34.29%)\n1×"];
+	5 -> 7 [arrowsize="0.38", color="#0c5185", fontcolor="#0c5185", fontsize="10.00", label="14.19%\n12236800×", labeldistance="0.57", penwidth="0.57"];
+	6 [color="#0c738d", fontcolor="#ffffff", fontsize="10.00", label="integral_normalization(double, int, complex*)\n20.00%\n(20.00%)\n281×"];
+	7 [color="#0c6289", fontcolor="#ffffff", fontsize="10.00", label="complex_multiplication(complex, complex)\n17.14%\n(17.14%)\n14782464×"];
+	8 [color="#0d1976", fontcolor="#ffffff", fontsize="10.00", label="get_step()\n2.86%\n(2.86%)\n28802×"];
+	9 [color="#0d1976", fontcolor="#ffffff", fontsize="10.00", label="fprintf_ascq_me_results_table_form(_IO_FILE*)\n2.86%\n(0.00%)\n1×"];
+	9 -> 8 [arrowsize="0.35", color="#0d1976", fontcolor="#0d1976", fontsize="10.00", label="2.86%\n28802×", labeldistance="0.50", penwidth="0.50"];
+}

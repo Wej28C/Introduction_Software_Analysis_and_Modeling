@@ -1,0 +1,478 @@
+\doxysection{aa.\+h File Reference}
+\label{aa_8h}\index{aa.h@{aa.h}}
+
+
+Definition of an amino acid.  
+
+
+{\ttfamily \#include \char`\"{}formula.\+h\char`\"{}}\newline
+Include dependency graph for aa.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aa_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aa_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ amino\+\_\+acid\+\_\+\+CF}
+\begin{DoxyCompactList}\small\item\em Structure representing an amino acid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \textbf{ amino\+\_\+acid\+\_\+\+CF} \textbf{ aa\+\_\+\+CF\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure representing an amino acid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ init\+\_\+peptid\+\_\+link} (\textbf{ element\+\_\+t} $\ast$elem\+\_\+table, int elem\+\_\+table\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Procedure which initialises the formula of peptid liaison and the util formulae. \end{DoxyCompactList}\item 
+\textbf{ aa\+\_\+\+CF\+\_\+t} $\ast$ \textbf{ get\+\_\+amino\+\_\+acid\+\_\+table} (const char $\ast$filename, \textbf{ element\+\_\+t} $\ast$elem\+\_\+table, int elem\+\_\+table\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Function which initialise and return the amino acid formula table stored in a file. \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+amino\+\_\+acid\+\_\+table} (\textbf{ aa\+\_\+\+CF\+\_\+t} $\ast$aa\+\_\+table)
+\begin{DoxyCompactList}\small\item\em Procedure which frees the memory allocated for an amino acid table. \end{DoxyCompactList}\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ get\+\_\+util\+\_\+formula} (const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Function which allows to get a already calculated formula. \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+peptide\+\_\+link} ()
+\begin{DoxyCompactList}\small\item\em Procedure which frees the formula of the peptide link and the util formulae. \end{DoxyCompactList}\item 
+void \textbf{ print\+\_\+amino\+\_\+acid\+\_\+table} (\textbf{ aa\+\_\+\+CF\+\_\+t} $\ast$aa\+\_\+table)
+\begin{DoxyCompactList}\small\item\em Procedure which prints on the screen the amino acid table. \end{DoxyCompactList}\item 
+void \textbf{ fprint\+\_\+amino\+\_\+acid\+\_\+table} (FILE $\ast$file, \textbf{ aa\+\_\+\+CF\+\_\+t} $\ast$aa\+\_\+table)
+\begin{DoxyCompactList}\small\item\em Procedure which prints in a file the amino acid table. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+X} (char amino\+\_\+acid)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to set the amino acid that will be used when X is met in a FASTA file. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+Z} (char amino\+\_\+acid)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to set the amino acid that will be used when Z is met in a FASTA file. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+B} (char amino\+\_\+acid)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to set the amino acid that will be used when B is met in a FASTA file. \end{DoxyCompactList}\item 
+char \textbf{ get\+\_\+X} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to access to the amino acid used for X. \end{DoxyCompactList}\item 
+char \textbf{ get\+\_\+Z} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to access to the amino acid used for Z. \end{DoxyCompactList}\item 
+char \textbf{ get\+\_\+B} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to access to the amino acid used for B. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition of an amino acid. 
+
+\begin{DoxyAuthor}{Author}
+Nicolas GRUSZCZYNSKA and Nicolas DOLET (2005).~\newline
+ Modified and updated by Jean-\/\+Charles BOISSON (2005-\/2008). 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{aa_8h_a0c04a6091393d976c30a222dfa09aea1}} 
+\index{aa.h@{aa.h}!aa\_CF\_t@{aa\_CF\_t}}
+\index{aa\_CF\_t@{aa\_CF\_t}!aa.h@{aa.h}}
+\doxysubsubsection{aa\_CF\_t}
+{\footnotesize\ttfamily typedef struct \textbf{ amino\+\_\+acid\+\_\+\+CF} \textbf{ aa\+\_\+\+CF\+\_\+t}}
+
+
+
+Structure representing an amino acid. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{aa_8h_ab8fb4020e5ce73359f5cdebdab5e7eaf}} 
+\index{aa.h@{aa.h}!fprint\_amino\_acid\_table@{fprint\_amino\_acid\_table}}
+\index{fprint\_amino\_acid\_table@{fprint\_amino\_acid\_table}!aa.h@{aa.h}}
+\doxysubsubsection{fprint\_amino\_acid\_table()}
+{\footnotesize\ttfamily void fprint\+\_\+amino\+\_\+acid\+\_\+table (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file,  }\item[{\textbf{ aa\+\_\+\+CF\+\_\+t} $\ast$}]{aa\+\_\+table }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints in a file the amino acid table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file where the amino acid table will be printed. \\
+\hline
+{\em aa\+\_\+table} & The amino acid table to print. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 434 of file aa.\+cpp.
+
+
+
+References formula\+\_\+tochar(), and get\+\_\+weight().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aa_8h_ab8fb4020e5ce73359f5cdebdab5e7eaf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{aa_8h_a79bc6083d58f52b3d4a9e30e3dfd241d}} 
+\index{aa.h@{aa.h}!free\_amino\_acid\_table@{free\_amino\_acid\_table}}
+\index{free\_amino\_acid\_table@{free\_amino\_acid\_table}!aa.h@{aa.h}}
+\doxysubsubsection{free\_amino\_acid\_table()}
+{\footnotesize\ttfamily void free\+\_\+amino\+\_\+acid\+\_\+table (\begin{DoxyParamCaption}\item[{\textbf{ aa\+\_\+\+CF\+\_\+t} $\ast$}]{aa\+\_\+table }\end{DoxyParamCaption})}
+
+
+
+Procedure which frees the memory allocated for an amino acid table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aa\+\_\+table} & The amino acid table. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 208 of file aa.\+cpp.
+
+
+
+References error(), free\+\_\+formula(), and FREE\+\_\+\+MEMORY\+\_\+\+ERROR.
+
+
+
+Referenced by free\+\_\+tables().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aa_8h_a79bc6083d58f52b3d4a9e30e3dfd241d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{aa_8h_afd3b9a961e51a417a1335371880ba2c7}} 
+\index{aa.h@{aa.h}!free\_peptide\_link@{free\_peptide\_link}}
+\index{free\_peptide\_link@{free\_peptide\_link}!aa.h@{aa.h}}
+\doxysubsubsection{free\_peptide\_link()}
+{\footnotesize\ttfamily void free\+\_\+peptide\+\_\+link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which frees the formula of the peptide link and the util formulae. 
+
+
+
+Definition at line 317 of file aa.\+cpp.
+
+
+
+References CH, CO, CO2H, error(), free\+\_\+formula(), FREE\+\_\+\+MEMORY\+\_\+\+ERROR, H, H2O, NH, NH2, NH3, NHCHCO, and OH.
+
+
+
+Referenced by free\+\_\+tables().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aa_8h_afd3b9a961e51a417a1335371880ba2c7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{aa_8h_a02f042cf8135e2f2ef82c939a6007565}} 
+\index{aa.h@{aa.h}!get\_amino\_acid\_table@{get\_amino\_acid\_table}}
+\index{get\_amino\_acid\_table@{get\_amino\_acid\_table}!aa.h@{aa.h}}
+\doxysubsubsection{get\_amino\_acid\_table()}
+{\footnotesize\ttfamily \textbf{ aa\+\_\+\+CF\+\_\+t}$\ast$ get\+\_\+amino\+\_\+acid\+\_\+table (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{\textbf{ element\+\_\+t} $\ast$}]{elem\+\_\+table,  }\item[{int}]{elem\+\_\+table\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Function which initialise and return the amino acid formula table stored in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The file which contains the table. \\
+\hline
+{\em elem\+\_\+table} & The element table. \\
+\hline
+{\em elem\+\_\+table\+\_\+size} & The number of elements in the table. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The first aa\+\_\+\+CF\+\_\+t structure. 
+\end{DoxyReturn}
+
+
+Definition at line 138 of file aa.\+cpp.
+
+
+
+References amino\+\_\+acid\+\_\+\+CF\+::add\+\_\+modif, B, copy\+\_\+formula(), error(), amino\+\_\+acid\+\_\+\+CF\+::form, IO\+\_\+\+ERROR, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, read\+\_\+formula(), amino\+\_\+acid\+\_\+\+CF\+::sub\+\_\+modif, X, and Z.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aa_8h_a02f042cf8135e2f2ef82c939a6007565_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{aa_8h_a9f508070c94ece19eb024817bc1c3c20}} 
+\index{aa.h@{aa.h}!get\_B@{get\_B}}
+\index{get\_B@{get\_B}!aa.h@{aa.h}}
+\doxysubsubsection{get\_B()}
+{\footnotesize\ttfamily char get\+\_\+B (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to access to the amino acid used for B. 
+
+\begin{DoxyReturn}{Returns}
+The used amino acid used. 
+\end{DoxyReturn}
+
+
+Definition at line 486 of file aa.\+cpp.
+
+
+
+References B.
+
+\mbox{\label{aa_8h_a9b0323cac421a29475fdb29796a36e85}} 
+\index{aa.h@{aa.h}!get\_util\_formula@{get\_util\_formula}}
+\index{get\_util\_formula@{get\_util\_formula}!aa.h@{aa.h}}
+\doxysubsubsection{get\_util\_formula()}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t}$\ast$ get\+\_\+util\+\_\+formula (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get a already calculated formula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The char$\ast$ form of the wanted formula. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The wanted forumla. 
+\end{DoxyReturn}
+
+
+Definition at line 235 of file aa.\+cpp.
+
+
+
+References CH, CO, CO2H, error(), H, H2O, NH, NH2, NH3, NHCHCO, OH, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by digest(), fusion\+\_\+peptide(), get\+\_\+formula\+\_\+from\+\_\+sequence(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein(), and get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{aa_8h_a9b0323cac421a29475fdb29796a36e85_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{aa_8h_abab39ed02a3c430f2299b680678aa163}} 
+\index{aa.h@{aa.h}!get\_X@{get\_X}}
+\index{get\_X@{get\_X}!aa.h@{aa.h}}
+\doxysubsubsection{get\_X()}
+{\footnotesize\ttfamily char get\+\_\+X (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to access to the amino acid used for X. 
+
+\begin{DoxyReturn}{Returns}
+The used amino acid used. 
+\end{DoxyReturn}
+
+
+Definition at line 474 of file aa.\+cpp.
+
+
+
+References X.
+
+\mbox{\label{aa_8h_a1d320c9b96f1ec74863f086e79b38d3b}} 
+\index{aa.h@{aa.h}!get\_Z@{get\_Z}}
+\index{get\_Z@{get\_Z}!aa.h@{aa.h}}
+\doxysubsubsection{get\_Z()}
+{\footnotesize\ttfamily char get\+\_\+Z (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to access to the amino acid used for Z. 
+
+\begin{DoxyReturn}{Returns}
+The used amino acid used. 
+\end{DoxyReturn}
+
+
+Definition at line 480 of file aa.\+cpp.
+
+
+
+References Z.
+
+\mbox{\label{aa_8h_a072401b5a9c4013a4ae263c95cf11001}} 
+\index{aa.h@{aa.h}!init\_peptid\_link@{init\_peptid\_link}}
+\index{init\_peptid\_link@{init\_peptid\_link}!aa.h@{aa.h}}
+\doxysubsubsection{init\_peptid\_link()}
+{\footnotesize\ttfamily void init\+\_\+peptid\+\_\+link (\begin{DoxyParamCaption}\item[{\textbf{ element\+\_\+t} $\ast$}]{elem\+\_\+table,  }\item[{int}]{elem\+\_\+table\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Procedure which initialises the formula of peptid liaison and the util formulae. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem\+\_\+table} & The element table. \\
+\hline
+{\em elem\+\_\+table\+\_\+size} & The number of elements in the table. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 123 of file aa.\+cpp.
+
+
+
+References CH, CO, CO2H, H, H2O, NH, NH2, NH3, NHCHCO, OH, and read\+\_\+formula().
+
+
+
+Referenced by tables\+\_\+initialisation().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aa_8h_a072401b5a9c4013a4ae263c95cf11001_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{aa_8h_ab411645090eb466fc78a2ada0fd252a0}} 
+\index{aa.h@{aa.h}!print\_amino\_acid\_table@{print\_amino\_acid\_table}}
+\index{print\_amino\_acid\_table@{print\_amino\_acid\_table}!aa.h@{aa.h}}
+\doxysubsubsection{print\_amino\_acid\_table()}
+{\footnotesize\ttfamily void print\+\_\+amino\+\_\+acid\+\_\+table (\begin{DoxyParamCaption}\item[{\textbf{ aa\+\_\+\+CF\+\_\+t} $\ast$}]{aa\+\_\+table }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints on the screen the amino acid table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aa\+\_\+table} & The amino acid table. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 412 of file aa.\+cpp.
+
+
+
+References formula\+\_\+tochar().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{aa_8h_ab411645090eb466fc78a2ada0fd252a0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{aa_8h_af95d42915a176fb102be200b4be7927f}} 
+\index{aa.h@{aa.h}!set\_B@{set\_B}}
+\index{set\_B@{set\_B}!aa.h@{aa.h}}
+\doxysubsubsection{set\_B()}
+{\footnotesize\ttfamily void set\+\_\+B (\begin{DoxyParamCaption}\item[{char}]{amino\+\_\+acid }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to set the amino acid that will be used when B is met in a FASTA file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amino\+\_\+acid} & The amino acid corresponding to B. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 468 of file aa.\+cpp.
+
+
+
+References B.
+
+
+
+Referenced by load\+\_\+string\+\_\+keyword().
+
+\mbox{\label{aa_8h_aa518c450b96b78255adbc89f2a0ba4a6}} 
+\index{aa.h@{aa.h}!set\_X@{set\_X}}
+\index{set\_X@{set\_X}!aa.h@{aa.h}}
+\doxysubsubsection{set\_X()}
+{\footnotesize\ttfamily void set\+\_\+X (\begin{DoxyParamCaption}\item[{char}]{amino\+\_\+acid }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to set the amino acid that will be used when X is met in a FASTA file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amino\+\_\+acid} & The amino acid corresponding to X. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 456 of file aa.\+cpp.
+
+
+
+References X.
+
+
+
+Referenced by load\+\_\+string\+\_\+keyword().
+
+\mbox{\label{aa_8h_af3681b4a98a8f1b0c9cc22b20162b26b}} 
+\index{aa.h@{aa.h}!set\_Z@{set\_Z}}
+\index{set\_Z@{set\_Z}!aa.h@{aa.h}}
+\doxysubsubsection{set\_Z()}
+{\footnotesize\ttfamily void set\+\_\+Z (\begin{DoxyParamCaption}\item[{char}]{amino\+\_\+acid }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to set the amino acid that will be used when Z is met in a FASTA file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amino\+\_\+acid} & The amino acid corresponding to Z. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 462 of file aa.\+cpp.
+
+
+
+References Z.
+
+
+
+Referenced by load\+\_\+string\+\_\+keyword().
+

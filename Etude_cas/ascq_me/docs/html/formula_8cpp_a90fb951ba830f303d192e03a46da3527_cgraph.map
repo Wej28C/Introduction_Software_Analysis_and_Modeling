@@ -1,0 +1,6 @@
+<map id="add_element" name="add_element">
+<area shape="rect" id="node1" title="Procedure which adds an element in a formula." alt="" coords="5,31,112,57"/>
+<area shape="rect" id="node2" href="$formula_8cpp.html#a1b353bcd70fedc65de083af2d954e594" title="Local function that allows to gain the copy of an element structure." alt="" coords="160,31,305,57"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#aa2cff9d5e8bd11bacae69d478368fde7" title="Local function that allows to gain the copy of an isotop structure." alt="" coords="353,5,453,32"/>
+<area shape="rect" id="node4" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="501,31,555,57"/>
+</map>

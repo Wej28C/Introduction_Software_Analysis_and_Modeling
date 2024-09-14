@@ -1,0 +1,327 @@
+.TH "cleavage.cpp" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cleavage.cpp \- Implementation of the methods defined in \fBcleavage\&.h\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'cleavage\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcp_fprint\fP (FILE *f, \fBcp_t\fP *cp)"
+.br
+.RI "Tool procedure used in cplt_fprint\&. "
+.ti -1c
+.RI "\fBcpl_t\fP * \fBstringToCpl\fP (char *s)"
+.br
+.RI "Function which translates according to a grammar a character a sequence into a complete cleavage rule\&. "
+.ti -1c
+.RI "int \fBcpl_isCleavage\fP (\fBcpl_t\fP *cpl, char c)"
+.br
+.RI "Function which indicates if letter can be a cleveage point according to the cleavage rules\&. "
+.ti -1c
+.RI "int \fBcpl_isCleavage2\fP (\fBcpl_t\fP *cpl, char cprev, char c, char cnext)"
+.br
+.RI "Function which indicates if we are in a good cleavage situation according to the cleavage rules\&. "
+.ti -1c
+.RI "void \fBcpl_fprint\fP (FILE *f, \fBcpl_t\fP *cpl)"
+.br
+.RI "Procedure which prints the rules in a file in an understanding style\&. "
+.ti -1c
+.RI "\fBenztable_t\fP * \fBenzym_load\fP (const char *fileToLoad)"
+.br
+.RI "Procedure which initialized the enztable_t structure from a file\&. "
+.ti -1c
+.RI "int \fBget_enzyme_number\fP (char *enztofind, \fBenztable_t\fP *enzt)"
+.br
+.RI "Function which returns the place of an enzym in the enzyme list\&. "
+.ti -1c
+.RI "void \fBprint_enzyme_table\fP (\fBenztable_t\fP *enzt)"
+.br
+.RI "Procedure which prints the enzyme table on the screen\&. "
+.ti -1c
+.RI "void \fBfree_cpt\fP (\fBcp_t\fP *cpt)"
+.br
+.RI "Procedure which frees the content of a cpt structure\&. "
+.ti -1c
+.RI "void \fBfree_cplt\fP (\fBcpl_t\fP *cplt)"
+.br
+.RI "Procedure which frees the content of a cplt structure\&. "
+.ti -1c
+.RI "void \fBfree_enzt\fP (\fBenz_t\fP *enzt)"
+.br
+.RI "Procedure which frees the content of a enzt structure\&. "
+.ti -1c
+.RI "void \fBfree_enzym_table\fP (\fBenztable_t\fP *enzyme_table)"
+.br
+.RI "Procedure which frees an enzyme table\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of the methods defined in \fBcleavage\&.h\fP\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Pierre LAURENCE and David BOENS for ASCQ-PROT (2003)\&.
+.br
+ Modified and updated by Jean-Charles BOISSON (2005-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBcleavage\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void cp_fprint (FILE * f, \fBcp_t\fP * cp)"
+
+.PP
+Tool procedure used in cplt_fprint\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP The file where the cp will be printed\&. 
+.br
+\fIcp\fP The cp structure to print\&. 
+.RE
+.PP
+
+.PP
+Definition at line 239 of file cleavage\&.cpp\&.
+.PP
+References cleavePoint::exceptafter, cleavePoint::exceptbefore, cleavePoint::letter, cleavePoint::nbexceptafter, and cleavePoint::nbexceptbefore\&.
+.PP
+Referenced by cpl_fprint()\&.
+.SS "void cpl_fprint (FILE * f, \fBcpl_t\fP * cpl)"
+
+.PP
+Procedure which prints the rules in a file in an understanding style\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP The file in which we want to print the rules\&. 
+.br
+\fIcpl\fP The rules\&. 
+.RE
+.PP
+
+.PP
+Definition at line 267 of file cleavage\&.cpp\&.
+.PP
+References cleavePointList::cp, cp_fprint(), and cleavePointList::size\&.
+.SS "int cpl_isCleavage (\fBcpl_t\fP * cpl, char c)"
+
+.PP
+Function which indicates if letter can be a cleveage point according to the cleavage rules\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcpl\fP The rules\&. 
+.br
+\fIc\fP The considered letter\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE (see \fButil\&.h\fP)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 207 of file cleavage\&.cpp\&.
+.PP
+References cleavePointList::cp, FALSE, cleavePoint::letter, cleavePointList::size, and TRUE\&.
+.SS "int cpl_isCleavage2 (\fBcpl_t\fP * cpl, char cprev, char c, char cnext)"
+
+.PP
+Function which indicates if we are in a good cleavage situation according to the cleavage rules\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcpl\fP The rules\&. 
+.br
+\fIcprev\fP The letter(s) before the current one\&. 
+.br
+\fIc\fP The current letter\&. 
+.br
+\fIcnext\fP The letter(s) after the current one\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE (see \fButil\&.h\fP)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 217 of file cleavage\&.cpp\&.
+.PP
+References cleavePointList::cp, cleavePoint::exceptafter, cleavePoint::exceptbefore, FALSE, cleavePoint::letter, cleavePoint::nbexceptafter, cleavePoint::nbexceptbefore, cleavePointList::size, and TRUE\&.
+.PP
+Referenced by digest()\&.
+.SS "\fBenztable_t\fP * enzym_load (const char * fileToLoad)"
+
+.PP
+Procedure which initialized the enztable_t structure from a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileToLoad\fP The file used to make the initialisation\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The enzyme table\&. 
+.RE
+.PP
+
+.PP
+Definition at line 276 of file cleavage\&.cpp\&.
+.PP
+References C_SIDE, enzyme::cpl, enzyme_list::enz, EOL, error(), IO_ERROR, N_SIDE, enzyme::name, SEPARATOR, enzyme::side, enzyme_list::size, stringToCpl(), and USAGE_ERROR\&.
+.PP
+Referenced by init_util_digestion()\&.
+.SS "void free_cplt (\fBcpl_t\fP * cplt)"
+
+.PP
+Procedure which frees the content of a cplt structure\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcplt\fP The cplt structure we want to free\&. 
+.RE
+.PP
+
+.PP
+Definition at line 436 of file cleavage\&.cpp\&.
+.PP
+References cleavePointList::cp, error(), free_cpt(), FREE_MEMORY_ERROR, and cleavePointList::size\&.
+.PP
+Referenced by free_enzt()\&.
+.SS "void free_cpt (\fBcp_t\fP * cpt)"
+
+.PP
+Procedure which frees the content of a cpt structure\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcpt\fP The cpt structure we want to free\&. 
+.RE
+.PP
+
+.PP
+Definition at line 409 of file cleavage\&.cpp\&.
+.PP
+References error(), cleavePoint::exceptafter, cleavePoint::exceptbefore, FREE_MEMORY_ERROR, cleavePoint::nbexceptafter, and cleavePoint::nbexceptbefore\&.
+.PP
+Referenced by free_cplt()\&.
+.SS "void free_enzt (\fBenz_t\fP * enzt)"
+
+.PP
+Procedure which frees the content of a enzt structure\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIenzt\fP The enzyme table we want to free\&. 
+.RE
+.PP
+
+.PP
+Definition at line 457 of file cleavage\&.cpp\&.
+.PP
+References enzyme::cpl, error(), free_cplt(), FREE_MEMORY_ERROR, and enzyme::name\&.
+.PP
+Referenced by free_enzym_table()\&.
+.SS "void free_enzym_table (\fBenztable_t\fP * enzyme_table)"
+
+.PP
+Procedure which frees an enzyme table\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIenzyme_table\fP The enzym table to free\&. 
+.RE
+.PP
+
+.PP
+Definition at line 480 of file cleavage\&.cpp\&.
+.PP
+References enzyme_list::enz, error(), free_enzt(), FREE_MEMORY_ERROR, and enzyme_list::size\&.
+.PP
+Referenced by free_util_digestion()\&.
+.SS "int get_enzyme_number (char * enztofind, \fBenztable_t\fP * enzt)"
+
+.PP
+Function which returns the place of an enzym in the enzyme list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIenztofind\fP The enzym we want to find\&. 
+.br
+\fIenzt\fP The enzyme table\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The place of the enzyme in the enzyme list\&. 
+.RE
+.PP
+
+.PP
+Definition at line 377 of file cleavage\&.cpp\&.
+.PP
+References enzyme_list::enz, enzyme::name, and enzyme_list::size\&.
+.SS "void print_enzyme_table (\fBenztable_t\fP * enzt)"
+
+.PP
+Procedure which prints the enzyme table on the screen\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIenzt\fP The enzyme table\&. 
+.RE
+.PP
+
+.PP
+Definition at line 399 of file cleavage\&.cpp\&.
+.PP
+References enzyme_list::enz, enzyme::name, and enzyme_list::size\&.
+.SS "\fBcpl_t\fP * stringToCpl (char * s)"
+
+.PP
+Function which translates according to a grammar a character a sequence into a complete cleavage rule\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIs\fP a correct character chain according to the grammar\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The complete cleavage rule\&. 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file cleavage\&.cpp\&.
+.PP
+References cleavePointList::cp, error(), cleavePoint::exceptafter, cleavePoint::exceptbefore, FALSE, cleavePoint::letter, MEMORY_ALLOCATION_ERROR, cleavePoint::nbexceptafter, cleavePoint::nbexceptbefore, cleavePointList::size, and TRUE\&.
+.PP
+Referenced by enzym_load()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

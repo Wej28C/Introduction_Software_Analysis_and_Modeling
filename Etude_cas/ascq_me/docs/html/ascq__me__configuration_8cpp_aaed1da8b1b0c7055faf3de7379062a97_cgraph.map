@@ -1,0 +1,14 @@
+<map id="load_float_keyword" name="load_float_keyword">
+<area shape="rect" id="node1" title="Procedure which reads the value of a parameter that requires a float value (or a double value)." alt="" coords="5,192,153,219"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="867,192,920,219"/>
+<area shape="rect" id="node3" href="$isodistrib_8h.html#a276facbe926ddf3d1fb564a5c0377b36" title=" " alt="" coords="201,40,397,67"/>
+<area shape="rect" id="node4" href="$util_8h.html#a1d08e0f99bc95efbc389136a48eac477" title="Function which allows to read a line and put it in a char*." alt="" coords="258,91,341,118"/>
+<area shape="rect" id="node7" href="$seqio_8h.html#ac5f6ed3fcfd606b6df425aaff112c368" title="Procedure to set a for the experimental protein mass." alt="" coords="215,142,383,168"/>
+<area shape="rect" id="node8" href="$isodistrib_8h.html#a74145f64a708f96625f7e46c90d2b823" title="Procedure which allows to modify the gaussian value." alt="" coords="447,192,598,219"/>
+<area shape="rect" id="node9" href="$isodistrib_8h.html#a18bc0989ef001e5b3db821a38738f21a" title="Procedure which allows to modify the maximum mass for the peptides." alt="" coords="654,243,813,270"/>
+<area shape="rect" id="node10" href="$isodistrib_8h.html#ae5def3be3b71b0591b0e792edea41cbd" title="Procedure which allows to modify the minimum mass for the peptides." alt="" coords="445,294,600,320"/>
+<area shape="rect" id="node11" href="$isodistrib_8h.html#a49ebf622a74b3d3d0552737f3bea487a" title="Procedure which allows to modify the score sensitivity." alt="" coords="648,344,819,371"/>
+<area shape="rect" id="node12" href="$isodistrib_8h.html#a71e2228db775fe3946ad8561ff9c91fe" title="Procedure which allows to set the threshold useful for the procedure write_spectrum_peak_only and the..." alt="" coords="244,395,355,422"/>
+<area shape="rect" id="node5" href="$util_8cpp.html#ae77d8b2f8e8bfec6dd7dbb836f5ee2f3" title="Function which allows to read a char* until a special separator, EOF or the end of the line." alt="" coords="479,91,566,118"/>
+<area shape="rect" id="node6" href="$util_8cpp.html#a8deed219368df958f27871ec0d0d45e8" title="Function which allows to not take the blanks of a file." alt="" coords="681,142,786,168"/>
+</map>

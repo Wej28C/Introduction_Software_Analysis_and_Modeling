@@ -1,0 +1,11 @@
+<map id="get_amino_acid_table" name="get_amino_acid_table">
+<area shape="rect" id="node1" title="Function which initialise and return the amino acid formula table stored in a file." alt="" coords="5,68,171,95"/>
+<area shape="rect" id="node2" href="$formula_8cpp.html#ab26f1f1f23fc5eecbf139fe58e3f310a" title="Get the copy of a formula." alt="" coords="219,68,329,95"/>
+<area shape="rect" id="node6" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="907,144,960,171"/>
+<area shape="rect" id="node7" href="$formula_8cpp.html#ac758acc73decf9d338119936c70f6794" title="Allocate and read a formula from a string." alt="" coords="219,195,329,221"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#a7abb70e00923aee6b3fecac10731042c" title="Get the copy of a composition." alt="" coords="377,93,517,120"/>
+<area shape="rect" id="node4" href="$formula_8cpp.html#a1b353bcd70fedc65de083af2d954e594" title="Local function that allows to gain the copy of an element structure." alt="" coords="565,144,711,171"/>
+<area shape="rect" id="node5" href="$formula_8cpp.html#aa2cff9d5e8bd11bacae69d478368fde7" title="Local function that allows to gain the copy of an isotop structure." alt="" coords="759,144,859,171"/>
+<area shape="rect" id="node8" href="$formula_8cpp.html#a499402e9c41a7629571b9f17dee38d86" title="Local function that affects the quantity of atoms in a composition_t structure." alt="" coords="397,195,497,221"/>
+<area shape="rect" id="node9" href="$formula_8cpp.html#a24b1ac4e1e5e074dbf381e2f5155cca9" title="Local tool function which returns the most close int of a double &lt;=&gt; rint function used because rint ..." alt="" coords="592,195,684,221"/>
+</map>

@@ -1,0 +1,31 @@
+<map id="init_distrib" name="init_distrib">
+<area shape="rect" id="node1" title="Procedure which initializes the parameters and allocates the useful structures." alt="" coords="5,360,96,387"/>
+<area shape="rect" id="node2" href="$isodistrib_8cpp.html#add439be0f19853cd7568299e4e9f2043" title="Complex Discrete Fourier Transform." alt="" coords="223,132,269,159"/>
+<area shape="rect" id="node10" href="$complex_8cpp.html#a0f222462fb28e0970e119cf2815a61f6" title="Function which makes the multiplication of 2 complex numbers." alt="" coords="159,208,333,235"/>
+<area shape="rect" id="node11" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="951,537,1004,564"/>
+<area shape="rect" id="node12" href="$formula_8cpp.html#a4c746199d04b732d41c72f52bb05cdd9" title="Free the memory allocated for a formula." alt="" coords="421,309,527,336"/>
+<area shape="rect" id="node15" href="$formula_8cpp.html#a2e96927511f60e9cad544aaff8bc33f1" title=" " alt="" coords="174,411,318,437"/>
+<area shape="rect" id="node23" href="$tables_8h.html#a36cb3093f11f7c112626c4668380a974" title="Function which returns the size of the element table." alt="" coords="157,512,335,539"/>
+<area shape="rect" id="node24" href="$util_8h.html#aeecaa6e13d0fc8e0fdf90adefed0ef92" title="Function which indicates if the verbose mode is activated." alt="" coords="144,563,348,589"/>
+<area shape="rect" id="node25" href="$formula_8cpp.html#ac758acc73decf9d338119936c70f6794" title="Allocate and read a formula from a string." alt="" coords="191,461,301,488"/>
+<area shape="rect" id="node3" href="$fft4g_8cpp.html#a797ab524538f313c7556d2ea04c3602a" title="One of the child routines." alt="" coords="643,132,703,159"/>
+<area shape="rect" id="node4" href="$fft4g_8cpp.html#a6ce44e550bfe817f80745375a96a70e6" title="One of the child routines." alt="" coords="431,208,517,235"/>
+<area shape="rect" id="node5" href="$fft4g_8cpp.html#a4c1c506bae9dc84a4f6f0a8588b4c194" title="One of the child routines." alt="" coords="439,5,509,32"/>
+<area shape="rect" id="node8" href="$fft4g_8cpp.html#aebb9cc2fc5808b13bbe1cf0a857a3f73" title="One of the child routines." alt="" coords="441,56,507,83"/>
+<area shape="rect" id="node9" href="$fft4g_8cpp.html#a7c1e1feac8c6a479cce040aae6bc80e8" title="One of the initializing routines." alt="" coords="437,157,511,184"/>
+<area shape="rect" id="node6" href="$fft4g_8cpp.html#ad356c86d9a665e64e85e2a20254c5474" title="One of the child routines." alt="" coords="643,5,702,32"/>
+<area shape="rect" id="node7" href="$fft4g_8cpp.html#a52cfc09e3aa1db914d876ecc317e04c9" title="One of the child routines." alt="" coords="641,56,704,83"/>
+<area shape="rect" id="node13" href="$formula_8cpp.html#a6a81bdde62cda8c4d6ed43d9b16b4c26" title="Procedure which frees the memory allocated for a composition." alt="" coords="605,360,740,387"/>
+<area shape="rect" id="node14" href="$formula_8cpp.html#aa924d9fff6ed2c0d2168efc91d41e03a" title="Local procedure that frees the memory allocated for an element structure." alt="" coords="793,411,903,437"/>
+<area shape="rect" id="node16" href="$util_8h.html#a0a8fd6188fa02e1d59178d8e88c235c4" title="Function which allows to jump a line from a file." alt="" coords="423,360,525,387"/>
+<area shape="rect" id="node17" href="$util_8h.html#a9ce39f0e4832bfdd973a4715b42df3b3" title="Function which allows to jump commentaries in a file." alt="" coords="396,411,552,437"/>
+<area shape="rect" id="node19" href="$util_8h.html#a1d08e0f99bc95efbc389136a48eac477" title="Function which allows to read a line and put it in a char*." alt="" coords="433,512,515,539"/>
+<area shape="rect" id="node22" href="$util_8h.html#a58b9836425eb912a8bbcd5e040e28349" title="Function which allows to read a char* until a special separator, EOF or the end of the line." alt="" coords="629,563,716,589"/>
+<area shape="rect" id="node18" href="$util_8cpp.html#a0a8fd6188fa02e1d59178d8e88c235c4" title="Function which allows to jump a line from a file." alt="" coords="622,411,723,437"/>
+<area shape="rect" id="node20" href="$util_8cpp.html#ae77d8b2f8e8bfec6dd7dbb836f5ee2f3" title="Function which allows to read a char* until a special separator, EOF or the end of the line." alt="" coords="629,512,716,539"/>
+<area shape="rect" id="node21" href="$util_8cpp.html#a8deed219368df958f27871ec0d0d45e8" title="Function which allows to not take the blanks of a file." alt="" coords="795,563,901,589"/>
+<area shape="rect" id="node26" href="$formula_8cpp.html#a499402e9c41a7629571b9f17dee38d86" title="Local function that affects the quantity of atoms in a composition_t structure." alt="" coords="424,689,524,716"/>
+<area shape="rect" id="node27" href="$formula_8cpp.html#a24b1ac4e1e5e074dbf381e2f5155cca9" title="Local tool function which returns the most close int of a double &lt;=&gt; rint function used because rint ..." alt="" coords="627,715,719,741"/>
+<area shape="rect" id="node28" href="$formula_8cpp.html#a1b353bcd70fedc65de083af2d954e594" title="Local function that allows to gain the copy of an element structure." alt="" coords="600,664,745,691"/>
+<area shape="rect" id="node29" href="$formula_8cpp.html#aa2cff9d5e8bd11bacae69d478368fde7" title="Local function that allows to gain the copy of an isotop structure." alt="" coords="798,715,898,741"/>
+</map>

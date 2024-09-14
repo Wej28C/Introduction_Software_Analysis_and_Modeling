@@ -1,0 +1,817 @@
+\doxysection{seqio.\+cpp File Reference}
+\label{seqio_8cpp}\index{seqio.cpp@{seqio.cpp}}
+
+
+Implementation of the methods defined in \doxyref{seqio.\+h}{p.}{seqio_8h}.  
+
+
+{\ttfamily \#include \char`\"{}seqio.\+h\char`\"{}}\newline
+Include dependency graph for seqio.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{seqio_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ MALLOC\+\_\+\+STEP\+\_\+\+SEQ}~10000
+\begin{DoxyCompactList}\small\item\em Standard size of allocation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \textbf{ get\+Seq} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the sequence of the current protein in the FASTA file. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+reversed\+\_\+sequence} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the reverse of the current protein sequence. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+Desc} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the description of the current protein in the FASTA file. \end{DoxyCompactList}\item 
+unsigned int \textbf{ is\+\_\+parsing\+\_\+started} ()
+\begin{DoxyCompactList}\small\item\em Function that indicates if the parsing of the database is started or not i.\+e. next\+Entry has been called at least one time. \end{DoxyCompactList}\item 
+int \textbf{ next\+Entry} (long $\ast$offset)
+\begin{DoxyCompactList}\small\item\em Function which allows to move until the next entry. \end{DoxyCompactList}\item 
+void \textbf{ fastafclose} ()
+\begin{DoxyCompactList}\small\item\em Function to close the FASTA file currently opened. \end{DoxyCompactList}\item 
+void \textbf{ fastafopen} (const char $\ast$filename, long $\ast$size)
+\begin{DoxyCompactList}\small\item\em Function which opens a FASTA file. \end{DoxyCompactList}\item 
+void \textbf{ fastafwrite} (FILE $\ast$f, char $\ast$desc, char $\ast$seq)
+\begin{DoxyCompactList}\small\item\em Procedure which writes in a file the description and the sequence of a protein. \end{DoxyCompactList}\item 
+void \textbf{ fastafwrite\+\_\+way} (FILE $\ast$f, char $\ast$desc, char $\ast$seq, int way)
+\begin{DoxyCompactList}\small\item\em Procedure which writes in a file the description and the sequence of a protein in a reading phase particulary. \end{DoxyCompactList}\item 
+int \textbf{ get\+Entry} (long $\ast$offset)
+\begin{DoxyCompactList}\small\item\em Function to position the cursor on the nearest entry from the offset position. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+specie} (const char $\ast$wanted\+\_\+specie)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to specifie the wanted specie to study. \end{DoxyCompactList}\item 
+int \textbf{ is\+\_\+a\+\_\+wanted\+\_\+protein} ()
+\begin{DoxyCompactList}\small\item\em Function which indicates if the current protein is wanted or not. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+fasta\+\_\+filename} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the name of the opened file. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+specie} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the current specie wanted from the fasta file. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+exp\+\_\+protein\+\_\+mass} (double mass)
+\begin{DoxyCompactList}\small\item\em Procedure to set a for the experimental protein mass. \end{DoxyCompactList}\item 
+double \textbf{ get\+\_\+exp\+\_\+protein\+\_\+mass} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the mass given for the protein mass. \end{DoxyCompactList}\item 
+int \textbf{ is\+\_\+exp\+\_\+protein\+\_\+mass\+\_\+activated} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to know if a experimental protein mass has been already set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \textbf{ Seq\+Buffer} =NULL
+\begin{DoxyCompactList}\small\item\em Variable that corresponds to the buffer holding the current protein sequence. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ Desc\+Buffer} =NULL
+\begin{DoxyCompactList}\small\item\em Variable that corresponds to the buffer holding the current protein description. \end{DoxyCompactList}\item 
+FILE $\ast$ \textbf{ Db\+File} =NULL
+\begin{DoxyCompactList}\small\item\em Variable that corresponds to the opened FASTA file. \end{DoxyCompactList}\item 
+long \textbf{ Offset} = (long) 0
+\begin{DoxyCompactList}\small\item\em Variable that corresponds to the offset in the FASTA file. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ specie} =NULL
+\begin{DoxyCompactList}\small\item\em Variable that corresponds to the wanted specie. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ fasta\+\_\+file\+\_\+name} =NULL
+\begin{DoxyCompactList}\small\item\em Variable that corresponds to the name of the opened FASTA file. \end{DoxyCompactList}\item 
+double \textbf{ protein\+\_\+mass} =0.\+0
+\begin{DoxyCompactList}\small\item\em Variable that corresponds to the experimental protein mass. \end{DoxyCompactList}\item 
+int \textbf{ protein\+\_\+mass\+\_\+given} =\textbf{ FALSE}
+\begin{DoxyCompactList}\small\item\em Variable that indicates if the a experimental protein mass has been given. \end{DoxyCompactList}\item 
+double \textbf{ mass\+\_\+tolerance} =10.\+0
+\begin{DoxyCompactList}\small\item\em Variable that indicates the according tolerance around the experimental protein mass. \end{DoxyCompactList}\item 
+unsigned \textbf{ parsing\+\_\+is\+\_\+started} =\textbf{ FALSE}
+\begin{DoxyCompactList}\small\item\em Variable that indicates if the parsing of the database has started or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the methods defined in \doxyref{seqio.\+h}{p.}{seqio_8h}. 
+
+\begin{DoxyAuthor}{Author}
+Pierre LAURENCE and David BOENS for ASCQ-\/\+PROT (2003).~\newline
+ Modified and updated by Jean-\/\+Charles BOISSON (2005-\/2008). 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{seqio_8cpp_ab8ba1929671a672a65c0cf866b717e81}} 
+\index{seqio.cpp@{seqio.cpp}!MALLOC\_STEP\_SEQ@{MALLOC\_STEP\_SEQ}}
+\index{MALLOC\_STEP\_SEQ@{MALLOC\_STEP\_SEQ}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{MALLOC\_STEP\_SEQ}
+{\footnotesize\ttfamily \#define MALLOC\+\_\+\+STEP\+\_\+\+SEQ~10000}
+
+
+
+Standard size of allocation. 
+
+
+
+Definition at line 56 of file seqio.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{seqio_8cpp_a3d5c165fe28541c59609426759bf6ba4}} 
+\index{seqio.cpp@{seqio.cpp}!fastafclose@{fastafclose}}
+\index{fastafclose@{fastafclose}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{fastafclose()}
+{\footnotesize\ttfamily void fastafclose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to close the FASTA file currently opened. 
+
+
+
+Definition at line 265 of file seqio.\+cpp.
+
+
+
+References Db\+File, Desc\+Buffer, fasta\+\_\+file\+\_\+name, Seq\+Buffer, and specie.
+
+
+
+Referenced by ascq\+\_\+me\+\_\+configuration\+\_\+cleaning().
+
+\mbox{\label{seqio_8cpp_a069681ca63db37dd3d2ba68e37249980}} 
+\index{seqio.cpp@{seqio.cpp}!fastafopen@{fastafopen}}
+\index{fastafopen@{fastafopen}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{fastafopen()}
+{\footnotesize\ttfamily void fastafopen (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{long $\ast$}]{size }\end{DoxyParamCaption})}
+
+
+
+Function which opens a FASTA file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to open. \\
+\hline
+{\em size} & The variable what will contain the FASTA file size. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 295 of file seqio.\+cpp.
+
+
+
+References Db\+File, error(), fasta\+\_\+file\+\_\+name, IO\+\_\+\+ERROR, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, and Offset.
+
+
+
+Referenced by load\+\_\+string\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{seqio_8cpp_a069681ca63db37dd3d2ba68e37249980_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{seqio_8cpp_a68e682655601585e24ab415add078a7c}} 
+\index{seqio.cpp@{seqio.cpp}!fastafwrite@{fastafwrite}}
+\index{fastafwrite@{fastafwrite}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{fastafwrite()}
+{\footnotesize\ttfamily void fastafwrite (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{f,  }\item[{char $\ast$}]{desc,  }\item[{char $\ast$}]{seq }\end{DoxyParamCaption})}
+
+
+
+Procedure which writes in a file the description and the sequence of a protein. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The file where the result will be write. \\
+\hline
+{\em desc} & The protein description. \\
+\hline
+{\em seq} & The protein sequence. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 321 of file seqio.\+cpp.
+
+
+
+References error(), and MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{seqio_8cpp_a68e682655601585e24ab415add078a7c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{seqio_8cpp_a3506ae51d21a79aa7950313873c7ae76}} 
+\index{seqio.cpp@{seqio.cpp}!fastafwrite\_way@{fastafwrite\_way}}
+\index{fastafwrite\_way@{fastafwrite\_way}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{fastafwrite\_way()}
+{\footnotesize\ttfamily void fastafwrite\+\_\+way (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{f,  }\item[{char $\ast$}]{desc,  }\item[{char $\ast$}]{seq,  }\item[{int}]{way }\end{DoxyParamCaption})}
+
+
+
+Procedure which writes in a file the description and the sequence of a protein in a reading phase particulary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The file where the result will be written. \\
+\hline
+{\em desc} & The protein description. \\
+\hline
+{\em seq} & The protein sequence. \\
+\hline
+{\em way} & The way to make the translation. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 358 of file seqio.\+cpp.
+
+
+
+References error(), and MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{seqio_8cpp_a3506ae51d21a79aa7950313873c7ae76_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{seqio_8cpp_a8349401ac581f6f77c7f922a006367a4}} 
+\index{seqio.cpp@{seqio.cpp}!get\_exp\_protein\_mass@{get\_exp\_protein\_mass}}
+\index{get\_exp\_protein\_mass@{get\_exp\_protein\_mass}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{get\_exp\_protein\_mass()}
+{\footnotesize\ttfamily double get\+\_\+exp\+\_\+protein\+\_\+mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the mass given for the protein mass. 
+
+\begin{DoxyReturn}{Returns}
+The mass. 
+\end{DoxyReturn}
+
+
+Definition at line 499 of file seqio.\+cpp.
+
+
+
+References error(), FALSE, protein\+\_\+mass, protein\+\_\+mass\+\_\+given, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by fprint\+\_\+configuration(), and print\+\_\+configuration().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{seqio_8cpp_a8349401ac581f6f77c7f922a006367a4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{seqio_8cpp_a5653dd37557036382709fcaa32ff212b}} 
+\index{seqio.cpp@{seqio.cpp}!get\_fasta\_filename@{get\_fasta\_filename}}
+\index{get\_fasta\_filename@{get\_fasta\_filename}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{get\_fasta\_filename()}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+fasta\+\_\+filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the name of the opened file. 
+
+\begin{DoxyReturn}{Returns}
+The name of opened fasta file. 
+\end{DoxyReturn}
+
+
+Definition at line 480 of file seqio.\+cpp.
+
+
+
+References fasta\+\_\+file\+\_\+name.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{seqio_8cpp_ad56f711f56b0ab99c4af12e90910cfa6}} 
+\index{seqio.cpp@{seqio.cpp}!get\_reversed\_sequence@{get\_reversed\_sequence}}
+\index{get\_reversed\_sequence@{get\_reversed\_sequence}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{get\_reversed\_sequence()}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+reversed\+\_\+sequence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the reverse of the current protein sequence. 
+
+\begin{DoxyReturn}{Returns}
+The protein sequence reversed. 
+\end{DoxyReturn}
+
+
+Definition at line 115 of file seqio.\+cpp.
+
+
+
+References error(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, result, and Seq\+Buffer.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{seqio_8cpp_ad56f711f56b0ab99c4af12e90910cfa6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{seqio_8cpp_af5fcc2c674e929dd732e159e9a3a148e}} 
+\index{seqio.cpp@{seqio.cpp}!get\_specie@{get\_specie}}
+\index{get\_specie@{get\_specie}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{get\_specie()}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+specie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the current specie wanted from the fasta file. 
+
+\begin{DoxyReturn}{Returns}
+The current specie. 
+\end{DoxyReturn}
+
+
+Definition at line 486 of file seqio.\+cpp.
+
+
+
+References specie.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), is\+\_\+simulated\+\_\+wanted\+\_\+protein(), and print\+\_\+configuration().
+
+\mbox{\label{seqio_8cpp_ab7dd62e540606441ea33ec0f4a387bc1}} 
+\index{seqio.cpp@{seqio.cpp}!getDesc@{getDesc}}
+\index{getDesc@{getDesc}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{getDesc()}
+{\footnotesize\ttfamily char$\ast$ get\+Desc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the description of the current protein in the FASTA file. 
+
+\begin{DoxyReturn}{Returns}
+The description. 
+\end{DoxyReturn}
+
+
+Definition at line 144 of file seqio.\+cpp.
+
+
+
+References Desc\+Buffer.
+
+
+
+Referenced by main().
+
+\mbox{\label{seqio_8cpp_ab04508ecec4dfe6c89e78d3e632d9c37}} 
+\index{seqio.cpp@{seqio.cpp}!getEntry@{getEntry}}
+\index{getEntry@{getEntry}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{getEntry()}
+{\footnotesize\ttfamily int get\+Entry (\begin{DoxyParamCaption}\item[{long $\ast$}]{offset }\end{DoxyParamCaption})}
+
+
+
+Function to position the cursor on the nearest entry from the offset position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & The position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Int that indicates if the function has worked or not. 
+\end{DoxyReturn}
+
+
+Definition at line 398 of file seqio.\+cpp.
+
+
+
+References Db\+File, next\+Entry(), and Offset.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{seqio_8cpp_ab04508ecec4dfe6c89e78d3e632d9c37_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{seqio_8cpp_a4dd0696a9a653b576a2d53e15ee6394c}} 
+\index{seqio.cpp@{seqio.cpp}!getSeq@{getSeq}}
+\index{getSeq@{getSeq}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{getSeq()}
+{\footnotesize\ttfamily char$\ast$ get\+Seq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the sequence of the current protein in the FASTA file. 
+
+\begin{DoxyReturn}{Returns}
+The protein sequence. 
+\end{DoxyReturn}
+
+
+Definition at line 109 of file seqio.\+cpp.
+
+
+
+References Seq\+Buffer.
+
+
+
+Referenced by main().
+
+\mbox{\label{seqio_8cpp_a33ab640d1f19b1908102537797086c37}} 
+\index{seqio.cpp@{seqio.cpp}!is\_a\_wanted\_protein@{is\_a\_wanted\_protein}}
+\index{is\_a\_wanted\_protein@{is\_a\_wanted\_protein}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{is\_a\_wanted\_protein()}
+{\footnotesize\ttfamily int is\+\_\+a\+\_\+wanted\+\_\+protein (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which indicates if the current protein is wanted or not. 
+
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE (according to \doxyref{util.\+h}{p.}{util_8h}). 
+\end{DoxyReturn}
+
+
+Definition at line 434 of file seqio.\+cpp.
+
+
+
+References Desc\+Buffer, error(), FALSE, free\+\_\+formula(), get\+\_\+formula\+\_\+from\+\_\+sequence(), get\+\_\+weight(), mass\+\_\+tolerance, protein\+\_\+mass, protein\+\_\+mass\+\_\+given, Seq\+Buffer, specie, TRUE, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{seqio_8cpp_a33ab640d1f19b1908102537797086c37_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{seqio_8cpp_ab5e43691be6ed6edc601afb8b0692ade}} 
+\index{seqio.cpp@{seqio.cpp}!is\_exp\_protein\_mass\_activated@{is\_exp\_protein\_mass\_activated}}
+\index{is\_exp\_protein\_mass\_activated@{is\_exp\_protein\_mass\_activated}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{is\_exp\_protein\_mass\_activated()}
+{\footnotesize\ttfamily int is\+\_\+exp\+\_\+protein\+\_\+mass\+\_\+activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to know if a experimental protein mass has been already set. 
+
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE (according to \doxyref{util.\+h}{p.}{util_8h}). 
+\end{DoxyReturn}
+
+
+Definition at line 511 of file seqio.\+cpp.
+
+
+
+References protein\+\_\+mass\+\_\+given.
+
+
+
+Referenced by fprint\+\_\+configuration(), and print\+\_\+configuration().
+
+\mbox{\label{seqio_8cpp_ae9f48d8632a96ba0e506432cbd61d6bc}} 
+\index{seqio.cpp@{seqio.cpp}!is\_parsing\_started@{is\_parsing\_started}}
+\index{is\_parsing\_started@{is\_parsing\_started}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{is\_parsing\_started()}
+{\footnotesize\ttfamily unsigned int is\+\_\+parsing\+\_\+started (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that indicates if the parsing of the database is started or not i.\+e. next\+Entry has been called at least one time. 
+
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE according to \doxyref{util.\+h}{p.}{util_8h}. 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file seqio.\+cpp.
+
+
+
+References parsing\+\_\+is\+\_\+started.
+
+
+
+Referenced by set\+\_\+minimum\+\_\+matched\+\_\+peptide\+\_\+number(), and set\+\_\+minimum\+\_\+peptide\+\_\+number().
+
+\mbox{\label{seqio_8cpp_acade74b2655f64a81053c1a9c43b5c00}} 
+\index{seqio.cpp@{seqio.cpp}!nextEntry@{nextEntry}}
+\index{nextEntry@{nextEntry}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{nextEntry()}
+{\footnotesize\ttfamily int next\+Entry (\begin{DoxyParamCaption}\item[{long $\ast$}]{offset }\end{DoxyParamCaption})}
+
+
+
+Function which allows to move until the next entry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & The current position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int that indicates if the function has worked correctly or not. 
+\end{DoxyReturn}
+
+
+Definition at line 156 of file seqio.\+cpp.
+
+
+
+References Db\+File, Desc\+Buffer, error(), EXECUTION\+\_\+\+ERROR, FALSE, MALLOC\+\_\+\+STEP\+\_\+\+SEQ, Offset, parsing\+\_\+is\+\_\+started, Seq\+Buffer, and TRUE.
+
+
+
+Referenced by get\+Entry(), and main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{seqio_8cpp_acade74b2655f64a81053c1a9c43b5c00_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{seqio_8cpp_ac5f6ed3fcfd606b6df425aaff112c368}} 
+\index{seqio.cpp@{seqio.cpp}!set\_exp\_protein\_mass@{set\_exp\_protein\_mass}}
+\index{set\_exp\_protein\_mass@{set\_exp\_protein\_mass}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{set\_exp\_protein\_mass()}
+{\footnotesize\ttfamily void set\+\_\+exp\+\_\+protein\+\_\+mass (\begin{DoxyParamCaption}\item[{double}]{mass }\end{DoxyParamCaption})}
+
+
+
+Procedure to set a for the experimental protein mass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mass} & The weight. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+The mass tolerance is by defaut 10\%. 
+\end{DoxyWarning}
+
+
+Definition at line 492 of file seqio.\+cpp.
+
+
+
+References protein\+\_\+mass, protein\+\_\+mass\+\_\+given, and TRUE.
+
+
+
+Referenced by load\+\_\+float\+\_\+keyword().
+
+\mbox{\label{seqio_8cpp_aee4efb3e23624a4bcbea642252118ea2}} 
+\index{seqio.cpp@{seqio.cpp}!set\_specie@{set\_specie}}
+\index{set\_specie@{set\_specie}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{set\_specie()}
+{\footnotesize\ttfamily void set\+\_\+specie (\begin{DoxyParamCaption}\item[{const char $\ast$}]{wanted\+\_\+specie }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to specifie the wanted specie to study. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wanted\+\_\+specie} & The wanted specie. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This call will be refused if a fasta file is already opened. 
+\end{DoxyWarning}
+
+
+Definition at line 406 of file seqio.\+cpp.
+
+
+
+References Db\+File, error(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, specie, USAGE\+\_\+\+ERROR, and WARNING.
+
+
+
+Referenced by load\+\_\+string\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{seqio_8cpp_aee4efb3e23624a4bcbea642252118ea2_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{seqio_8cpp_abbf6566158960c721a845e91c9b9d524}} 
+\index{seqio.cpp@{seqio.cpp}!DbFile@{DbFile}}
+\index{DbFile@{DbFile}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{DbFile}
+{\footnotesize\ttfamily FILE $\ast$ Db\+File =NULL}
+
+
+
+Variable that corresponds to the opened FASTA file. 
+
+
+
+Definition at line 71 of file seqio.\+cpp.
+
+
+
+Referenced by fastafclose(), fastafopen(), get\+Entry(), next\+Entry(), and set\+\_\+specie().
+
+\mbox{\label{seqio_8cpp_a675b6c12a94ab8885c3b695f5abf928b}} 
+\index{seqio.cpp@{seqio.cpp}!DescBuffer@{DescBuffer}}
+\index{DescBuffer@{DescBuffer}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{DescBuffer}
+{\footnotesize\ttfamily char $\ast$ Desc\+Buffer =NULL}
+
+
+
+Variable that corresponds to the buffer holding the current protein description. 
+
+
+
+Definition at line 66 of file seqio.\+cpp.
+
+
+
+Referenced by fastafclose(), get\+Desc(), is\+\_\+a\+\_\+wanted\+\_\+protein(), and next\+Entry().
+
+\mbox{\label{seqio_8cpp_a843225dadbaf5ded79007285d800faf1}} 
+\index{seqio.cpp@{seqio.cpp}!fasta\_file\_name@{fasta\_file\_name}}
+\index{fasta\_file\_name@{fasta\_file\_name}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{fasta\_file\_name}
+{\footnotesize\ttfamily char $\ast$ fasta\+\_\+file\+\_\+name =NULL}
+
+
+
+Variable that corresponds to the name of the opened FASTA file. 
+
+
+
+Definition at line 86 of file seqio.\+cpp.
+
+
+
+Referenced by fastafclose(), fastafopen(), and get\+\_\+fasta\+\_\+filename().
+
+\mbox{\label{seqio_8cpp_a1e5a62d26f7c6a6732fc640e45b6b794}} 
+\index{seqio.cpp@{seqio.cpp}!mass\_tolerance@{mass\_tolerance}}
+\index{mass\_tolerance@{mass\_tolerance}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{mass\_tolerance}
+{\footnotesize\ttfamily double mass\+\_\+tolerance =10.\+0}
+
+
+
+Variable that indicates the according tolerance around the experimental protein mass. 
+
+
+
+Definition at line 101 of file seqio.\+cpp.
+
+
+
+Referenced by is\+\_\+a\+\_\+wanted\+\_\+protein().
+
+\mbox{\label{seqio_8cpp_aad7df986191652e206d6f1bce4ef209b}} 
+\index{seqio.cpp@{seqio.cpp}!Offset@{Offset}}
+\index{Offset@{Offset}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{Offset}
+{\footnotesize\ttfamily long Offset = (long) 0}
+
+
+
+Variable that corresponds to the offset in the FASTA file. 
+
+
+
+Definition at line 76 of file seqio.\+cpp.
+
+
+
+Referenced by fastafopen(), get\+Entry(), and next\+Entry().
+
+\mbox{\label{seqio_8cpp_af4f0479d4b1d74dba5956ebb4ba7aa3d}} 
+\index{seqio.cpp@{seqio.cpp}!parsing\_is\_started@{parsing\_is\_started}}
+\index{parsing\_is\_started@{parsing\_is\_started}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{parsing\_is\_started}
+{\footnotesize\ttfamily unsigned int parsing\+\_\+is\+\_\+started =\textbf{ FALSE}}
+
+
+
+Variable that indicates if the parsing of the database has started or not. 
+
+
+
+Definition at line 106 of file seqio.\+cpp.
+
+
+
+Referenced by is\+\_\+parsing\+\_\+started(), and next\+Entry().
+
+\mbox{\label{seqio_8cpp_a4e928f5bd2ca6f62d165281898fb5e69}} 
+\index{seqio.cpp@{seqio.cpp}!protein\_mass@{protein\_mass}}
+\index{protein\_mass@{protein\_mass}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{protein\_mass}
+{\footnotesize\ttfamily double protein\+\_\+mass =0.\+0}
+
+
+
+Variable that corresponds to the experimental protein mass. 
+
+
+
+Definition at line 91 of file seqio.\+cpp.
+
+
+
+Referenced by get\+\_\+exp\+\_\+protein\+\_\+mass(), is\+\_\+a\+\_\+wanted\+\_\+protein(), and set\+\_\+exp\+\_\+protein\+\_\+mass().
+
+\mbox{\label{seqio_8cpp_a45154c6d3fac374fa4d820eed43319bc}} 
+\index{seqio.cpp@{seqio.cpp}!protein\_mass\_given@{protein\_mass\_given}}
+\index{protein\_mass\_given@{protein\_mass\_given}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{protein\_mass\_given}
+{\footnotesize\ttfamily int protein\+\_\+mass\+\_\+given =\textbf{ FALSE}}
+
+
+
+Variable that indicates if the a experimental protein mass has been given. 
+
+
+
+Definition at line 96 of file seqio.\+cpp.
+
+
+
+Referenced by get\+\_\+exp\+\_\+protein\+\_\+mass(), is\+\_\+a\+\_\+wanted\+\_\+protein(), is\+\_\+exp\+\_\+protein\+\_\+mass\+\_\+activated(), and set\+\_\+exp\+\_\+protein\+\_\+mass().
+
+\mbox{\label{seqio_8cpp_af6ec39f9b6cf0a7e1a57debbb788e5a7}} 
+\index{seqio.cpp@{seqio.cpp}!SeqBuffer@{SeqBuffer}}
+\index{SeqBuffer@{SeqBuffer}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{SeqBuffer}
+{\footnotesize\ttfamily char $\ast$ Seq\+Buffer =NULL}
+
+
+
+Variable that corresponds to the buffer holding the current protein sequence. 
+
+
+
+Definition at line 61 of file seqio.\+cpp.
+
+
+
+Referenced by fastafclose(), get\+\_\+reversed\+\_\+sequence(), get\+Seq(), is\+\_\+a\+\_\+wanted\+\_\+protein(), and next\+Entry().
+
+\mbox{\label{seqio_8cpp_a4a5bfd4f777eb441388447a53ca03c3b}} 
+\index{seqio.cpp@{seqio.cpp}!specie@{specie}}
+\index{specie@{specie}!seqio.cpp@{seqio.cpp}}
+\doxysubsubsection{specie}
+{\footnotesize\ttfamily char $\ast$ specie =NULL}
+
+
+
+Variable that corresponds to the wanted specie. 
+
+
+
+Definition at line 81 of file seqio.\+cpp.
+
+
+
+Referenced by fastafclose(), get\+\_\+specie(), is\+\_\+a\+\_\+wanted\+\_\+protein(), and set\+\_\+specie().
+
