@@ -1,0 +1,62 @@
+.TH "element" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+element \- Structure representing an element in the NIST table\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <formula\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "char \fBsymbol\fP [3]"
+.br
+.RI "The symbol of the element, for example: C\&. "
+.ti -1c
+.RI "int \fBnb_isotops\fP"
+.br
+.RI "The number of isotops\&. "
+.ti -1c
+.RI "\fBisotop_t\fP * \fBisotops\fP"
+.br
+.RI "The isotops\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure representing an element in the NIST table\&. 
+.PP
+Definition at line 74 of file formula\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBisotop_t\fP* element::isotops"
+
+.PP
+The isotops\&. 
+.PP
+Definition at line 81 of file formula\&.h\&.
+.PP
+Referenced by affect_atom(), copy_one_element(), free_element(), get_element_table(), get_weight(), init_distrib(), and optimized_isotopic_distribution()\&.
+.SS "int element::nb_isotops"
+
+.PP
+The number of isotops\&. 
+.PP
+Definition at line 79 of file formula\&.h\&.
+.PP
+Referenced by affect_atom(), copy_one_element(), fprint_element_table(), get_element_table(), init_distrib(), optimized_isotopic_distribution(), and print_element_table()\&.
+.SS "char element::symbol[3]"
+
+.PP
+The symbol of the element, for example: C\&. 
+.PP
+Definition at line 77 of file formula\&.h\&.
+.PP
+Referenced by add_element(), copy_one_element(), formula_tochar(), optimized_isotopic_distribution(), and sub_formula()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

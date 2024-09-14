@@ -1,0 +1,8 @@
+<map id="read_spectrum" name="read_spectrum">
+<area shape="rect" id="node1" title="Procedure which loads a spectrum from a file." alt="" coords="5,81,124,108"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="247,5,301,32"/>
+<area shape="rect" id="node3" href="$isodistrib_8cpp.html#a5c39c88fa3c8878e0b6b847f0bd04dad" title="Procedure which makes a normalization of a data array." alt="" coords="189,56,359,83"/>
+<area shape="rect" id="node4" href="$util_8h.html#aeecaa6e13d0fc8e0fdf90adefed0ef92" title="Function which indicates if the verbose mode is activated." alt="" coords="172,107,376,133"/>
+<area shape="rect" id="node5" href="$util_8h.html#a9ce39f0e4832bfdd973a4715b42df3b3" title="Function which allows to jump commentaries in a file." alt="" coords="196,157,352,184"/>
+<area shape="rect" id="node6" href="$util_8cpp.html#a0a8fd6188fa02e1d59178d8e88c235c4" title="Function which allows to jump a line from a file." alt="" coords="424,157,525,184"/>
+</map>

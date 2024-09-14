@@ -1,0 +1,364 @@
+\doxysection{tables.\+cpp File Reference}
+\label{tables_8cpp}\index{tables.cpp@{tables.cpp}}
+
+
+Implementation of the methods defined in \doxyref{tables.\+h}{p.}{tables_8h}.  
+
+
+{\ttfamily \#include \char`\"{}tables.\+h\char`\"{}}\newline
+Include dependency graph for tables.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tables_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ tables\+\_\+initialisation} ()
+\begin{DoxyCompactList}\small\item\em Procedure which initialises all the useful data \+: element table, amino acid table, ... \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+tables} ()
+\begin{DoxyCompactList}\small\item\em Procedure which frees the memory allocated for all the useful data \+: element table, amino acid table ,... \end{DoxyCompactList}\item 
+\textbf{ element\+\_\+t} $\ast$ \textbf{ get\+\_\+element\+\_\+table} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the element table. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+element\+\_\+table\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the size of the element table. \end{DoxyCompactList}\item 
+\textbf{ aa\+\_\+\+CF\+\_\+t} \textbf{ get\+\_\+amino\+\_\+acid} (char aa)
+\begin{DoxyCompactList}\small\item\em Function which returns the amino acid structure associated to a given char. \end{DoxyCompactList}\item 
+\textbf{ aa\+\_\+\+CF\+\_\+t} $\ast$ \textbf{ get\+\_\+amino\+\_\+acid\+\_\+table} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the amino acid table. \end{DoxyCompactList}\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ get\+\_\+formula\+\_\+from\+\_\+sequence} (char $\ast$\textbf{ sequence})
+\begin{DoxyCompactList}\small\item\em Function which allows to get the formula of the proteic sequence given. \end{DoxyCompactList}\item 
+char \textbf{ get\+\_\+amino\+\_\+acid\+\_\+at\+\_\+index} (int index)
+\begin{DoxyCompactList}\small\item\em Function wich returns the amino acid structure associated to an index, it uses the array that contains the amino acids in an increasing order (according to the mass). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ element\+\_\+t} $\ast$ \textbf{ element\+\_\+table} =NULL
+\begin{DoxyCompactList}\small\item\em Variable that corresponds to the table which will contain all the chemical elements. \end{DoxyCompactList}\item 
+int \textbf{ nb\+\_\+elements} =0
+\begin{DoxyCompactList}\small\item\em Variable that corresponds to the total number of chemical elements. \end{DoxyCompactList}\item 
+\textbf{ aa\+\_\+\+CF\+\_\+t} $\ast$ \textbf{ amino\+\_\+acid\+\_\+table} =NULL
+\begin{DoxyCompactList}\small\item\em Variable that corresponds to the table which will contain all the amino acid formulae. \end{DoxyCompactList}\item 
+char \textbf{ sorted\+\_\+amino\+\_\+acid\+\_\+table} [$\,$] = \{\textquotesingle{}G\textquotesingle{},\textquotesingle{}A\textquotesingle{},\textquotesingle{}S\textquotesingle{},\textquotesingle{}P\textquotesingle{},\textquotesingle{}V\textquotesingle{},\textquotesingle{}T\textquotesingle{},\textquotesingle{}C\textquotesingle{},\textquotesingle{}I\textquotesingle{},\textquotesingle{}L\textquotesingle{},\textquotesingle{}N\textquotesingle{},\textquotesingle{}D\textquotesingle{},\textquotesingle{}Q\textquotesingle{},\textquotesingle{}K\textquotesingle{},\textquotesingle{}E\textquotesingle{},\textquotesingle{}M\textquotesingle{},\textquotesingle{}\textbf{ H}\textquotesingle{},\textquotesingle{}U\textquotesingle{},\textquotesingle{}F\textquotesingle{},\textquotesingle{}R\textquotesingle{},\textquotesingle{}Y\textquotesingle{},\textquotesingle{}W\textquotesingle{}, \textquotesingle{}O\textquotesingle{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the methods defined in \doxyref{tables.\+h}{p.}{tables_8h}. 
+
+\begin{DoxyAuthor}{Author}
+Jean-\/\+Charles BOISSON (2005-\/2008). 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{tables_8cpp_a3f632028de13b6c9bceb17d214404fa7}} 
+\index{tables.cpp@{tables.cpp}!free\_tables@{free\_tables}}
+\index{free\_tables@{free\_tables}!tables.cpp@{tables.cpp}}
+\doxysubsubsection{free\_tables()}
+{\footnotesize\ttfamily void free\+\_\+tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which frees the memory allocated for all the useful data \+: element table, amino acid table ,... 
+
+
+
+Definition at line 77 of file tables.\+cpp.
+
+
+
+References amino\+\_\+acid\+\_\+table, element\+\_\+table, free\+\_\+amino\+\_\+acid\+\_\+table(), free\+\_\+element\+\_\+table(), free\+\_\+peptide\+\_\+link(), and nb\+\_\+elements.
+
+
+
+Referenced by ascq\+\_\+me\+\_\+configuration\+\_\+cleaning().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tables_8cpp_a3f632028de13b6c9bceb17d214404fa7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{tables_8cpp_ab1e4cb89e0628c675a7127e6d3618320}} 
+\index{tables.cpp@{tables.cpp}!get\_amino\_acid@{get\_amino\_acid}}
+\index{get\_amino\_acid@{get\_amino\_acid}!tables.cpp@{tables.cpp}}
+\doxysubsubsection{get\_amino\_acid()}
+{\footnotesize\ttfamily \textbf{ aa\+\_\+\+CF\+\_\+t} get\+\_\+amino\+\_\+acid (\begin{DoxyParamCaption}\item[{char}]{aa }\end{DoxyParamCaption})}
+
+
+
+Function which returns the amino acid structure associated to a given char. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aa} & The char which corresponding to an amino acid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amino acid structure associated (aa\+\_\+\+CF\+\_\+t). 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file tables.\+cpp.
+
+
+
+References amino\+\_\+acid\+\_\+table, error(), EXECUTION\+\_\+\+ERROR, amino\+\_\+acid\+\_\+\+CF\+::form, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by digest(), get\+\_\+formula\+\_\+from\+\_\+sequence(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein(), and get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{tables_8cpp_ab1e4cb89e0628c675a7127e6d3618320_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{tables_8cpp_a6979cd45d329baf9bb8b684816f71ae8}} 
+\index{tables.cpp@{tables.cpp}!get\_amino\_acid\_at\_index@{get\_amino\_acid\_at\_index}}
+\index{get\_amino\_acid\_at\_index@{get\_amino\_acid\_at\_index}!tables.cpp@{tables.cpp}}
+\doxysubsubsection{get\_amino\_acid\_at\_index()}
+{\footnotesize\ttfamily char get\+\_\+amino\+\_\+acid\+\_\+at\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Function wich returns the amino acid structure associated to an index, it uses the array that contains the amino acids in an increasing order (according to the mass). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a char representing an amino acid. 
+\end{DoxyReturn}
+
+
+Definition at line 148 of file tables.\+cpp.
+
+
+
+References sorted\+\_\+amino\+\_\+acid\+\_\+table.
+
+\mbox{\label{tables_8cpp_ae5700d8a171b1898a6377e5cb40d31da}} 
+\index{tables.cpp@{tables.cpp}!get\_amino\_acid\_table@{get\_amino\_acid\_table}}
+\index{get\_amino\_acid\_table@{get\_amino\_acid\_table}!tables.cpp@{tables.cpp}}
+\doxysubsubsection{get\_amino\_acid\_table()}
+{\footnotesize\ttfamily \textbf{ aa\+\_\+\+CF\+\_\+t}$\ast$ get\+\_\+amino\+\_\+acid\+\_\+table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the amino acid table. 
+
+\begin{DoxyReturn}{Returns}
+The amino acid table. 
+\end{DoxyReturn}
+
+
+Definition at line 117 of file tables.\+cpp.
+
+
+
+References amino\+\_\+acid\+\_\+table.
+
+
+
+Referenced by tables\+\_\+initialisation().
+
+\mbox{\label{tables_8cpp_ad707e99dbc884266e4ebacc80bd17709}} 
+\index{tables.cpp@{tables.cpp}!get\_element\_table@{get\_element\_table}}
+\index{get\_element\_table@{get\_element\_table}!tables.cpp@{tables.cpp}}
+\doxysubsubsection{get\_element\_table()}
+{\footnotesize\ttfamily \textbf{ element\+\_\+t}$\ast$ get\+\_\+element\+\_\+table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the element table. 
+
+\begin{DoxyReturn}{Returns}
+The element table. 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file tables.\+cpp.
+
+
+
+References element\+\_\+table.
+
+
+
+Referenced by tables\+\_\+initialisation().
+
+\mbox{\label{tables_8cpp_a36cb3093f11f7c112626c4668380a974}} 
+\index{tables.cpp@{tables.cpp}!get\_element\_table\_size@{get\_element\_table\_size}}
+\index{get\_element\_table\_size@{get\_element\_table\_size}!tables.cpp@{tables.cpp}}
+\doxysubsubsection{get\_element\_table\_size()}
+{\footnotesize\ttfamily int get\+\_\+element\+\_\+table\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the size of the element table. 
+
+\begin{DoxyReturn}{Returns}
+The element table size. 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file tables.\+cpp.
+
+
+
+References nb\+\_\+elements.
+
+
+
+Referenced by init\+\_\+distrib(), load\+\_\+modifications(), set\+\_\+peptide\+\_\+charge(), and tables\+\_\+initialisation().
+
+\mbox{\label{tables_8cpp_a7aa087903aacb16af4019233225c2a0d}} 
+\index{tables.cpp@{tables.cpp}!get\_formula\_from\_sequence@{get\_formula\_from\_sequence}}
+\index{get\_formula\_from\_sequence@{get\_formula\_from\_sequence}!tables.cpp@{tables.cpp}}
+\doxysubsubsection{get\_formula\_from\_sequence()}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t}$\ast$ get\+\_\+formula\+\_\+from\+\_\+sequence (\begin{DoxyParamCaption}\item[{char $\ast$}]{sequence }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the formula of the proteic sequence given. 
+
+\begin{DoxyReturn}{Returns}
+The formula. 
+\end{DoxyReturn}
+
+
+Definition at line 123 of file tables.\+cpp.
+
+
+
+References add\+\_\+formula(), copy\+\_\+formula(), error(), amino\+\_\+acid\+\_\+\+CF\+::form, get\+\_\+amino\+\_\+acid(), get\+\_\+util\+\_\+formula(), sequence, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by fprintf\+\_\+ascq\+\_\+me\+\_\+results(), fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+table\+\_\+form(), fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+xml(), is\+\_\+a\+\_\+wanted\+\_\+protein(), and printf\+\_\+ascq\+\_\+me\+\_\+results().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tables_8cpp_a7aa087903aacb16af4019233225c2a0d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{tables_8cpp_a0d7c4affa06d618641099bd35047add6}} 
+\index{tables.cpp@{tables.cpp}!tables\_initialisation@{tables\_initialisation}}
+\index{tables\_initialisation@{tables\_initialisation}!tables.cpp@{tables.cpp}}
+\doxysubsubsection{tables\_initialisation()}
+{\footnotesize\ttfamily void tables\+\_\+initialisation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which initialises all the useful data \+: element table, amino acid table, ... 
+
+
+
+Definition at line 69 of file tables.\+cpp.
+
+
+
+References AMINO\+\_\+\+ACID\+\_\+\+TABLE, amino\+\_\+acid\+\_\+table, ELEMENT\+\_\+\+TABLE, element\+\_\+table, get\+\_\+amino\+\_\+acid\+\_\+table(), get\+\_\+element\+\_\+table(), get\+\_\+element\+\_\+table\+\_\+size(), init\+\_\+peptid\+\_\+link(), and nb\+\_\+elements.
+
+
+
+Referenced by load\+\_\+configuration().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tables_8cpp_a0d7c4affa06d618641099bd35047add6_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{tables_8cpp_a53e39daba98dbbfffe8cefc5d1eca450}} 
+\index{tables.cpp@{tables.cpp}!amino\_acid\_table@{amino\_acid\_table}}
+\index{amino\_acid\_table@{amino\_acid\_table}!tables.cpp@{tables.cpp}}
+\doxysubsubsection{amino\_acid\_table}
+{\footnotesize\ttfamily \textbf{ aa\+\_\+\+CF\+\_\+t} $\ast$ amino\+\_\+acid\+\_\+table =NULL}
+
+
+
+Variable that corresponds to the table which will contain all the amino acid formulae. 
+
+
+
+Definition at line 64 of file tables.\+cpp.
+
+
+
+Referenced by free\+\_\+tables(), get\+\_\+amino\+\_\+acid(), get\+\_\+amino\+\_\+acid\+\_\+table(), and tables\+\_\+initialisation().
+
+\mbox{\label{tables_8cpp_a853de4224957674eef36c50e50bacc49}} 
+\index{tables.cpp@{tables.cpp}!element\_table@{element\_table}}
+\index{element\_table@{element\_table}!tables.cpp@{tables.cpp}}
+\doxysubsubsection{element\_table}
+{\footnotesize\ttfamily \textbf{ element\+\_\+t} $\ast$ element\+\_\+table =NULL}
+
+
+
+Variable that corresponds to the table which will contain all the chemical elements. 
+
+
+
+Definition at line 54 of file tables.\+cpp.
+
+
+
+Referenced by fprint\+\_\+element\+\_\+table(), free\+\_\+tables(), get\+\_\+element\+\_\+table(), print\+\_\+element\+\_\+table(), and tables\+\_\+initialisation().
+
+\mbox{\label{tables_8cpp_a80731b0fd32ef05faecf70ae1f475433}} 
+\index{tables.cpp@{tables.cpp}!nb\_elements@{nb\_elements}}
+\index{nb\_elements@{nb\_elements}!tables.cpp@{tables.cpp}}
+\doxysubsubsection{nb\_elements}
+{\footnotesize\ttfamily int nb\+\_\+elements =0}
+
+
+
+Variable that corresponds to the total number of chemical elements. 
+
+
+
+Definition at line 59 of file tables.\+cpp.
+
+
+
+Referenced by free\+\_\+tables(), get\+\_\+element\+\_\+table\+\_\+size(), and tables\+\_\+initialisation().
+
+\mbox{\label{tables_8cpp_afacf67fe06850571447793ef4e05e621}} 
+\index{tables.cpp@{tables.cpp}!sorted\_amino\_acid\_table@{sorted\_amino\_acid\_table}}
+\index{sorted\_amino\_acid\_table@{sorted\_amino\_acid\_table}!tables.cpp@{tables.cpp}}
+\doxysubsubsection{sorted\_amino\_acid\_table}
+{\footnotesize\ttfamily char sorted\+\_\+amino\+\_\+acid\+\_\+table[$\,$] = \{\textquotesingle{}G\textquotesingle{},\textquotesingle{}A\textquotesingle{},\textquotesingle{}S\textquotesingle{},\textquotesingle{}P\textquotesingle{},\textquotesingle{}V\textquotesingle{},\textquotesingle{}T\textquotesingle{},\textquotesingle{}C\textquotesingle{},\textquotesingle{}I\textquotesingle{},\textquotesingle{}L\textquotesingle{},\textquotesingle{}N\textquotesingle{},\textquotesingle{}D\textquotesingle{},\textquotesingle{}Q\textquotesingle{},\textquotesingle{}K\textquotesingle{},\textquotesingle{}E\textquotesingle{},\textquotesingle{}M\textquotesingle{},\textquotesingle{}\textbf{ H}\textquotesingle{},\textquotesingle{}U\textquotesingle{},\textquotesingle{}F\textquotesingle{},\textquotesingle{}R\textquotesingle{},\textquotesingle{}Y\textquotesingle{},\textquotesingle{}W\textquotesingle{}, \textquotesingle{}O\textquotesingle{}\}}
+
+
+
+Definition at line 66 of file tables.\+cpp.
+
+
+
+Referenced by get\+\_\+amino\+\_\+acid\+\_\+at\+\_\+index().
+

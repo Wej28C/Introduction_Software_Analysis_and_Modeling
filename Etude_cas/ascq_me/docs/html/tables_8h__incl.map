@@ -1,0 +1,13 @@
+<map id="tables.h" name="tables.h">
+<area shape="rect" id="node1" title="Description of methods that allows to manipulate amino acids easier." alt="" coords="187,5,261,32"/>
+<area shape="rect" id="node2" href="$aa_8h.html" title="Definition of an amino acid." alt="" coords="199,80,249,107"/>
+<area shape="rect" id="node3" href="$formula_8h.html" title="Definition of a chemical formula." alt="" coords="181,155,267,181"/>
+<area shape="rect" id="node4" href="$util_8h.html" title="Definition of several useful things." alt="" coords="197,229,251,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,304,69,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="94,304,165,331"/>
+<area shape="rect" id="node7" title=" " alt="" coords="189,304,259,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="283,304,351,331"/>
+<area shape="rect" id="node9" href="$error_8h.html" title="Definition of the error management." alt="" coords="376,304,440,331"/>
+<area shape="rect" id="node10" title=" " alt="" coords="328,379,395,405"/>
+<area shape="rect" id="node11" title=" " alt="" coords="419,379,490,405"/>
+</map>

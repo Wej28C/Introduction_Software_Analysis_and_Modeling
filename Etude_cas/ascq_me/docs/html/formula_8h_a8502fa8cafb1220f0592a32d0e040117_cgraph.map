@@ -1,0 +1,6 @@
+<map id="free_n_formula" name="free_n_formula">
+<area shape="rect" id="node1" title="Free the memory for n formula." alt="" coords="5,5,127,32"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="515,31,568,57"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#a6a81bdde62cda8c4d6ed43d9b16b4c26" title="Procedure which frees the memory allocated for a composition." alt="" coords="175,31,309,57"/>
+<area shape="rect" id="node4" href="$formula_8cpp.html#aa924d9fff6ed2c0d2168efc91d41e03a" title="Local procedure that frees the memory allocated for an element structure." alt="" coords="357,81,467,108"/>
+</map>

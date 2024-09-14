@@ -1,0 +1,5 @@
+<map id="peptide_charge_weight" name="peptide_charge_weight">
+<area shape="rect" id="node1" title="Function which allows to get the weight of the atom charge." alt="" coords="5,5,179,32"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="369,5,423,32"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#a77a6756752caf55587c228c4e51b8c7e" title="Get the weight of a formula." alt="" coords="227,31,321,57"/>
+</map>

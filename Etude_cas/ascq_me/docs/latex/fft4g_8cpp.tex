@@ -1,0 +1,502 @@
+\doxysection{fft4g.\+cpp File Reference}
+\label{fft4g_8cpp}\index{fft4g.cpp@{fft4g.cpp}}
+
+
+The complete fft package is also in the ASCQ\+\_\+\+ME sources in fft\+\_\+src.  
+
+
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for fft4g.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=103pt]{fft4g_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ cdft} (int n, int isgn, double $\ast$a, int $\ast$\textbf{ ip}, double $\ast$\textbf{ w})
+\begin{DoxyCompactList}\small\item\em Complex Discrete Fourier Transform. \end{DoxyCompactList}\item 
+void \textbf{ rdft} (int n, int isgn, double $\ast$a, int $\ast$\textbf{ ip}, double $\ast$\textbf{ w})
+\begin{DoxyCompactList}\small\item\em Real Discrete Fourier Transform. \end{DoxyCompactList}\item 
+void \textbf{ ddct} (int n, int isgn, double $\ast$a, int $\ast$\textbf{ ip}, double $\ast$\textbf{ w})
+\begin{DoxyCompactList}\small\item\em Discrete Cosine Transform. \end{DoxyCompactList}\item 
+void \textbf{ ddst} (int n, int isgn, double $\ast$a, int $\ast$\textbf{ ip}, double $\ast$\textbf{ w})
+\begin{DoxyCompactList}\small\item\em Discrete Sine Transform. \end{DoxyCompactList}\item 
+void \textbf{ dfct} (int n, double $\ast$a, double $\ast$t, int $\ast$\textbf{ ip}, double $\ast$\textbf{ w})
+\begin{DoxyCompactList}\small\item\em Cosine Transform of RDFT (Real Symmetric DFT). \end{DoxyCompactList}\item 
+void \textbf{ dfst} (int n, double $\ast$a, double $\ast$t, int $\ast$\textbf{ ip}, double $\ast$\textbf{ w})
+\begin{DoxyCompactList}\small\item\em Sine Transform of RDFT (Real Anti-\/symmetric DFT) \end{DoxyCompactList}\item 
+void \textbf{ makewt} (int nw, int $\ast$\textbf{ ip}, double $\ast$\textbf{ w})
+\begin{DoxyCompactList}\small\item\em One of the initializing routines. \end{DoxyCompactList}\item 
+void \textbf{ makect} (int nc, int $\ast$\textbf{ ip}, double $\ast$c)
+\begin{DoxyCompactList}\small\item\em One the initializing routines. \end{DoxyCompactList}\item 
+void \textbf{ bitrv2} (int n, int $\ast$\textbf{ ip}, double $\ast$a)
+\begin{DoxyCompactList}\small\item\em One of the child routines. \end{DoxyCompactList}\item 
+void \textbf{ bitrv2conj} (int n, int $\ast$\textbf{ ip}, double $\ast$a)
+\begin{DoxyCompactList}\small\item\em One of the child routines. \end{DoxyCompactList}\item 
+void \textbf{ cftfsub} (int n, double $\ast$a, double $\ast$\textbf{ w})
+\begin{DoxyCompactList}\small\item\em One of the child routines. \end{DoxyCompactList}\item 
+void \textbf{ cftbsub} (int n, double $\ast$a, double $\ast$\textbf{ w})
+\begin{DoxyCompactList}\small\item\em One of the child routines. \end{DoxyCompactList}\item 
+void \textbf{ cft1st} (int n, double $\ast$a, double $\ast$\textbf{ w})
+\begin{DoxyCompactList}\small\item\em One of the child routines. \end{DoxyCompactList}\item 
+void \textbf{ cftmdl} (int n, int l, double $\ast$a, double $\ast$\textbf{ w})
+\begin{DoxyCompactList}\small\item\em One of the child routines. \end{DoxyCompactList}\item 
+void \textbf{ rftfsub} (int n, double $\ast$a, int nc, double $\ast$c)
+\begin{DoxyCompactList}\small\item\em One of the child routines. \end{DoxyCompactList}\item 
+void \textbf{ rftbsub} (int n, double $\ast$a, int nc, double $\ast$c)
+\begin{DoxyCompactList}\small\item\em One the child rountines. \end{DoxyCompactList}\item 
+void \textbf{ dctsub} (int n, double $\ast$a, int nc, double $\ast$c)
+\begin{DoxyCompactList}\small\item\em One of the child routines. \end{DoxyCompactList}\item 
+void \textbf{ dstsub} (int n, double $\ast$a, int nc, double $\ast$c)
+\begin{DoxyCompactList}\small\item\em One of the child routines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The complete fft package is also in the ASCQ\+\_\+\+ME sources in fft\+\_\+src. 
+
+\begin{DoxyAuthor}{Author}
+See {\texttt{ http\+://momonga.\+t.\+u-\/tokyo.\+ac.\+jp/$\sim$ooura/fft.\+html}} where the fft package has been downloaded. 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{fft4g_8cpp_a797ab524538f313c7556d2ea04c3602a}} 
+\index{fft4g.cpp@{fft4g.cpp}!bitrv2@{bitrv2}}
+\index{bitrv2@{bitrv2}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{bitrv2()}
+{\footnotesize\ttfamily void bitrv2 (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int $\ast$}]{ip,  }\item[{double $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+One of the child routines. 
+
+
+
+Definition at line 775 of file fft4g.\+cpp.
+
+
+
+References ip.
+
+
+
+Referenced by cdft(), ddct(), ddst(), dfct(), dfst(), makewt(), and rdft().
+
+\mbox{\label{fft4g_8cpp_a6ce44e550bfe817f80745375a96a70e6}} 
+\index{fft4g.cpp@{fft4g.cpp}!bitrv2conj@{bitrv2conj}}
+\index{bitrv2conj@{bitrv2conj}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{bitrv2conj()}
+{\footnotesize\ttfamily void bitrv2conj (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int $\ast$}]{ip,  }\item[{double $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+One of the child routines. 
+
+
+
+Definition at line 877 of file fft4g.\+cpp.
+
+
+
+References ip.
+
+
+
+Referenced by cdft().
+
+\mbox{\label{fft4g_8cpp_aa754f002152d34798514df0dcb55b561}} 
+\index{fft4g.cpp@{fft4g.cpp}!cdft@{cdft}}
+\index{cdft@{cdft}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{cdft()}
+{\footnotesize\ttfamily void cdft (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{isgn,  }\item[{double $\ast$}]{a,  }\item[{int $\ast$}]{ip,  }\item[{double $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+Complex Discrete Fourier Transform. 
+
+
+
+Definition at line 328 of file fft4g.\+cpp.
+
+
+
+References bitrv2(), bitrv2conj(), cftbsub(), cftfsub(), ip, makewt(), and w.
+
+
+
+Referenced by init\+\_\+distrib(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{fft4g_8cpp_aa754f002152d34798514df0dcb55b561_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{fft4g_8cpp_ad356c86d9a665e64e85e2a20254c5474}} 
+\index{fft4g.cpp@{fft4g.cpp}!cft1st@{cft1st}}
+\index{cft1st@{cft1st}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{cft1st()}
+{\footnotesize\ttfamily void cft1st (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+One of the child routines. 
+
+
+
+Definition at line 1095 of file fft4g.\+cpp.
+
+
+
+References w.
+
+
+
+Referenced by cftbsub(), and cftfsub().
+
+\mbox{\label{fft4g_8cpp_a4c1c506bae9dc84a4f6f0a8588b4c194}} 
+\index{fft4g.cpp@{fft4g.cpp}!cftbsub@{cftbsub}}
+\index{cftbsub@{cftbsub}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{cftbsub()}
+{\footnotesize\ttfamily void cftbsub (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+One of the child routines. 
+
+
+
+Definition at line 1041 of file fft4g.\+cpp.
+
+
+
+References cft1st(), cftmdl(), and w.
+
+
+
+Referenced by cdft(), ddct(), ddst(), and rdft().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{fft4g_8cpp_a4c1c506bae9dc84a4f6f0a8588b4c194_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{fft4g_8cpp_aebb9cc2fc5808b13bbe1cf0a857a3f73}} 
+\index{fft4g.cpp@{fft4g.cpp}!cftfsub@{cftfsub}}
+\index{cftfsub@{cftfsub}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{cftfsub()}
+{\footnotesize\ttfamily void cftfsub (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+One of the child routines. 
+
+
+
+Definition at line 987 of file fft4g.\+cpp.
+
+
+
+References cft1st(), cftmdl(), and w.
+
+
+
+Referenced by cdft(), ddct(), ddst(), dfct(), dfst(), and rdft().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{fft4g_8cpp_aebb9cc2fc5808b13bbe1cf0a857a3f73_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{fft4g_8cpp_a52cfc09e3aa1db914d876ecc317e04c9}} 
+\index{fft4g.cpp@{fft4g.cpp}!cftmdl@{cftmdl}}
+\index{cftmdl@{cftmdl}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{cftmdl()}
+{\footnotesize\ttfamily void cftmdl (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{l,  }\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+One of the child routines. 
+
+
+
+Definition at line 1202 of file fft4g.\+cpp.
+
+
+
+References w.
+
+
+
+Referenced by cftbsub(), and cftfsub().
+
+\mbox{\label{fft4g_8cpp_a9b11a41477bc500f82e6661adae4aede}} 
+\index{fft4g.cpp@{fft4g.cpp}!dctsub@{dctsub}}
+\index{dctsub@{dctsub}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{dctsub()}
+{\footnotesize\ttfamily void dctsub (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{double $\ast$}]{a,  }\item[{int}]{nc,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+One of the child routines. 
+
+
+
+Definition at line 1387 of file fft4g.\+cpp.
+
+
+
+Referenced by ddct(), and dfct().
+
+\mbox{\label{fft4g_8cpp_a14ba3de9295a2ad403d2b33944d580e9}} 
+\index{fft4g.cpp@{fft4g.cpp}!ddct@{ddct}}
+\index{ddct@{ddct}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{ddct()}
+{\footnotesize\ttfamily void ddct (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{isgn,  }\item[{double $\ast$}]{a,  }\item[{int $\ast$}]{ip,  }\item[{double $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+Discrete Cosine Transform. 
+
+
+
+Definition at line 404 of file fft4g.\+cpp.
+
+
+
+References bitrv2(), cftbsub(), cftfsub(), dctsub(), ip, makect(), makewt(), rftbsub(), rftfsub(), and w.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{fft4g_8cpp_a14ba3de9295a2ad403d2b33944d580e9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{fft4g_8cpp_afb0d9d2aedeaa2edf3000c7e5675665c}} 
+\index{fft4g.cpp@{fft4g.cpp}!ddst@{ddst}}
+\index{ddst@{ddst}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{ddst()}
+{\footnotesize\ttfamily void ddst (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{isgn,  }\item[{double $\ast$}]{a,  }\item[{int $\ast$}]{ip,  }\item[{double $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+Discrete Sine Transform. 
+
+
+
+Definition at line 465 of file fft4g.\+cpp.
+
+
+
+References bitrv2(), cftbsub(), cftfsub(), dstsub(), ip, makect(), makewt(), rftbsub(), rftfsub(), and w.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{fft4g_8cpp_afb0d9d2aedeaa2edf3000c7e5675665c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{fft4g_8cpp_af9a09113fe78c41b30efeaf7abd7ff15}} 
+\index{fft4g.cpp@{fft4g.cpp}!dfct@{dfct}}
+\index{dfct@{dfct}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{dfct()}
+{\footnotesize\ttfamily void dfct (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{t,  }\item[{int $\ast$}]{ip,  }\item[{double $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+Cosine Transform of RDFT (Real Symmetric DFT). 
+
+
+
+Definition at line 526 of file fft4g.\+cpp.
+
+
+
+References bitrv2(), cftfsub(), dctsub(), ip, makect(), makewt(), rftfsub(), and w.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{fft4g_8cpp_af9a09113fe78c41b30efeaf7abd7ff15_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{fft4g_8cpp_a93291a6a3abd3f53e8f09b76eb3aa458}} 
+\index{fft4g.cpp@{fft4g.cpp}!dfst@{dfst}}
+\index{dfst@{dfst}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{dfst()}
+{\footnotesize\ttfamily void dfst (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{t,  }\item[{int $\ast$}]{ip,  }\item[{double $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+Sine Transform of RDFT (Real Anti-\/symmetric DFT) 
+
+
+
+Definition at line 624 of file fft4g.\+cpp.
+
+
+
+References bitrv2(), cftfsub(), dstsub(), ip, makect(), makewt(), rftfsub(), and w.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{fft4g_8cpp_a93291a6a3abd3f53e8f09b76eb3aa458_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{fft4g_8cpp_af239623ac43abcf2d596043266b17306}} 
+\index{fft4g.cpp@{fft4g.cpp}!dstsub@{dstsub}}
+\index{dstsub@{dstsub}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{dstsub()}
+{\footnotesize\ttfamily void dstsub (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{double $\ast$}]{a,  }\item[{int}]{nc,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+One of the child routines. 
+
+
+
+Definition at line 1410 of file fft4g.\+cpp.
+
+
+
+Referenced by ddst(), and dfst().
+
+\mbox{\label{fft4g_8cpp_a5ce6b1884a8902c7774efd882f07a887}} 
+\index{fft4g.cpp@{fft4g.cpp}!makect@{makect}}
+\index{makect@{makect}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{makect()}
+{\footnotesize\ttfamily void makect (\begin{DoxyParamCaption}\item[{int}]{nc,  }\item[{int $\ast$}]{ip,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+One the initializing routines. 
+
+
+
+Definition at line 751 of file fft4g.\+cpp.
+
+
+
+References ip.
+
+
+
+Referenced by ddct(), ddst(), dfct(), dfst(), and rdft().
+
+\mbox{\label{fft4g_8cpp_a7c1e1feac8c6a479cce040aae6bc80e8}} 
+\index{fft4g.cpp@{fft4g.cpp}!makewt@{makewt}}
+\index{makewt@{makewt}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{makewt()}
+{\footnotesize\ttfamily void makewt (\begin{DoxyParamCaption}\item[{int}]{nw,  }\item[{int $\ast$}]{ip,  }\item[{double $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+One of the initializing routines. 
+
+
+
+Definition at line 719 of file fft4g.\+cpp.
+
+
+
+References bitrv2(), ip, and w.
+
+
+
+Referenced by cdft(), ddct(), ddst(), dfct(), dfst(), and rdft().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{fft4g_8cpp_a7c1e1feac8c6a479cce040aae6bc80e8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{fft4g_8cpp_a5cfa54c9102b120336a73ae640e1aee6}} 
+\index{fft4g.cpp@{fft4g.cpp}!rdft@{rdft}}
+\index{rdft@{rdft}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{rdft()}
+{\footnotesize\ttfamily void rdft (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{isgn,  }\item[{double $\ast$}]{a,  }\item[{int $\ast$}]{ip,  }\item[{double $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+Real Discrete Fourier Transform. 
+
+
+
+Definition at line 355 of file fft4g.\+cpp.
+
+
+
+References bitrv2(), cftbsub(), cftfsub(), ip, makect(), makewt(), rftbsub(), rftfsub(), and w.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{fft4g_8cpp_a5cfa54c9102b120336a73ae640e1aee6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{fft4g_8cpp_a3f6c3ee0de85c1eda63727b47a3ae202}} 
+\index{fft4g.cpp@{fft4g.cpp}!rftbsub@{rftbsub}}
+\index{rftbsub@{rftbsub}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{rftbsub()}
+{\footnotesize\ttfamily void rftbsub (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{double $\ast$}]{a,  }\item[{int}]{nc,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+One the child rountines. 
+
+
+
+Definition at line 1358 of file fft4g.\+cpp.
+
+
+
+Referenced by ddct(), ddst(), and rdft().
+
+\mbox{\label{fft4g_8cpp_a402bebf4b32bb905dc11045bcdd60226}} 
+\index{fft4g.cpp@{fft4g.cpp}!rftfsub@{rftfsub}}
+\index{rftfsub@{rftfsub}!fft4g.cpp@{fft4g.cpp}}
+\doxysubsubsection{rftfsub()}
+{\footnotesize\ttfamily void rftfsub (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{double $\ast$}]{a,  }\item[{int}]{nc,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+One of the child routines. 
+
+
+
+Definition at line 1331 of file fft4g.\+cpp.
+
+
+
+Referenced by ddct(), ddst(), dfct(), dfst(), and rdft().
+

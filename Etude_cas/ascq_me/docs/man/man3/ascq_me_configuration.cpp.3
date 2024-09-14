@@ -1,0 +1,488 @@
+.TH "ascq_me_configuration.cpp" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ascq_me_configuration.cpp \- Implementation of the methods defined in \fBascq_me_configuration\&.h\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ascq_me_configuration\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBload_int_keyword\fP (FILE *file, char *buffer)"
+.br
+.RI "Procedure which reads the value of a parameter that requires an int value\&. "
+.ti -1c
+.RI "void \fBload_unsigned_int_keyword\fP (FILE *file, char *buffer)"
+.br
+.RI "Procedure which reads the value of a parameter that requires an unsigned int value\&. "
+.ti -1c
+.RI "void \fBload_boolean_keyword\fP (FILE *file, char *buffer)"
+.br
+.RI "Procedure which reads the value of a parameter that requires a boolean value (in reality it is a char*, not really a boolean)\&. "
+.ti -1c
+.RI "void \fBload_string_keyword\fP (FILE *file, const char *buffer)"
+.br
+.RI "Procedure which reads the value of a parameter that requires a string value (it is a char* value)\&. "
+.ti -1c
+.RI "void \fBload_float_keyword\fP (FILE *file, char *buffer)"
+.br
+.RI "Procedure which reads the value of a parameter that requires a float value (or a double value)\&. "
+.ti -1c
+.RI "char * \fBget_configuration_file_name\fP ()"
+.br
+.RI "Function which returns the name of the configuration file used\&. "
+.ti -1c
+.RI "void \fBload_configuration\fP (char *configuration_file)"
+.br
+.RI "Procedure which allows to load the wanted configuration <=> set all the parameters of the application\&. "
+.ti -1c
+.RI "void \fBascq_me_configuration_cleaning\fP ()"
+.br
+.RI "Procedure which frees all the memory allocated for ascq_me configuration\&. "
+.ti -1c
+.RI "int \fBis_fasta_chosen\fP ()"
+.br
+.RI "Function which indicates if the chosen file type is fasta or spectra\&. "
+.ti -1c
+.RI "void \fBprint_configuration\fP ()"
+.br
+.RI "Procedure which allows to print the current configuration on the stdout\&. "
+.ti -1c
+.RI "void \fBfprint_configuration\fP (FILE *file)"
+.br
+.RI "Procedure which allows to print the current configuration in a file\&. "
+.ti -1c
+.RI "void \fBfprint_configuration_xml\fP (FILE *file)"
+.br
+.RI "Procedure which allows to print in a xml format the current configuration in a file\&. "
+.ti -1c
+.RI "void \fBactivate_decoy_mode\fP ()"
+.br
+.RI "Procedure which allows to activate the decoy mode\&. "
+.ti -1c
+.RI "int \fBis_decoy_mode_activated\fP ()"
+.br
+.RI "Function which allows to know if the decoy mode has been activated or not\&. "
+.ti -1c
+.RI "void \fBset_decoy_score\fP (double score)"
+.br
+.RI "Procedure which allows to set the decoy_score\&. "
+.ti -1c
+.RI "double \fBget_decoy_score\fP ()"
+.br
+.RI "Function which allows to get the decoy score\&. "
+.ti -1c
+.RI "int \fBget_nb_displayed_proteins\fP ()"
+.br
+.RI "Function which returns the number of displayed proteins\&. "
+.ti -1c
+.RI "const char * \fBget_base_name\fP ()"
+.br
+.RI "Function which allows to get the base name of the result file of ASCQ_ME\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "char * \fBbase_name\fP =NULL"
+.br
+.RI "Base name for the ASCQ_ME result files\&. "
+.ti -1c
+.RI "char * \fBconfiguration_file_name\fP =NULL"
+.br
+.RI "Name of the configuration file used\&. "
+.ti -1c
+.RI "int \fBfasta_format\fP =\fBTRUE\fP"
+.br
+.RI "Variable that indicates if the chosen format is FASTA (TRUE) or spectrum (FALSE)\&. "
+.ti -1c
+.RI "int \fBdecoy_mode_activation\fP =\fBFALSE\fP"
+.br
+.RI "Variable that indicates if the decoy mode is activated or not\&. "
+.ti -1c
+.RI "double \fBdecoy_score\fP =0\&.0"
+.br
+.RI "Variable that contains the mean of the decoy score of the analyzed proteins\&. "
+.ti -1c
+.RI "int \fBnb_displayed_proteins\fP =10"
+.br
+.RI "Number of displayed proteins\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of the methods defined in \fBascq_me_configuration\&.h\fP\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jean-Charles BOISSON (2005-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBascq_me_configuration\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void activate_decoy_mode ()"
+
+.PP
+Procedure which allows to activate the decoy mode\&. 
+.PP
+Definition at line 1008 of file ascq_me_configuration\&.cpp\&.
+.PP
+References decoy_mode_activation, and TRUE\&.
+.PP
+Referenced by load_boolean_keyword()\&.
+.SS "void ascq_me_configuration_cleaning ()"
+
+.PP
+Procedure which frees all the memory allocated for ascq_me configuration\&. 
+.PP
+Definition at line 771 of file ascq_me_configuration\&.cpp\&.
+.PP
+References base_name, configuration_file_name, fasta_format, fastafclose(), free_activated_modification(), free_all_modifications(), free_isodistrib(), free_tables(), free_util_digestion(), and TRUE\&.
+.PP
+Referenced by main()\&.
+.SS "void fprint_configuration (FILE * file)"
+
+.PP
+Procedure which allows to print the current configuration in a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file where the current will be put\&. 
+.RE
+.PP
+
+.PP
+Definition at line 871 of file ascq_me_configuration\&.cpp\&.
+.PP
+References configuration_file_name, formula_tochar(), fprint_modification_configuration(), get_activation_full_digest(), get_atom_quantity(), get_exp_protein_mass(), get_experimental_filename(), get_fasta_filename(), get_gaussian_value(), get_maximum_mass(), get_maximum_peptide_length(), get_minimum_mass(), get_minimum_matched_peptide_number(), get_minimum_peptide_number(), get_nb_displayed_proteins(), get_nb_missed_cleavages(), get_number_of_activated_modifications(), get_peptide_charge_formula(), get_peptide_maximum_mass(), get_peptide_precision(), get_scoring_sensitivity(), get_simulated_spectra_filename(), get_specie(), get_spectrum_maximum_mass(), get_spectrum_precision(), get_threshold(), get_used_enzyme(), is_decoy_mode_activated(), is_exp_protein_mass_activated(), is_fasta_chosen(), PROGRAM_NAME, PROGRAM_VERSION, and TRUE\&.
+.PP
+Referenced by main()\&.
+.SS "void fprint_configuration_xml (FILE * file)"
+
+.PP
+Procedure which allows to print in a xml format the current configuration in a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file where the current configuration in a xml format will be put\&. 
+.RE
+.PP
+
+.PP
+Definition at line 946 of file ascq_me_configuration\&.cpp\&.
+.PP
+References configuration_file_name, formula_tochar(), fprint_xml_modification_configuration(), get_activation_full_digest(), get_atom_quantity(), get_experimental_filename(), get_fasta_filename(), get_gaussian_value(), get_maximum_mass(), get_maximum_peptide_length(), get_minimum_mass(), get_minimum_matched_peptide_number(), get_minimum_peptide_number(), get_nb_displayed_proteins(), get_nb_missed_cleavages(), get_number_of_activated_modifications(), get_peptide_charge_formula(), get_peptide_maximum_mass(), get_peptide_precision(), get_scoring_sensitivity(), get_simulated_spectra_filename(), get_specie(), get_spectrum_maximum_mass(), get_spectrum_precision(), get_threshold(), get_used_enzyme(), is_decoy_mode_activated(), is_fasta_chosen(), PROGRAM_VERSION, and TRUE\&.
+.PP
+Referenced by main()\&.
+.SS "char * get_base_name ()"
+
+.PP
+Function which allows to get the base name of the result file of ASCQ_ME\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The base name\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+This function directly returns a pointer (not a copy), do not modified it 
+.RE
+.PP
+
+.PP
+Definition at line 1038 of file ascq_me_configuration\&.cpp\&.
+.PP
+References base_name\&.
+.PP
+Referenced by main()\&.
+.SS "char * get_configuration_file_name ()"
+
+.PP
+Function which returns the name of the configuration file used\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The configuration file name\&. 
+.RE
+.PP
+
+.PP
+Definition at line 118 of file ascq_me_configuration\&.cpp\&.
+.PP
+References configuration_file_name, error(), and USAGE_ERROR\&.
+.SS "double get_decoy_score ()"
+
+.PP
+Function which allows to get the decoy score\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The decoy score\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1026 of file ascq_me_configuration\&.cpp\&.
+.PP
+References decoy_score\&.
+.PP
+Referenced by fprintf_ascq_me_results(), fprintf_ascq_me_results_xml(), and printf_ascq_me_results()\&.
+.SS "int get_nb_displayed_proteins ()"
+
+.PP
+Function which returns the number of displayed proteins\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The number\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1032 of file ascq_me_configuration\&.cpp\&.
+.PP
+References nb_displayed_proteins\&.
+.PP
+Referenced by add_protein(), fprint_configuration(), fprint_configuration_xml(), init_ascq_me_display(), and print_configuration()\&.
+.SS "int is_decoy_mode_activated ()"
+
+.PP
+Function which allows to know if the decoy mode has been activated or not\&. 
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE (according to \fButil\&.h\fP)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1014 of file ascq_me_configuration\&.cpp\&.
+.PP
+References decoy_mode_activation\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), fprintf_ascq_me_results(), main(), print_configuration(), and printf_ascq_me_results()\&.
+.SS "int is_fasta_chosen ()"
+
+.PP
+Function which indicates if the chosen file type is fasta or spectra\&. 
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE (see \fButil\&.h\fP)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 798 of file ascq_me_configuration\&.cpp\&.
+.PP
+References fasta_format\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), main(), and print_configuration()\&.
+.SS "void load_boolean_keyword (FILE * file, char * buffer)"
+
+.PP
+Procedure which reads the value of a parameter that requires a boolean value (in reality it is a char*, not really a boolean)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file to read\&. 
+.br
+\fIbuffer\fP The name of the keyword 
+.RE
+.PP
+
+.PP
+Definition at line 438 of file ascq_me_configuration\&.cpp\&.
+.PP
+References activate_decoy_mode(), activate_full_digestion(), error(), EXECUTION_ERROR, FALSE, fasta_format, read_line(), TRUE, and USAGE_ERROR\&.
+.PP
+Referenced by load_configuration()\&.
+.SS "void load_configuration (char * configuration_file)"
+
+.PP
+Procedure which allows to load the wanted configuration <=> set all the parameters of the application\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconfiguration_file\fP The configuration file\&. 
+.RE
+.PP
+
+.PP
+Definition at line 130 of file ascq_me_configuration\&.cpp\&.
+.PP
+References configuration_file_name, error(), FALSE, get_distribution_activation(), init_util_digestion(), IO_ERROR, jump_commentaries(), load_boolean_keyword(), load_float_keyword(), load_int_keyword(), load_modifications(), load_string_keyword(), load_unsigned_int_keyword(), MEMORY_ALLOCATION_ERROR, MODIFICATION_FILENAME, tables_initialisation(), and USAGE_ERROR\&.
+.PP
+Referenced by main()\&.
+.SS "void load_float_keyword (FILE * file, char * buffer)"
+
+.PP
+Procedure which reads the value of a parameter that requires a float value (or a double value)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file to read\&. 
+.br
+\fIbuffer\fP The name of the keyword 
+.RE
+.PP
+
+.PP
+Definition at line 655 of file ascq_me_configuration\&.cpp\&.
+.PP
+References error(), EXECUTION_ERROR, get_distribution_activation(), read_line(), set_exp_protein_mass(), set_gaussian_value(), set_maximum_mass(), set_minimum_mass(), set_scoring_sensitivity(), set_threshold(), TRUE, USAGE_ERROR, and WARNING\&.
+.PP
+Referenced by load_configuration()\&.
+.SS "void load_int_keyword (FILE * file, char * buffer)"
+
+.PP
+Procedure which reads the value of a parameter that requires an int value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file to read\&. 
+.br
+\fIbuffer\fP The name of the keyword 
+.RE
+.PP
+
+.PP
+Definition at line 245 of file ascq_me_configuration\&.cpp\&.
+.PP
+References error(), EXECUTION_ERROR, get_distribution_activation(), nb_displayed_proteins, read_line(), set_C_atom_quantity(), set_maximum_peptide_length(), set_nb_missed_cleavages(), set_peptide_maximum_mass(), set_peptide_precision(), set_precision(), set_spectrum_maximum_mass(), set_used_enzyme(), TRUE, USAGE_ERROR, and WARNING\&.
+.PP
+Referenced by load_configuration()\&.
+.SS "void load_string_keyword (FILE * file, const char * buffer)"
+
+.PP
+Procedure which reads the value of a parameter that requires a string value (it is a char* value)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file to read\&. 
+.br
+\fIbuffer\fP The name of the keyword 
+.RE
+.PP
+
+.PP
+Definition at line 516 of file ascq_me_configuration\&.cpp\&.
+.PP
+References base_name, error(), EXECUTION_ERROR, FALSE, fasta_format, fastafopen(), init_distrib(), load_modification_configuration(), MEMORY_ALLOCATION_ERROR, read_line(), read_simulated_spectrum(), read_spectrum(), set_B(), set_peptide_charge(), set_specie(), set_X(), set_Z(), and USAGE_ERROR\&.
+.PP
+Referenced by load_configuration()\&.
+.SS "void load_unsigned_int_keyword (FILE * file, char * buffer)"
+
+.PP
+Procedure which reads the value of a parameter that requires an unsigned int value\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file to read\&. 
+.br
+\fIbuffer\fP The name of the keyword 
+.RE
+.PP
+
+.PP
+Definition at line 382 of file ascq_me_configuration\&.cpp\&.
+.PP
+References error(), EXECUTION_ERROR, read_line(), set_minimum_matched_peptide_number(), set_minimum_peptide_number(), USAGE_ERROR, and WARNING\&.
+.PP
+Referenced by load_configuration()\&.
+.SS "void print_configuration ()"
+
+.PP
+Procedure which allows to print the current configuration on the stdout\&. 
+.PP
+Definition at line 804 of file ascq_me_configuration\&.cpp\&.
+.PP
+References configuration_file_name, formula_tochar(), get_activation_full_digest(), get_atom_quantity(), get_exp_protein_mass(), get_experimental_filename(), get_fasta_filename(), get_gaussian_value(), get_maximum_mass(), get_maximum_peptide_length(), get_minimum_mass(), get_minimum_matched_peptide_number(), get_minimum_peptide_number(), get_nb_displayed_proteins(), get_nb_missed_cleavages(), get_number_of_activated_modifications(), get_peptide_charge_formula(), get_peptide_maximum_mass(), get_peptide_precision(), get_scoring_sensitivity(), get_simulated_spectra_filename(), get_specie(), get_spectrum_maximum_mass(), get_spectrum_precision(), get_threshold(), get_used_enzyme(), is_decoy_mode_activated(), is_exp_protein_mass_activated(), is_fasta_chosen(), print_modification_configuration(), PROGRAM_NAME, PROGRAM_VERSION, and TRUE\&.
+.SS "void set_decoy_score (double score)"
+
+.PP
+Procedure which allows to set the decoy_score\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIscore\fP The decoy score\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1020 of file ascq_me_configuration\&.cpp\&.
+.PP
+References decoy_score\&.
+.PP
+Referenced by main()\&.
+.SH "Variable Documentation"
+.PP 
+.SS "char * base_name =NULL"
+
+.PP
+Base name for the ASCQ_ME result files\&. 
+.PP
+Definition at line 55 of file ascq_me_configuration\&.cpp\&.
+.PP
+Referenced by ascq_me_configuration_cleaning(), get_base_name(), and load_string_keyword()\&.
+.SS "char * configuration_file_name =NULL"
+
+.PP
+Name of the configuration file used\&. 
+.PP
+Definition at line 60 of file ascq_me_configuration\&.cpp\&.
+.PP
+Referenced by ascq_me_configuration_cleaning(), fprint_configuration(), fprint_configuration_xml(), get_configuration_file_name(), load_configuration(), and print_configuration()\&.
+.SS "int decoy_mode_activation =\fBFALSE\fP"
+
+.PP
+Variable that indicates if the decoy mode is activated or not\&. 
+.PP
+Definition at line 70 of file ascq_me_configuration\&.cpp\&.
+.PP
+Referenced by activate_decoy_mode(), and is_decoy_mode_activated()\&.
+.SS "double decoy_score =0\&.0"
+
+.PP
+Variable that contains the mean of the decoy score of the analyzed proteins\&. 
+.PP
+Definition at line 75 of file ascq_me_configuration\&.cpp\&.
+.PP
+Referenced by get_decoy_score(), main(), and set_decoy_score()\&.
+.SS "int fasta_format =\fBTRUE\fP"
+
+.PP
+Variable that indicates if the chosen format is FASTA (TRUE) or spectrum (FALSE)\&. 
+.PP
+Definition at line 65 of file ascq_me_configuration\&.cpp\&.
+.PP
+Referenced by ascq_me_configuration_cleaning(), is_fasta_chosen(), load_boolean_keyword(), and load_string_keyword()\&.
+.SS "int nb_displayed_proteins =10"
+
+.PP
+Number of displayed proteins\&. 
+.PP
+Definition at line 80 of file ascq_me_configuration\&.cpp\&.
+.PP
+Referenced by get_nb_displayed_proteins(), and load_int_keyword()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

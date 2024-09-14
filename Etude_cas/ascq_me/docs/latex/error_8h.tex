@@ -1,0 +1,210 @@
+\doxysection{error.\+h File Reference}
+\label{error_8h}\index{error.h@{error.h}}
+
+
+Definition of the error management.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for error.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{error_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{error_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ PROGRAM\+\_\+\+NAME}~\char`\"{}ASCQ\+\_\+\+ME\char`\"{}
+\begin{DoxyCompactList}\small\item\em The name of the program. \end{DoxyCompactList}\item 
+\#define \textbf{ PROGRAM\+\_\+\+VERSION}~\char`\"{}1.\+0.\+6\char`\"{}
+\begin{DoxyCompactList}\small\item\em The current version of the program. \end{DoxyCompactList}\item 
+\#define \textbf{ IO\+\_\+\+ERROR}~1
+\begin{DoxyCompactList}\small\item\em The first type of error. \end{DoxyCompactList}\item 
+\#define \textbf{ USAGE\+\_\+\+ERROR}~2
+\begin{DoxyCompactList}\small\item\em The second type of error. \end{DoxyCompactList}\item 
+\#define \textbf{ EXECUTION\+\_\+\+ERROR}~3
+\begin{DoxyCompactList}\small\item\em The third type of error. \end{DoxyCompactList}\item 
+\#define \textbf{ MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR}~4
+\begin{DoxyCompactList}\small\item\em The fourth type of error. \end{DoxyCompactList}\item 
+\#define \textbf{ FREE\+\_\+\+MEMORY\+\_\+\+ERROR}~5
+\begin{DoxyCompactList}\small\item\em The fifth type of error. \end{DoxyCompactList}\item 
+\#define \textbf{ WARNING}~10
+\begin{DoxyCompactList}\small\item\em Definition that allows to indicate that something strange happens. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ error} (int error\+\_\+code, const char $\ast$user\+\_\+msg, const char $\ast$dev\+\_\+msg)
+\begin{DoxyCompactList}\small\item\em procedure which allows to throw an error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition of the error management. 
+
+\begin{DoxyAuthor}{Author}
+Jean-\/\+Charles BOISSON (2006-\/2008). 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software.
+\end{DoxyWarning}
+Each type of error is associated to a value and 2 types of messages are used one for the user and the other for the developper. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{error_8h_ac239a0d6195cd847a1063c16f6d7861c}} 
+\index{error.h@{error.h}!EXECUTION\_ERROR@{EXECUTION\_ERROR}}
+\index{EXECUTION\_ERROR@{EXECUTION\_ERROR}!error.h@{error.h}}
+\doxysubsubsection{EXECUTION\_ERROR}
+{\footnotesize\ttfamily \#define EXECUTION\+\_\+\+ERROR~3}
+
+
+
+The third type of error. 
+
+Error corresponding to unexpected error during the traitment. 
+
+Definition at line 85 of file error.\+h.
+
+\mbox{\label{error_8h_a490c1e8fb303cff1758d4d1b953ff48d}} 
+\index{error.h@{error.h}!FREE\_MEMORY\_ERROR@{FREE\_MEMORY\_ERROR}}
+\index{FREE\_MEMORY\_ERROR@{FREE\_MEMORY\_ERROR}!error.h@{error.h}}
+\doxysubsubsection{FREE\_MEMORY\_ERROR}
+{\footnotesize\ttfamily \#define FREE\+\_\+\+MEMORY\+\_\+\+ERROR~5}
+
+
+
+The fifth type of error. 
+
+Error corresponding to try to call the free method on a struct that is NULL. 
+
+Definition at line 99 of file error.\+h.
+
+\mbox{\label{error_8h_a5d4c9c7b61a0326a939f9109f96d7423}} 
+\index{error.h@{error.h}!IO\_ERROR@{IO\_ERROR}}
+\index{IO\_ERROR@{IO\_ERROR}!error.h@{error.h}}
+\doxysubsubsection{IO\_ERROR}
+{\footnotesize\ttfamily \#define IO\+\_\+\+ERROR~1}
+
+
+
+The first type of error. 
+
+Error corresponding to in/out errors (generally during the file using). 
+
+Definition at line 71 of file error.\+h.
+
+\mbox{\label{error_8h_aa6840d299f62b023f82661d31597c982}} 
+\index{error.h@{error.h}!MEMORY\_ALLOCATION\_ERROR@{MEMORY\_ALLOCATION\_ERROR}}
+\index{MEMORY\_ALLOCATION\_ERROR@{MEMORY\_ALLOCATION\_ERROR}!error.h@{error.h}}
+\doxysubsubsection{MEMORY\_ALLOCATION\_ERROR}
+{\footnotesize\ttfamily \#define MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR~4}
+
+
+
+The fourth type of error. 
+
+Error corresponding to the failure of a malloc or a equivalent method (NULL has been returned). 
+
+Definition at line 92 of file error.\+h.
+
+\mbox{\label{error_8h_a3b6a35b8be8405a9db72cc5dea97954b}} 
+\index{error.h@{error.h}!PROGRAM\_NAME@{PROGRAM\_NAME}}
+\index{PROGRAM\_NAME@{PROGRAM\_NAME}!error.h@{error.h}}
+\doxysubsubsection{PROGRAM\_NAME}
+{\footnotesize\ttfamily \#define PROGRAM\+\_\+\+NAME~\char`\"{}ASCQ\+\_\+\+ME\char`\"{}}
+
+
+
+The name of the program. 
+
+
+
+Definition at line 59 of file error.\+h.
+
+\mbox{\label{error_8h_a2f10abd650e471fae2d7e8c63d41206a}} 
+\index{error.h@{error.h}!PROGRAM\_VERSION@{PROGRAM\_VERSION}}
+\index{PROGRAM\_VERSION@{PROGRAM\_VERSION}!error.h@{error.h}}
+\doxysubsubsection{PROGRAM\_VERSION}
+{\footnotesize\ttfamily \#define PROGRAM\+\_\+\+VERSION~\char`\"{}1.\+0.\+6\char`\"{}}
+
+
+
+The current version of the program. 
+
+
+
+Definition at line 64 of file error.\+h.
+
+\mbox{\label{error_8h_ae93a09c7f9bf75949657e664b0621bb4}} 
+\index{error.h@{error.h}!USAGE\_ERROR@{USAGE\_ERROR}}
+\index{USAGE\_ERROR@{USAGE\_ERROR}!error.h@{error.h}}
+\doxysubsubsection{USAGE\_ERROR}
+{\footnotesize\ttfamily \#define USAGE\+\_\+\+ERROR~2}
+
+
+
+The second type of error. 
+
+Error corresponding to user errors (generally bad values for the method parameters). 
+
+Definition at line 78 of file error.\+h.
+
+\mbox{\label{error_8h_a5cb439d9f933fde4cf23caa370c030e7}} 
+\index{error.h@{error.h}!WARNING@{WARNING}}
+\index{WARNING@{WARNING}!error.h@{error.h}}
+\doxysubsubsection{WARNING}
+{\footnotesize\ttfamily \#define WARNING~10}
+
+
+
+Definition that allows to indicate that something strange happens. 
+
+This definition corresponds to something that is not a error (the program is not stopped) but it can be interesting to the user to know the detail. 
+
+Definition at line 107 of file error.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{error_8h_a5488d9b4d7fc51e0242d827bddd32374}} 
+\index{error.h@{error.h}!error@{error}}
+\index{error@{error}!error.h@{error.h}}
+\doxysubsubsection{error()}
+{\footnotesize\ttfamily void error (\begin{DoxyParamCaption}\item[{int}]{error\+\_\+code,  }\item[{const char $\ast$}]{user\+\_\+msg,  }\item[{const char $\ast$}]{dev\+\_\+msg }\end{DoxyParamCaption})}
+
+
+
+procedure which allows to throw an error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+code} & the error code. \\
+\hline
+{\em user\+\_\+msg} & the message for the user. \\
+\hline
+{\em dev\+\_\+msg} & the message for the developer. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file error.\+cpp.
+
+
+
+References EXECUTION\+\_\+\+ERROR, FREE\+\_\+\+MEMORY\+\_\+\+ERROR, IO\+\_\+\+ERROR, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, PROGRAM\+\_\+\+NAME, PROGRAM\+\_\+\+VERSION, USAGE\+\_\+\+ERROR, and WARNING.
+
+
+
+Referenced by activate\+\_\+full\+\_\+digestion(), add\+\_\+chains(), add\+\_\+formula(), add\+\_\+modification(), add\+\_\+peptide\+\_\+modification(), add\+\_\+protein(), affect\+\_\+atom(), apply\+\_\+global\+\_\+modification(), apply\+\_\+modification(), can\+\_\+be\+\_\+used\+\_\+on(), can\+\_\+be\+\_\+used\+\_\+on\+\_\+for\+\_\+digestion(), compare\+\_\+peptide\+\_\+score\+\_\+from\+\_\+indices(), compare\+\_\+peptide\+\_\+scores(), compute\+\_\+equivalent\+\_\+peptides(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+global(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide(), copy\+\_\+composition(), copy\+\_\+double\+\_\+array(), copy\+\_\+formula(), copy\+\_\+isotop(), copy\+\_\+one\+\_\+element(), copy\+\_\+peptide(), copy\+\_\+spectrum(), delete\+\_\+final\+\_\+blanks(), digest(), digestion\+\_\+modification\+\_\+initialization(), enzym\+\_\+load(), fastafopen(), fastafwrite(), fastafwrite\+\_\+way(), fprint\+\_\+peptide(), fprint\+\_\+peptide\+\_\+index(), free\+\_\+amino\+\_\+acid\+\_\+table(), free\+\_\+composition(), free\+\_\+cplt(), free\+\_\+cpt(), free\+\_\+element(), free\+\_\+element\+\_\+table(), free\+\_\+enzt(), free\+\_\+enzym\+\_\+table(), free\+\_\+formula(), free\+\_\+n\+\_\+formula(), free\+\_\+peptide(), free\+\_\+peptide\+\_\+link(), fusion\+\_\+peptide(), get\+\_\+activated\+\_\+modification\+\_\+name(), get\+\_\+activated\+\_\+modification\+\_\+symbol(), get\+\_\+amino\+\_\+acid(), get\+\_\+amino\+\_\+acid\+\_\+table(), get\+\_\+configuration\+\_\+file\+\_\+name(), get\+\_\+copie\+\_\+of\+\_\+digestion\+\_\+result(), get\+\_\+element(), get\+\_\+element\+\_\+table(), get\+\_\+exp\+\_\+protein\+\_\+mass(), get\+\_\+formula\+\_\+from\+\_\+sequence(), get\+\_\+formula\+\_\+to\+\_\+add(), get\+\_\+formula\+\_\+to\+\_\+sub(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+global\+\_\+modification\+\_\+index(), get\+\_\+modification\+\_\+amino\+\_\+acids(), get\+\_\+modification\+\_\+formula\+\_\+to\+\_\+add(), get\+\_\+modification\+\_\+formula\+\_\+to\+\_\+sub(), get\+\_\+modification\+\_\+name(), get\+\_\+modification\+\_\+side(), get\+\_\+modification\+\_\+symbol(), get\+\_\+modification\+\_\+type(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index(), get\+\_\+peptide\+\_\+sequence(), get\+\_\+reversed\+\_\+sequence(), get\+\_\+util\+\_\+formula(), get\+\_\+weight(), init\+\_\+ascq\+\_\+me\+\_\+display(), init\+\_\+distrib(), is\+\_\+a\+\_\+wanted\+\_\+protein(), is\+\_\+simulated\+\_\+wanted\+\_\+protein(), jump\+\_\+blanks(), load\+\_\+boolean\+\_\+keyword(), load\+\_\+configuration(), load\+\_\+float\+\_\+keyword(), load\+\_\+int\+\_\+keyword(), load\+\_\+modification\+\_\+configuration(), load\+\_\+modifications(), load\+\_\+string\+\_\+keyword(), load\+\_\+unsigned\+\_\+int\+\_\+keyword(), main(), new\+\_\+peptides\+\_\+with\+\_\+missed\+\_\+cleavages(), next\+\_\+simulated\+\_\+spectrum(), next\+Entry(), optimized\+\_\+isotopic\+\_\+distribution(), peptide\+\_\+charge\+\_\+weight(), print\+\_\+peptide(), print\+\_\+peptide\+\_\+index(), read\+\_\+formula(), read\+\_\+simulated\+\_\+spectrum(), read\+\_\+spectrum(), read\+\_\+until(), real\+\_\+digest(), save\+\_\+partial\+\_\+peptide\+\_\+scoring(), set\+\_\+\+C\+\_\+atom\+\_\+quantity(), set\+\_\+exp\+\_\+spectrum(), set\+\_\+gaussian\+\_\+value(), set\+\_\+maximum\+\_\+mass(), set\+\_\+maximum\+\_\+peptide\+\_\+length(), set\+\_\+minimum\+\_\+mass(), set\+\_\+minimum\+\_\+matched\+\_\+peptide\+\_\+number(), set\+\_\+minimum\+\_\+peptide\+\_\+number(), set\+\_\+peptide\+\_\+maximum\+\_\+mass(), set\+\_\+peptide\+\_\+precision(), set\+\_\+precision(), set\+\_\+scoring\+\_\+sensitivity(), set\+\_\+specie(), set\+\_\+spectrum\+\_\+maximum\+\_\+mass(), sort\+\_\+and\+\_\+init\+\_\+with\+\_\+peptide\+\_\+scoring(), string\+To\+Cpl(), and sub\+\_\+formula().
+

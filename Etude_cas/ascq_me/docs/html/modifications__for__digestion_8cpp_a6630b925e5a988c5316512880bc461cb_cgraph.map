@@ -1,0 +1,6 @@
+<map id="load_modification_configuration" name="load_modification_configuration">
+<area shape="rect" id="node1" title="Procedure which loads the configuration for the modifications." alt="" coords="5,31,236,57"/>
+<area shape="rect" id="node2" href="$modifications__for__digestion_8cpp.html#a4520167f17e7368561c7f1329724c0a4" title="Procedure which allows to activate a new modification." alt="" coords="284,56,419,83"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="519,5,572,32"/>
+<area shape="rect" id="node4" href="$modification__table_8h.html#a560a3281a425d851c2a80054aca5a05c" title="Function which allows to get the total number of available modifications." alt="" coords="467,57,624,98"/>
+</map>

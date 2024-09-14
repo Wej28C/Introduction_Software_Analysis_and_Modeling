@@ -1,0 +1,86 @@
+.TH "cleavePoint" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cleavePoint \- Structure representing a cleavage point\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cleavage\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "char \fBletter\fP"
+.br
+.RI "The letter on which we can cut (before or after)\&. "
+.ti -1c
+.RI "int \fBnbexceptbefore\fP"
+.br
+.RI "The number of different letters that cannot be before the cleavage-letter\&. "
+.ti -1c
+.RI "char * \fBexceptbefore\fP"
+.br
+.RI "The letters which cannot be before the cleavage-letter\&. "
+.ti -1c
+.RI "int \fBnbexceptafter\fP"
+.br
+.RI "The number of different letters than cannot be after the cleavage-letter\&. "
+.ti -1c
+.RI "char * \fBexceptafter\fP"
+.br
+.RI "The letters which cannot be after the cleavage-letter\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure representing a cleavage point\&. 
+.PP
+Definition at line 71 of file cleavage\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "char* cleavePoint::exceptafter"
+
+.PP
+The letters which cannot be after the cleavage-letter\&. 
+.PP
+Definition at line 82 of file cleavage\&.h\&.
+.PP
+Referenced by cp_fprint(), cpl_isCleavage2(), free_cpt(), and stringToCpl()\&.
+.SS "char* cleavePoint::exceptbefore"
+
+.PP
+The letters which cannot be before the cleavage-letter\&. 
+.PP
+Definition at line 78 of file cleavage\&.h\&.
+.PP
+Referenced by cp_fprint(), cpl_isCleavage2(), free_cpt(), and stringToCpl()\&.
+.SS "char cleavePoint::letter"
+
+.PP
+The letter on which we can cut (before or after)\&. 
+.PP
+Definition at line 74 of file cleavage\&.h\&.
+.PP
+Referenced by cp_fprint(), cpl_isCleavage(), cpl_isCleavage2(), and stringToCpl()\&.
+.SS "int cleavePoint::nbexceptafter"
+
+.PP
+The number of different letters than cannot be after the cleavage-letter\&. 
+.PP
+Definition at line 80 of file cleavage\&.h\&.
+.PP
+Referenced by cp_fprint(), cpl_isCleavage2(), free_cpt(), and stringToCpl()\&.
+.SS "int cleavePoint::nbexceptbefore"
+
+.PP
+The number of different letters that cannot be before the cleavage-letter\&. 
+.PP
+Definition at line 76 of file cleavage\&.h\&.
+.PP
+Referenced by cp_fprint(), cpl_isCleavage2(), free_cpt(), and stringToCpl()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

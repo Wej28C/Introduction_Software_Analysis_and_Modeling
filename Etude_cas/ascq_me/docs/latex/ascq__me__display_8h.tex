@@ -1,0 +1,499 @@
+\doxysection{ascq\+\_\+me\+\_\+display.\+h File Reference}
+\label{ascq__me__display_8h}\index{ascq\_me\_display.h@{ascq\_me\_display.h}}
+
+
+Definition of the methods to use and display ASCQ\+\_\+\+ME results.  
+
+
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include \char`\"{}ascq\+\_\+me\+\_\+configuration.\+h\char`\"{}}\newline
+Include dependency graph for ascq\+\_\+me\+\_\+display.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{ascq__me__display_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{ascq__me__display_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ init\+\_\+ascq\+\_\+me\+\_\+display} ()
+\begin{DoxyCompactList}\small\item\em Procedure which inits all the useful structure for ASCQ\+\_\+\+ME display. \end{DoxyCompactList}\item 
+void \textbf{ add\+\_\+protein} (char $\ast$description, char $\ast$\textbf{ sequence}, \textbf{ complex\+\_\+t} $\ast$spectrum, double score)
+\begin{DoxyCompactList}\small\item\em Procedure which adds and manages a new saved protein. \end{DoxyCompactList}\item 
+void \textbf{ printf\+\_\+ascq\+\_\+me\+\_\+results} ()
+\begin{DoxyCompactList}\small\item\em Procedure which prints on the stdout the ASCQ\+\_\+\+ME results. \end{DoxyCompactList}\item 
+void \textbf{ fprintf\+\_\+ascq\+\_\+me\+\_\+results} (FILE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Procedure which prints in a file the ASCQ\+\_\+\+ME results. \end{DoxyCompactList}\item 
+void \textbf{ ascq\+\_\+me\+\_\+cleaning} ()
+\begin{DoxyCompactList}\small\item\em Procedure which frees all the memory allocated for ascq\+\_\+me (excepted the structures allocated in \doxyref{ascq\+\_\+me.\+cpp}{p.}{ascq__me_8cpp}). \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+ascq\+\_\+me\+\_\+display} ()
+\begin{DoxyCompactList}\small\item\em Procedure which frees all the structures useful for the ASCQ\+\_\+\+ME display. \end{DoxyCompactList}\item 
+void \textbf{ fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+table\+\_\+form} (FILE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Procedure which prints in a file the ASCQ\+\_\+\+ME results in order to use them in spreadsheet programs. \end{DoxyCompactList}\item 
+void \textbf{ save\+\_\+partial\+\_\+peptide\+\_\+scoring} (double $\ast$peptide\+\_\+scoring, int nb\+\_\+peptides)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to save the partial peptide scoring of the current protein. \end{DoxyCompactList}\item 
+int \textbf{ compare\+\_\+peptide\+\_\+scores} (const void $\ast$first, const void $\ast$second)
+\begin{DoxyCompactList}\small\item\em Procedure which compares two partial\+\_\+score ==$>$ useful for qsort. \end{DoxyCompactList}\item 
+int \textbf{ compare\+\_\+peptide\+\_\+score\+\_\+from\+\_\+indices} (const void $\ast$first, const void $\ast$second)
+\begin{DoxyCompactList}\small\item\em Procedure which compares two partial scores from the score indexes in the current peptide scoring array ==$>$ useful for qsort. \end{DoxyCompactList}\item 
+void \textbf{ sort\+\_\+and\+\_\+init\+\_\+with\+\_\+peptide\+\_\+scoring} ()
+\begin{DoxyCompactList}\small\item\em Procedure which allows to sort the peptides\+\_\+scoring in a decreasing order and initialises the array of peptides sequences. \end{DoxyCompactList}\item 
+void \textbf{ fprintf\+\_\+ascq\+\_\+me\+\_\+peptide\+\_\+scoring} (FILE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Procedure which prints in a file the ASCQ\+\_\+\+ME scoring for the peptides of each result protein in order to use them in a spreadsheet program. \end{DoxyCompactList}\item 
+void \textbf{ fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+xml} (FILE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Procedure which prints in a file the ASCQ\+\_\+\+ME results in a xml format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition of the methods to use and display ASCQ\+\_\+\+ME results. 
+
+\begin{DoxyAuthor}{Author}
+Jean-\/\+Charles BOISSON (2006-\/2008). 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{ascq__me__display_8h_ae43c2670063b2326937c6b98cd56b585}} 
+\index{ascq\_me\_display.h@{ascq\_me\_display.h}!add\_protein@{add\_protein}}
+\index{add\_protein@{add\_protein}!ascq\_me\_display.h@{ascq\_me\_display.h}}
+\doxysubsubsection{add\_protein()}
+{\footnotesize\ttfamily void add\+\_\+protein (\begin{DoxyParamCaption}\item[{char $\ast$}]{description,  }\item[{char $\ast$}]{sequence,  }\item[{\textbf{ complex\+\_\+t} $\ast$}]{spectrum,  }\item[{double}]{score }\end{DoxyParamCaption})}
+
+
+
+Procedure which adds and manages a new saved protein. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em description} & The protein description. \\
+\hline
+{\em sequence} & The protein sequence. \\
+\hline
+{\em spectrum} & The protein simulated spectrum. \\
+\hline
+{\em score} & The protein score. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 206 of file ascq\+\_\+me\+\_\+display.\+cpp.
+
+
+
+References copy\+\_\+formula(), copy\+\_\+spectrum(), current\+\_\+peptide\+\_\+formulae, current\+\_\+peptide\+\_\+scores, current\+\_\+peptides, error(), free\+\_\+n\+\_\+formula(), get\+\_\+nb\+\_\+displayed\+\_\+proteins(), link\+\_\+between\+\_\+score\+\_\+and\+\_\+others, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, nb\+\_\+current\+\_\+peptides, nb\+\_\+saved\+\_\+proteins, peptide\+\_\+formulae, peptide\+\_\+number, peptide\+\_\+scores, peptides, protein\+\_\+descriptions, protein\+\_\+scores, protein\+\_\+sequences, protein\+\_\+spectra, sequence, sort\+\_\+and\+\_\+init\+\_\+with\+\_\+peptide\+\_\+scoring(), and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ascq__me__display_8h_ae43c2670063b2326937c6b98cd56b585_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__display_8h_a738dc5b534babcb45161aab392062e68}} 
+\index{ascq\_me\_display.h@{ascq\_me\_display.h}!ascq\_me\_cleaning@{ascq\_me\_cleaning}}
+\index{ascq\_me\_cleaning@{ascq\_me\_cleaning}!ascq\_me\_display.h@{ascq\_me\_display.h}}
+\doxysubsubsection{ascq\_me\_cleaning()}
+{\footnotesize\ttfamily void ascq\+\_\+me\+\_\+cleaning (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which frees all the memory allocated for ascq\+\_\+me (excepted the structures allocated in \doxyref{ascq\+\_\+me.\+cpp}{p.}{ascq__me_8cpp}). 
+
+
+
+Definition at line 481 of file ascq\+\_\+me\+\_\+display.\+cpp.
+
+
+
+References current\+\_\+peptide\+\_\+scores, free\+\_\+n\+\_\+formula(), link\+\_\+between\+\_\+score\+\_\+and\+\_\+others, link\+\_\+between\+\_\+score\+\_\+and\+\_\+peptides, nb\+\_\+current\+\_\+peptides, nb\+\_\+saved\+\_\+proteins, peptide\+\_\+formulae, peptide\+\_\+number, peptide\+\_\+scores, peptides, protein\+\_\+descriptions, protein\+\_\+scores, protein\+\_\+sequences, and protein\+\_\+spectra.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ascq__me__display_8h_a738dc5b534babcb45161aab392062e68_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__display_8h_a68e65deee77b6737a3959ba16918e443}} 
+\index{ascq\_me\_display.h@{ascq\_me\_display.h}!compare\_peptide\_score\_from\_indices@{compare\_peptide\_score\_from\_indices}}
+\index{compare\_peptide\_score\_from\_indices@{compare\_peptide\_score\_from\_indices}!ascq\_me\_display.h@{ascq\_me\_display.h}}
+\doxysubsubsection{compare\_peptide\_score\_from\_indices()}
+{\footnotesize\ttfamily int compare\+\_\+peptide\+\_\+score\+\_\+from\+\_\+indices (\begin{DoxyParamCaption}\item[{const void $\ast$}]{first,  }\item[{const void $\ast$}]{second }\end{DoxyParamCaption})}
+
+
+
+Procedure which compares two partial scores from the score indexes in the current peptide scoring array ==$>$ useful for qsort. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & a void pointer that is in reality an index to a peptide score. \\
+\hline
+{\em second} & a void pointer that is also an index to a peptide score. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, 0 or -\/1 $<$=$>$ the first is inferior,equal or superior to the second. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+It\textquotesingle{}s for a decreasing order. 
+\end{DoxyWarning}
+
+
+Definition at line 649 of file ascq\+\_\+me\+\_\+display.\+cpp.
+
+
+
+References current\+\_\+peptide\+\_\+scores, error(), and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by sort\+\_\+and\+\_\+init\+\_\+with\+\_\+peptide\+\_\+scoring().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{ascq__me__display_8h_a68e65deee77b6737a3959ba16918e443_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__display_8h_a9aeda6435efe15476c23b3b3c57e8b01}} 
+\index{ascq\_me\_display.h@{ascq\_me\_display.h}!compare\_peptide\_scores@{compare\_peptide\_scores}}
+\index{compare\_peptide\_scores@{compare\_peptide\_scores}!ascq\_me\_display.h@{ascq\_me\_display.h}}
+\doxysubsubsection{compare\_peptide\_scores()}
+{\footnotesize\ttfamily int compare\+\_\+peptide\+\_\+scores (\begin{DoxyParamCaption}\item[{const void $\ast$}]{first,  }\item[{const void $\ast$}]{second }\end{DoxyParamCaption})}
+
+
+
+Procedure which compares two partial\+\_\+score ==$>$ useful for qsort. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & a void pointer that is in reality a peptide score. \\
+\hline
+{\em second} & a void pointer which is also a peptide score. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, 0 or -\/1 $<$=$>$ the first is inferior,equal or superior to the second. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+It is for a decreasing order. 
+\end{DoxyWarning}
+
+
+Definition at line 622 of file ascq\+\_\+me\+\_\+display.\+cpp.
+
+
+
+References current\+\_\+peptide\+\_\+scores, error(), and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by sort\+\_\+and\+\_\+init\+\_\+with\+\_\+peptide\+\_\+scoring().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{ascq__me__display_8h_a9aeda6435efe15476c23b3b3c57e8b01_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__display_8h_a6fee676f2e668e4d66dbaa1524e923c3}} 
+\index{ascq\_me\_display.h@{ascq\_me\_display.h}!fprintf\_ascq\_me\_peptide\_scoring@{fprintf\_ascq\_me\_peptide\_scoring}}
+\index{fprintf\_ascq\_me\_peptide\_scoring@{fprintf\_ascq\_me\_peptide\_scoring}!ascq\_me\_display.h@{ascq\_me\_display.h}}
+\doxysubsubsection{fprintf\_ascq\_me\_peptide\_scoring()}
+{\footnotesize\ttfamily void fprintf\+\_\+ascq\+\_\+me\+\_\+peptide\+\_\+scoring (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints in a file the ASCQ\+\_\+\+ME scoring for the peptides of each result protein in order to use them in a spreadsheet program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file where the data will be written. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 719 of file ascq\+\_\+me\+\_\+display.\+cpp.
+
+
+
+References get\+\_\+weight(), link\+\_\+between\+\_\+score\+\_\+and\+\_\+others, nb\+\_\+saved\+\_\+proteins, peptide\+\_\+formulae, peptide\+\_\+number, peptide\+\_\+scores, and peptides.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ascq__me__display_8h_a6fee676f2e668e4d66dbaa1524e923c3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__display_8h_a69a299d4b6955e1914b82bda7904a678}} 
+\index{ascq\_me\_display.h@{ascq\_me\_display.h}!fprintf\_ascq\_me\_results@{fprintf\_ascq\_me\_results}}
+\index{fprintf\_ascq\_me\_results@{fprintf\_ascq\_me\_results}!ascq\_me\_display.h@{ascq\_me\_display.h}}
+\doxysubsubsection{fprintf\_ascq\_me\_results()}
+{\footnotesize\ttfamily void fprintf\+\_\+ascq\+\_\+me\+\_\+results (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints in a file the ASCQ\+\_\+\+ME results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The considered file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 440 of file ascq\+\_\+me\+\_\+display.\+cpp.
+
+
+
+References free\+\_\+formula(), get\+\_\+decoy\+\_\+score(), get\+\_\+formula\+\_\+from\+\_\+sequence(), get\+\_\+peptide\+\_\+score\+\_\+threshold(), get\+\_\+weight(), is\+\_\+decoy\+\_\+mode\+\_\+activated(), link\+\_\+between\+\_\+score\+\_\+and\+\_\+others, nb\+\_\+saved\+\_\+proteins, peptide\+\_\+formulae, peptide\+\_\+number, peptide\+\_\+scores, peptides, protein\+\_\+descriptions, protein\+\_\+scores, protein\+\_\+sequences, and TRUE.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ascq__me__display_8h_a69a299d4b6955e1914b82bda7904a678_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__display_8h_ae76b7c857c623dd724cbb28af5928821}} 
+\index{ascq\_me\_display.h@{ascq\_me\_display.h}!fprintf\_ascq\_me\_results\_table\_form@{fprintf\_ascq\_me\_results\_table\_form}}
+\index{fprintf\_ascq\_me\_results\_table\_form@{fprintf\_ascq\_me\_results\_table\_form}!ascq\_me\_display.h@{ascq\_me\_display.h}}
+\doxysubsubsection{fprintf\_ascq\_me\_results\_table\_form()}
+{\footnotesize\ttfamily void fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+table\+\_\+form (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints in a file the ASCQ\+\_\+\+ME results in order to use them in spreadsheet programs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file where the results will be written. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 517 of file ascq\+\_\+me\+\_\+display.\+cpp.
+
+
+
+References compute\+\_\+correlation(), free\+\_\+formula(), get\+\_\+exp\+\_\+spectrum(), get\+\_\+formula\+\_\+from\+\_\+sequence(), get\+\_\+maximum\+\_\+mass(), get\+\_\+minimum\+\_\+mass(), get\+\_\+step(), get\+\_\+weight(), link\+\_\+between\+\_\+score\+\_\+and\+\_\+others, nb\+\_\+saved\+\_\+proteins, PROGRAM\+\_\+\+LIMITATION, protein\+\_\+descriptions, protein\+\_\+scores, protein\+\_\+sequences, and protein\+\_\+spectra.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ascq__me__display_8h_ae76b7c857c623dd724cbb28af5928821_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__display_8h_a5248d0841151eb1e867c6c466a57dc0b}} 
+\index{ascq\_me\_display.h@{ascq\_me\_display.h}!fprintf\_ascq\_me\_results\_xml@{fprintf\_ascq\_me\_results\_xml}}
+\index{fprintf\_ascq\_me\_results\_xml@{fprintf\_ascq\_me\_results\_xml}!ascq\_me\_display.h@{ascq\_me\_display.h}}
+\doxysubsubsection{fprintf\_ascq\_me\_results\_xml()}
+{\footnotesize\ttfamily void fprintf\+\_\+ascq\+\_\+me\+\_\+results\+\_\+xml (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints in a file the ASCQ\+\_\+\+ME results in a xml format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 763 of file ascq\+\_\+me\+\_\+display.\+cpp.
+
+
+
+References free\+\_\+formula(), get\+\_\+decoy\+\_\+score(), get\+\_\+formula\+\_\+from\+\_\+sequence(), get\+\_\+weight(), link\+\_\+between\+\_\+score\+\_\+and\+\_\+others, nb\+\_\+saved\+\_\+proteins, peptide\+\_\+number, peptide\+\_\+scores, peptides, protein\+\_\+descriptions, protein\+\_\+scores, and protein\+\_\+sequences.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ascq__me__display_8h_a5248d0841151eb1e867c6c466a57dc0b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__display_8h_aec53224e360c3cd93d56958ced727cf3}} 
+\index{ascq\_me\_display.h@{ascq\_me\_display.h}!free\_ascq\_me\_display@{free\_ascq\_me\_display}}
+\index{free\_ascq\_me\_display@{free\_ascq\_me\_display}!ascq\_me\_display.h@{ascq\_me\_display.h}}
+\doxysubsubsection{free\_ascq\_me\_display()}
+{\footnotesize\ttfamily void free\+\_\+ascq\+\_\+me\+\_\+display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which frees all the structures useful for the ASCQ\+\_\+\+ME display. 
+
+\mbox{\label{ascq__me__display_8h_afb3245c46e378e1cb3eba863871815c1}} 
+\index{ascq\_me\_display.h@{ascq\_me\_display.h}!init\_ascq\_me\_display@{init\_ascq\_me\_display}}
+\index{init\_ascq\_me\_display@{init\_ascq\_me\_display}!ascq\_me\_display.h@{ascq\_me\_display.h}}
+\doxysubsubsection{init\_ascq\_me\_display()}
+{\footnotesize\ttfamily void init\+\_\+ascq\+\_\+me\+\_\+display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which inits all the useful structure for ASCQ\+\_\+\+ME display. 
+
+
+
+Definition at line 132 of file ascq\+\_\+me\+\_\+display.\+cpp.
+
+
+
+References error(), get\+\_\+nb\+\_\+displayed\+\_\+proteins(), link\+\_\+between\+\_\+score\+\_\+and\+\_\+others, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, peptide\+\_\+formulae, peptide\+\_\+number, peptide\+\_\+scores, peptides, protein\+\_\+descriptions, protein\+\_\+scores, protein\+\_\+sequences, and protein\+\_\+spectra.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{ascq__me__display_8h_afb3245c46e378e1cb3eba863871815c1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__display_8h_a0bb3f9f41183de49bbd12d954b4b8975}} 
+\index{ascq\_me\_display.h@{ascq\_me\_display.h}!printf\_ascq\_me\_results@{printf\_ascq\_me\_results}}
+\index{printf\_ascq\_me\_results@{printf\_ascq\_me\_results}!ascq\_me\_display.h@{ascq\_me\_display.h}}
+\doxysubsubsection{printf\_ascq\_me\_results()}
+{\footnotesize\ttfamily void printf\+\_\+ascq\+\_\+me\+\_\+results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints on the stdout the ASCQ\+\_\+\+ME results. 
+
+
+
+Definition at line 417 of file ascq\+\_\+me\+\_\+display.\+cpp.
+
+
+
+References free\+\_\+formula(), get\+\_\+decoy\+\_\+score(), get\+\_\+formula\+\_\+from\+\_\+sequence(), get\+\_\+weight(), is\+\_\+decoy\+\_\+mode\+\_\+activated(), link\+\_\+between\+\_\+score\+\_\+and\+\_\+others, nb\+\_\+saved\+\_\+proteins, protein\+\_\+descriptions, protein\+\_\+scores, protein\+\_\+sequences, and TRUE.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ascq__me__display_8h_a0bb3f9f41183de49bbd12d954b4b8975_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__display_8h_a566635f4777ddf88fdae7faedd6e4744}} 
+\index{ascq\_me\_display.h@{ascq\_me\_display.h}!save\_partial\_peptide\_scoring@{save\_partial\_peptide\_scoring}}
+\index{save\_partial\_peptide\_scoring@{save\_partial\_peptide\_scoring}!ascq\_me\_display.h@{ascq\_me\_display.h}}
+\doxysubsubsection{save\_partial\_peptide\_scoring()}
+{\footnotesize\ttfamily void save\+\_\+partial\+\_\+peptide\+\_\+scoring (\begin{DoxyParamCaption}\item[{double $\ast$}]{peptide\+\_\+scoring,  }\item[{int}]{nb\+\_\+peptides }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to save the partial peptide scoring of the current protein. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em peptide\+\_\+scoring} & The current peptide scoring. \\
+\hline
+{\em nb\+\_\+peptides} & The peptide number. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 592 of file ascq\+\_\+me\+\_\+display.\+cpp.
+
+
+
+References current\+\_\+peptide\+\_\+scores, error(), link\+\_\+between\+\_\+score\+\_\+and\+\_\+peptides, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, and nb\+\_\+current\+\_\+peptides.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{ascq__me__display_8h_a566635f4777ddf88fdae7faedd6e4744_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{ascq__me__display_8h_a939ea81b7249e09472db9e9de2690453}} 
+\index{ascq\_me\_display.h@{ascq\_me\_display.h}!sort\_and\_init\_with\_peptide\_scoring@{sort\_and\_init\_with\_peptide\_scoring}}
+\index{sort\_and\_init\_with\_peptide\_scoring@{sort\_and\_init\_with\_peptide\_scoring}!ascq\_me\_display.h@{ascq\_me\_display.h}}
+\doxysubsubsection{sort\_and\_init\_with\_peptide\_scoring()}
+{\footnotesize\ttfamily void sort\+\_\+and\+\_\+init\+\_\+with\+\_\+peptide\+\_\+scoring (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to sort the peptides\+\_\+scoring in a decreasing order and initialises the array of peptides sequences. 
+
+qsort is used thanks to the methods compare\+\_\+peptides\+\_\+score and compare\+\_\+peptides\+\_\+score\+\_\+from\+\_\+indices. 
+
+Definition at line 676 of file ascq\+\_\+me\+\_\+display.\+cpp.
+
+
+
+References compare\+\_\+peptide\+\_\+score\+\_\+from\+\_\+indices(), compare\+\_\+peptide\+\_\+scores(), current\+\_\+peptide\+\_\+formulae, current\+\_\+peptide\+\_\+scores, current\+\_\+peptides, error(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index(), get\+\_\+peptide\+\_\+sequence(), link\+\_\+between\+\_\+score\+\_\+and\+\_\+peptides, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, and nb\+\_\+current\+\_\+peptides.
+
+
+
+Referenced by add\+\_\+protein().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ascq__me__display_8h_a939ea81b7249e09472db9e9de2690453_cgraph}
+\end{center}
+\end{figure}

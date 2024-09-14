@@ -1,0 +1,5 @@
+<map id="enzym_load" name="enzym_load">
+<area shape="rect" id="node1" title="Procedure which initialized the enztable_t structure from a file." alt="" coords="5,5,107,32"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="297,5,351,32"/>
+<area shape="rect" id="node3" href="$cleavage_8cpp.html#ac58a41900496b50ee5828266870644aa" title="Function which translates according to a grammar a character a sequence into a complete cleavage rule..." alt="" coords="155,31,249,57"/>
+</map>

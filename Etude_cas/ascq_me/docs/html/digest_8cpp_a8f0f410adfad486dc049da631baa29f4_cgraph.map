@@ -1,0 +1,12 @@
+<map id="free_util_digestion" name="free_util_digestion">
+<area shape="rect" id="node1" title="Procedure which frees all the data useful for the digestion (enzym table for the moment)." alt="" coords="5,215,148,242"/>
+<area shape="rect" id="node2" href="$cleavage_8cpp.html#a68f3408dd74149469201ba724f8b66c4" title="Procedure which frees an enzyme table." alt="" coords="196,63,335,90"/>
+<area shape="rect" id="node7" href="$formula_8cpp.html#a4c746199d04b732d41c72f52bb05cdd9" title="Free the memory allocated for a formula." alt="" coords="383,215,489,242"/>
+<area shape="rect" id="node10" href="$digest_8cpp.html#a11d3b212638a310c07b9ce18619d9456" title="Procedure which free the memory allocated for the post&#45;translational modifications of a peptide." alt="" coords="213,316,317,343"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="877,164,931,191"/>
+<area shape="rect" id="node4" href="$cleavage_8cpp.html#adbf86fc5a884ae28fea764c08bc488fb" title="Procedure which frees the content of a enzt structure." alt="" coords="395,63,477,90"/>
+<area shape="rect" id="node5" href="$cleavage_8cpp.html#a6cbb9dbebd384d9abf403a850fecfa55" title="Procedure which frees the content of a cplt structure." alt="" coords="565,88,644,115"/>
+<area shape="rect" id="node6" href="$cleavage_8cpp.html#aa72c64491600445e412ab877f6bfc2f7" title="Procedure which frees the content of a cpt structure." alt="" coords="737,139,812,166"/>
+<area shape="rect" id="node8" href="$formula_8cpp.html#a6a81bdde62cda8c4d6ed43d9b16b4c26" title="Procedure which frees the memory allocated for a composition." alt="" coords="537,240,672,267"/>
+<area shape="rect" id="node9" href="$formula_8cpp.html#aa924d9fff6ed2c0d2168efc91d41e03a" title="Local procedure that frees the memory allocated for an element structure." alt="" coords="720,291,829,318"/>
+</map>

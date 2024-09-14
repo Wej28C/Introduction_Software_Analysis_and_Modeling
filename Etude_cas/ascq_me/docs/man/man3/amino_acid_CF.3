@@ -1,0 +1,62 @@
+.TH "amino_acid_CF" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+amino_acid_CF \- Structure representing an amino acid\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <aa\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBformula_t\fP * \fBform\fP"
+.br
+.RI "The radical formula\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBadd_modif\fP"
+.br
+.RI "The removing atoms for modifications\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBsub_modif\fP"
+.br
+.RI "The added atoms for modifications\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure representing an amino acid\&. 
+.PP
+Definition at line 58 of file aa\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBformula_t\fP* amino_acid_CF::add_modif"
+
+.PP
+The removing atoms for modifications\&. 
+.PP
+Definition at line 63 of file aa\&.h\&.
+.PP
+Referenced by get_amino_acid_table()\&.
+.SS "\fBformula_t\fP* amino_acid_CF::form"
+
+.PP
+The radical formula\&. 
+.PP
+Definition at line 61 of file aa\&.h\&.
+.PP
+Referenced by digest(), get_amino_acid(), get_amino_acid_table(), get_formula_from_sequence(), get_formulae_of_peptides(), get_peptide_formula_from_another_protein(), and get_peptide_formula_from_index()\&.
+.SS "\fBformula_t\fP* amino_acid_CF::sub_modif"
+
+.PP
+The added atoms for modifications\&. 
+.PP
+Definition at line 65 of file aa\&.h\&.
+.PP
+Referenced by get_amino_acid_table()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

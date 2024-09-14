@@ -1,0 +1,454 @@
+.TH "modifications_for_digestion.h" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+modifications_for_digestion.h \- Definition of the specifications for the post-translation modifications in the digestion case\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'modification_table\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBpost_traductional_modification\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFIXED\fP   0"
+.br
+.RI "Definition that corresponds to a fixed modification\&. "
+.ti -1c
+.RI "#define \fBVARIABLE\fP   1"
+.br
+.RI "Definition that corresponds to a variable modification\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBpost_traductional_modification\fP \fBpost_translational_modification_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBprint_modification_configuration\fP ()"
+.br
+.RI "Procedure which prints the current configuration of activated modifications on the stdout\&. "
+.ti -1c
+.RI "void \fBfprint_modification_configuration\fP (FILE *file)"
+.br
+.RI "Procedure which prints the current configuration of activated modifications in a file\&. "
+.ti -1c
+.RI "void \fBfprint_xml_modification_configuration\fP (FILE *file)"
+.br
+.RI "Procedure which prints the current configuration of activated modifications in a file in a XML format\&. "
+.ti -1c
+.RI "void \fBload_modification_configuration\fP (char *configuration)"
+.br
+.RI "Procedure which loads the configuration for the modifications\&. "
+.ti -1c
+.RI "void \fBadd_modification\fP (int type, int id)"
+.br
+.RI "Procedure which allows to activate a new modification\&. "
+.ti -1c
+.RI "void \fBfree_activated_modification\fP ()"
+.br
+.RI "Procedure which allows to free all the initialised modifications\&. "
+.ti -1c
+.RI "int \fBget_number_of_activated_modifications\fP ()"
+.br
+.RI "Function which returns the number of activated modifications\&. "
+.ti -1c
+.RI "int \fBcan_be_used_on_for_digestion\fP (int modif, char amino_acid, int place, int size, int first)"
+.br
+.RI "Function which indicates if the given amino acid can have the indicated modification\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBget_formula_to_add\fP (int modif)"
+.br
+.RI "Function which returns the formula to add according to the indicated modification\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBget_formula_to_sub\fP (int modif)"
+.br
+.RI "Function which returns the formula to sub according the indicated modification\&. "
+.ti -1c
+.RI "int \fBget_modification_type\fP (int modif)"
+.br
+.RI "Function which returns the type of modification according the given index\&. "
+.ti -1c
+.RI "void \fBapply_modification\fP (\fBformula_t\fP *\fBformula\fP, int modif)"
+.br
+.RI "Procedure which applies a modification on a formula\&. "
+.ti -1c
+.RI "char * \fBget_activated_modification_symbol\fP (int modif)"
+.br
+.RI "Function which returns the small name (symbol) of a modification\&. "
+.ti -1c
+.RI "char * \fBget_activated_modification_name\fP (int modif)"
+.br
+.RI "Function which returns the full name of a modification\&. "
+.ti -1c
+.RI "void \fBdigestion_modification_initialization\fP (const char *configuration)"
+.br
+.RI "Procedure that allows to initialize all the post translational modifications for the digestion\&. "
+.ti -1c
+.RI "int \fBget_global_modification_index\fP (int modif)"
+.br
+.RI "Function which returns the global index of the modification\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition of the specifications for the post-translation modifications in the digestion case\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jean-Charles BOISSON (2006-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBmodifications_for_digestion\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define FIXED   0"
+
+.PP
+Definition that corresponds to a fixed modification\&. 
+.PP
+Definition at line 57 of file modifications_for_digestion\&.h\&.
+.SS "#define VARIABLE   1"
+
+.PP
+Definition that corresponds to a variable modification\&. 
+.PP
+Definition at line 62 of file modifications_for_digestion\&.h\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBpost_traductional_modification\fP \fBpost_translational_modification_t\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "void add_modification (int type, int id)"
+
+.PP
+Procedure which allows to activate a new modification\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItype\fP It can be FIXED or VARIABLE\&. 
+.br
+\fIid\fP The modification index (see \fBmodification_table\&.h\fP)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 187 of file modifications_for_digestion\&.cpp\&.
+.PP
+References error(), FALSE, FIXED, get_total_number_of_modifications(), MEMORY_ALLOCATION_ERROR, post_traductional_modification::modification, modifications, nb_modifications, TRUE, post_traductional_modification::type, USAGE_ERROR, and VARIABLE\&.
+.PP
+Referenced by digestion_modification_initialization(), and load_modification_configuration()\&.
+.SS "void apply_modification (\fBformula_t\fP * formula, int modif)"
+
+.PP
+Procedure which applies a modification on a formula\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIformula\fP The formula where the modification have to be applied\&. 
+.br
+\fImodif\fP The modification index\&. 
+.RE
+.PP
+
+.PP
+Definition at line 330 of file modifications_for_digestion\&.cpp\&.
+.PP
+References add_formula(), error(), EXECUTION_ERROR, FALSE, get_formula_to_add(), get_formula_to_sub(), nb_modifications, sub_formula(), and USAGE_ERROR\&.
+.PP
+Referenced by get_formulae_of_peptides(), get_peptide_formula_from_another_protein(), and get_peptide_formula_from_index()\&.
+.SS "int can_be_used_on_for_digestion (int modif, char amino_acid, int place, int size, int first)"
+
+.PP
+Function which indicates if the given amino acid can have the indicated modification\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The chosen modification index\&. 
+.br
+\fIamino_acid\fP An amino acid\&. 
+.br
+\fIplace\fP Its place\&. 
+.br
+\fIsize\fP The size of the protein/peptide\&. 
+.br
+\fIfirst\fP The last parameter indicates if the amino acid is the first of the complete protein or the first peptide\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+The first place <=> N-term, the last one <=> C-term\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE (see \fButil\&.h\fP)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 266 of file modifications_for_digestion\&.cpp\&.
+.PP
+References can_be_used_on(), error(), modifications, nb_modifications, and USAGE_ERROR\&.
+.PP
+Referenced by compute_post_traductional_modifications_one_peptide()\&.
+.SS "void digestion_modification_initialization (const char * configuration)"
+
+.PP
+Procedure that allows to initialize all the post translational modifications for the digestion\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconfiguration\fP The modification configuration\&. 
+.RE
+.PP
+
+.PP
+Definition at line 381 of file modifications_for_digestion\&.cpp\&.
+.PP
+References add_modification(), error(), FALSE, FIXED, MEMORY_ALLOCATION_ERROR, USAGE_ERROR, and VARIABLE\&.
+.SS "void fprint_modification_configuration (FILE * file)"
+
+.PP
+Procedure which prints the current configuration of activated modifications in a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file where we want to print the configuration\&. 
+.RE
+.PP
+
+.PP
+Definition at line 75 of file modifications_for_digestion\&.cpp\&.
+.PP
+References FIXED, get_modification_name(), modifications, and nb_modifications\&.
+.PP
+Referenced by fprint_configuration()\&.
+.SS "void fprint_xml_modification_configuration (FILE * file)"
+
+.PP
+Procedure which prints the current configuration of activated modifications in a file in a XML format\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file where we want to print the configuration\&. 
+.RE
+.PP
+
+.PP
+Definition at line 87 of file modifications_for_digestion\&.cpp\&.
+.PP
+References FIXED, get_modification_name(), modifications, and nb_modifications\&.
+.PP
+Referenced by fprint_configuration_xml()\&.
+.SS "void free_activated_modification ()"
+
+.PP
+Procedure which allows to free all the initialised modifications\&. 
+.PP
+Definition at line 251 of file modifications_for_digestion\&.cpp\&.
+.PP
+References modifications, and nb_modifications\&.
+.PP
+Referenced by ascq_me_configuration_cleaning()\&.
+.SS "char * get_activated_modification_name (int modif)"
+
+.PP
+Function which returns the full name of a modification\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The modification index\&. 
+.RE
+.PP
+
+.PP
+Definition at line 370 of file modifications_for_digestion\&.cpp\&.
+.PP
+References error(), get_modification_name(), modifications, nb_modifications, and USAGE_ERROR\&.
+.SS "char * get_activated_modification_symbol (int modif)"
+
+.PP
+Function which returns the small name (symbol) of a modification\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The modification index\&. 
+.RE
+.PP
+
+.PP
+Definition at line 359 of file modifications_for_digestion\&.cpp\&.
+.PP
+References error(), get_modification_symbol(), modifications, nb_modifications, and USAGE_ERROR\&.
+.PP
+Referenced by fprint_peptide(), get_peptide_sequence(), and print_peptide()\&.
+.SS "\fBformula_t\fP * get_formula_to_add (int modif)"
+
+.PP
+Function which returns the formula to add according to the indicated modification\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The modification index\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The formula\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+The result can be NULL if no formula is needed to add to apply the modification\&. 
+.RE
+.PP
+
+.PP
+Definition at line 277 of file modifications_for_digestion\&.cpp\&.
+.PP
+References error(), get_modification_formula_to_add(), modifications, formula::nb_comp, nb_modifications, and USAGE_ERROR\&.
+.PP
+Referenced by add_peptide_modification(), and apply_modification()\&.
+.SS "\fBformula_t\fP * get_formula_to_sub (int modif)"
+
+.PP
+Function which returns the formula to sub according the indicated modification\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The modification index\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The formula\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+The result can be NULL if no formula is needed to sub to apply the modification\&. 
+.RE
+.PP
+
+.PP
+Definition at line 298 of file modifications_for_digestion\&.cpp\&.
+.PP
+References error(), get_modification_formula_to_sub(), modifications, formula::nb_comp, nb_modifications, and USAGE_ERROR\&.
+.PP
+Referenced by add_peptide_modification(), and apply_modification()\&.
+.SS "int get_global_modification_index (int modif)"
+
+.PP
+Function which returns the global index of the modification\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The index for the digestion modification\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The global index in order to use the functions of the modification table\&. 
+.RE
+.PP
+
+.PP
+Definition at line 469 of file modifications_for_digestion\&.cpp\&.
+.PP
+References error(), post_traductional_modification::modification, modifications, nb_modifications, and USAGE_ERROR\&.
+.SS "int get_modification_type (int modif)"
+
+.PP
+Function which returns the type of modification according the given index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The modification index\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The corresponding type\&. 
+.RE
+.PP
+
+.PP
+Definition at line 319 of file modifications_for_digestion\&.cpp\&.
+.PP
+References error(), modifications, nb_modifications, post_traductional_modification::type, and USAGE_ERROR\&.
+.PP
+Referenced by compute_post_traductional_modifications_one_peptide()\&.
+.SS "int get_number_of_activated_modifications ()"
+
+.PP
+Function which returns the number of activated modifications\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The number of activated modifications\&. 
+.RE
+.PP
+
+.PP
+Definition at line 260 of file modifications_for_digestion\&.cpp\&.
+.PP
+References nb_modifications\&.
+.PP
+Referenced by add_peptide_modification(), compute_post_traductional_modifications_one_peptide(), fprint_configuration(), fprint_configuration_xml(), print_configuration(), and real_digest()\&.
+.SS "void load_modification_configuration (char * configuration)"
+
+.PP
+Procedure which loads the configuration for the modifications\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconfiguration\fP The current configuration to load\&. 
+.RE
+.PP
+
+.PP
+Definition at line 99 of file modifications_for_digestion\&.cpp\&.
+.PP
+References add_modification(), error(), FALSE, FIXED, MEMORY_ALLOCATION_ERROR, USAGE_ERROR, and VARIABLE\&.
+.PP
+Referenced by load_string_keyword()\&.
+.SS "void print_modification_configuration ()"
+
+.PP
+Procedure which prints the current configuration of activated modifications on the stdout\&. 
+.PP
+Definition at line 63 of file modifications_for_digestion\&.cpp\&.
+.PP
+References FIXED, get_modification_name(), modifications, and nb_modifications\&.
+.PP
+Referenced by print_configuration()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

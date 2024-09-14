@@ -1,0 +1,4 @@
+<map id="set_maximum_peptide_length" name="set_maximum_peptide_length">
+<area shape="rect" id="node1" title="Procedure which sets the maximum allowed length in amino acids for a peptide." alt="" coords="5,5,177,47"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="225,13,279,39"/>
+</map>

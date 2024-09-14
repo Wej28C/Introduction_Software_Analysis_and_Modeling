@@ -1,0 +1,110 @@
+.TH "peptide" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+peptide \- Structure that describes a peptide\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <digest\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "long \fBstartOff\fP"
+.br
+.RI "Start index of a peptide (according to the protein sequence)\&. "
+.ti -1c
+.RI "long \fBendOff\fP"
+.br
+.RI "End index of a peptide (according to the protein sequence)\&. "
+.ti -1c
+.RI "double \fBweight\fP"
+.br
+.RI "The peptide mass\&. "
+.ti -1c
+.RI "int \fBnb_missed_cleavages\fP"
+.br
+.RI "The number of missed cleavage of the peptide\&. "
+.ti -1c
+.RI "int * \fBnb_modif\fP"
+.br
+.RI "The number of post-transltional modification for each amino acid\&. "
+.ti -1c
+.RI "int ** \fBmodifications\fP"
+.br
+.RI "All the post-translational modifications of the peptide\&. "
+.ti -1c
+.RI "int \fBequivalent_to_another\fP"
+.br
+.RI "Value that indicates if this peptide is equivalent to another one due to post-translational modifications\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure that describes a peptide\&. 
+.PP
+Definition at line 65 of file digest\&.h\&.
+.SH "Field Documentation"
+.PP 
+.SS "long peptide::endOff"
+
+.PP
+End index of a peptide (according to the protein sequence)\&. 
+.PP
+Definition at line 70 of file digest\&.h\&.
+.PP
+Referenced by add_peptide_modification(), compute_equivalent_peptides(), compute_post_traductional_modifications_one_peptide(), copy_peptide(), digest(), fprint_peptide(), free_peptide(), fusion_peptide(), get_formulae_of_peptides(), get_peptide_formula_from_another_protein(), get_peptide_formula_from_index(), get_peptide_length_at_index(), get_peptide_sequence(), and print_peptide()\&.
+.SS "int peptide::equivalent_to_another"
+
+.PP
+Value that indicates if this peptide is equivalent to another one due to post-translational modifications\&. 
+.PP
+Definition at line 80 of file digest\&.h\&.
+.PP
+Referenced by compute_equivalent_peptides(), compute_post_traductional_modifications_one_peptide(), copy_peptide(), digest(), fusion_peptide(), and is_equivalent_to_another()\&.
+.SS "int** peptide::modifications"
+
+.PP
+All the post-translational modifications of the peptide\&. 
+.PP
+Definition at line 78 of file digest\&.h\&.
+.PP
+Referenced by add_peptide_modification(), copy_peptide(), digest(), fprint_peptide(), free_peptide(), fusion_peptide(), get_peptide_formula_from_another_protein(), new_peptides_with_missed_cleavages(), and print_peptide()\&.
+.SS "int peptide::nb_missed_cleavages"
+
+.PP
+The number of missed cleavage of the peptide\&. 
+.PP
+Definition at line 74 of file digest\&.h\&.
+.PP
+Referenced by copy_peptide(), digest(), and fusion_peptide()\&.
+.SS "int* peptide::nb_modif"
+
+.PP
+The number of post-transltional modification for each amino acid\&. 
+.PP
+Definition at line 76 of file digest\&.h\&.
+.PP
+Referenced by add_peptide_modification(), copy_peptide(), digest(), fprint_peptide(), free_peptide(), fusion_peptide(), get_formulae_of_peptides(), get_peptide_formula_from_another_protein(), get_peptide_formula_from_index(), get_peptide_sequence(), new_peptides_with_missed_cleavages(), and print_peptide()\&.
+.SS "long peptide::startOff"
+
+.PP
+Start index of a peptide (according to the protein sequence)\&. 
+.PP
+Definition at line 68 of file digest\&.h\&.
+.PP
+Referenced by add_peptide_modification(), compute_equivalent_peptides(), compute_post_traductional_modifications_one_peptide(), copy_peptide(), digest(), fprint_peptide(), free_peptide(), fusion_peptide(), get_formulae_of_peptides(), get_peptide_formula_from_another_protein(), get_peptide_formula_from_index(), get_peptide_length_at_index(), get_peptide_sequence(), and print_peptide()\&.
+.SS "double peptide::weight"
+
+.PP
+The peptide mass\&. 
+.PP
+Definition at line 72 of file digest\&.h\&.
+.PP
+Referenced by add_peptide_modification(), compare_peptides(), compute_post_traductional_modifications_one_peptide(), copy_peptide(), digest(), fusion_peptide(), and new_peptides_with_missed_cleavages()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

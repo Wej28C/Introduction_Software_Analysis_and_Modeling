@@ -1,0 +1,20 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#f63b01", fontcolor="#ffffff", fontsize="10.00", label="main\n94.12%\n(0.00%)"];
+	1 -> 3 [arrowsize="0.84", color="#a9d207", fontcolor="#a9d207", fontsize="10.00", label="69.96%\n1×", labeldistance="2.80", penwidth="2.80"];
+	1 -> 5 [arrowsize="0.49", color="#0c8e92", fontcolor="#0c8e92", fontsize="10.00", label="24.15%\n1×", labeldistance="0.97", penwidth="0.97"];
+	2 [color="#a9d207", fontcolor="#ffffff", fontsize="10.00", label="load_string_keyword(_IO_FILE*, char const*)\n69.96%\n(0.00%)\n10×"];
+	2 -> 4 [arrowsize="0.83", color="#a6d207", fontcolor="#a6d207", fontsize="10.00", label="69.67%\n1×", labeldistance="2.79", penwidth="2.79"];
+	3 [color="#a9d207", fontcolor="#ffffff", fontsize="10.00", label="load_configuration(char*)\n69.96%\n(0.00%)\n1×"];
+	3 -> 2 [arrowsize="0.84", color="#a9d207", fontcolor="#a9d207", fontsize="10.00", label="69.96%\n10×", labeldistance="2.80", penwidth="2.80"];
+	4 [color="#a6d207", fontcolor="#ffffff", fontsize="10.00", label="init_distrib()\n69.67%\n(47.06%)\n1×"];
+	4 -> 6 [arrowsize="0.48", color="#0c8490", fontcolor="#0c8490", fontsize="10.00", label="22.61%\n12236800×", labeldistance="0.90", penwidth="0.90"];
+	5 [color="#0c8e92", fontcolor="#ffffff", fontsize="10.00", label="optimized_isotopic_distribution(formula*, int)\n24.15%\n(5.88%)\n1×"];
+	5 -> 6 [arrowsize="0.35", color="#0d1174", fontcolor="#0d1174", fontsize="10.00", label="0.92%\n499712×", labeldistance="0.50", penwidth="0.50"];
+	5 -> 7 [arrowsize="0.42", color="#0c6389", fontcolor="#0c6389", fontsize="10.00", label="17.35%\n58×", labeldistance="0.69", penwidth="0.69"];
+	6 [color="#0c8a91", fontcolor="#ffffff", fontsize="10.00", label="complex_multiplication(complex, complex)\n23.53%\n(23.53%)\n12736512×"];
+	7 [color="#0c658a", fontcolor="#ffffff", fontsize="10.00", label="integral_normalization(double, int, complex*)\n17.65%\n(17.65%)\n59×"];
+	8 [color="#0d267a", fontcolor="#ffffff", fontsize="10.00", label="complex_addition(complex, complex)\n5.88%\n(5.88%)"];
+}

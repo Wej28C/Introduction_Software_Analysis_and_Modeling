@@ -1,0 +1,5 @@
+<map id="composition" name="composition">
+<area shape="rect" id="node1" title="Structure representing an element with its quantity, for example: C2." alt="" coords="5,184,108,211"/>
+<area shape="rect" id="node2" href="$structelement.html" title="Structure representing an element in the NIST table." alt="" coords="19,95,95,121"/>
+<area shape="rect" id="node3" href="$structisotop.html" title="An isotopic structure represents the isotop of an element." alt="" coords="25,5,88,32"/>
+</map>

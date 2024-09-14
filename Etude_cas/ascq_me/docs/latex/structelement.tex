@@ -1,0 +1,99 @@
+\doxysection{element Struct Reference}
+\label{structelement}\index{element@{element}}
+
+
+Structure representing an element in the NIST table.  
+
+
+
+
+{\ttfamily \#include $<$formula.\+h$>$}
+
+
+
+Collaboration diagram for element\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=112pt]{structelement__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char \textbf{ symbol} [3]
+\begin{DoxyCompactList}\small\item\em The symbol of the element, for example\+: C. \end{DoxyCompactList}\item 
+int \textbf{ nb\+\_\+isotops}
+\begin{DoxyCompactList}\small\item\em The number of isotops. \end{DoxyCompactList}\item 
+\textbf{ isotop\+\_\+t} $\ast$ \textbf{ isotops}
+\begin{DoxyCompactList}\small\item\em The isotops. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing an element in the NIST table. 
+
+Definition at line 74 of file formula.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{structelement_a4c0188b600402cd314008f4a16658948}} 
+\index{element@{element}!isotops@{isotops}}
+\index{isotops@{isotops}!element@{element}}
+\doxysubsubsection{isotops}
+{\footnotesize\ttfamily \textbf{ isotop\+\_\+t}$\ast$ element\+::isotops}
+
+
+
+The isotops. 
+
+
+
+Definition at line 81 of file formula.\+h.
+
+
+
+Referenced by affect\+\_\+atom(), copy\+\_\+one\+\_\+element(), free\+\_\+element(), get\+\_\+element\+\_\+table(), get\+\_\+weight(), init\+\_\+distrib(), and optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{structelement_a8e834ff5b0efca06c8dcddd9925dec15}} 
+\index{element@{element}!nb\_isotops@{nb\_isotops}}
+\index{nb\_isotops@{nb\_isotops}!element@{element}}
+\doxysubsubsection{nb\_isotops}
+{\footnotesize\ttfamily int element\+::nb\+\_\+isotops}
+
+
+
+The number of isotops. 
+
+
+
+Definition at line 79 of file formula.\+h.
+
+
+
+Referenced by affect\+\_\+atom(), copy\+\_\+one\+\_\+element(), fprint\+\_\+element\+\_\+table(), get\+\_\+element\+\_\+table(), init\+\_\+distrib(), optimized\+\_\+isotopic\+\_\+distribution(), and print\+\_\+element\+\_\+table().
+
+\mbox{\label{structelement_aff521fff3239c45261445dc53be62995}} 
+\index{element@{element}!symbol@{symbol}}
+\index{symbol@{symbol}!element@{element}}
+\doxysubsubsection{symbol}
+{\footnotesize\ttfamily char element\+::symbol[3]}
+
+
+
+The symbol of the element, for example\+: C. 
+
+
+
+Definition at line 77 of file formula.\+h.
+
+
+
+Referenced by add\+\_\+element(), copy\+\_\+one\+\_\+element(), formula\+\_\+tochar(), optimized\+\_\+isotopic\+\_\+distribution(), and sub\+\_\+formula().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ formula.\+h}\end{DoxyCompactItemize}

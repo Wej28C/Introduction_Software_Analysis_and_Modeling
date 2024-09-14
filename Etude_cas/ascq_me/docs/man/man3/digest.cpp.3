@@ -1,0 +1,1046 @@
+.TH "digest.cpp" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+digest.cpp \- Implementation of the methods defined in \fBdigest\&.h\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'digest\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdigest\fP ()"
+.br
+.RI "Procedure which realises the digestion with 0 miss-cleavage\&. "
+.ti -1c
+.RI "\fBpeptide_t\fP * \fBget_result_of_digestion\fP (int *nb_peptides)"
+.br
+.RI "Function which returns the peptides resulting of the digestion\&. "
+.ti -1c
+.RI "\fBpeptide_t\fP * \fBget_copie_of_digestion_result\fP (int *nb_peptides)"
+.br
+.RI "Function which allows to gain a copie of the result of the digestion\&. "
+.ti -1c
+.RI "void \fBprint_result_of_digestion\fP (\fBpeptide_t\fP *\fBpeptides\fP, int nb_peptides)"
+.br
+.RI "Procedure which prints on stdout the result of the digestion\&. "
+.ti -1c
+.RI "void \fBfprint_result_of_digestion\fP (FILE *file, \fBpeptide_t\fP *\fBpeptides\fP, int nb_peptides)"
+.br
+.RI "Procedure which prints in a file the result of the digestion\&. "
+.ti -1c
+.RI "void \fBfprint_result_of_digestion_table_format\fP (FILE *file, \fBpeptide_t\fP *\fBpeptides\fP, int nb_peptides)"
+.br
+.RI "Procedure which prints in a file a result of the digestion in a format useful for speadsheet programs\&. "
+.ti -1c
+.RI "\fBpeptide_t\fP * \fBcopy_peptide\fP (\fBpeptide_t\fP *original)"
+.br
+.RI "Function which makes a copy of a peptide\&. "
+.ti -1c
+.RI "\fBpeptide_t\fP * \fBfusion_peptide\fP (\fBpeptide_t\fP *first, \fBpeptide_t\fP *second)"
+.br
+.RI "Function which makes the fusion of two CONTIGUOUS (!!!) peptides\&. "
+.ti -1c
+.RI "void \fBnew_peptides_with_missed_cleavages\fP (int missed_cleavage, int *nb_new_peptides_total)"
+.br
+.RI "Procedure which allows to compute the new peptides gained due to missed cleavages\&. "
+.ti -1c
+.RI "void \fBreal_digest\fP (char *seq)"
+.br
+.RI "Procedure which realises the real digestion according the number of missed cleavages\&. "
+.ti -1c
+.RI "void \fBactivate_full_digestion\fP (int activation)"
+.br
+.RI "Procedure which allows to activate or desactivate the full-digest process i\&.e\&. when it is activated, the digestion do not use the missed cleavage parameter and makes the digestion with all the possible missed cleavages (from 1 to n-1 missed cleavages with n the number of peptides gained without missed cleavages)\&. "
+.ti -1c
+.RI "int \fBcompare_peptides\fP (const void *first, const void *second)"
+.br
+.RI "Procedure which compares two peptides ==> useful for qsort\&. "
+.ti -1c
+.RI "void \fBsort_peptides\fP ()"
+.br
+.RI "Procedure which sorts the current experimental peptides\&. "
+.ti -1c
+.RI "void \fBset_peptide_charge\fP (const char *\fBformula\fP)"
+.br
+.RI "Procedure which allows to set the value of the atom charge\&. "
+.ti -1c
+.RI "double \fBpeptide_charge_weight\fP ()"
+.br
+.RI "Function which allows to get the weight of the atom charge\&. "
+.ti -1c
+.RI "void \fBdefault_peptide_charge\fP ()"
+.br
+.RI "Procedure which sets the atom charge with the default value <=> H formula\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBget_peptide_charge_formula\fP ()"
+.br
+.RI "Function which returns the formula of the atom charge\&. "
+.ti -1c
+.RI "void \fBinit_util_digestion\fP ()"
+.br
+.RI "Procedure which initialises all the data useful for digestion (enzyme table for the moment)\&. "
+.ti -1c
+.RI "void \fBset_used_enzyme\fP (int chosen_enzyme)"
+.br
+.RI "Procedure which sets the chosen enzyme (default is 0 for trypsine see others in enztable\&.aprot)\&. "
+.ti -1c
+.RI "void \fBfree_util_digestion\fP ()"
+.br
+.RI "Procedure which frees all the data useful for the digestion (enzym table for the moment)\&. "
+.ti -1c
+.RI "void \fBset_nb_missed_cleavages\fP (int missed_cleavage)"
+.br
+.RI "Procedure which allows to set the number of authorized missed cleavage\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBget_formulae_of_peptides\fP (int *nb_peptides)"
+.br
+.RI "Function which allows to obtain the result of the digestion in a formulae format\&. "
+.ti -1c
+.RI "int \fBget_nb_missed_cleavages\fP ()"
+.br
+.RI "Function which allows to get the number of authorized missed cleavages\&. "
+.ti -1c
+.RI "int \fBget_activation_full_digest\fP ()"
+.br
+.RI "Function which allows to get the state of the activation of full digestion\&. "
+.ti -1c
+.RI "char * \fBget_used_enzyme\fP ()"
+.br
+.RI "Function which allows to get the name of the used enzyme\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBget_peptide_formula_from_index\fP (int index)"
+.br
+.RI "Function which returns a formula corresponding to a peptide according to its place in the current digestion\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBget_peptide_formula\fP (\fBpeptide_t\fP *\fBpeptide\fP)"
+.br
+.RI "Function which returns a formula corresponding to a wanted peptide of the current digested protein\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBget_peptide_formula_from_another_protein\fP (\fBpeptide_t\fP *\fBpeptide\fP, char *protein_sequence)"
+.br
+.RI "Function which returns a formula corresponding to a wanted peptide that not belongs to the current digested protein\&. "
+.ti -1c
+.RI "void \fBfree_peptide\fP (\fBpeptide_t\fP *\fBpeptide\fP)"
+.br
+.RI "Procedure which free the memory allocated for the post-translational modifications of a peptide\&. "
+.ti -1c
+.RI "void \fBadd_peptide_modification\fP (\fBpeptide_t\fP *\fBpeptide\fP, int amino_acid, int modif)"
+.br
+.RI "Procedure which adds a modification on an amino acid of a peptide\&. "
+.ti -1c
+.RI "void \fBcompute_post_traductional_modifications_global\fP ()"
+.br
+.RI "Procedure which computes peptides gained with post-translational modifications\&. "
+.ti -1c
+.RI "\fBpeptide_t\fP * \fBcompute_post_traductional_modifications_one_peptide\fP (\fBpeptide_t\fP *\fBpeptide\fP, int *nb_new)"
+.br
+.RI "Function which computes the peptides gained with post-translational modifications from one peptide\&. "
+.ti -1c
+.RI "char * \fBget_peptide_sequence\fP (int index)"
+.br
+.RI "Function which returns the sequence of the wanted peptide, this sequence is only for making saves for printing because it can contains modifications name\&. "
+.ti -1c
+.RI "void \fBprint_peptide\fP (\fBpeptide_t\fP *\fBpeptide\fP)"
+.br
+.RI "Procedure which allows to print directly a peptide on the stdout\&. "
+.ti -1c
+.RI "void \fBprint_peptide_index\fP (int index)"
+.br
+.RI "Procedure which prints directly on the screen a peptide of the current digestion (thanks to an index)\&. "
+.ti -1c
+.RI "void \fBfprint_peptide\fP (FILE *file, \fBpeptide_t\fP *\fBpeptide\fP)"
+.br
+.RI "Procedure which allows to print a peptide in a file\&. "
+.ti -1c
+.RI "void \fBfprint_peptide_index\fP (FILE *file, int index)"
+.br
+.RI "Procedure which prints in a file a peptide of the current digestion (thanks to an index)\&. "
+.ti -1c
+.RI "int \fBget_peptide_length_at_index\fP (int index)"
+.br
+.RI "Function which returns the sequence length of a wanted peptide\&. "
+.ti -1c
+.RI "int \fBis_equivalent_to_another\fP (int index)"
+.br
+.RI "Function which indicates if a peptide is equivalent to another one due to variable post-translational modifications\&. "
+.ti -1c
+.RI "void \fBset_maximum_peptide_length\fP (int new_value)"
+.br
+.RI "Procedure which sets the maximum allowed length in amino acids for a peptide\&. "
+.ti -1c
+.RI "int \fBget_maximum_peptide_length\fP ()"
+.br
+.RI "Function which returns the maximum allowed length in amino acids for a peptide\&. "
+.ti -1c
+.RI "void \fBcompute_equivalent_peptides\fP ()"
+.br
+.RI "Procedure which computes for the current digestion, the peptides which has to be marked has equivalent to another one\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBpeptide_t\fP * \fBPeptides\fP = NULL"
+.br
+.RI "Result of the current digestion\&. "
+.ti -1c
+.RI "int \fBNbPeptides\fP =0"
+.br
+.RI "Current digestion peptide number\&. "
+.ti -1c
+.RI "int \fBFULL_DIGESTION\fP =\fBFALSE\fP"
+.br
+.RI "Activation state of the full digest process, TRUE or FALSE (see \fButil\&.h\fP)\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBpeptide_charge_formula\fP =NULL"
+.br
+.RI "Formula to add for the peptide to be charged\&. "
+.ti -1c
+.RI "\fBenztable_t\fP * \fBenztable\fP =NULL"
+.br
+.RI "Enzyme table\&. "
+.ti -1c
+.RI "int \fBenzyme\fP =0"
+.br
+.RI "Index of the current chosen enzyme in the enzyme table\&. "
+.ti -1c
+.RI "int \fBnb_missed_cleavages\fP =0"
+.br
+.RI "Maximum number of missed cleavage\&. "
+.ti -1c
+.RI "char * \fBsequence\fP =NULL"
+.br
+.RI "Sequence of the protein that i currently digested\&. "
+.ti -1c
+.RI "int \fBmaximum_peptide_length\fP =30"
+.br
+.RI "Maximum length in amino acids allowed for a peptide\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of the methods defined in \fBdigest\&.h\fP\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Pierre LAURENCE and David BOENS (2003)\&.
+.br
+ Modified and updated by Jean-Charles BOISSON (2005-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBdigest\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void activate_full_digestion (int activation)"
+
+.PP
+Procedure which allows to activate or desactivate the full-digest process i\&.e\&. when it is activated, the digestion do not use the missed cleavage parameter and makes the digestion with all the possible missed cleavages (from 1 to n-1 missed cleavages with n the number of peptides gained without missed cleavages)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIactivation\fP The parameter which activates (TRUE) or not (FALSE) the full digestion\&. 
+.RE
+.PP
+
+.PP
+Definition at line 693 of file digest\&.cpp\&.
+.PP
+References error(), FALSE, FULL_DIGESTION, TRUE, and USAGE_ERROR\&.
+.PP
+Referenced by load_boolean_keyword()\&.
+.SS "void add_peptide_modification (\fBpeptide_t\fP * peptide, int amino_acid, int modif)"
+
+.PP
+Procedure which adds a modification on an amino acid of a peptide\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpeptide\fP The peptide\&. 
+.br
+\fIamino_acid\fP The amino acid (its index)\&. 
+.br
+\fImodif\fP The wanted modification (its index)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 999 of file digest\&.cpp\&.
+.PP
+References peptide::endOff, error(), get_formula_to_add(), get_formula_to_sub(), get_number_of_activated_modifications(), get_weight(), MEMORY_ALLOCATION_ERROR, peptide::modifications, peptide::nb_modif, peptide::startOff, USAGE_ERROR, and peptide::weight\&.
+.PP
+Referenced by compute_post_traductional_modifications_one_peptide()\&.
+.SS "int compare_peptides (const void * first, const void * second)"
+
+.PP
+Procedure which compares two peptides ==> useful for qsort\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirst\fP a void pointer that is in reality a peptide\&. 
+.br
+\fIsecond\fP a void pointer that is also a peptide\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+-1, 0 or 1 <=> the first is inferior,equal or superior to the second\&. 
+.RE
+.PP
+
+.PP
+Definition at line 707 of file digest\&.cpp\&.
+.PP
+References peptide::weight\&.
+.PP
+Referenced by compute_post_traductional_modifications_one_peptide(), and sort_peptides()\&.
+.SS "void compute_equivalent_peptides ()"
+
+.PP
+Procedure which computes for the current digestion, the peptides which has to be marked has equivalent to another one\&. 
+.PP
+Definition at line 1447 of file digest\&.cpp\&.
+.PP
+References peptide::endOff, equals(), peptide::equivalent_to_another, error(), EXECUTION_ERROR, FALSE, get_peptide_sequence(), NbPeptides, Peptides, peptide::startOff, TRUE, and USAGE_ERROR\&.
+.PP
+Referenced by real_digest()\&.
+.SS "void compute_post_traductional_modifications_global ()"
+
+.PP
+Procedure which computes peptides gained with post-translational modifications\&. 
+.PP
+Definition at line 1084 of file digest\&.cpp\&.
+.PP
+References compute_post_traductional_modifications_one_peptide(), copy_peptide(), error(), free_peptide(), MEMORY_ALLOCATION_ERROR, NbPeptides, and Peptides\&.
+.PP
+Referenced by real_digest()\&.
+.SS "\fBpeptide_t\fP * compute_post_traductional_modifications_one_peptide (\fBpeptide_t\fP * peptide, int * nb_new)"
+
+.PP
+Function which computes the peptides gained with post-translational modifications from one peptide\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpeptide\fP The peptide\&. 
+.br
+\fInb_new\fP The number of new peptides generated (initialised by the function)\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The new peptides\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1145 of file digest\&.cpp\&.
+.PP
+References add_peptide_modification(), can_be_used_on_for_digestion(), compare_peptides(), copy_peptide(), peptide::endOff, peptide::equivalent_to_another, error(), EXECUTION_ERROR, FALSE, FIXED, get_modification_type(), get_number_of_activated_modifications(), maximum_peptide_length, MEMORY_ALLOCATION_ERROR, nb_modifications, sequence, peptide::startOff, TRUE, USAGE_ERROR, and peptide::weight\&.
+.PP
+Referenced by compute_post_traductional_modifications_global()\&.
+.SS "\fBpeptide_t\fP * copy_peptide (\fBpeptide_t\fP * original)"
+
+.PP
+Function which makes a copy of a peptide\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoriginal\fP The peptide we want to copy\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The copy\&. 
+.RE
+.PP
+
+.PP
+Definition at line 341 of file digest\&.cpp\&.
+.PP
+References peptide::endOff, peptide::equivalent_to_another, error(), MEMORY_ALLOCATION_ERROR, peptide::modifications, peptide::nb_missed_cleavages, peptide::nb_modif, peptide::startOff, USAGE_ERROR, and peptide::weight\&.
+.PP
+Referenced by compute_post_traductional_modifications_global(), compute_post_traductional_modifications_one_peptide(), fusion_peptide(), get_copie_of_digestion_result(), and new_peptides_with_missed_cleavages()\&.
+.SS "void default_peptide_charge ()"
+
+.PP
+Procedure which sets the atom charge with the default value <=> H formula\&. 
+.PP
+Definition at line 755 of file digest\&.cpp\&.
+.PP
+References set_peptide_charge()\&.
+.PP
+Referenced by init_util_digestion()\&.
+.SS "void digest ()"
+
+.PP
+Procedure which realises the digestion with 0 miss-cleavage\&. 
+.PP
+Definition at line 101 of file digest\&.cpp\&.
+.PP
+References C_SIDE, enzyme::cpl, cpl_isCleavage2(), peptide::endOff, enzyme_list::enz, enztable, peptide::equivalent_to_another, error(), FALSE, amino_acid_CF::form, free_peptide(), get_amino_acid(), get_util_formula(), get_weight(), MEMORY_ALLOCATION_ERROR, peptide::modifications, N_SIDE, peptide::nb_missed_cleavages, peptide::nb_modif, NbPeptides, peptide_charge_weight(), Peptides, sequence, enzyme::side, peptide::startOff, and peptide::weight\&.
+.PP
+Referenced by real_digest()\&.
+.SS "void fprint_peptide (FILE * file, \fBpeptide_t\fP * peptide)"
+
+.PP
+Procedure which allows to print a peptide in a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file\&. 
+.br
+\fIpeptide\fP The peptide we want to print\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1368 of file digest\&.cpp\&.
+.PP
+References peptide::endOff, error(), get_activated_modification_symbol(), peptide::modifications, peptide::nb_modif, sequence, peptide::startOff, and USAGE_ERROR\&.
+.PP
+Referenced by fprint_peptide_index()\&.
+.SS "void fprint_peptide_index (FILE * file, int index)"
+
+.PP
+Procedure which prints in a file a peptide of the current digestion (thanks to an index)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file\&. 
+.br
+\fIindex\fP The index\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1394 of file digest\&.cpp\&.
+.PP
+References error(), fprint_peptide(), NbPeptides, Peptides, and USAGE_ERROR\&.
+.PP
+Referenced by fprint_result_of_digestion(), and fprint_result_of_digestion_table_format()\&.
+.SS "void fprint_result_of_digestion (FILE * file, \fBpeptide_t\fP * peptides, int nb_peptides)"
+
+.PP
+Procedure which prints in a file the result of the digestion\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file where the result have to be put\&. 
+.br
+\fIpeptides\fP The peptide_t* we want to view to print\&. 
+.br
+\fInb_peptides\fP The peptide number\&. 
+.RE
+.PP
+
+.PP
+Definition at line 288 of file digest\&.cpp\&.
+.PP
+References formula_tochar(), fprint_peptide_index(), free_n_formula(), get_formulae_of_peptides(), nb_missed_cleavages, peptides, and TRUE\&.
+.SS "void fprint_result_of_digestion_table_format (FILE * file, \fBpeptide_t\fP * peptides, int nb_peptides)"
+
+.PP
+Procedure which prints in a file a result of the digestion in a format useful for speadsheet programs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file where the result have to be put\&. 
+.br
+\fIpeptides\fP The peptide_t* we want to print\&. 
+.br
+\fInb_peptides\fP The peptide number\&. 
+.RE
+.PP
+
+.PP
+Definition at line 315 of file digest\&.cpp\&.
+.PP
+References formula_tochar(), fprint_peptide_index(), free_n_formula(), get_formulae_of_peptides(), nb_missed_cleavages, peptides, and TRUE\&.
+.SS "void free_peptide (\fBpeptide_t\fP * peptide)"
+
+.PP
+Procedure which free the memory allocated for the post-translational modifications of a peptide\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpeptide\fP The peptide we want to free the memory\&. 
+.RE
+.PP
+
+.PP
+Definition at line 966 of file digest\&.cpp\&.
+.PP
+References peptide::endOff, error(), FREE_MEMORY_ERROR, peptide::modifications, peptide::nb_modif, and peptide::startOff\&.
+.PP
+Referenced by compute_post_traductional_modifications_global(), digest(), free_util_digestion(), and new_peptides_with_missed_cleavages()\&.
+.SS "void free_util_digestion ()"
+
+.PP
+Procedure which frees all the data useful for the digestion (enzym table for the moment)\&. 
+.PP
+Definition at line 781 of file digest\&.cpp\&.
+.PP
+References enztable, free_enzym_table(), free_formula(), free_peptide(), NbPeptides, peptide_charge_formula, Peptides, and sequence\&.
+.PP
+Referenced by ascq_me_configuration_cleaning()\&.
+.SS "\fBpeptide_t\fP * fusion_peptide (\fBpeptide_t\fP * first, \fBpeptide_t\fP * second)"
+
+.PP
+Function which makes the fusion of two CONTIGUOUS (!!!) peptides\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirst\fP The first peptide\&. 
+.br
+\fIsecond\fP The second peptide\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+The two peptides must be contiguous\&. They are fusionned in this order (first is really before second in the peptidic sequence)\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The new peptide result of the fusion\&. 
+.RE
+.PP
+
+.PP
+Definition at line 420 of file digest\&.cpp\&.
+.PP
+References copy_peptide(), peptide::endOff, peptide::equivalent_to_another, error(), FALSE, get_util_formula(), get_weight(), MEMORY_ALLOCATION_ERROR, peptide::modifications, peptide::nb_missed_cleavages, peptide::nb_modif, peptide_charge_weight(), peptide::startOff, USAGE_ERROR, and peptide::weight\&.
+.PP
+Referenced by new_peptides_with_missed_cleavages()\&.
+.SS "int get_activation_full_digest ()"
+
+.PP
+Function which allows to get the state of the activation of full digestion\&. 
+.PP
+Definition at line 855 of file digest\&.cpp\&.
+.PP
+References FULL_DIGESTION\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "\fBpeptide_t\fP * get_copie_of_digestion_result (int * nb_peptides)"
+
+.PP
+Function which allows to gain a copie of the result of the digestion\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInb_peptides\fP The number of peptides, initialised by the function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The peptide list obtained after the digestion\&. 
+.RE
+.PP
+
+.PP
+Definition at line 239 of file digest\&.cpp\&.
+.PP
+References copy_peptide(), error(), MEMORY_ALLOCATION_ERROR, NbPeptides, and Peptides\&.
+.SS "\fBformula_t\fP * get_formulae_of_peptides (int * nb_peptides)"
+
+.PP
+Function which allows to obtain the result of the digestion in a formulae format\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInb_peptides\fP The peptide number (initialised by the function)\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The peptides in a formulae format\&. 
+.RE
+.PP
+
+.PP
+Definition at line 807 of file digest\&.cpp\&.
+.PP
+References add_formula(), apply_modification(), copy_formula(), peptide::endOff, error(), amino_acid_CF::form, get_amino_acid(), get_peptide_charge_formula(), get_util_formula(), MEMORY_ALLOCATION_ERROR, modifications, peptide::nb_modif, NbPeptides, peptides, Peptides, sequence, and peptide::startOff\&.
+.PP
+Referenced by fprint_result_of_digestion(), fprint_result_of_digestion_table_format(), main(), and print_result_of_digestion()\&.
+.SS "int get_maximum_peptide_length ()"
+
+.PP
+Function which returns the maximum allowed length in amino acids for a peptide\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The maximum allowed length\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1441 of file digest\&.cpp\&.
+.PP
+References maximum_peptide_length\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "int get_nb_missed_cleavages ()"
+
+.PP
+Function which allows to get the number of authorized missed cleavages\&. 
+.PP
+Definition at line 849 of file digest\&.cpp\&.
+.PP
+References nb_missed_cleavages\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "\fBformula_t\fP * get_peptide_charge_formula ()"
+
+.PP
+Function which returns the formula of the atom charge\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The formula of the atom charge (in formula_t* format)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 762 of file digest\&.cpp\&.
+.PP
+References peptide_charge_formula\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), get_formulae_of_peptides(), get_peptide_formula_from_another_protein(), get_peptide_formula_from_index(), and print_configuration()\&.
+.SS "\fBformula_t\fP * get_peptide_formula (\fBpeptide_t\fP * peptide)"
+
+.PP
+Function which returns a formula corresponding to a wanted peptide of the current digested protein\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpeptide\fP The peptide\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The corresponding formula\&. 
+.RE
+.PP
+
+.PP
+Definition at line 913 of file digest\&.cpp\&.
+.PP
+References get_peptide_formula_from_another_protein(), and sequence\&.
+.SS "\fBformula_t\fP * get_peptide_formula_from_another_protein (\fBpeptide_t\fP * peptide, char * protein_sequence)"
+
+.PP
+Function which returns a formula corresponding to a wanted peptide that not belongs to the current digested protein\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpeptide\fP The peptide\&. 
+.br
+\fIprotein_sequence\fP The corresponding complete protein sequence\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The peptide formula\&. 
+.RE
+.PP
+
+.PP
+Definition at line 919 of file digest\&.cpp\&.
+.PP
+References add_formula(), apply_modification(), copy_formula(), peptide::endOff, error(), amino_acid_CF::form, get_amino_acid(), get_peptide_charge_formula(), get_util_formula(), peptide::modifications, peptide::nb_modif, peptide::startOff, and USAGE_ERROR\&.
+.PP
+Referenced by get_peptide_formula()\&.
+.SS "\fBformula_t\fP * get_peptide_formula_from_index (int index)"
+
+.PP
+Function which returns a formula corresponding to a peptide according to its place in the current digestion\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP The index of the peptide in the current digestion\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The peptide formula\&. 
+.RE
+.PP
+
+.PP
+Definition at line 867 of file digest\&.cpp\&.
+.PP
+References add_formula(), apply_modification(), copy_formula(), peptide::endOff, error(), amino_acid_CF::form, get_amino_acid(), get_peptide_charge_formula(), get_util_formula(), modifications, peptide::nb_modif, NbPeptides, Peptides, sequence, peptide::startOff, and USAGE_ERROR\&.
+.PP
+Referenced by sort_and_init_with_peptide_scoring()\&.
+.SS "int get_peptide_length_at_index (int index)"
+
+.PP
+Function which returns the sequence length of a wanted peptide\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP The index of the wanted peptide\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The peptide length\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1405 of file digest\&.cpp\&.
+.PP
+References peptide::endOff, NbPeptides, Peptides, and peptide::startOff\&.
+.SS "char * get_peptide_sequence (int index)"
+
+.PP
+Function which returns the sequence of the wanted peptide, this sequence is only for making saves for printing because it can contains modifications name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP The index of the wanted peptide\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The sequence\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1275 of file digest\&.cpp\&.
+.PP
+References peptide::endOff, error(), get_activated_modification_symbol(), MEMORY_ALLOCATION_ERROR, modifications, peptide::nb_modif, NbPeptides, Peptides, sequence, peptide::startOff, and USAGE_ERROR\&.
+.PP
+Referenced by compute_equivalent_peptides(), and sort_and_init_with_peptide_scoring()\&.
+.SS "\fBpeptide_t\fP * get_result_of_digestion (int * nb_peptides)"
+
+.PP
+Function which returns the peptides resulting of the digestion\&. 
+.PP
+\fBWarning\fP
+.RS 4
+get_result_of_digestion gives a original pointer so if you want to keep this result and make other digestion, use the next function called get_copie_of_digestion_result (don't forget to free the pointer after using it) 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInb_peptides\fP The number of peptides, initialised by the function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The peptide list obtained after the digestion\&. 
+.RE
+.PP
+
+.PP
+Definition at line 232 of file digest\&.cpp\&.
+.PP
+References NbPeptides, and Peptides\&.
+.SS "char * get_used_enzyme ()"
+
+.PP
+Function which allows to get the name of the used enzyme\&. 
+.PP
+Definition at line 861 of file digest\&.cpp\&.
+.PP
+References enzyme_list::enz, enztable, enzyme, and enzyme::name\&.
+.PP
+Referenced by fprint_configuration(), fprint_configuration_xml(), and print_configuration()\&.
+.SS "void init_util_digestion ()"
+
+.PP
+Procedure which initialises all the data useful for digestion (enzyme table for the moment)\&. 
+.PP
+Definition at line 768 of file digest\&.cpp\&.
+.PP
+References default_peptide_charge(), ENZFILENAME, enztable, and enzym_load()\&.
+.PP
+Referenced by load_configuration()\&.
+.SS "int is_equivalent_to_another (int index)"
+
+.PP
+Function which indicates if a peptide is equivalent to another one due to variable post-translational modifications\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP The index of the wanted peptide\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE (see \fButil\&.h\fP)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1417 of file digest\&.cpp\&.
+.PP
+References peptide::equivalent_to_another, NbPeptides, and Peptides\&.
+.PP
+Referenced by optimized_isotopic_distribution()\&.
+.SS "void new_peptides_with_missed_cleavages (int missed_cleavage, int * nb_new_peptides_total)"
+
+.PP
+Procedure which allows to compute the new peptides gained due to missed cleavages\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImissed_cleavage\fP The number of missed cleavage\&. 
+.br
+\fInb_new_peptides_total\fP The total number of new peptides (modified by the procedure)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 567 of file digest\&.cpp\&.
+.PP
+References copy_peptide(), error(), free_peptide(), fusion_peptide(), MEMORY_ALLOCATION_ERROR, peptide::modifications, peptide::nb_modif, NbPeptides, Peptides, and peptide::weight\&.
+.PP
+Referenced by real_digest()\&.
+.SS "double peptide_charge_weight ()"
+
+.PP
+Function which allows to get the weight of the atom charge\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The weight of the atom charge\&. 
+.RE
+.PP
+
+.PP
+Definition at line 744 of file digest\&.cpp\&.
+.PP
+References error(), get_weight(), peptide_charge_formula, and USAGE_ERROR\&.
+.PP
+Referenced by digest(), and fusion_peptide()\&.
+.SS "void print_peptide (\fBpeptide_t\fP * peptide)"
+
+.PP
+Procedure which allows to print directly a peptide on the stdout\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpeptide\fP The peptide we want to print\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1331 of file digest\&.cpp\&.
+.PP
+References peptide::endOff, error(), get_activated_modification_symbol(), peptide::modifications, peptide::nb_modif, sequence, peptide::startOff, and USAGE_ERROR\&.
+.PP
+Referenced by print_peptide_index()\&.
+.SS "void print_peptide_index (int index)"
+
+.PP
+Procedure which prints directly on the screen a peptide of the current digestion (thanks to an index)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP The index of the peptide\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1357 of file digest\&.cpp\&.
+.PP
+References error(), NbPeptides, Peptides, print_peptide(), and USAGE_ERROR\&.
+.PP
+Referenced by print_result_of_digestion()\&.
+.SS "void print_result_of_digestion (\fBpeptide_t\fP * peptides, int nb_peptides)"
+
+.PP
+Procedure which prints on stdout the result of the digestion\&. 
+.PP
+Definition at line 261 of file digest\&.cpp\&.
+.PP
+References formula_tochar(), free_n_formula(), get_formulae_of_peptides(), nb_missed_cleavages, peptides, print_peptide_index(), and TRUE\&.
+.SS "void real_digest (char * seq)"
+
+.PP
+Procedure which realises the real digestion according the number of missed cleavages\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIseq\fP The sequence to digest\&. 
+.RE
+.PP
+
+.PP
+Definition at line 646 of file digest\&.cpp\&.
+.PP
+References compute_equivalent_peptides(), compute_post_traductional_modifications_global(), digest(), error(), FULL_DIGESTION, get_number_of_activated_modifications(), MEMORY_ALLOCATION_ERROR, nb_missed_cleavages, NbPeptides, new_peptides_with_missed_cleavages(), sequence, and TRUE\&.
+.PP
+Referenced by main()\&.
+.SS "void set_maximum_peptide_length (int new_value)"
+
+.PP
+Procedure which sets the maximum allowed length in amino acids for a peptide\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_value\fP The new value\&. If a peptide has a longer length, it will be not considered during the post-translational modification computation\&. 
+.RE
+.PP
+
+.PP
+Definition at line 1429 of file digest\&.cpp\&.
+.PP
+References error(), maximum_peptide_length, and USAGE_ERROR\&.
+.PP
+Referenced by load_int_keyword()\&.
+.SS "void set_nb_missed_cleavages (int missed_cleavage)"
+
+.PP
+Procedure which allows to set the number of authorized missed cleavage\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImissed_cleavage\fP The number of missed cleavages\&. 
+.RE
+.PP
+
+.PP
+Definition at line 801 of file digest\&.cpp\&.
+.PP
+References nb_missed_cleavages\&.
+.PP
+Referenced by load_int_keyword()\&.
+.SS "void set_peptide_charge (const char * formula)"
+
+.PP
+Procedure which allows to set the value of the atom charge\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIformula\fP The formula (in char* format)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 734 of file digest\&.cpp\&.
+.PP
+References free_formula(), get_element_table(), get_element_table_size(), peptide_charge_formula, and read_formula()\&.
+.PP
+Referenced by default_peptide_charge(), and load_string_keyword()\&.
+.SS "void set_used_enzyme (int chosen_enzyme)"
+
+.PP
+Procedure which sets the chosen enzyme (default is 0 for trypsine see others in enztable\&.aprot)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchosen_enzyme\fP The chosen_enzyme\&. 
+.RE
+.PP
+
+.PP
+Definition at line 775 of file digest\&.cpp\&.
+.PP
+Referenced by load_int_keyword()\&.
+.SS "void sort_peptides ()"
+
+.PP
+Procedure which sorts the current experimental peptides\&. It is simply a call of qsort with the function compare_peptides\&. 
+.PP
+Definition at line 728 of file digest\&.cpp\&.
+.PP
+References compare_peptides(), NbPeptides, and Peptides\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBenztable_t\fP * enztable =NULL"
+
+.PP
+Enzyme table\&. 
+.PP
+Definition at line 76 of file digest\&.cpp\&.
+.PP
+Referenced by digest(), free_util_digestion(), get_used_enzyme(), and init_util_digestion()\&.
+.SS "int \fBenzyme\fP =0"
+
+.PP
+Index of the current chosen enzyme in the enzyme table\&. The default value corresponds to the trypsine enzyme, see enztable\&.aprot to understand\&. 
+.PP
+Definition at line 83 of file digest\&.cpp\&.
+.PP
+Referenced by get_used_enzyme()\&.
+.SS "int FULL_DIGESTION =\fBFALSE\fP"
+
+.PP
+Activation state of the full digest process, TRUE or FALSE (see \fButil\&.h\fP)\&. 
+.PP
+Definition at line 66 of file digest\&.cpp\&.
+.PP
+Referenced by activate_full_digestion(), get_activation_full_digest(), and real_digest()\&.
+.SS "int maximum_peptide_length =30"
+
+.PP
+Maximum length in amino acids allowed for a peptide\&. 
+.PP
+Definition at line 98 of file digest\&.cpp\&.
+.PP
+Referenced by compute_post_traductional_modifications_one_peptide(), get_maximum_peptide_length(), and set_maximum_peptide_length()\&.
+.SS "int nb_missed_cleavages =0"
+
+.PP
+Maximum number of missed cleavage\&. 
+.PP
+Definition at line 88 of file digest\&.cpp\&.
+.PP
+Referenced by fprint_result_of_digestion(), fprint_result_of_digestion_table_format(), get_nb_missed_cleavages(), print_result_of_digestion(), real_digest(), and set_nb_missed_cleavages()\&.
+.SS "int NbPeptides =0"
+
+.PP
+Current digestion peptide number\&. 
+.PP
+Definition at line 61 of file digest\&.cpp\&.
+.PP
+Referenced by compute_equivalent_peptides(), compute_post_traductional_modifications_global(), digest(), fprint_peptide_index(), free_util_digestion(), get_copie_of_digestion_result(), get_formulae_of_peptides(), get_peptide_formula_from_index(), get_peptide_length_at_index(), get_peptide_sequence(), get_result_of_digestion(), is_equivalent_to_another(), new_peptides_with_missed_cleavages(), print_peptide_index(), real_digest(), and sort_peptides()\&.
+.SS "\fBformula_t\fP * peptide_charge_formula =NULL"
+
+.PP
+Formula to add for the peptide to be charged\&. 
+.PP
+Definition at line 71 of file digest\&.cpp\&.
+.PP
+Referenced by free_util_digestion(), get_peptide_charge_formula(), peptide_charge_weight(), and set_peptide_charge()\&.
+.SS "\fBpeptide_t\fP * Peptides = NULL"
+
+.PP
+Result of the current digestion\&. 
+.PP
+Definition at line 56 of file digest\&.cpp\&.
+.PP
+Referenced by compute_equivalent_peptides(), compute_post_traductional_modifications_global(), digest(), fprint_peptide_index(), free_util_digestion(), get_copie_of_digestion_result(), get_formulae_of_peptides(), get_peptide_formula_from_index(), get_peptide_length_at_index(), get_peptide_sequence(), get_result_of_digestion(), is_equivalent_to_another(), new_peptides_with_missed_cleavages(), print_peptide_index(), and sort_peptides()\&.
+.SS "char * sequence =NULL"
+
+.PP
+Sequence of the protein that i currently digested\&. 
+.PP
+Definition at line 93 of file digest\&.cpp\&.
+.PP
+Referenced by add_protein(), compute_post_traductional_modifications_one_peptide(), digest(), fprint_peptide(), free_util_digestion(), get_formula_from_sequence(), get_formulae_of_peptides(), get_peptide_formula(), get_peptide_formula_from_index(), get_peptide_sequence(), main(), print_peptide(), and real_digest()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

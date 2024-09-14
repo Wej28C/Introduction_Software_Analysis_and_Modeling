@@ -1,0 +1,5 @@
+<map id="get_copie_of_digestion_result" name="get_copie_of_digestion_result">
+<area shape="rect" id="node1" title="Function which allows to gain a copie of the result of the digestion." alt="" coords="5,23,177,65"/>
+<area shape="rect" id="node2" href="$digest_8cpp.html#a80275fa3e1e4d9b11b240cff99b42937" title="Function which makes a copy of a peptide." alt="" coords="225,5,335,32"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="383,31,436,57"/>
+</map>

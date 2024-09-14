@@ -1,0 +1,34 @@
+<map id="print_configuration" name="print_configuration">
+<area shape="rect" id="node1" title="Procedure which allows to print the current configuration on the stdout." alt="" coords="5,785,149,812"/>
+<area shape="rect" id="node2" href="$formula_8cpp.html#a5447ba10b6180f5df396e0b9adf028ad" title="Returns a string representing a formula." alt="" coords="250,5,371,32"/>
+<area shape="rect" id="node3" href="$digest_8cpp.html#a673770bf1f0f2b0a07655fa1b2c24e1b" title="Function which allows to get the state of the activation of full digestion." alt="" coords="239,57,382,98"/>
+<area shape="rect" id="node4" href="$isodistrib_8h.html#a280ffab2d02998e01a44184845b596f0" title="Tool function which returns the atom quantity linked to a symbol or &#45;1 if the symbol has not an assoc..." alt="" coords="238,123,383,149"/>
+<area shape="rect" id="node5" href="$seqio_8h.html#a8349401ac581f6f77c7f922a006367a4" title="Function which allows to get the mass given for the protein mass." alt="" coords="475,507,644,533"/>
+<area shape="rect" id="node7" href="$isodistrib_8h.html#aa435218d3540c506a90181ff60e8f75a" title="Function which returns the file name of the experimental spectrum." alt="" coords="210,224,411,251"/>
+<area shape="rect" id="node8" href="$seqio_8h.html#af2089929bdee1875e0252dce1516efce" title="Function which allows to get the name of the opened file." alt="" coords="237,275,384,301"/>
+<area shape="rect" id="node9" href="$isodistrib_8h.html#a38b2baeea98ea70c204d2434b8dc31c9" title="Function which allows to get the gaussian value." alt="" coords="235,325,386,352"/>
+<area shape="rect" id="node10" href="$isodistrib_8h.html#aa5d0bbdac85d016ad27a4f529a4e692d" title="Function which returns the maximum mass authorized for the peptides." alt="" coords="231,376,390,403"/>
+<area shape="rect" id="node11" href="$digest_8cpp.html#a0f617d41fbc06de16b28ab0de326ee0c" title="Function which returns the maximum allowed length in amino acids for a peptide." alt="" coords="224,427,397,469"/>
+<area shape="rect" id="node12" href="$isodistrib_8h.html#a59044c8d77e53bd0c22ef860fdf3501a" title="Function which returns the minimum mass authorized for the peptides." alt="" coords="233,493,388,520"/>
+<area shape="rect" id="node13" href="$isodistrib_8h.html#aa74882bb3f8fdc045dbbfe3816ce1970" title="Function which allows to get the minimum matched peptide number for a protein to be considered." alt="" coords="222,545,399,586"/>
+<area shape="rect" id="node14" href="$isodistrib_8h.html#ad628b2f2734fb64109c33bfc08f0cfed" title="Function which allows to get the minimum peptide number for a protein to be considered." alt="" coords="226,610,395,651"/>
+<area shape="rect" id="node15" href="$ascq__me__configuration_8cpp.html#ab3bd3d4a93114c7d13ac56c790d562fb" title="Function which returns the number of displayed proteins." alt="" coords="213,676,409,703"/>
+<area shape="rect" id="node16" href="$digest_8cpp.html#a5d77cfc05e381e5434ef78285c6ce5e7" title="Function which allows to get the number of authorized missed cleavages." alt="" coords="214,727,407,753"/>
+<area shape="rect" id="node17" href="$modifications__for__digestion_8h.html#a0e4b90ffeeaa3e701529e856321c0481" title="Function which returns the number of activated modifications." alt="" coords="217,778,405,819"/>
+<area shape="rect" id="node18" href="$digest_8cpp.html#a6347f5f049f9632f9edb4bcf88f62e51" title="Function which returns the formula of the atom charge." alt="" coords="235,843,386,885"/>
+<area shape="rect" id="node19" href="$isodistrib_8h.html#a5627442fd2144d785918fa5ece0be3a1" title="Function which allows to get the peptide maximum mass." alt="" coords="203,909,418,936"/>
+<area shape="rect" id="node20" href="$isodistrib_8h.html#a309726b2dec37dc12d125d74111563f3" title="Function which allows to get the peptide precision." alt="" coords="228,960,393,987"/>
+<area shape="rect" id="node21" href="$isodistrib_8h.html#ab945fa5b633a6771b6000253a604a6cf" title="Function which returns the score sensitivity." alt="" coords="225,1011,397,1037"/>
+<area shape="rect" id="node22" href="$isodistrib_8h.html#a7ec5070468212f547cca1cdb987112b4" title="Function which returns the name of file containing the simulated spectra." alt="" coords="225,1062,396,1103"/>
+<area shape="rect" id="node23" href="$seqio_8h.html#a2a897519ecfffe349e6582386272fbf0" title="Function which allows to get the current specie wanted from the fasta file." alt="" coords="265,1128,357,1155"/>
+<area shape="rect" id="node24" href="$isodistrib_8h.html#a5072600af7f4fb91db3b553dad5f1a97" title="Function which allows to get the maximum mass authorized for the spectrum." alt="" coords="197,1179,424,1205"/>
+<area shape="rect" id="node25" href="$isodistrib_8h.html#a58be87f6a9f200f0782a96c0590c2900" title="Function which allows to get the spetrum precision." alt="" coords="222,1229,399,1256"/>
+<area shape="rect" id="node26" href="$isodistrib_8h.html#a557f7a689615e673776adb76de5a96c7" title="Function to obtain the threshold." alt="" coords="255,1280,366,1307"/>
+<area shape="rect" id="node27" href="$digest_8cpp.html#a04f56b8b3aa3eaccf42a1e49d8fba8c7" title="Function which allows to get the name of the used enzyme." alt="" coords="241,1331,381,1357"/>
+<area shape="rect" id="node28" href="$ascq__me__configuration_8cpp.html#a84dc869a8a397c2a4b8474bf20811f2f" title="Function which allows to know if the decoy mode has been activated or not." alt="" coords="215,1381,406,1408"/>
+<area shape="rect" id="node29" href="$seqio_8h.html#ab5e43691be6ed6edc601afb8b0692ade" title="Function which allows to know if a experimental protein mass has been already set." alt="" coords="231,1433,390,1474"/>
+<area shape="rect" id="node30" href="$ascq__me__configuration_8cpp.html#a4415adbbeeb4e09514b3c276acc2987c" title="Function which indicates if the chosen file type is fasta or spectra." alt="" coords="247,1499,374,1525"/>
+<area shape="rect" id="node31" href="$modifications__for__digestion_8h.html#aa0dc64862ddff506cde8b2bed5ec6bd6" title="Procedure which prints the current configuration of activated modifications on the stdout." alt="" coords="241,1550,381,1591"/>
+<area shape="rect" id="node6" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="695,865,748,892"/>
+<area shape="rect" id="node32" href="$modification__table_8h.html#a2033f5c347fcf58f8897cf4f9de9bf56" title="Function which allows to get the complete name of a modification." alt="" coords="472,891,647,917"/>
+</map>

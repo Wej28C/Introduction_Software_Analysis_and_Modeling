@@ -1,0 +1,14 @@
+<map id="seqio.h" name="seqio.h">
+<area shape="rect" id="node1" title="Description of methods allowing the using of FASTA files and other useful things linked to them." alt="" coords="189,5,259,32"/>
+<area shape="rect" id="node2" href="$tables_8h.html" title="Description of methods that allows to manipulate amino acids easier." alt="" coords="187,80,261,107"/>
+<area shape="rect" id="node3" href="$aa_8h.html" title="Definition of an amino acid." alt="" coords="199,155,249,181"/>
+<area shape="rect" id="node4" href="$formula_8h.html" title="Definition of a chemical formula." alt="" coords="181,229,267,256"/>
+<area shape="rect" id="node5" href="$util_8h.html" title="Definition of several useful things." alt="" coords="197,304,251,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,379,69,405"/>
+<area shape="rect" id="node7" title=" " alt="" coords="94,379,165,405"/>
+<area shape="rect" id="node8" title=" " alt="" coords="189,379,259,405"/>
+<area shape="rect" id="node9" title=" " alt="" coords="283,379,351,405"/>
+<area shape="rect" id="node10" href="$error_8h.html" title="Definition of the error management." alt="" coords="376,379,440,405"/>
+<area shape="rect" id="node11" title=" " alt="" coords="328,453,395,480"/>
+<area shape="rect" id="node12" title=" " alt="" coords="419,453,490,480"/>
+</map>

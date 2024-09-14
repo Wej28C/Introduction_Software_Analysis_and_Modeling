@@ -1,0 +1,668 @@
+\doxysection{modifications\+\_\+for\+\_\+digestion.\+cpp File Reference}
+\label{modifications__for__digestion_8cpp}\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+
+
+Implementation of the methods defined in \doxyref{modifications\+\_\+for\+\_\+digestion.\+h}{p.}{modifications__for__digestion_8h}.  
+
+
+{\ttfamily \#include \char`\"{}modifications\+\_\+for\+\_\+digestion.\+h\char`\"{}}\newline
+Include dependency graph for modifications\+\_\+for\+\_\+digestion.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modifications__for__digestion_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ print\+\_\+modification\+\_\+configuration} ()
+\begin{DoxyCompactList}\small\item\em Procedure which prints the current configuration of activated modifications on the stdout. \end{DoxyCompactList}\item 
+void \textbf{ fprint\+\_\+modification\+\_\+configuration} (FILE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Procedure which prints the current configuration of activated modifications in a file. \end{DoxyCompactList}\item 
+void \textbf{ fprint\+\_\+xml\+\_\+modification\+\_\+configuration} (FILE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Procedure which prints the current configuration of activated modifications in a file in a XML format. \end{DoxyCompactList}\item 
+void \textbf{ load\+\_\+modification\+\_\+configuration} (char $\ast$configuration)
+\begin{DoxyCompactList}\small\item\em Procedure which loads the configuration for the modifications. \end{DoxyCompactList}\item 
+void \textbf{ add\+\_\+modification} (int type, int id)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to activate a new modification. \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+activated\+\_\+modification} ()
+\begin{DoxyCompactList}\small\item\em Procedure which allows to free all the initialised modifications. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+number\+\_\+of\+\_\+activated\+\_\+modifications} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the number of activated modifications. \end{DoxyCompactList}\item 
+int \textbf{ can\+\_\+be\+\_\+used\+\_\+on\+\_\+for\+\_\+digestion} (int modif, char amino\+\_\+acid, int place, int size, int first)
+\begin{DoxyCompactList}\small\item\em Function which indicates if the given amino acid can have the indicated modification. \end{DoxyCompactList}\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ get\+\_\+formula\+\_\+to\+\_\+add} (int modif)
+\begin{DoxyCompactList}\small\item\em Function which returns the formula to add according to the indicated modification. \end{DoxyCompactList}\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ get\+\_\+formula\+\_\+to\+\_\+sub} (int modif)
+\begin{DoxyCompactList}\small\item\em Function which returns the formula to sub according the indicated modification. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+modification\+\_\+type} (int modif)
+\begin{DoxyCompactList}\small\item\em Function which returns the type of modification according the given index. \end{DoxyCompactList}\item 
+void \textbf{ apply\+\_\+modification} (\textbf{ formula\+\_\+t} $\ast$\textbf{ formula}, int modif)
+\begin{DoxyCompactList}\small\item\em Procedure which applies a modification on a formula. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+activated\+\_\+modification\+\_\+symbol} (int modif)
+\begin{DoxyCompactList}\small\item\em Function which returns the small name (symbol) of a modification. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+activated\+\_\+modification\+\_\+name} (int modif)
+\begin{DoxyCompactList}\small\item\em Function which returns the full name of a modification. \end{DoxyCompactList}\item 
+void \textbf{ digestion\+\_\+modification\+\_\+initialization} (const char $\ast$configuration)
+\begin{DoxyCompactList}\small\item\em Procedure that allows to initialize all the post translational modifications for the digestion. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+global\+\_\+modification\+\_\+index} (int modif)
+\begin{DoxyCompactList}\small\item\em Function which returns the global index of the modification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ nb\+\_\+modifications} =0
+\begin{DoxyCompactList}\small\item\em The total number of activated modifications. \end{DoxyCompactList}\item 
+\textbf{ post\+\_\+translational\+\_\+modification\+\_\+t} $\ast$ \textbf{ modifications} =NULL
+\begin{DoxyCompactList}\small\item\em The activated post-\/translational modifications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the methods defined in \doxyref{modifications\+\_\+for\+\_\+digestion.\+h}{p.}{modifications__for__digestion_8h}. 
+
+\begin{DoxyAuthor}{Author}
+Jean-\/\+Charles BOISSON (2006-\/2008). 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{modifications__for__digestion_8cpp_a4520167f17e7368561c7f1329724c0a4}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!add\_modification@{add\_modification}}
+\index{add\_modification@{add\_modification}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{add\_modification()}
+{\footnotesize\ttfamily void add\+\_\+modification (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to activate a new modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & It can be FIXED or VARIABLE. \\
+\hline
+{\em id} & The modification index (see \doxyref{modification\+\_\+table.\+h}{p.}{modification__table_8h}). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 187 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References error(), FALSE, FIXED, get\+\_\+total\+\_\+number\+\_\+of\+\_\+modifications(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, post\+\_\+traductional\+\_\+modification\+::modification, modifications, nb\+\_\+modifications, TRUE, post\+\_\+traductional\+\_\+modification\+::type, USAGE\+\_\+\+ERROR, and VARIABLE.
+
+
+
+Referenced by digestion\+\_\+modification\+\_\+initialization(), and load\+\_\+modification\+\_\+configuration().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{modifications__for__digestion_8cpp_a4520167f17e7368561c7f1329724c0a4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modifications__for__digestion_8cpp_a746cf71b9979cbdad3b15746b7687d7e}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!apply\_modification@{apply\_modification}}
+\index{apply\_modification@{apply\_modification}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{apply\_modification()}
+{\footnotesize\ttfamily void apply\+\_\+modification (\begin{DoxyParamCaption}\item[{\textbf{ formula\+\_\+t} $\ast$}]{formula,  }\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Procedure which applies a modification on a formula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formula} & The formula where the modification have to be applied. \\
+\hline
+{\em modif} & The modification index. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 330 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References add\+\_\+formula(), error(), EXECUTION\+\_\+\+ERROR, FALSE, get\+\_\+formula\+\_\+to\+\_\+add(), get\+\_\+formula\+\_\+to\+\_\+sub(), nb\+\_\+modifications, sub\+\_\+formula(), and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein(), and get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modifications__for__digestion_8cpp_a746cf71b9979cbdad3b15746b7687d7e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modifications__for__digestion_8cpp_a2db7b6970689413aaf3424cd4d9db80e}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!can\_be\_used\_on\_for\_digestion@{can\_be\_used\_on\_for\_digestion}}
+\index{can\_be\_used\_on\_for\_digestion@{can\_be\_used\_on\_for\_digestion}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{can\_be\_used\_on\_for\_digestion()}
+{\footnotesize\ttfamily int can\+\_\+be\+\_\+used\+\_\+on\+\_\+for\+\_\+digestion (\begin{DoxyParamCaption}\item[{int}]{modif,  }\item[{char}]{amino\+\_\+acid,  }\item[{int}]{place,  }\item[{int}]{size,  }\item[{int}]{first }\end{DoxyParamCaption})}
+
+
+
+Function which indicates if the given amino acid can have the indicated modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The chosen modification index. \\
+\hline
+{\em amino\+\_\+acid} & An amino acid. \\
+\hline
+{\em place} & Its place. \\
+\hline
+{\em size} & The size of the protein/peptide. \\
+\hline
+{\em first} & The last parameter indicates if the amino acid is the first of the complete protein or the first peptide. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+The first place $<$=$>$ N-\/term, the last one $<$=$>$ C-\/term. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE (see \doxyref{util.\+h}{p.}{util_8h}). 
+\end{DoxyReturn}
+
+
+Definition at line 266 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References can\+\_\+be\+\_\+used\+\_\+on(), error(), modifications, nb\+\_\+modifications, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modifications__for__digestion_8cpp_a2db7b6970689413aaf3424cd4d9db80e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modifications__for__digestion_8cpp_a4307635ff93c2e96f41b9b97354709a8}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!digestion\_modification\_initialization@{digestion\_modification\_initialization}}
+\index{digestion\_modification\_initialization@{digestion\_modification\_initialization}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{digestion\_modification\_initialization()}
+{\footnotesize\ttfamily void digestion\+\_\+modification\+\_\+initialization (\begin{DoxyParamCaption}\item[{const char $\ast$}]{configuration }\end{DoxyParamCaption})}
+
+
+
+Procedure that allows to initialize all the post translational modifications for the digestion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em configuration} & The modification configuration. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 381 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References add\+\_\+modification(), error(), FALSE, FIXED, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, USAGE\+\_\+\+ERROR, and VARIABLE.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modifications__for__digestion_8cpp_a4307635ff93c2e96f41b9b97354709a8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modifications__for__digestion_8cpp_af49932c8b1833d9e7972ec51007e9349}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!fprint\_modification\_configuration@{fprint\_modification\_configuration}}
+\index{fprint\_modification\_configuration@{fprint\_modification\_configuration}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{fprint\_modification\_configuration()}
+{\footnotesize\ttfamily void fprint\+\_\+modification\+\_\+configuration (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints the current configuration of activated modifications in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file where we want to print the configuration. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 75 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References FIXED, get\+\_\+modification\+\_\+name(), modifications, and nb\+\_\+modifications.
+
+
+
+Referenced by fprint\+\_\+configuration().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modifications__for__digestion_8cpp_af49932c8b1833d9e7972ec51007e9349_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modifications__for__digestion_8cpp_a8eb7bb7e14b2280bb2c83722cb5826ea}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!fprint\_xml\_modification\_configuration@{fprint\_xml\_modification\_configuration}}
+\index{fprint\_xml\_modification\_configuration@{fprint\_xml\_modification\_configuration}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{fprint\_xml\_modification\_configuration()}
+{\footnotesize\ttfamily void fprint\+\_\+xml\+\_\+modification\+\_\+configuration (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints the current configuration of activated modifications in a file in a XML format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file where we want to print the configuration. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 87 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References FIXED, get\+\_\+modification\+\_\+name(), modifications, and nb\+\_\+modifications.
+
+
+
+Referenced by fprint\+\_\+configuration\+\_\+xml().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modifications__for__digestion_8cpp_a8eb7bb7e14b2280bb2c83722cb5826ea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modifications__for__digestion_8cpp_af3256d6b6d6fba6e4a7e92378af20148}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!free\_activated\_modification@{free\_activated\_modification}}
+\index{free\_activated\_modification@{free\_activated\_modification}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{free\_activated\_modification()}
+{\footnotesize\ttfamily void free\+\_\+activated\+\_\+modification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to free all the initialised modifications. 
+
+
+
+Definition at line 251 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References modifications, and nb\+\_\+modifications.
+
+
+
+Referenced by ascq\+\_\+me\+\_\+configuration\+\_\+cleaning().
+
+\mbox{\label{modifications__for__digestion_8cpp_ae41393555e5ebbf67da96fdc940eab5a}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!get\_activated\_modification\_name@{get\_activated\_modification\_name}}
+\index{get\_activated\_modification\_name@{get\_activated\_modification\_name}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{get\_activated\_modification\_name()}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+activated\+\_\+modification\+\_\+name (\begin{DoxyParamCaption}\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Function which returns the full name of a modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The modification index. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 370 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References error(), get\+\_\+modification\+\_\+name(), modifications, nb\+\_\+modifications, and USAGE\+\_\+\+ERROR.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modifications__for__digestion_8cpp_ae41393555e5ebbf67da96fdc940eab5a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modifications__for__digestion_8cpp_aaf9be7fbd847dcce77377aa9f3c19bcb}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!get\_activated\_modification\_symbol@{get\_activated\_modification\_symbol}}
+\index{get\_activated\_modification\_symbol@{get\_activated\_modification\_symbol}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{get\_activated\_modification\_symbol()}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+activated\+\_\+modification\+\_\+symbol (\begin{DoxyParamCaption}\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Function which returns the small name (symbol) of a modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The modification index. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 359 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References error(), get\+\_\+modification\+\_\+symbol(), modifications, nb\+\_\+modifications, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by fprint\+\_\+peptide(), get\+\_\+peptide\+\_\+sequence(), and print\+\_\+peptide().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modifications__for__digestion_8cpp_aaf9be7fbd847dcce77377aa9f3c19bcb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modifications__for__digestion_8cpp_a1607af4467c9e19848d32d6b99247186}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!get\_formula\_to\_add@{get\_formula\_to\_add}}
+\index{get\_formula\_to\_add@{get\_formula\_to\_add}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{get\_formula\_to\_add()}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t}$\ast$ get\+\_\+formula\+\_\+to\+\_\+add (\begin{DoxyParamCaption}\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Function which returns the formula to add according to the indicated modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The modification index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The formula. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+The result can be NULL if no formula is needed to add to apply the modification. 
+\end{DoxyWarning}
+
+
+Definition at line 277 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References error(), get\+\_\+modification\+\_\+formula\+\_\+to\+\_\+add(), modifications, formula\+::nb\+\_\+comp, nb\+\_\+modifications, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by add\+\_\+peptide\+\_\+modification(), and apply\+\_\+modification().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modifications__for__digestion_8cpp_a1607af4467c9e19848d32d6b99247186_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modifications__for__digestion_8cpp_af72c53394a9c35b8d1961e49ae1b919a}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!get\_formula\_to\_sub@{get\_formula\_to\_sub}}
+\index{get\_formula\_to\_sub@{get\_formula\_to\_sub}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{get\_formula\_to\_sub()}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t}$\ast$ get\+\_\+formula\+\_\+to\+\_\+sub (\begin{DoxyParamCaption}\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Function which returns the formula to sub according the indicated modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The modification index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The formula. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+The result can be NULL if no formula is needed to sub to apply the modification. 
+\end{DoxyWarning}
+
+
+Definition at line 298 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References error(), get\+\_\+modification\+\_\+formula\+\_\+to\+\_\+sub(), modifications, formula\+::nb\+\_\+comp, nb\+\_\+modifications, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by add\+\_\+peptide\+\_\+modification(), and apply\+\_\+modification().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modifications__for__digestion_8cpp_af72c53394a9c35b8d1961e49ae1b919a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modifications__for__digestion_8cpp_a35933eff4c52eb4672e4ca6c4eff77f0}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!get\_global\_modification\_index@{get\_global\_modification\_index}}
+\index{get\_global\_modification\_index@{get\_global\_modification\_index}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{get\_global\_modification\_index()}
+{\footnotesize\ttfamily int get\+\_\+global\+\_\+modification\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Function which returns the global index of the modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The index for the digestion modification. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The global index in order to use the functions of the modification table. 
+\end{DoxyReturn}
+
+
+Definition at line 469 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References error(), post\+\_\+traductional\+\_\+modification\+::modification, modifications, nb\+\_\+modifications, and USAGE\+\_\+\+ERROR.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{modifications__for__digestion_8cpp_a35933eff4c52eb4672e4ca6c4eff77f0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modifications__for__digestion_8cpp_a980d6e7e28f52d68cb0750812b604217}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!get\_modification\_type@{get\_modification\_type}}
+\index{get\_modification\_type@{get\_modification\_type}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{get\_modification\_type()}
+{\footnotesize\ttfamily int get\+\_\+modification\+\_\+type (\begin{DoxyParamCaption}\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Function which returns the type of modification according the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The modification index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding type. 
+\end{DoxyReturn}
+
+
+Definition at line 319 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References error(), modifications, nb\+\_\+modifications, post\+\_\+traductional\+\_\+modification\+::type, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{modifications__for__digestion_8cpp_a980d6e7e28f52d68cb0750812b604217_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modifications__for__digestion_8cpp_a0e4b90ffeeaa3e701529e856321c0481}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!get\_number\_of\_activated\_modifications@{get\_number\_of\_activated\_modifications}}
+\index{get\_number\_of\_activated\_modifications@{get\_number\_of\_activated\_modifications}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{get\_number\_of\_activated\_modifications()}
+{\footnotesize\ttfamily int get\+\_\+number\+\_\+of\+\_\+activated\+\_\+modifications (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the number of activated modifications. 
+
+\begin{DoxyReturn}{Returns}
+The number of activated modifications. 
+\end{DoxyReturn}
+
+
+Definition at line 260 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References nb\+\_\+modifications.
+
+
+
+Referenced by add\+\_\+peptide\+\_\+modification(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide(), fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), print\+\_\+configuration(), and real\+\_\+digest().
+
+\mbox{\label{modifications__for__digestion_8cpp_a6630b925e5a988c5316512880bc461cb}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!load\_modification\_configuration@{load\_modification\_configuration}}
+\index{load\_modification\_configuration@{load\_modification\_configuration}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{load\_modification\_configuration()}
+{\footnotesize\ttfamily void load\+\_\+modification\+\_\+configuration (\begin{DoxyParamCaption}\item[{char $\ast$}]{configuration }\end{DoxyParamCaption})}
+
+
+
+Procedure which loads the configuration for the modifications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em configuration} & The current configuration to load. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 99 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References add\+\_\+modification(), error(), FALSE, FIXED, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, USAGE\+\_\+\+ERROR, and VARIABLE.
+
+
+
+Referenced by load\+\_\+string\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modifications__for__digestion_8cpp_a6630b925e5a988c5316512880bc461cb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modifications__for__digestion_8cpp_aa0dc64862ddff506cde8b2bed5ec6bd6}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!print\_modification\_configuration@{print\_modification\_configuration}}
+\index{print\_modification\_configuration@{print\_modification\_configuration}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{print\_modification\_configuration()}
+{\footnotesize\ttfamily void print\+\_\+modification\+\_\+configuration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints the current configuration of activated modifications on the stdout. 
+
+
+
+Definition at line 63 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+References FIXED, get\+\_\+modification\+\_\+name(), modifications, and nb\+\_\+modifications.
+
+
+
+Referenced by print\+\_\+configuration().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modifications__for__digestion_8cpp_aa0dc64862ddff506cde8b2bed5ec6bd6_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{modifications__for__digestion_8cpp_a78828a2653db21b72c21eefd48118b72}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!modifications@{modifications}}
+\index{modifications@{modifications}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{modifications}
+{\footnotesize\ttfamily \textbf{ post\+\_\+translational\+\_\+modification\+\_\+t} $\ast$ modifications =NULL}
+
+
+
+The activated post-\/translational modifications. 
+
+
+
+Definition at line 59 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+Referenced by add\+\_\+modification(), can\+\_\+be\+\_\+used\+\_\+on\+\_\+for\+\_\+digestion(), fprint\+\_\+modification\+\_\+configuration(), fprint\+\_\+xml\+\_\+modification\+\_\+configuration(), free\+\_\+activated\+\_\+modification(), get\+\_\+activated\+\_\+modification\+\_\+name(), get\+\_\+activated\+\_\+modification\+\_\+symbol(), get\+\_\+formula\+\_\+to\+\_\+add(), get\+\_\+formula\+\_\+to\+\_\+sub(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+global\+\_\+modification\+\_\+index(), get\+\_\+modification\+\_\+type(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index(), get\+\_\+peptide\+\_\+sequence(), and print\+\_\+modification\+\_\+configuration().
+
+\mbox{\label{modifications__for__digestion_8cpp_a9071e7d1b82b5c122f455979b7123915}} 
+\index{modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}!nb\_modifications@{nb\_modifications}}
+\index{nb\_modifications@{nb\_modifications}!modifications\_for\_digestion.cpp@{modifications\_for\_digestion.cpp}}
+\doxysubsubsection{nb\_modifications}
+{\footnotesize\ttfamily int nb\+\_\+modifications =0}
+
+
+
+The total number of activated modifications. 
+
+
+
+Definition at line 54 of file modifications\+\_\+for\+\_\+digestion.\+cpp.
+
+
+
+Referenced by add\+\_\+modification(), apply\+\_\+modification(), can\+\_\+be\+\_\+used\+\_\+on\+\_\+for\+\_\+digestion(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide(), fprint\+\_\+modification\+\_\+configuration(), fprint\+\_\+xml\+\_\+modification\+\_\+configuration(), free\+\_\+activated\+\_\+modification(), get\+\_\+activated\+\_\+modification\+\_\+name(), get\+\_\+activated\+\_\+modification\+\_\+symbol(), get\+\_\+formula\+\_\+to\+\_\+add(), get\+\_\+formula\+\_\+to\+\_\+sub(), get\+\_\+global\+\_\+modification\+\_\+index(), get\+\_\+modification\+\_\+type(), get\+\_\+number\+\_\+of\+\_\+activated\+\_\+modifications(), and print\+\_\+modification\+\_\+configuration().
+

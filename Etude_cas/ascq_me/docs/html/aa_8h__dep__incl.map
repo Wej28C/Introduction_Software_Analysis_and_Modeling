@@ -1,0 +1,21 @@
+<map id="aa.h" name="aa.h">
+<area shape="rect" id="node1" title="Definition of an amino acid." alt="" coords="386,5,437,32"/>
+<area shape="rect" id="node2" href="$aa_8cpp.html" title="Implementation of the methods defined in aa.h." alt="" coords="332,80,397,107"/>
+<area shape="rect" id="node3" href="$tables_8h.html" title="Description of methods that allows to manipulate amino acids easier." alt="" coords="422,80,497,107"/>
+<area shape="rect" id="node4" href="$modification__table_8h.html" title="Definition of a lot of things to use post&#45;translational modifications." alt="" coords="246,155,401,181"/>
+<area shape="rect" id="node17" href="$seqio_8h.html" title="Description of methods allowing the using of FASTA files and other useful things linked to them." alt="" coords="425,155,494,181"/>
+<area shape="rect" id="node19" href="$tables_8cpp.html" title="Implementation of the methods defined in tables.h." alt="" coords="519,155,608,181"/>
+<area shape="rect" id="node5" href="$modifications__for__digestion_8h.html" title="Definition of the specifications for the post&#45;translation modifications in the digestion case." alt="" coords="5,229,220,256"/>
+<area shape="rect" id="node16" href="$modification__table_8cpp.html" title="Implementation of the methods defined in modification_table.h." alt="" coords="245,229,415,256"/>
+<area shape="rect" id="node6" href="$digest_8h.html" title="Description of methods allowing to make the digestion of proteins." alt="" coords="75,304,150,331"/>
+<area shape="rect" id="node15" href="$modifications__for__digestion_8cpp.html" title="Implementation of the methods defined in modifications_for_digestion.h." alt="" coords="174,304,403,331"/>
+<area shape="rect" id="node7" href="$digest_8cpp.html" title="Implementation of the methods defined in digest.h." alt="" coords="68,379,157,405"/>
+<area shape="rect" id="node8" href="$isodistrib_8h.html" title="Definition of the methods to make simulated spectrum computation." alt="" coords="293,379,388,405"/>
+<area shape="rect" id="node9" href="$ascq__me__configuration_8h.html" title="Definition of the useful things to configure ASCQ_ME." alt="" coords="163,453,347,480"/>
+<area shape="rect" id="node14" href="$isodistrib_8cpp.html" title="Implementation of the methods defined in isodistrib.h." alt="" coords="371,453,481,480"/>
+<area shape="rect" id="node10" href="$ascq__me__configuration_8cpp.html" title="Implementation of the methods defined in ascq_me_configuration.h." alt="" coords="59,528,257,555"/>
+<area shape="rect" id="node11" href="$ascq__me__display_8h.html" title="Definition of the methods to use and display ASCQ_ME results." alt="" coords="282,528,426,555"/>
+<area shape="rect" id="node12" href="$ascq__me_8cpp.html" title="ASCQ_ME main program." alt="" coords="222,603,329,629"/>
+<area shape="rect" id="node13" href="$ascq__me__display_8cpp.html" title="Implementation of the methods defined in ascq_me_display.h." alt="" coords="353,603,512,629"/>
+<area shape="rect" id="node18" href="$seqio_8cpp.html" title="Implementation of the methods defined in seqio.h." alt="" coords="491,229,575,256"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="modifications_for_digestion.h" name="modifications_for_digestion.h">
+<area shape="rect" id="node1" title="Definition of the specifications for the post&#45;translation modifications in the digestion case." alt="" coords="209,5,424,32"/>
+<area shape="rect" id="node2" href="$digest_8h.html" title="Description of methods allowing to make the digestion of proteins." alt="" coords="191,80,266,107"/>
+<area shape="rect" id="node11" href="$modifications__for__digestion_8cpp.html" title="Implementation of the methods defined in modifications_for_digestion.h." alt="" coords="290,80,519,107"/>
+<area shape="rect" id="node3" href="$digest_8cpp.html" title="Implementation of the methods defined in digest.h." alt="" coords="127,155,216,181"/>
+<area shape="rect" id="node4" href="$isodistrib_8h.html" title="Definition of the methods to make simulated spectrum computation." alt="" coords="240,155,335,181"/>
+<area shape="rect" id="node5" href="$ascq__me__configuration_8h.html" title="Definition of the useful things to configure ASCQ_ME." alt="" coords="110,229,294,256"/>
+<area shape="rect" id="node10" href="$isodistrib_8cpp.html" title="Implementation of the methods defined in isodistrib.h." alt="" coords="318,229,427,256"/>
+<area shape="rect" id="node6" href="$ascq__me__configuration_8cpp.html" title="Implementation of the methods defined in ascq_me_configuration.h." alt="" coords="5,304,204,331"/>
+<area shape="rect" id="node7" href="$ascq__me__display_8h.html" title="Definition of the methods to use and display ASCQ_ME results." alt="" coords="229,304,373,331"/>
+<area shape="rect" id="node8" href="$ascq__me_8cpp.html" title="ASCQ_ME main program." alt="" coords="169,379,275,405"/>
+<area shape="rect" id="node9" href="$ascq__me__display_8cpp.html" title="Implementation of the methods defined in ascq_me_display.h." alt="" coords="300,379,459,405"/>
+</map>

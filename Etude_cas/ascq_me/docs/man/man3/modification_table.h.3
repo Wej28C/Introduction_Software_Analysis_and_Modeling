@@ -1,0 +1,386 @@
+.TH "modification_table.h" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+modification_table.h \- Definition of a lot of things to use post-translational modifications\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'tables\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMODIFICATION_FILENAME\fP   '\&./internal/modification_file'"
+.br
+.RI "Default location of the modification file\&. "
+.ti -1c
+.RI "#define \fBC_TERM\fP   0"
+.br
+.RI "The first type of modification location\&. "
+.ti -1c
+.RI "#define \fBN_TERM\fP   1"
+.br
+.RI "The second type of modification location\&. "
+.ti -1c
+.RI "#define \fBBOTH_TERM\fP   2"
+.br
+.RI "The third type of modification location\&. "
+.ti -1c
+.RI "#define \fBINDEPENDANT_TERM\fP   3"
+.br
+.RI "The fourth type of modification location\&. "
+.ti -1c
+.RI "#define \fBPROTEIN\fP   4"
+.br
+.RI "The fifth type of modification location\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfree_all_modifications\fP ()"
+.br
+.RI "Procedure which allows to free the modification formulae\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBget_modification_formula_to_add\fP (int modif)"
+.br
+.RI "Function which returns the formula to add when we want to apply a wanted modification\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBget_modification_formula_to_sub\fP (int modif)"
+.br
+.RI "Function which returns the formula to sub when we want to apply a wanted modification\&. "
+.ti -1c
+.RI "char * \fBget_modification_symbol\fP (int modif)"
+.br
+.RI "Function which allows to get the corresponding symbol according a wanted modification\&. "
+.ti -1c
+.RI "char * \fBget_modification_amino_acids\fP (int modif)"
+.br
+.RI "Function which allows to return all the amino acids on which this modification can be used\&. "
+.ti -1c
+.RI "int \fBget_total_number_of_modifications\fP ()"
+.br
+.RI "Function which allows to get the total number of available modifications\&. "
+.ti -1c
+.RI "void \fBload_modifications\fP (const char *file)"
+.br
+.RI "Procedure which loads the available modifications from a file\&. "
+.ti -1c
+.RI "char * \fBget_modification_name\fP (int modif)"
+.br
+.RI "Function which allows to get the complete name of a modification\&. "
+.ti -1c
+.RI "int \fBget_modification_side\fP (int modif)"
+.br
+.RI "Function which returns the side corresponding to the modification\&. "
+.ti -1c
+.RI "int \fBcan_be_used_on\fP (int modif, char amino_acid, int place, int size, int first)"
+.br
+.RI "Function which indicates if the amino acid given can have the indicated modification\&. "
+.ti -1c
+.RI "void \fBapply_global_modification\fP (\fBformula_t\fP *\fBformula\fP, int modif)"
+.br
+.RI "Procedure which applies a modification on a formula\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition of a lot of things to use post-translational modifications\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jean-Charles BOISSON (2005-2008) 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBmodification_table\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BOTH_TERM   2"
+
+.PP
+The third type of modification location\&. This type corresponds to modification located on the N-terminal side or the C-terminal of a protein or a peptide\&. 
+.PP
+Definition at line 78 of file modification_table\&.h\&.
+.SS "#define C_TERM   0"
+
+.PP
+The first type of modification location\&. This type corresponds to modification located on the C-terminal side of a protein or a peptide\&. 
+.PP
+Definition at line 64 of file modification_table\&.h\&.
+.SS "#define INDEPENDANT_TERM   3"
+
+.PP
+The fourth type of modification location\&. This type corresponds to modification located anywhere on a protein or a peptide\&. 
+.PP
+Definition at line 85 of file modification_table\&.h\&.
+.SS "#define MODIFICATION_FILENAME   '\&./internal/modification_file'"
+
+.PP
+Default location of the modification file\&. 
+.PP
+Definition at line 57 of file modification_table\&.h\&.
+.SS "#define N_TERM   1"
+
+.PP
+The second type of modification location\&. This type corresponds to modification located on the N-terminal side of a protein or a peptide\&. 
+.PP
+Definition at line 71 of file modification_table\&.h\&.
+.SS "#define PROTEIN   4"
+
+.PP
+The fifth type of modification location\&. This type corresponds to modification located anywhere on a protein\&. 
+.PP
+Definition at line 92 of file modification_table\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "void apply_global_modification (\fBformula_t\fP * formula, int modif)"
+
+.PP
+Procedure which applies a modification on a formula\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIformula\fP The formula to modify\&. 
+.br
+\fImodif\fP The index of the modif to apply\&. 
+.RE
+.PP
+
+.PP
+Definition at line 587 of file modification_table\&.cpp\&.
+.PP
+References add_formula(), error(), EXECUTION_ERROR, FALSE, formula_to_add, formula_to_sub, nb_total_modif, sub_formula(), and USAGE_ERROR\&.
+.SS "int can_be_used_on (int modif, char amino_acid, int place, int size, int first)"
+
+.PP
+Function which indicates if the amino acid given can have the indicated modification\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The chosen modification\&. 
+.br
+\fIamino_acid\fP The amino acid 
+.br
+\fIplace\fP Its place 
+.br
+\fIsize\fP The size of the protein/peptide\&. 
+.br
+\fIfirst\fP This parameters indicates if the amino acid is an amino acid of a complete protein or the amino acid of the first peptide\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+The first place <=> N-term, the last <=> C-term\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+TRUE or FALSE (see \fButil\&.h\fP)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 193 of file modification_table\&.cpp\&.
+.PP
+References BOTH_TERM, C_TERM, error(), FALSE, INDEPENDANT_TERM, modifications_on_amino_acids, N_TERM, nb_total_modif, PROTEIN, side, TRUE, and USAGE_ERROR\&.
+.PP
+Referenced by can_be_used_on_for_digestion()\&.
+.SS "void free_all_modifications ()"
+
+.PP
+Procedure which allows to free the modification formulae\&. 
+.PP
+Definition at line 87 of file modification_table\&.cpp\&.
+.PP
+References formula_to_add, formula_to_sub, free_composition(), modifications_name, modifications_on_amino_acids, nb_total_modif, side, and symbol\&.
+.PP
+Referenced by ascq_me_configuration_cleaning()\&.
+.SS "char * get_modification_amino_acids (int modif)"
+
+.PP
+Function which allows to return all the amino acids on which this modification can be used\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The wanted modification\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The amino acids\&. 
+.RE
+.PP
+
+.PP
+Definition at line 154 of file modification_table\&.cpp\&.
+.PP
+References error(), modifications_on_amino_acids, nb_total_modif, and USAGE_ERROR\&.
+.SS "\fBformula_t\fP * get_modification_formula_to_add (int modif)"
+
+.PP
+Function which returns the formula to add when we want to apply a wanted modification\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The wanted modification\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The formula to add to apply the modification\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+This function return directly a pointer on the formula, so do not modify it, if you want this formula and make modification on it, call copy_formula(get_modification_formula_to_add(modif)) in order to have a copy\&. 
+.RE
+.PP
+
+.PP
+Definition at line 120 of file modification_table\&.cpp\&.
+.PP
+References error(), formula_to_add, nb_total_modif, and USAGE_ERROR\&.
+.PP
+Referenced by get_formula_to_add()\&.
+.SS "\fBformula_t\fP * get_modification_formula_to_sub (int modif)"
+
+.PP
+Function which returns the formula to sub when we want to apply a wanted modification\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The wanted modification\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The formula to sub to apply the modification\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+This function return directly a pointer on the formula, so do not modify it, if you want this formula and make modification on it, call copy_formula(get_modification_formula_to_sub(modif)) in order to have a copy\&. 
+.RE
+.PP
+
+.PP
+Definition at line 132 of file modification_table\&.cpp\&.
+.PP
+References error(), formula_to_sub, nb_total_modif, and USAGE_ERROR\&.
+.PP
+Referenced by get_formula_to_sub()\&.
+.SS "char * get_modification_name (int modif)"
+
+.PP
+Function which allows to get the complete name of a modification\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The wanted modification\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The modification complete name\&. 
+.RE
+.PP
+
+.PP
+Definition at line 171 of file modification_table\&.cpp\&.
+.PP
+References error(), modifications_name, nb_total_modif, and USAGE_ERROR\&.
+.PP
+Referenced by fprint_modification_configuration(), fprint_xml_modification_configuration(), get_activated_modification_name(), and print_modification_configuration()\&.
+.SS "int get_modification_side (int modif)"
+
+.PP
+Function which returns the side corresponding to the modification\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The wanted modif\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The corresponding side\&. 
+.RE
+.PP
+
+.PP
+Definition at line 182 of file modification_table\&.cpp\&.
+.PP
+References error(), nb_total_modif, side, and USAGE_ERROR\&.
+.SS "char * get_modification_symbol (int modif)"
+
+.PP
+Function which allows to get the corresponding symbol according a wanted modification\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImodif\fP The wanted modification\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The corresponding char* 
+.RE
+.PP
+
+.PP
+Definition at line 143 of file modification_table\&.cpp\&.
+.PP
+References error(), nb_total_modif, symbol, and USAGE_ERROR\&.
+.PP
+Referenced by get_activated_modification_symbol()\&.
+.SS "int get_total_number_of_modifications ()"
+
+.PP
+Function which allows to get the total number of available modifications\&. 
+.PP
+\fBReturns\fP
+.RS 4
+the modification number\&. 
+.RE
+.PP
+
+.PP
+Definition at line 165 of file modification_table\&.cpp\&.
+.PP
+References nb_total_modif\&.
+.PP
+Referenced by add_modification()\&.
+.SS "void load_modifications (const char * file)"
+
+.PP
+Procedure which loads the available modifications from a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file for the loading\&. 
+.RE
+.PP
+
+.PP
+Definition at line 273 of file modification_table\&.cpp\&.
+.PP
+References BOTH_TERM, C_TERM, formula::comps, error(), formula_to_add, formula_to_sub, get_element_table(), get_element_table_size(), INDEPENDANT_TERM, IO_ERROR, jump_a_line(), jump_commentaries(), MEMORY_ALLOCATION_ERROR, modifications_name, modifications_on_amino_acids, N_TERM, formula::nb_comp, nb_total_modif, PROTEIN, read_formula(), read_until(), side, symbol, and USAGE_ERROR\&.
+.PP
+Referenced by load_configuration()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

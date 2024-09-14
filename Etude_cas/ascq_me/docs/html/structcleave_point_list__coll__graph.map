@@ -1,0 +1,4 @@
+<map id="cleavePointList" name="cleavePointList">
+<area shape="rect" id="node1" title="Structure representing a list of cleavage point &lt;=&gt; cleavage rules." alt="" coords="5,95,127,121"/>
+<area shape="rect" id="node2" href="$structcleave_point.html" title="Structure representing a cleavage point." alt="" coords="17,5,115,32"/>
+</map>

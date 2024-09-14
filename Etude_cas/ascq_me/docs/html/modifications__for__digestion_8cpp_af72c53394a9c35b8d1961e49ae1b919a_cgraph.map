@@ -1,0 +1,5 @@
+<map id="get_formula_to_sub" name="get_formula_to_sub">
+<area shape="rect" id="node1" title="Function which returns the formula to sub according the indicated modification." alt="" coords="5,5,156,32"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="441,5,495,32"/>
+<area shape="rect" id="node3" href="$modification__table_8h.html#aba646f6f85ed365f229f046b3dfcd568" title="Function which returns the formula to sub when we want to apply a wanted modification." alt="" coords="204,27,393,69"/>
+</map>

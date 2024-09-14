@@ -1,0 +1,16 @@
+<map id="compute_post_traductional_modifications_one_peptide" name="compute_post_traductional_modifications_one_peptide">
+<area shape="rect" id="node1" title="Function which computes the peptides gained with post&#45;translational modifications from one peptide." alt="" coords="5,386,209,427"/>
+<area shape="rect" id="node2" href="$digest_8cpp.html#aa13a35874ea72a754db20466c5841440" title="Procedure which adds a modification on an amino acid of a peptide." alt="" coords="257,200,448,227"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="969,292,1023,319"/>
+<area shape="rect" id="node8" href="$modifications__for__digestion_8h.html#a0e4b90ffeeaa3e701529e856321c0481" title="Function which returns the number of activated modifications." alt="" coords="496,277,684,318"/>
+<area shape="rect" id="node10" href="$modifications__for__digestion_8h.html#a2db7b6970689413aaf3424cd4d9db80e" title="Function which indicates if the given amino acid can have the indicated modification." alt="" coords="513,394,667,435"/>
+<area shape="rect" id="node12" href="$digest_8cpp.html#a0f9932b4e837de7ac9caba80bac79458" title="Procedure which compares two peptides ==&gt; useful for qsort." alt="" coords="281,444,424,471"/>
+<area shape="rect" id="node13" href="$digest_8cpp.html#a80275fa3e1e4d9b11b240cff99b42937" title="Function which makes a copy of a peptide." alt="" coords="772,495,881,521"/>
+<area shape="rect" id="node14" href="$modifications__for__digestion_8h.html#a980d6e7e28f52d68cb0750812b604217" title="Function which returns the type of modification according the given index." alt="" coords="269,545,436,572"/>
+<area shape="rect" id="node4" href="$modifications__for__digestion_8h.html#a84b6ed9c61d01949851a3e604f86c9fd" title="Function which returns the formula to add according to the indicated modification." alt="" coords="514,116,666,143"/>
+<area shape="rect" id="node6" href="$modifications__for__digestion_8h.html#a4345d817329fcc4866b055d7ff49f800" title="Function which returns the formula to sub according the indicated modification." alt="" coords="515,175,665,201"/>
+<area shape="rect" id="node9" href="$formula_8cpp.html#a77a6756752caf55587c228c4e51b8c7e" title="Get the weight of a formula." alt="" coords="779,292,874,319"/>
+<area shape="rect" id="node5" href="$modification__table_8h.html#a850b2a79e023d1d979f6cc4c26fcfacf" title="Function which returns the formula to add when we want to apply a wanted modification." alt="" coords="732,109,921,150"/>
+<area shape="rect" id="node7" href="$modification__table_8h.html#aba646f6f85ed365f229f046b3dfcd568" title="Function which returns the formula to sub when we want to apply a wanted modification." alt="" coords="732,226,921,267"/>
+<area shape="rect" id="node11" href="$modification__table_8h.html#a2d2aebfd756a3421cb0ad046fd099206" title="Function which indicates if the amino acid given can have the indicated modification." alt="" coords="762,444,891,471"/>
+</map>

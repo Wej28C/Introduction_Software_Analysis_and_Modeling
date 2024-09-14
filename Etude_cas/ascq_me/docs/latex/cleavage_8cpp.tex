@@ -1,0 +1,452 @@
+\doxysection{cleavage.\+cpp File Reference}
+\label{cleavage_8cpp}\index{cleavage.cpp@{cleavage.cpp}}
+
+
+Implementation of the methods defined in \doxyref{cleavage.\+h}{p.}{cleavage_8h}.  
+
+
+{\ttfamily \#include \char`\"{}cleavage.\+h\char`\"{}}\newline
+Include dependency graph for cleavage.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cleavage_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ cp\+\_\+fprint} (FILE $\ast$f, \textbf{ cp\+\_\+t} $\ast$cp)
+\begin{DoxyCompactList}\small\item\em Tool procedure used in cplt\+\_\+fprint. \end{DoxyCompactList}\item 
+\textbf{ cpl\+\_\+t} $\ast$ \textbf{ string\+To\+Cpl} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Function which translates according to a grammar a character a sequence into a complete cleavage rule. \end{DoxyCompactList}\item 
+int \textbf{ cpl\+\_\+is\+Cleavage} (\textbf{ cpl\+\_\+t} $\ast$cpl, char c)
+\begin{DoxyCompactList}\small\item\em Function which indicates if letter can be a cleveage point according to the cleavage rules. \end{DoxyCompactList}\item 
+int \textbf{ cpl\+\_\+is\+Cleavage2} (\textbf{ cpl\+\_\+t} $\ast$cpl, char cprev, char c, char cnext)
+\begin{DoxyCompactList}\small\item\em Function which indicates if we are in a good cleavage situation according to the cleavage rules. \end{DoxyCompactList}\item 
+void \textbf{ cpl\+\_\+fprint} (FILE $\ast$f, \textbf{ cpl\+\_\+t} $\ast$cpl)
+\begin{DoxyCompactList}\small\item\em Procedure which prints the rules in a file in an understanding style. \end{DoxyCompactList}\item 
+\textbf{ enztable\+\_\+t} $\ast$ \textbf{ enzym\+\_\+load} (const char $\ast$file\+To\+Load)
+\begin{DoxyCompactList}\small\item\em Procedure which initialized the enztable\+\_\+t structure from a file. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+enzyme\+\_\+number} (char $\ast$enztofind, \textbf{ enztable\+\_\+t} $\ast$enzt)
+\begin{DoxyCompactList}\small\item\em Function which returns the place of an enzym in the enzyme list. \end{DoxyCompactList}\item 
+void \textbf{ print\+\_\+enzyme\+\_\+table} (\textbf{ enztable\+\_\+t} $\ast$enzt)
+\begin{DoxyCompactList}\small\item\em Procedure which prints the enzyme table on the screen. \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+cpt} (\textbf{ cp\+\_\+t} $\ast$cpt)
+\begin{DoxyCompactList}\small\item\em Procedure which frees the content of a cpt structure. \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+cplt} (\textbf{ cpl\+\_\+t} $\ast$cplt)
+\begin{DoxyCompactList}\small\item\em Procedure which frees the content of a cplt structure. \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+enzt} (\textbf{ enz\+\_\+t} $\ast$enzt)
+\begin{DoxyCompactList}\small\item\em Procedure which frees the content of a enzt structure. \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+enzym\+\_\+table} (\textbf{ enztable\+\_\+t} $\ast$enzyme\+\_\+table)
+\begin{DoxyCompactList}\small\item\em Procedure which frees an enzyme table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the methods defined in \doxyref{cleavage.\+h}{p.}{cleavage_8h}. 
+
+\begin{DoxyAuthor}{Author}
+Pierre LAURENCE and David BOENS for ASCQ-\/\+PROT (2003).~\newline
+ Modified and updated by Jean-\/\+Charles BOISSON (2005-\/2008). 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{cleavage_8cpp_a4817d40539ea606b753c513b3f250802}} 
+\index{cleavage.cpp@{cleavage.cpp}!cp\_fprint@{cp\_fprint}}
+\index{cp\_fprint@{cp\_fprint}!cleavage.cpp@{cleavage.cpp}}
+\doxysubsubsection{cp\_fprint()}
+{\footnotesize\ttfamily void cp\+\_\+fprint (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{f,  }\item[{\textbf{ cp\+\_\+t} $\ast$}]{cp }\end{DoxyParamCaption})}
+
+
+
+Tool procedure used in cplt\+\_\+fprint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The file where the cp will be printed. \\
+\hline
+{\em cp} & The cp structure to print. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 239 of file cleavage.\+cpp.
+
+
+
+References cleave\+Point\+::exceptafter, cleave\+Point\+::exceptbefore, cleave\+Point\+::letter, cleave\+Point\+::nbexceptafter, and cleave\+Point\+::nbexceptbefore.
+
+
+
+Referenced by cpl\+\_\+fprint().
+
+\mbox{\label{cleavage_8cpp_ab09bda98e63a283dbe46872fcf33c129}} 
+\index{cleavage.cpp@{cleavage.cpp}!cpl\_fprint@{cpl\_fprint}}
+\index{cpl\_fprint@{cpl\_fprint}!cleavage.cpp@{cleavage.cpp}}
+\doxysubsubsection{cpl\_fprint()}
+{\footnotesize\ttfamily void cpl\+\_\+fprint (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{f,  }\item[{\textbf{ cpl\+\_\+t} $\ast$}]{cpl }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints the rules in a file in an understanding style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The file in which we want to print the rules. \\
+\hline
+{\em cpl} & The rules. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 267 of file cleavage.\+cpp.
+
+
+
+References cleave\+Point\+List\+::cp, cp\+\_\+fprint(), and cleave\+Point\+List\+::size.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{cleavage_8cpp_ab09bda98e63a283dbe46872fcf33c129_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{cleavage_8cpp_aa65711eba6e79a8aeecfaaca3b386b72}} 
+\index{cleavage.cpp@{cleavage.cpp}!cpl\_isCleavage@{cpl\_isCleavage}}
+\index{cpl\_isCleavage@{cpl\_isCleavage}!cleavage.cpp@{cleavage.cpp}}
+\doxysubsubsection{cpl\_isCleavage()}
+{\footnotesize\ttfamily int cpl\+\_\+is\+Cleavage (\begin{DoxyParamCaption}\item[{\textbf{ cpl\+\_\+t} $\ast$}]{cpl,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Function which indicates if letter can be a cleveage point according to the cleavage rules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpl} & The rules. \\
+\hline
+{\em c} & The considered letter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE (see \doxyref{util.\+h}{p.}{util_8h}). 
+\end{DoxyReturn}
+
+
+Definition at line 207 of file cleavage.\+cpp.
+
+
+
+References cleave\+Point\+List\+::cp, FALSE, cleave\+Point\+::letter, cleave\+Point\+List\+::size, and TRUE.
+
+\mbox{\label{cleavage_8cpp_a2f9252562ba27a34ccc1d1bc3cddd238}} 
+\index{cleavage.cpp@{cleavage.cpp}!cpl\_isCleavage2@{cpl\_isCleavage2}}
+\index{cpl\_isCleavage2@{cpl\_isCleavage2}!cleavage.cpp@{cleavage.cpp}}
+\doxysubsubsection{cpl\_isCleavage2()}
+{\footnotesize\ttfamily int cpl\+\_\+is\+Cleavage2 (\begin{DoxyParamCaption}\item[{\textbf{ cpl\+\_\+t} $\ast$}]{cpl,  }\item[{char}]{cprev,  }\item[{char}]{c,  }\item[{char}]{cnext }\end{DoxyParamCaption})}
+
+
+
+Function which indicates if we are in a good cleavage situation according to the cleavage rules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpl} & The rules. \\
+\hline
+{\em cprev} & The letter(s) before the current one. \\
+\hline
+{\em c} & The current letter. \\
+\hline
+{\em cnext} & The letter(s) after the current one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE (see \doxyref{util.\+h}{p.}{util_8h}). 
+\end{DoxyReturn}
+
+
+Definition at line 217 of file cleavage.\+cpp.
+
+
+
+References cleave\+Point\+List\+::cp, cleave\+Point\+::exceptafter, cleave\+Point\+::exceptbefore, FALSE, cleave\+Point\+::letter, cleave\+Point\+::nbexceptafter, cleave\+Point\+::nbexceptbefore, cleave\+Point\+List\+::size, and TRUE.
+
+
+
+Referenced by digest().
+
+\mbox{\label{cleavage_8cpp_a6ab257f135937e17b411f49ac652a932}} 
+\index{cleavage.cpp@{cleavage.cpp}!enzym\_load@{enzym\_load}}
+\index{enzym\_load@{enzym\_load}!cleavage.cpp@{cleavage.cpp}}
+\doxysubsubsection{enzym\_load()}
+{\footnotesize\ttfamily \textbf{ enztable\+\_\+t} $\ast$ enzym\+\_\+load (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+To\+Load }\end{DoxyParamCaption})}
+
+
+
+Procedure which initialized the enztable\+\_\+t structure from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+To\+Load} & The file used to make the initialisation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The enzyme table. 
+\end{DoxyReturn}
+
+
+Definition at line 276 of file cleavage.\+cpp.
+
+
+
+References C\+\_\+\+SIDE, enzyme\+::cpl, enzyme\+\_\+list\+::enz, EOL, error(), IO\+\_\+\+ERROR, N\+\_\+\+SIDE, enzyme\+::name, SEPARATOR, enzyme\+::side, enzyme\+\_\+list\+::size, string\+To\+Cpl(), and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by init\+\_\+util\+\_\+digestion().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{cleavage_8cpp_a6ab257f135937e17b411f49ac652a932_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{cleavage_8cpp_a6cbb9dbebd384d9abf403a850fecfa55}} 
+\index{cleavage.cpp@{cleavage.cpp}!free\_cplt@{free\_cplt}}
+\index{free\_cplt@{free\_cplt}!cleavage.cpp@{cleavage.cpp}}
+\doxysubsubsection{free\_cplt()}
+{\footnotesize\ttfamily void free\+\_\+cplt (\begin{DoxyParamCaption}\item[{\textbf{ cpl\+\_\+t} $\ast$}]{cplt }\end{DoxyParamCaption})}
+
+
+
+Procedure which frees the content of a cplt structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cplt} & The cplt structure we want to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 436 of file cleavage.\+cpp.
+
+
+
+References cleave\+Point\+List\+::cp, error(), free\+\_\+cpt(), FREE\+\_\+\+MEMORY\+\_\+\+ERROR, and cleave\+Point\+List\+::size.
+
+
+
+Referenced by free\+\_\+enzt().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{cleavage_8cpp_a6cbb9dbebd384d9abf403a850fecfa55_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{cleavage_8cpp_aa72c64491600445e412ab877f6bfc2f7}} 
+\index{cleavage.cpp@{cleavage.cpp}!free\_cpt@{free\_cpt}}
+\index{free\_cpt@{free\_cpt}!cleavage.cpp@{cleavage.cpp}}
+\doxysubsubsection{free\_cpt()}
+{\footnotesize\ttfamily void free\+\_\+cpt (\begin{DoxyParamCaption}\item[{\textbf{ cp\+\_\+t} $\ast$}]{cpt }\end{DoxyParamCaption})}
+
+
+
+Procedure which frees the content of a cpt structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpt} & The cpt structure we want to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 409 of file cleavage.\+cpp.
+
+
+
+References error(), cleave\+Point\+::exceptafter, cleave\+Point\+::exceptbefore, FREE\+\_\+\+MEMORY\+\_\+\+ERROR, cleave\+Point\+::nbexceptafter, and cleave\+Point\+::nbexceptbefore.
+
+
+
+Referenced by free\+\_\+cplt().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{cleavage_8cpp_aa72c64491600445e412ab877f6bfc2f7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{cleavage_8cpp_adbf86fc5a884ae28fea764c08bc488fb}} 
+\index{cleavage.cpp@{cleavage.cpp}!free\_enzt@{free\_enzt}}
+\index{free\_enzt@{free\_enzt}!cleavage.cpp@{cleavage.cpp}}
+\doxysubsubsection{free\_enzt()}
+{\footnotesize\ttfamily void free\+\_\+enzt (\begin{DoxyParamCaption}\item[{\textbf{ enz\+\_\+t} $\ast$}]{enzt }\end{DoxyParamCaption})}
+
+
+
+Procedure which frees the content of a enzt structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enzt} & The enzyme table we want to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 457 of file cleavage.\+cpp.
+
+
+
+References enzyme\+::cpl, error(), free\+\_\+cplt(), FREE\+\_\+\+MEMORY\+\_\+\+ERROR, and enzyme\+::name.
+
+
+
+Referenced by free\+\_\+enzym\+\_\+table().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cleavage_8cpp_adbf86fc5a884ae28fea764c08bc488fb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{cleavage_8cpp_a68f3408dd74149469201ba724f8b66c4}} 
+\index{cleavage.cpp@{cleavage.cpp}!free\_enzym\_table@{free\_enzym\_table}}
+\index{free\_enzym\_table@{free\_enzym\_table}!cleavage.cpp@{cleavage.cpp}}
+\doxysubsubsection{free\_enzym\_table()}
+{\footnotesize\ttfamily void free\+\_\+enzym\+\_\+table (\begin{DoxyParamCaption}\item[{\textbf{ enztable\+\_\+t} $\ast$}]{enzyme\+\_\+table }\end{DoxyParamCaption})}
+
+
+
+Procedure which frees an enzyme table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enzyme\+\_\+table} & The enzym table to free. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 480 of file cleavage.\+cpp.
+
+
+
+References enzyme\+\_\+list\+::enz, error(), free\+\_\+enzt(), FREE\+\_\+\+MEMORY\+\_\+\+ERROR, and enzyme\+\_\+list\+::size.
+
+
+
+Referenced by free\+\_\+util\+\_\+digestion().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cleavage_8cpp_a68f3408dd74149469201ba724f8b66c4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{cleavage_8cpp_a1ae68afe40226e8ceb911d9aeb7c11d5}} 
+\index{cleavage.cpp@{cleavage.cpp}!get\_enzyme\_number@{get\_enzyme\_number}}
+\index{get\_enzyme\_number@{get\_enzyme\_number}!cleavage.cpp@{cleavage.cpp}}
+\doxysubsubsection{get\_enzyme\_number()}
+{\footnotesize\ttfamily int get\+\_\+enzyme\+\_\+number (\begin{DoxyParamCaption}\item[{char $\ast$}]{enztofind,  }\item[{\textbf{ enztable\+\_\+t} $\ast$}]{enzt }\end{DoxyParamCaption})}
+
+
+
+Function which returns the place of an enzym in the enzyme list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enztofind} & The enzym we want to find. \\
+\hline
+{\em enzt} & The enzyme table. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The place of the enzyme in the enzyme list. 
+\end{DoxyReturn}
+
+
+Definition at line 377 of file cleavage.\+cpp.
+
+
+
+References enzyme\+\_\+list\+::enz, enzyme\+::name, and enzyme\+\_\+list\+::size.
+
+\mbox{\label{cleavage_8cpp_aef9f434784a53279bd7c0d50dc0deb76}} 
+\index{cleavage.cpp@{cleavage.cpp}!print\_enzyme\_table@{print\_enzyme\_table}}
+\index{print\_enzyme\_table@{print\_enzyme\_table}!cleavage.cpp@{cleavage.cpp}}
+\doxysubsubsection{print\_enzyme\_table()}
+{\footnotesize\ttfamily void print\+\_\+enzyme\+\_\+table (\begin{DoxyParamCaption}\item[{\textbf{ enztable\+\_\+t} $\ast$}]{enzt }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints the enzyme table on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enzt} & The enzyme table. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 399 of file cleavage.\+cpp.
+
+
+
+References enzyme\+\_\+list\+::enz, enzyme\+::name, and enzyme\+\_\+list\+::size.
+
+\mbox{\label{cleavage_8cpp_ac58a41900496b50ee5828266870644aa}} 
+\index{cleavage.cpp@{cleavage.cpp}!stringToCpl@{stringToCpl}}
+\index{stringToCpl@{stringToCpl}!cleavage.cpp@{cleavage.cpp}}
+\doxysubsubsection{stringToCpl()}
+{\footnotesize\ttfamily \textbf{ cpl\+\_\+t} $\ast$ string\+To\+Cpl (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Function which translates according to a grammar a character a sequence into a complete cleavage rule. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & a correct character chain according to the grammar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The complete cleavage rule. 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file cleavage.\+cpp.
+
+
+
+References cleave\+Point\+List\+::cp, error(), cleave\+Point\+::exceptafter, cleave\+Point\+::exceptbefore, FALSE, cleave\+Point\+::letter, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, cleave\+Point\+::nbexceptafter, cleave\+Point\+::nbexceptbefore, cleave\+Point\+List\+::size, and TRUE.
+
+
+
+Referenced by enzym\+\_\+load().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{cleavage_8cpp_ac58a41900496b50ee5828266870644aa_cgraph}
+\end{center}
+\end{figure}

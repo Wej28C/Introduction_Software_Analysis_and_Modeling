@@ -1,0 +1,14 @@
+<map id="apply_global_modification" name="apply_global_modification">
+<area shape="rect" id="node1" title="Procedure which applies a modification on a formula." alt="" coords="5,68,199,95"/>
+<area shape="rect" id="node2" href="$formula_8cpp.html#a8e4bdf0442e08288e70dcd8f2464b77c" title="Add two formula." alt="" coords="401,68,505,95"/>
+<area shape="rect" id="node6" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="1085,271,1139,297"/>
+<area shape="rect" id="node7" href="$formula_8cpp.html#ad2114448f547806cb41559772955f34f" title="Substrate two formula." alt="" coords="247,245,349,272"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#a90fb951ba830f303d192e03a46da3527" title="Procedure which adds an element in a formula." alt="" coords="573,93,679,120"/>
+<area shape="rect" id="node4" href="$formula_8cpp.html#a1b353bcd70fedc65de083af2d954e594" title="Local function that allows to gain the copy of an element structure." alt="" coords="744,144,889,171"/>
+<area shape="rect" id="node5" href="$formula_8cpp.html#aa2cff9d5e8bd11bacae69d478368fde7" title="Local function that allows to gain the copy of an isotop structure." alt="" coords="937,195,1037,221"/>
+<area shape="rect" id="node8" href="$formula_8cpp.html#ab26f1f1f23fc5eecbf139fe58e3f310a" title="Get the copy of a formula." alt="" coords="397,195,508,221"/>
+<area shape="rect" id="node10" href="$formula_8cpp.html#a6a81bdde62cda8c4d6ed43d9b16b4c26" title="Procedure which frees the memory allocated for a composition." alt="" coords="559,397,693,424"/>
+<area shape="rect" id="node11" href="$formula_8cpp.html#aa924d9fff6ed2c0d2168efc91d41e03a" title="Local procedure that frees the memory allocated for an element structure." alt="" coords="762,448,871,475"/>
+<area shape="rect" id="node12" href="$formula_8cpp.html#a4c746199d04b732d41c72f52bb05cdd9" title="Free the memory allocated for a formula." alt="" coords="399,397,506,424"/>
+<area shape="rect" id="node9" href="$formula_8cpp.html#a7abb70e00923aee6b3fecac10731042c" title="Get the copy of a composition." alt="" coords="556,195,696,221"/>
+</map>

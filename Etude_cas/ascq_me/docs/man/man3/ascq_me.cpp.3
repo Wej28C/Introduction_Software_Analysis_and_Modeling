@@ -1,0 +1,113 @@
+.TH "ascq_me.cpp" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ascq_me.cpp \- ASCQ_ME main program\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ascq_me_display\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBASCQ_ME_TABLE_RESULT\fP   '_ascq_me_table_results\&.txt'"
+.br
+.RI "Default format of the table results of ASCQ_ME\&. "
+.ti -1c
+.RI "#define \fBASCQ_ME_RESULT\fP   '_ascq_me_results\&.txt'"
+.br
+.RI "Default format of the text results of ASCQ_ME\&. "
+.ti -1c
+.RI "#define \fBASCQ_ME_PEPTIDES_SCORING\fP   '_ascq_me_peptides_scoring\&.txt'"
+.br
+.RI "Default format of the peptide scoring of ASCQ_ME\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBprint_ascq_me_usage\fP ()"
+.br
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.RI "ASCQ_ME main function\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+ASCQ_ME main program\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jean-Charles BOISSON (2005-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBascq_me\&.cpp\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ASCQ_ME_PEPTIDES_SCORING   '_ascq_me_peptides_scoring\&.txt'"
+
+.PP
+Default format of the peptide scoring of ASCQ_ME\&. 
+.PP
+Definition at line 65 of file ascq_me\&.cpp\&.
+.SS "#define ASCQ_ME_RESULT   '_ascq_me_results\&.txt'"
+
+.PP
+Default format of the text results of ASCQ_ME\&. 
+.PP
+Definition at line 60 of file ascq_me\&.cpp\&.
+.SS "#define ASCQ_ME_TABLE_RESULT   '_ascq_me_table_results\&.txt'"
+
+.PP
+Default format of the table results of ASCQ_ME\&. 
+.PP
+Definition at line 55 of file ascq_me\&.cpp\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main (int argc, char * argv[])"
+
+.PP
+ASCQ_ME main function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargc\fP The number of parameters of the ASCQ_ME command including the ASCQ_ME command\&. 
+.br
+\fIargv\fP The parameters\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The return code of the ASCQ_ME command\&. 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file ascq_me\&.cpp\&.
+.PP
+References activate_verbose_mode(), add_chains(), add_protein(), ascq_me_cleaning(), ascq_me_configuration_cleaning(), ASCQ_ME_PEPTIDES_SCORING, ASCQ_ME_RESULT, ASCQ_ME_TABLE_RESULT, decoy_score, error(), FALSE, fprint_configuration(), fprint_configuration_xml(), fprintf_ascq_me_peptide_scoring(), fprintf_ascq_me_results(), fprintf_ascq_me_results_table_form(), fprintf_ascq_me_results_xml(), free_n_formula(), get_base_name(), get_current_peptide_score_save(), get_current_peptide_score_size(), get_formulae_of_peptides(), get_reversed_sequence(), get_spectrum_original_description(), get_spectrum_original_sequence(), get_theo_spectrum(), getDesc(), getSeq(), init_ascq_me_display(), IO_ERROR, is_a_wanted_protein(), is_decoy_mode_activated(), is_fasta_chosen(), is_simulated_wanted_protein(), is_verbose_mode_activated(), load_configuration(), next_simulated_spectrum(), nextEntry(), optimized_isotopic_distribution(), peptides, print_ascq_me_usage(), PROGRAM_NAME, PROGRAM_VERSION, real_digest(), save_partial_peptide_scoring(), sequence, set_decoy_score(), TRUE, and USAGE_ERROR\&.
+.SS "void print_ascq_me_usage ()"
+
+.PP
+Definition at line 308 of file ascq_me\&.cpp\&.
+.PP
+Referenced by main()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

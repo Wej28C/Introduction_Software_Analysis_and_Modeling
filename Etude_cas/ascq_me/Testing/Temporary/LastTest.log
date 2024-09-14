@@ -1,0 +1,288 @@
+Start testing: Nov 06 18:17 CET
+----------------------------------------------------------
+1/15 Testing: apo_mascot.config
+1/15 Test: apo_mascot.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/apo_mascot.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"apo_mascot.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Failed.
+"apo_mascot.config" end time: Nov 06 18:17 CET
+"apo_mascot.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/15 Testing: apo_mascot_fixed_modif.config
+2/15 Test: apo_mascot_fixed_modif.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/apo_mascot_fixed_modif.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"apo_mascot_fixed_modif.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"apo_mascot_fixed_modif.config" end time: Nov 06 18:17 CET
+"apo_mascot_fixed_modif.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/15 Testing: cytc.config
+3/15 Test: cytc.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/cytc.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"cytc.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"cytc.config" end time: Nov 06 18:17 CET
+"cytc.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/15 Testing: cytc_alone_theo.config
+4/15 Test: cytc_alone_theo.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/cytc_alone_theo.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"cytc_alone_theo.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Failed.
+"cytc_alone_theo.config" end time: Nov 06 18:17 CET
+"cytc_alone_theo.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/15 Testing: default_configuration.config
+5/15 Test: default_configuration.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/default_configuration.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"default_configuration.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Failed.
+"default_configuration.config" end time: Nov 06 18:17 CET
+"default_configuration.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/15 Testing: default_configuration_albu_name.config
+6/15 Test: default_configuration_albu_name.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/default_configuration_albu_name.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"default_configuration_albu_name.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"default_configuration_albu_name.config" end time: Nov 06 18:17 CET
+"default_configuration_albu_name.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/15 Testing: first.config
+7/15 Test: first.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/first.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"first.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"first.config" end time: Nov 06 18:17 CET
+"first.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/15 Testing: first_decoy.config
+8/15 Test: first_decoy.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/first_decoy.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"first_decoy.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Failed.
+"first_decoy.config" end time: Nov 06 18:17 CET
+"first_decoy.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/15 Testing: first_limited_apo_weigth.config
+9/15 Test: first_limited_apo_weigth.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/first_limited_apo_weigth.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"first_limited_apo_weigth.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"first_limited_apo_weigth.config" end time: Nov 06 18:17 CET
+"first_limited_apo_weigth.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/15 Testing: first_multi_modif.config
+10/15 Test: first_multi_modif.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/first_multi_modif.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"first_multi_modif.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Failed.
+"first_multi_modif.config" end time: Nov 06 18:17 CET
+"first_multi_modif.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/15 Testing: human_filter.config
+11/15 Test: human_filter.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/human_filter.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"human_filter.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"human_filter.config" end time: Nov 06 18:17 CET
+"human_filter.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/15 Testing: ker.config
+12/15 Test: ker.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/ker.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"ker.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"ker.config" end time: Nov 06 18:17 CET
+"ker.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/15 Testing: ker_human.config
+13/15 Test: ker_human.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/ker_human.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"ker_human.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"ker_human.config" end time: Nov 06 18:17 CET
+"ker_human.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/15 Testing: ker_human_apo_weight.config
+14/15 Test: ker_human_apo_weight.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/ker_human_apo_weight.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"ker_human_apo_weight.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Failed.
+"ker_human_apo_weight.config" end time: Nov 06 18:17 CET
+"ker_human_apo_weight.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/15 Testing: one_miss_cleavage_apo_mascot.config
+15/15 Test: one_miss_cleavage_apo_mascot.config
+Command: "/mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/src/ascq_me" "_configuration//mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/_configuration/one_miss_cleavage_apo_mascot.config"
+Directory: /mnt/c/Users/utilisateur/Documents/URCA/INFO504/Etude_cas_B_T_V2/Etude_cas_B_T/ascq_me/tests
+"one_miss_cleavage_apo_mascot.config" start time: Nov 06 18:17 CET
+Output:
+----------------------------------------------------------
+[ASCQ_ME version 1.0.6 : INFORMATION FOR USER]
+	ELEMENT TABLE FILE READING IMPOSSIBLE
+[ASCQ_ME version 1.0.6 : DEBUG INFORMATION   ]
+	F IS NULL IN GET_ELEMENT_TABLE IN FORMULA.CPP
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"one_miss_cleavage_apo_mascot.config" end time: Nov 06 18:17 CET
+"one_miss_cleavage_apo_mascot.config" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 06 18:17 CET

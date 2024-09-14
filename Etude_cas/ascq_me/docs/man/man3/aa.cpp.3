@@ -1,0 +1,478 @@
+.TH "aa.cpp" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aa.cpp \- Implementation of the methods defined in \fBaa\&.h\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'aa\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit_peptid_link\fP (\fBelement_t\fP *elem_table, int elem_table_size)"
+.br
+.RI "Procedure which initialises the formula of peptid liaison and the util formulae\&. "
+.ti -1c
+.RI "\fBaa_CF_t\fP * \fBget_amino_acid_table\fP (const char *filename, \fBelement_t\fP *elem_table, int elem_table_size)"
+.br
+.RI "Function which initialise and return the amino acid formula table stored in a file\&. "
+.ti -1c
+.RI "void \fBfree_amino_acid_table\fP (\fBaa_CF_t\fP *aa_table)"
+.br
+.RI "Procedure which frees the memory allocated for an amino acid table\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBget_util_formula\fP (const char *name)"
+.br
+.RI "Function which allows to get a already calculated formula\&. "
+.ti -1c
+.RI "void \fBfree_peptide_link\fP ()"
+.br
+.RI "Procedure which frees the formula of the peptide link and the util formulae\&. "
+.ti -1c
+.RI "void \fBprint_amino_acid_table\fP (\fBaa_CF_t\fP *aa_table)"
+.br
+.RI "Procedure which prints on the screen the amino acid table\&. "
+.ti -1c
+.RI "void \fBfprint_amino_acid_table\fP (FILE *file, \fBaa_CF_t\fP *aa_table)"
+.br
+.RI "Procedure which prints in a file the amino acid table\&. "
+.ti -1c
+.RI "void \fBset_X\fP (char amino_acid)"
+.br
+.RI "Procedure which allows to set the amino acid that will be used when X is met in a FASTA file\&. "
+.ti -1c
+.RI "void \fBset_Z\fP (char amino_acid)"
+.br
+.RI "Procedure which allows to set the amino acid that will be used when Z is met in a FASTA file\&. "
+.ti -1c
+.RI "void \fBset_B\fP (char amino_acid)"
+.br
+.RI "Procedure which allows to set the amino acid that will be used when B is met in a FASTA file\&. "
+.ti -1c
+.RI "char \fBget_X\fP ()"
+.br
+.RI "Function which allows to access to the amino acid used for X\&. "
+.ti -1c
+.RI "char \fBget_Z\fP ()"
+.br
+.RI "Function which allows to access to the amino acid used for Z\&. "
+.ti -1c
+.RI "char \fBget_B\fP ()"
+.br
+.RI "Function which allows to access to the amino acid used for B\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBformula_t\fP * \fBH\fP =NULL"
+.br
+.RI "Variable that corresponds to the H formula\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBOH\fP =NULL"
+.br
+.RI "Variable that corresponds to the OH formula\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBNHCHCO\fP =NULL"
+.br
+.RI "Variable that corresponds to the NHCHCO formula\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBH2O\fP =NULL"
+.br
+.RI "Variable that corresponds to the H2O formula\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBCO\fP =NULL"
+.br
+.RI "Variable that corresponds to the CO formula\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBNH\fP =NULL"
+.br
+.RI "Variable that corresponds to the NH formula\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBNH3\fP =NULL"
+.br
+.RI "Variable that corresponds to the NH3 formula\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBNH2\fP =NULL"
+.br
+.RI "Variable that corresponds to the NH2 formula\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBCH\fP =NULL"
+.br
+.RI "Variable that corresponds to the CH formula\&. "
+.ti -1c
+.RI "\fBformula_t\fP * \fBCO2H\fP =NULL"
+.br
+.RI "Variable that corresponds to the CO2H formula\&. "
+.ti -1c
+.RI "char \fBX\fP ='G'"
+.br
+.RI "Variable that corresponds to the value of the amino acid X read in a fasta file\&. "
+.ti -1c
+.RI "char \fBZ\fP ='E'"
+.br
+.RI "Variable that corresponds to the value of the amino acid Z read in a fasta file\&. "
+.ti -1c
+.RI "char \fBB\fP ='D'"
+.br
+.RI "Variable that corresponds to the value of the amino acid B read in a fasta file\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of the methods defined in \fBaa\&.h\fP\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Nicolas GRUSZCZYNSKA and Nicolas DOLET (2005)\&.
+.br
+ Modified and updated by Jean-Charles BOISSON (2005-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBaa\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void fprint_amino_acid_table (FILE * file, \fBaa_CF_t\fP * aa_table)"
+
+.PP
+Procedure which prints in a file the amino acid table\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile\fP The file where the amino acid table will be printed\&. 
+.br
+\fIaa_table\fP The amino acid table to print\&. 
+.RE
+.PP
+
+.PP
+Definition at line 434 of file aa\&.cpp\&.
+.PP
+References formula_tochar(), and get_weight()\&.
+.SS "void free_amino_acid_table (\fBaa_CF_t\fP * aa_table)"
+
+.PP
+Procedure which frees the memory allocated for an amino acid table\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaa_table\fP The amino acid table\&. 
+.RE
+.PP
+
+.PP
+Definition at line 208 of file aa\&.cpp\&.
+.PP
+References error(), free_formula(), and FREE_MEMORY_ERROR\&.
+.PP
+Referenced by free_tables()\&.
+.SS "void free_peptide_link ()"
+
+.PP
+Procedure which frees the formula of the peptide link and the util formulae\&. 
+.PP
+Definition at line 317 of file aa\&.cpp\&.
+.PP
+References CH, CO, CO2H, error(), free_formula(), FREE_MEMORY_ERROR, H, H2O, NH, NH2, NH3, NHCHCO, and OH\&.
+.PP
+Referenced by free_tables()\&.
+.SS "\fBaa_CF_t\fP * get_amino_acid_table (const char * filename, \fBelement_t\fP * elem_table, int elem_table_size)"
+
+.PP
+Function which initialise and return the amino acid formula table stored in a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP The file which contains the table\&. 
+.br
+\fIelem_table\fP The element table\&. 
+.br
+\fIelem_table_size\fP The number of elements in the table\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The first aa_CF_t structure\&. 
+.RE
+.PP
+
+.PP
+Definition at line 138 of file aa\&.cpp\&.
+.PP
+References amino_acid_CF::add_modif, B, copy_formula(), error(), amino_acid_CF::form, IO_ERROR, MEMORY_ALLOCATION_ERROR, read_formula(), amino_acid_CF::sub_modif, X, and Z\&.
+.SS "char get_B ()"
+
+.PP
+Function which allows to access to the amino acid used for B\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The used amino acid used\&. 
+.RE
+.PP
+
+.PP
+Definition at line 486 of file aa\&.cpp\&.
+.PP
+References B\&.
+.SS "\fBformula_t\fP * get_util_formula (const char * name)"
+
+.PP
+Function which allows to get a already calculated formula\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP The char* form of the wanted formula\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The wanted forumla\&. 
+.RE
+.PP
+
+.PP
+Definition at line 235 of file aa\&.cpp\&.
+.PP
+References CH, CO, CO2H, error(), H, H2O, NH, NH2, NH3, NHCHCO, OH, and USAGE_ERROR\&.
+.PP
+Referenced by digest(), fusion_peptide(), get_formula_from_sequence(), get_formulae_of_peptides(), get_peptide_formula_from_another_protein(), and get_peptide_formula_from_index()\&.
+.SS "char get_X ()"
+
+.PP
+Function which allows to access to the amino acid used for X\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The used amino acid used\&. 
+.RE
+.PP
+
+.PP
+Definition at line 474 of file aa\&.cpp\&.
+.PP
+References X\&.
+.SS "char get_Z ()"
+
+.PP
+Function which allows to access to the amino acid used for Z\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The used amino acid used\&. 
+.RE
+.PP
+
+.PP
+Definition at line 480 of file aa\&.cpp\&.
+.PP
+References Z\&.
+.SS "void init_peptid_link (\fBelement_t\fP * elem_table, int elem_table_size)"
+
+.PP
+Procedure which initialises the formula of peptid liaison and the util formulae\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelem_table\fP The element table\&. 
+.br
+\fIelem_table_size\fP The number of elements in the table\&. 
+.RE
+.PP
+
+.PP
+Definition at line 123 of file aa\&.cpp\&.
+.PP
+References CH, CO, CO2H, H, H2O, NH, NH2, NH3, NHCHCO, OH, and read_formula()\&.
+.PP
+Referenced by tables_initialisation()\&.
+.SS "void print_amino_acid_table (\fBaa_CF_t\fP * aa_table)"
+
+.PP
+Procedure which prints on the screen the amino acid table\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaa_table\fP The amino acid table\&. 
+.RE
+.PP
+
+.PP
+Definition at line 412 of file aa\&.cpp\&.
+.PP
+References formula_tochar()\&.
+.SS "void set_B (char amino_acid)"
+
+.PP
+Procedure which allows to set the amino acid that will be used when B is met in a FASTA file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIamino_acid\fP The amino acid corresponding to B\&. 
+.RE
+.PP
+
+.PP
+Definition at line 468 of file aa\&.cpp\&.
+.PP
+References B\&.
+.PP
+Referenced by load_string_keyword()\&.
+.SS "void set_X (char amino_acid)"
+
+.PP
+Procedure which allows to set the amino acid that will be used when X is met in a FASTA file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIamino_acid\fP The amino acid corresponding to X\&. 
+.RE
+.PP
+
+.PP
+Definition at line 456 of file aa\&.cpp\&.
+.PP
+References X\&.
+.PP
+Referenced by load_string_keyword()\&.
+.SS "void set_Z (char amino_acid)"
+
+.PP
+Procedure which allows to set the amino acid that will be used when Z is met in a FASTA file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIamino_acid\fP The amino acid corresponding to Z\&. 
+.RE
+.PP
+
+.PP
+Definition at line 462 of file aa\&.cpp\&.
+.PP
+References Z\&.
+.PP
+Referenced by load_string_keyword()\&.
+.SH "Variable Documentation"
+.PP 
+.SS "char B ='D'"
+
+.PP
+Variable that corresponds to the value of the amino acid B read in a fasta file\&. 
+.PP
+Definition at line 120 of file aa\&.cpp\&.
+.PP
+Referenced by get_amino_acid_table(), get_B(), and set_B()\&.
+.SS "\fBformula_t\fP * CH =NULL"
+
+.PP
+Variable that corresponds to the CH formula\&. 
+.PP
+Definition at line 98 of file aa\&.cpp\&.
+.PP
+Referenced by free_peptide_link(), get_util_formula(), and init_peptid_link()\&.
+.SS "\fBformula_t\fP * CO =NULL"
+
+.PP
+Variable that corresponds to the CO formula\&. 
+.PP
+Definition at line 78 of file aa\&.cpp\&.
+.PP
+Referenced by free_peptide_link(), get_util_formula(), and init_peptid_link()\&.
+.SS "\fBformula_t\fP * CO2H =NULL"
+
+.PP
+Variable that corresponds to the CO2H formula\&. 
+.PP
+Definition at line 103 of file aa\&.cpp\&.
+.PP
+Referenced by free_peptide_link(), get_util_formula(), and init_peptid_link()\&.
+.SS "\fBformula_t\fP * H =NULL"
+
+.PP
+Variable that corresponds to the H formula\&. 
+.PP
+Definition at line 58 of file aa\&.cpp\&.
+.PP
+Referenced by free_peptide_link(), get_util_formula(), and init_peptid_link()\&.
+.SS "\fBformula_t\fP * H2O =NULL"
+
+.PP
+Variable that corresponds to the H2O formula\&. 
+.PP
+Definition at line 73 of file aa\&.cpp\&.
+.PP
+Referenced by free_peptide_link(), get_util_formula(), and init_peptid_link()\&.
+.SS "\fBformula_t\fP * NH =NULL"
+
+.PP
+Variable that corresponds to the NH formula\&. 
+.PP
+Definition at line 83 of file aa\&.cpp\&.
+.PP
+Referenced by free_peptide_link(), get_util_formula(), and init_peptid_link()\&.
+.SS "\fBformula_t\fP * NH2 =NULL"
+
+.PP
+Variable that corresponds to the NH2 formula\&. 
+.PP
+Definition at line 93 of file aa\&.cpp\&.
+.PP
+Referenced by free_peptide_link(), get_util_formula(), and init_peptid_link()\&.
+.SS "\fBformula_t\fP * NH3 =NULL"
+
+.PP
+Variable that corresponds to the NH3 formula\&. 
+.PP
+Definition at line 88 of file aa\&.cpp\&.
+.PP
+Referenced by free_peptide_link(), get_util_formula(), and init_peptid_link()\&.
+.SS "\fBformula_t\fP * NHCHCO =NULL"
+
+.PP
+Variable that corresponds to the NHCHCO formula\&. 
+.PP
+Definition at line 68 of file aa\&.cpp\&.
+.PP
+Referenced by free_peptide_link(), get_util_formula(), and init_peptid_link()\&.
+.SS "\fBformula_t\fP * OH =NULL"
+
+.PP
+Variable that corresponds to the OH formula\&. 
+.PP
+Definition at line 63 of file aa\&.cpp\&.
+.PP
+Referenced by free_peptide_link(), get_util_formula(), and init_peptid_link()\&.
+.SS "char X ='G'"
+
+.PP
+Variable that corresponds to the value of the amino acid X read in a fasta file\&. 
+.PP
+Definition at line 110 of file aa\&.cpp\&.
+.PP
+Referenced by get_amino_acid_table(), get_X(), and set_X()\&.
+.SS "char Z ='E'"
+
+.PP
+Variable that corresponds to the value of the amino acid Z read in a fasta file\&. 
+.PP
+Definition at line 115 of file aa\&.cpp\&.
+.PP
+Referenced by get_amino_acid_table(), get_Z(), and set_Z()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

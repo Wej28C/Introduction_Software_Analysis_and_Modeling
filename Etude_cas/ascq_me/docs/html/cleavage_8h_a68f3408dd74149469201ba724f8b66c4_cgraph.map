@@ -1,0 +1,7 @@
+<map id="free_enzym_table" name="free_enzym_table">
+<area shape="rect" id="node1" title="Procedure which frees an enzyme table." alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="572,56,625,83"/>
+<area shape="rect" id="node3" href="$cleavage_8cpp.html#adbf86fc5a884ae28fea764c08bc488fb" title="Procedure which frees the content of a enzt structure." alt="" coords="192,31,275,57"/>
+<area shape="rect" id="node4" href="$cleavage_8cpp.html#a6cbb9dbebd384d9abf403a850fecfa55" title="Procedure which frees the content of a cplt structure." alt="" coords="323,81,401,108"/>
+<area shape="rect" id="node5" href="$cleavage_8cpp.html#aa72c64491600445e412ab877f6bfc2f7" title="Procedure which frees the content of a cpt structure." alt="" coords="449,132,524,159"/>
+</map>

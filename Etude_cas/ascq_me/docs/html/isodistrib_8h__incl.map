@@ -1,0 +1,20 @@
+<map id="isodistrib.h" name="isodistrib.h">
+<area shape="rect" id="node1" title="Definition of the methods to make simulated spectrum computation." alt="" coords="154,5,249,32"/>
+<area shape="rect" id="node2" href="$complex_8h.html" title="Definition of the complex structure and basic methods to use complex numbers." alt="" coords="5,229,96,256"/>
+<area shape="rect" id="node4" href="$digest_8h.html" title="Description of methods allowing to make the digestion of proteins." alt="" coords="164,80,239,107"/>
+<area shape="rect" id="node18" href="$seqio_8h.html" title="Description of methods allowing the using of FASTA files and other useful things linked to them." alt="" coords="317,80,387,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="17,603,85,629"/>
+<area shape="rect" id="node5" href="$cleavage_8h.html" title="Description of methods allowing to know where enzymes can cut proteins." alt="" coords="116,304,209,331"/>
+<area shape="rect" id="node13" href="$modifications__for__digestion_8h.html" title="Definition of the specifications for the post&#45;translation modifications in the digestion case." alt="" coords="171,155,386,181"/>
+<area shape="rect" id="node6" href="$util_8h.html" title="Definition of several useful things." alt="" coords="206,528,261,555"/>
+<area shape="rect" id="node7" title=" " alt="" coords="109,603,173,629"/>
+<area shape="rect" id="node8" title=" " alt="" coords="198,603,269,629"/>
+<area shape="rect" id="node9" title=" " alt="" coords="293,603,363,629"/>
+<area shape="rect" id="node10" href="$error_8h.html" title="Definition of the error management." alt="" coords="388,603,452,629"/>
+<area shape="rect" id="node11" title=" " alt="" coords="340,677,407,704"/>
+<area shape="rect" id="node12" title=" " alt="" coords="431,677,502,704"/>
+<area shape="rect" id="node14" href="$modification__table_8h.html" title="Definition of a lot of things to use post&#45;translational modifications." alt="" coords="201,229,356,256"/>
+<area shape="rect" id="node15" href="$tables_8h.html" title="Description of methods that allows to manipulate amino acids easier." alt="" coords="241,304,316,331"/>
+<area shape="rect" id="node16" href="$aa_8h.html" title="Definition of an amino acid." alt="" coords="248,379,299,405"/>
+<area shape="rect" id="node17" href="$formula_8h.html" title="Definition of a chemical formula." alt="" coords="227,453,312,480"/>
+</map>

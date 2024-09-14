@@ -1,0 +1,6 @@
+<map id="digestion_modification_initialization" name="digestion_modification_initialization">
+<area shape="rect" id="node1" title="Procedure that allows to initialize all the post translational modifications for the digestion." alt="" coords="5,23,176,65"/>
+<area shape="rect" id="node2" href="$modifications__for__digestion_8cpp.html#a4520167f17e7368561c7f1329724c0a4" title="Procedure which allows to activate a new modification." alt="" coords="224,56,359,83"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="459,5,512,32"/>
+<area shape="rect" id="node4" href="$modification__table_8h.html#a560a3281a425d851c2a80054aca5a05c" title="Function which allows to get the total number of available modifications." alt="" coords="407,57,564,98"/>
+</map>

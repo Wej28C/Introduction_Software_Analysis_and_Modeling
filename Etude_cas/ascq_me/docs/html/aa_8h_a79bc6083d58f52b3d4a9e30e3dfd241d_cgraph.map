@@ -1,0 +1,7 @@
+<map id="free_amino_acid_table" name="free_amino_acid_table">
+<area shape="rect" id="node1" title="Procedure which frees the memory allocated for an amino acid table." alt="" coords="5,5,176,32"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="719,56,772,83"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#a4c746199d04b732d41c72f52bb05cdd9" title="Free the memory allocated for a formula." alt="" coords="224,31,331,57"/>
+<area shape="rect" id="node4" href="$formula_8cpp.html#a6a81bdde62cda8c4d6ed43d9b16b4c26" title="Procedure which frees the memory allocated for a composition." alt="" coords="379,81,513,108"/>
+<area shape="rect" id="node5" href="$formula_8cpp.html#aa924d9fff6ed2c0d2168efc91d41e03a" title="Local procedure that frees the memory allocated for an element structure." alt="" coords="561,132,671,159"/>
+</map>

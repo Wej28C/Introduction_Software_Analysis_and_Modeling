@@ -1,0 +1,7 @@
+<map id="copy_formula" name="copy_formula">
+<area shape="rect" id="node1" title="Get the copy of a formula." alt="" coords="5,132,116,159"/>
+<area shape="rect" id="node2" href="$formula_8cpp.html#a7abb70e00923aee6b3fecac10731042c" title="Get the copy of a composition." alt="" coords="164,107,304,133"/>
+<area shape="rect" id="node5" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="693,81,747,108"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#a1b353bcd70fedc65de083af2d954e594" title="Local function that allows to gain the copy of an element structure." alt="" coords="352,56,497,83"/>
+<area shape="rect" id="node4" href="$formula_8cpp.html#aa2cff9d5e8bd11bacae69d478368fde7" title="Local function that allows to gain the copy of an isotop structure." alt="" coords="545,5,645,32"/>
+</map>

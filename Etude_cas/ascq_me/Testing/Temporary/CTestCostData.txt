@@ -1,0 +1,31 @@
+apo_mascot.config 0 0
+apo_mascot_fixed_modif.config 0 0
+cytc.config 0 0
+cytc_alone_theo.config 0 0
+default_configuration.config 0 0
+default_configuration_albu_name.config 0 0
+first.config 0 0
+first_decoy.config 0 0
+first_limited_apo_weigth.config 0 0
+first_multi_modif.config 0 0
+human_filter.config 0 0
+ker.config 0 0
+ker_human.config 0 0
+ker_human_apo_weight.config 0 0
+one_miss_cleavage_apo_mascot.config 0 0
+---
+apo_mascot.config
+apo_mascot_fixed_modif.config
+cytc.config
+cytc_alone_theo.config
+default_configuration.config
+default_configuration_albu_name.config
+first.config
+first_decoy.config
+first_limited_apo_weigth.config
+first_multi_modif.config
+human_filter.config
+ker.config
+ker_human.config
+ker_human_apo_weight.config
+one_miss_cleavage_apo_mascot.config

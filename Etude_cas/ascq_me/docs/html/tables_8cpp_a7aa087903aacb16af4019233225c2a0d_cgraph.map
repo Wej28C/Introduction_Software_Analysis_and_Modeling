@@ -1,0 +1,12 @@
+<map id="get_formula_from_sequence" name="get_formula_from_sequence">
+<area shape="rect" id="node1" title="Function which allows to get the formula of the proteic sequence given." alt="" coords="5,246,213,273"/>
+<area shape="rect" id="node2" href="$formula_8cpp.html#a8e4bdf0442e08288e70dcd8f2464b77c" title="Add two formula." alt="" coords="265,94,369,121"/>
+<area shape="rect" id="node6" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="979,170,1032,197"/>
+<area shape="rect" id="node7" href="$formula_8cpp.html#ab26f1f1f23fc5eecbf139fe58e3f310a" title="Get the copy of a formula." alt="" coords="261,196,372,222"/>
+<area shape="rect" id="node9" href="$tables_8cpp.html#ab1e4cb89e0628c675a7127e6d3618320" title="Function which returns the amino acid structure associated to a given char." alt="" coords="618,297,743,324"/>
+<area shape="rect" id="node10" href="$aa_8cpp.html#a7051accbc420772e52a6f065906ef3b0" title="Function which allows to get a already calculated formula." alt="" coords="801,348,931,374"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#a90fb951ba830f303d192e03a46da3527" title="Procedure which adds an element in a formula." alt="" coords="437,94,543,121"/>
+<area shape="rect" id="node4" href="$formula_8cpp.html#a1b353bcd70fedc65de083af2d954e594" title="Local function that allows to gain the copy of an element structure." alt="" coords="608,94,753,121"/>
+<area shape="rect" id="node5" href="$formula_8cpp.html#aa2cff9d5e8bd11bacae69d478368fde7" title="Local function that allows to gain the copy of an isotop structure." alt="" coords="816,94,916,121"/>
+<area shape="rect" id="node8" href="$formula_8cpp.html#a7abb70e00923aee6b3fecac10731042c" title="Get the copy of a composition." alt="" coords="420,145,560,172"/>
+</map>

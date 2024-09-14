@@ -1,0 +1,5 @@
+<map id="set_minimum_peptide_number" name="set_minimum_peptide_number">
+<area shape="rect" id="node1" title="Procedure which allows to modify the minimum peptide number needed to a protein to be considered." alt="" coords="5,23,173,65"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="265,5,319,32"/>
+<area shape="rect" id="node3" href="$seqio_8h.html#ae9f48d8632a96ba0e506432cbd61d6bc" title="Function that indicates if the parsing of the database is started or not i.e. nextEntry has been call..." alt="" coords="221,56,363,83"/>
+</map>

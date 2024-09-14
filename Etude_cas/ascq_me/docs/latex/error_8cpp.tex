@@ -1,0 +1,67 @@
+\doxysection{error.\+cpp File Reference}
+\label{error_8cpp}\index{error.cpp@{error.cpp}}
+
+
+Implementation of the methods defined in \doxyref{error.\+h}{p.}{error_8h}.  
+
+
+{\ttfamily \#include \char`\"{}error.\+h\char`\"{}}\newline
+Include dependency graph for error.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{error_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ error} (int error\+\_\+code, const char $\ast$user\+\_\+msg, const char $\ast$dev\+\_\+msg)
+\begin{DoxyCompactList}\small\item\em procedure which allows to throw an error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the methods defined in \doxyref{error.\+h}{p.}{error_8h}. 
+
+\begin{DoxyAuthor}{Author}
+Jean-\/\+Charles BOISSON (2006-\/2008). 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{error_8cpp_a5488d9b4d7fc51e0242d827bddd32374}} 
+\index{error.cpp@{error.cpp}!error@{error}}
+\index{error@{error}!error.cpp@{error.cpp}}
+\doxysubsubsection{error()}
+{\footnotesize\ttfamily void error (\begin{DoxyParamCaption}\item[{int}]{error\+\_\+code,  }\item[{const char $\ast$}]{user\+\_\+msg,  }\item[{const char $\ast$}]{dev\+\_\+msg }\end{DoxyParamCaption})}
+
+
+
+procedure which allows to throw an error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+code} & the error code. \\
+\hline
+{\em user\+\_\+msg} & the message for the user. \\
+\hline
+{\em dev\+\_\+msg} & the message for the developer. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file error.\+cpp.
+
+
+
+References EXECUTION\+\_\+\+ERROR, FREE\+\_\+\+MEMORY\+\_\+\+ERROR, IO\+\_\+\+ERROR, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, PROGRAM\+\_\+\+NAME, PROGRAM\+\_\+\+VERSION, USAGE\+\_\+\+ERROR, and WARNING.
+
+
+
+Referenced by activate\+\_\+full\+\_\+digestion(), add\+\_\+chains(), add\+\_\+formula(), add\+\_\+modification(), add\+\_\+peptide\+\_\+modification(), add\+\_\+protein(), affect\+\_\+atom(), apply\+\_\+global\+\_\+modification(), apply\+\_\+modification(), can\+\_\+be\+\_\+used\+\_\+on(), can\+\_\+be\+\_\+used\+\_\+on\+\_\+for\+\_\+digestion(), compare\+\_\+peptide\+\_\+score\+\_\+from\+\_\+indices(), compare\+\_\+peptide\+\_\+scores(), compute\+\_\+equivalent\+\_\+peptides(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+global(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide(), copy\+\_\+composition(), copy\+\_\+double\+\_\+array(), copy\+\_\+formula(), copy\+\_\+isotop(), copy\+\_\+one\+\_\+element(), copy\+\_\+peptide(), copy\+\_\+spectrum(), delete\+\_\+final\+\_\+blanks(), digest(), digestion\+\_\+modification\+\_\+initialization(), enzym\+\_\+load(), fastafopen(), fastafwrite(), fastafwrite\+\_\+way(), fprint\+\_\+peptide(), fprint\+\_\+peptide\+\_\+index(), free\+\_\+amino\+\_\+acid\+\_\+table(), free\+\_\+composition(), free\+\_\+cplt(), free\+\_\+cpt(), free\+\_\+element(), free\+\_\+element\+\_\+table(), free\+\_\+enzt(), free\+\_\+enzym\+\_\+table(), free\+\_\+formula(), free\+\_\+n\+\_\+formula(), free\+\_\+peptide(), free\+\_\+peptide\+\_\+link(), fusion\+\_\+peptide(), get\+\_\+activated\+\_\+modification\+\_\+name(), get\+\_\+activated\+\_\+modification\+\_\+symbol(), get\+\_\+amino\+\_\+acid(), get\+\_\+amino\+\_\+acid\+\_\+table(), get\+\_\+configuration\+\_\+file\+\_\+name(), get\+\_\+copie\+\_\+of\+\_\+digestion\+\_\+result(), get\+\_\+element(), get\+\_\+element\+\_\+table(), get\+\_\+exp\+\_\+protein\+\_\+mass(), get\+\_\+formula\+\_\+from\+\_\+sequence(), get\+\_\+formula\+\_\+to\+\_\+add(), get\+\_\+formula\+\_\+to\+\_\+sub(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+global\+\_\+modification\+\_\+index(), get\+\_\+modification\+\_\+amino\+\_\+acids(), get\+\_\+modification\+\_\+formula\+\_\+to\+\_\+add(), get\+\_\+modification\+\_\+formula\+\_\+to\+\_\+sub(), get\+\_\+modification\+\_\+name(), get\+\_\+modification\+\_\+side(), get\+\_\+modification\+\_\+symbol(), get\+\_\+modification\+\_\+type(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index(), get\+\_\+peptide\+\_\+sequence(), get\+\_\+reversed\+\_\+sequence(), get\+\_\+util\+\_\+formula(), get\+\_\+weight(), init\+\_\+ascq\+\_\+me\+\_\+display(), init\+\_\+distrib(), is\+\_\+a\+\_\+wanted\+\_\+protein(), is\+\_\+simulated\+\_\+wanted\+\_\+protein(), jump\+\_\+blanks(), load\+\_\+boolean\+\_\+keyword(), load\+\_\+configuration(), load\+\_\+float\+\_\+keyword(), load\+\_\+int\+\_\+keyword(), load\+\_\+modification\+\_\+configuration(), load\+\_\+modifications(), load\+\_\+string\+\_\+keyword(), load\+\_\+unsigned\+\_\+int\+\_\+keyword(), main(), new\+\_\+peptides\+\_\+with\+\_\+missed\+\_\+cleavages(), next\+\_\+simulated\+\_\+spectrum(), next\+Entry(), optimized\+\_\+isotopic\+\_\+distribution(), peptide\+\_\+charge\+\_\+weight(), print\+\_\+peptide(), print\+\_\+peptide\+\_\+index(), read\+\_\+formula(), read\+\_\+simulated\+\_\+spectrum(), read\+\_\+spectrum(), read\+\_\+until(), real\+\_\+digest(), save\+\_\+partial\+\_\+peptide\+\_\+scoring(), set\+\_\+\+C\+\_\+atom\+\_\+quantity(), set\+\_\+exp\+\_\+spectrum(), set\+\_\+gaussian\+\_\+value(), set\+\_\+maximum\+\_\+mass(), set\+\_\+maximum\+\_\+peptide\+\_\+length(), set\+\_\+minimum\+\_\+mass(), set\+\_\+minimum\+\_\+matched\+\_\+peptide\+\_\+number(), set\+\_\+minimum\+\_\+peptide\+\_\+number(), set\+\_\+peptide\+\_\+maximum\+\_\+mass(), set\+\_\+peptide\+\_\+precision(), set\+\_\+precision(), set\+\_\+scoring\+\_\+sensitivity(), set\+\_\+specie(), set\+\_\+spectrum\+\_\+maximum\+\_\+mass(), sort\+\_\+and\+\_\+init\+\_\+with\+\_\+peptide\+\_\+scoring(), string\+To\+Cpl(), and sub\+\_\+formula().
+

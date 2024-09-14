@@ -1,0 +1,6 @@
+<map id="fprint_amino_acid_table" name="fprint_amino_acid_table">
+<area shape="rect" id="node1" title="Procedure which prints in a file the amino acid table." alt="" coords="5,31,184,57"/>
+<area shape="rect" id="node2" href="$formula_8cpp.html#a5447ba10b6180f5df396e0b9adf028ad" title="Returns a string representing a formula." alt="" coords="232,5,353,32"/>
+<area shape="rect" id="node3" href="$formula_8cpp.html#a77a6756752caf55587c228c4e51b8c7e" title="Get the weight of a formula." alt="" coords="245,56,340,83"/>
+<area shape="rect" id="node4" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="401,56,455,83"/>
+</map>

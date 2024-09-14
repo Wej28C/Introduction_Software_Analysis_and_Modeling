@@ -1,0 +1,4 @@
+<map id="activate_full_digestion" name="activate_full_digestion">
+<area shape="rect" id="node1" title="Procedure which allows to activate or desactivate the full&#45;digest process i.e. when it is activated,..." alt="" coords="5,5,176,32"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="224,5,277,32"/>
+</map>

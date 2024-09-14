@@ -1,0 +1,7 @@
+<map id="fprint_peptide_index" name="fprint_peptide_index">
+<area shape="rect" id="node1" title="Procedure which prints in a file a peptide of the current digestion (thanks to an index)." alt="" coords="5,5,161,32"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="852,56,905,83"/>
+<area shape="rect" id="node3" href="$digest_8cpp.html#acf55d7859c8215e2d4755cac47d044b9" title="Procedure which allows to print a peptide in a file." alt="" coords="209,31,323,57"/>
+<area shape="rect" id="node4" href="$modifications__for__digestion_8h.html#af952fe27d5adf9a8dc045ce553004a79" title="Function which returns the small name (symbol) of a modification." alt="" coords="371,82,569,123"/>
+<area shape="rect" id="node5" href="$modification__table_8h.html#a127d92501b1fadaa59c4ebb89cf4f1e7" title="Function which allows to get the corresponding symbol according a wanted modification." alt="" coords="617,132,804,159"/>
+</map>

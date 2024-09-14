@@ -1,0 +1,191 @@
+.TH "complex.h" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+complex.h \- Definition of the complex structure and basic methods to use complex numbers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <math\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBcomplex\fP"
+.br
+.RI "Basic complex structure with a real part and an imaginary part\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBcomplex\fP \fBcomplex_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcomplex_t\fP \fBcomplex_multiplication\fP (\fBcomplex_t\fP z1, \fBcomplex_t\fP z2)"
+.br
+.RI "Function which makes the multiplication of 2 complex numbers\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP \fBcomplex_addition\fP (\fBcomplex_t\fP z1, \fBcomplex_t\fP z2)"
+.br
+.RI "Function which makes the addition of 2 complex numbers\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP \fBcomplex_subtraction\fP (\fBcomplex_t\fP z1, \fBcomplex_t\fP z2)"
+.br
+.RI "Function which makes the subtraction of 2 complex numbers\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP \fBcomplex_power\fP (\fBcomplex_t\fP z, int n)"
+.br
+.RI "Function which calculates the power of a complex number\&. "
+.ti -1c
+.RI "\fBcomplex_t\fP \fBcomplex_conjugate\fP (\fBcomplex_t\fP z)"
+.br
+.RI "Function which produces the conjugate complex number of one complex number\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition of the complex structure and basic methods to use complex numbers\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Jean-Charles BOISSON (2006-2008)\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBcomplex\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBcomplex\fP \fBcomplex_t\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBcomplex_t\fP complex_addition (\fBcomplex_t\fP z1, \fBcomplex_t\fP z2)"
+
+.PP
+Function which makes the addition of 2 complex numbers\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIz1\fP The first complex number\&. 
+.br
+\fIz2\fP The second complex number\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The addition of the 2 complex numbers\&. 
+.RE
+.PP
+
+.PP
+Definition at line 63 of file complex\&.cpp\&.
+.PP
+References complex::Im, and complex::Re\&.
+.SS "\fBcomplex_t\fP complex_conjugate (\fBcomplex_t\fP z)"
+
+.PP
+Function which produces the conjugate complex number of one complex number\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIz\fP The complex number\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The conjugate complex number\&. 
+.RE
+.PP
+
+.PP
+Definition at line 104 of file complex\&.cpp\&.
+.PP
+References complex::Im, and complex::Re\&.
+.SS "\fBcomplex_t\fP complex_multiplication (\fBcomplex_t\fP z1, \fBcomplex_t\fP z2)"
+
+.PP
+Function which makes the multiplication of 2 complex numbers\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIz1\fP The first complex number\&. 
+.br
+\fIz2\fP The second complex number\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The multiplication of the 2 complex numbers\&. 
+.RE
+.PP
+
+.PP
+Definition at line 52 of file complex\&.cpp\&.
+.PP
+References complex::Im, and complex::Re\&.
+.PP
+Referenced by complex_power(), init_distrib(), and optimized_isotopic_distribution()\&.
+.SS "\fBcomplex_t\fP complex_power (\fBcomplex_t\fP z, int n)"
+
+.PP
+Function which calculates the power of a complex number\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIz\fP The complex number\&. 
+.br
+\fIn\fP The power level\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The complex number at the good power level\&. 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file complex\&.cpp\&.
+.PP
+References complex_multiplication(), complex::Im, and complex::Re\&.
+.SS "\fBcomplex_t\fP complex_subtraction (\fBcomplex_t\fP z1, \fBcomplex_t\fP z2)"
+
+.PP
+Function which makes the subtraction of 2 complex numbers\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIz1\fP The first complex number\&. 
+.br
+\fIz2\fP The second complex number\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The subtraction of the 2 complex numbers\&. 
+.RE
+.PP
+
+.PP
+Definition at line 74 of file complex\&.cpp\&.
+.PP
+References complex::Im, and complex::Re\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

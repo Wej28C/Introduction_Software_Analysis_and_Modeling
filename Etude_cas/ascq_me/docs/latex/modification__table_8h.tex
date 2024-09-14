@@ -1,0 +1,564 @@
+\doxysection{modification\+\_\+table.\+h File Reference}
+\label{modification__table_8h}\index{modification\_table.h@{modification\_table.h}}
+
+
+Definition of a lot of things to use post-\/translational modifications.  
+
+
+{\ttfamily \#include \char`\"{}tables.\+h\char`\"{}}\newline
+Include dependency graph for modification\+\_\+table.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modification__table_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modification__table_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ MODIFICATION\+\_\+\+FILENAME}~\char`\"{}./internal/modification\+\_\+file\char`\"{}
+\begin{DoxyCompactList}\small\item\em Default location of the modification file. \end{DoxyCompactList}\item 
+\#define \textbf{ C\+\_\+\+TERM}~0
+\begin{DoxyCompactList}\small\item\em The first type of modification location. \end{DoxyCompactList}\item 
+\#define \textbf{ N\+\_\+\+TERM}~1
+\begin{DoxyCompactList}\small\item\em The second type of modification location. \end{DoxyCompactList}\item 
+\#define \textbf{ BOTH\+\_\+\+TERM}~2
+\begin{DoxyCompactList}\small\item\em The third type of modification location. \end{DoxyCompactList}\item 
+\#define \textbf{ INDEPENDANT\+\_\+\+TERM}~3
+\begin{DoxyCompactList}\small\item\em The fourth type of modification location. \end{DoxyCompactList}\item 
+\#define \textbf{ PROTEIN}~4
+\begin{DoxyCompactList}\small\item\em The fifth type of modification location. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ free\+\_\+all\+\_\+modifications} ()
+\begin{DoxyCompactList}\small\item\em Procedure which allows to free the modification formulae. \end{DoxyCompactList}\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ get\+\_\+modification\+\_\+formula\+\_\+to\+\_\+add} (int modif)
+\begin{DoxyCompactList}\small\item\em Function which returns the formula to add when we want to apply a wanted modification. \end{DoxyCompactList}\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ get\+\_\+modification\+\_\+formula\+\_\+to\+\_\+sub} (int modif)
+\begin{DoxyCompactList}\small\item\em Function which returns the formula to sub when we want to apply a wanted modification. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+modification\+\_\+symbol} (int modif)
+\begin{DoxyCompactList}\small\item\em Function which allows to get the corresponding symbol according a wanted modification. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+modification\+\_\+amino\+\_\+acids} (int modif)
+\begin{DoxyCompactList}\small\item\em Function which allows to return all the amino acids on which this modification can be used. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+total\+\_\+number\+\_\+of\+\_\+modifications} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the total number of available modifications. \end{DoxyCompactList}\item 
+void \textbf{ load\+\_\+modifications} (const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Procedure which loads the available modifications from a file. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+modification\+\_\+name} (int modif)
+\begin{DoxyCompactList}\small\item\em Function which allows to get the complete name of a modification. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+modification\+\_\+side} (int modif)
+\begin{DoxyCompactList}\small\item\em Function which returns the side corresponding to the modification. \end{DoxyCompactList}\item 
+int \textbf{ can\+\_\+be\+\_\+used\+\_\+on} (int modif, char amino\+\_\+acid, int place, int size, int first)
+\begin{DoxyCompactList}\small\item\em Function which indicates if the amino acid given can have the indicated modification. \end{DoxyCompactList}\item 
+void \textbf{ apply\+\_\+global\+\_\+modification} (\textbf{ formula\+\_\+t} $\ast$\textbf{ formula}, int modif)
+\begin{DoxyCompactList}\small\item\em Procedure which applies a modification on a formula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition of a lot of things to use post-\/translational modifications. 
+
+\begin{DoxyAuthor}{Author}
+Jean-\/\+Charles BOISSON (2005-\/2008) 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{modification__table_8h_ae30e396af1fa1c8899c2f896ae886e5a}} 
+\index{modification\_table.h@{modification\_table.h}!BOTH\_TERM@{BOTH\_TERM}}
+\index{BOTH\_TERM@{BOTH\_TERM}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{BOTH\_TERM}
+{\footnotesize\ttfamily \#define BOTH\+\_\+\+TERM~2}
+
+
+
+The third type of modification location. 
+
+This type corresponds to modification located on the N-\/terminal side or the C-\/terminal of a protein or a peptide. 
+
+Definition at line 78 of file modification\+\_\+table.\+h.
+
+\mbox{\label{modification__table_8h_a586a90f98bfeaee387a423f19f4297e1}} 
+\index{modification\_table.h@{modification\_table.h}!C\_TERM@{C\_TERM}}
+\index{C\_TERM@{C\_TERM}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{C\_TERM}
+{\footnotesize\ttfamily \#define C\+\_\+\+TERM~0}
+
+
+
+The first type of modification location. 
+
+This type corresponds to modification located on the C-\/terminal side of a protein or a peptide. 
+
+Definition at line 64 of file modification\+\_\+table.\+h.
+
+\mbox{\label{modification__table_8h_a2bdbf6113dd152ee783f77bd2ea3650d}} 
+\index{modification\_table.h@{modification\_table.h}!INDEPENDANT\_TERM@{INDEPENDANT\_TERM}}
+\index{INDEPENDANT\_TERM@{INDEPENDANT\_TERM}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{INDEPENDANT\_TERM}
+{\footnotesize\ttfamily \#define INDEPENDANT\+\_\+\+TERM~3}
+
+
+
+The fourth type of modification location. 
+
+This type corresponds to modification located anywhere on a protein or a peptide. 
+
+Definition at line 85 of file modification\+\_\+table.\+h.
+
+\mbox{\label{modification__table_8h_a73e209604405858c1e7a673b00c49014}} 
+\index{modification\_table.h@{modification\_table.h}!MODIFICATION\_FILENAME@{MODIFICATION\_FILENAME}}
+\index{MODIFICATION\_FILENAME@{MODIFICATION\_FILENAME}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{MODIFICATION\_FILENAME}
+{\footnotesize\ttfamily \#define MODIFICATION\+\_\+\+FILENAME~\char`\"{}./internal/modification\+\_\+file\char`\"{}}
+
+
+
+Default location of the modification file. 
+
+
+
+Definition at line 57 of file modification\+\_\+table.\+h.
+
+\mbox{\label{modification__table_8h_ab8670cc301037f3ef7155f35e671f27c}} 
+\index{modification\_table.h@{modification\_table.h}!N\_TERM@{N\_TERM}}
+\index{N\_TERM@{N\_TERM}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{N\_TERM}
+{\footnotesize\ttfamily \#define N\+\_\+\+TERM~1}
+
+
+
+The second type of modification location. 
+
+This type corresponds to modification located on the N-\/terminal side of a protein or a peptide. 
+
+Definition at line 71 of file modification\+\_\+table.\+h.
+
+\mbox{\label{modification__table_8h_a15e5af02dda15aed44659f41a8579a42}} 
+\index{modification\_table.h@{modification\_table.h}!PROTEIN@{PROTEIN}}
+\index{PROTEIN@{PROTEIN}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{PROTEIN}
+{\footnotesize\ttfamily \#define PROTEIN~4}
+
+
+
+The fifth type of modification location. 
+
+This type corresponds to modification located anywhere on a protein. 
+
+Definition at line 92 of file modification\+\_\+table.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{modification__table_8h_ac79881e5aa87409d878a06c96a3a57c4}} 
+\index{modification\_table.h@{modification\_table.h}!apply\_global\_modification@{apply\_global\_modification}}
+\index{apply\_global\_modification@{apply\_global\_modification}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{apply\_global\_modification()}
+{\footnotesize\ttfamily void apply\+\_\+global\+\_\+modification (\begin{DoxyParamCaption}\item[{\textbf{ formula\+\_\+t} $\ast$}]{formula,  }\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Procedure which applies a modification on a formula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formula} & The formula to modify. \\
+\hline
+{\em modif} & The index of the modif to apply. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 587 of file modification\+\_\+table.\+cpp.
+
+
+
+References add\+\_\+formula(), error(), EXECUTION\+\_\+\+ERROR, FALSE, formula\+\_\+to\+\_\+add, formula\+\_\+to\+\_\+sub, nb\+\_\+total\+\_\+modif, sub\+\_\+formula(), and USAGE\+\_\+\+ERROR.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modification__table_8h_ac79881e5aa87409d878a06c96a3a57c4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modification__table_8h_a2d2aebfd756a3421cb0ad046fd099206}} 
+\index{modification\_table.h@{modification\_table.h}!can\_be\_used\_on@{can\_be\_used\_on}}
+\index{can\_be\_used\_on@{can\_be\_used\_on}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{can\_be\_used\_on()}
+{\footnotesize\ttfamily int can\+\_\+be\+\_\+used\+\_\+on (\begin{DoxyParamCaption}\item[{int}]{modif,  }\item[{char}]{amino\+\_\+acid,  }\item[{int}]{place,  }\item[{int}]{size,  }\item[{int}]{first }\end{DoxyParamCaption})}
+
+
+
+Function which indicates if the amino acid given can have the indicated modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The chosen modification. \\
+\hline
+{\em amino\+\_\+acid} & The amino acid \\
+\hline
+{\em place} & Its place \\
+\hline
+{\em size} & The size of the protein/peptide. \\
+\hline
+{\em first} & This parameters indicates if the amino acid is an amino acid of a complete protein or the amino acid of the first peptide. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+The first place $<$=$>$ N-\/term, the last $<$=$>$ C-\/term. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE (see \doxyref{util.\+h}{p.}{util_8h}). 
+\end{DoxyReturn}
+
+
+Definition at line 193 of file modification\+\_\+table.\+cpp.
+
+
+
+References BOTH\+\_\+\+TERM, C\+\_\+\+TERM, error(), FALSE, INDEPENDANT\+\_\+\+TERM, modifications\+\_\+on\+\_\+amino\+\_\+acids, N\+\_\+\+TERM, nb\+\_\+total\+\_\+modif, PROTEIN, side, TRUE, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by can\+\_\+be\+\_\+used\+\_\+on\+\_\+for\+\_\+digestion().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{modification__table_8h_a2d2aebfd756a3421cb0ad046fd099206_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modification__table_8h_a77ed906e0193a72368a688acd69bef9e}} 
+\index{modification\_table.h@{modification\_table.h}!free\_all\_modifications@{free\_all\_modifications}}
+\index{free\_all\_modifications@{free\_all\_modifications}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{free\_all\_modifications()}
+{\footnotesize\ttfamily void free\+\_\+all\+\_\+modifications (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to free the modification formulae. 
+
+
+
+Definition at line 87 of file modification\+\_\+table.\+cpp.
+
+
+
+References formula\+\_\+to\+\_\+add, formula\+\_\+to\+\_\+sub, free\+\_\+composition(), modifications\+\_\+name, modifications\+\_\+on\+\_\+amino\+\_\+acids, nb\+\_\+total\+\_\+modif, side, and symbol.
+
+
+
+Referenced by ascq\+\_\+me\+\_\+configuration\+\_\+cleaning().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modification__table_8h_a77ed906e0193a72368a688acd69bef9e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modification__table_8h_a144cc966bd1d7d3c1ca3f532062837eb}} 
+\index{modification\_table.h@{modification\_table.h}!get\_modification\_amino\_acids@{get\_modification\_amino\_acids}}
+\index{get\_modification\_amino\_acids@{get\_modification\_amino\_acids}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{get\_modification\_amino\_acids()}
+{\footnotesize\ttfamily char $\ast$ get\+\_\+modification\+\_\+amino\+\_\+acids (\begin{DoxyParamCaption}\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Function which allows to return all the amino acids on which this modification can be used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The wanted modification. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amino acids. 
+\end{DoxyReturn}
+
+
+Definition at line 154 of file modification\+\_\+table.\+cpp.
+
+
+
+References error(), modifications\+\_\+on\+\_\+amino\+\_\+acids, nb\+\_\+total\+\_\+modif, and USAGE\+\_\+\+ERROR.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{modification__table_8h_a144cc966bd1d7d3c1ca3f532062837eb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modification__table_8h_a850b2a79e023d1d979f6cc4c26fcfacf}} 
+\index{modification\_table.h@{modification\_table.h}!get\_modification\_formula\_to\_add@{get\_modification\_formula\_to\_add}}
+\index{get\_modification\_formula\_to\_add@{get\_modification\_formula\_to\_add}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{get\_modification\_formula\_to\_add()}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t} $\ast$ get\+\_\+modification\+\_\+formula\+\_\+to\+\_\+add (\begin{DoxyParamCaption}\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Function which returns the formula to add when we want to apply a wanted modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The wanted modification. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The formula to add to apply the modification. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+This function return directly a pointer on the formula, so do not modify it, if you want this formula and make modification on it, call copy\+\_\+formula(get\+\_\+modification\+\_\+formula\+\_\+to\+\_\+add(modif)) in order to have a copy. 
+\end{DoxyWarning}
+
+
+Definition at line 120 of file modification\+\_\+table.\+cpp.
+
+
+
+References error(), formula\+\_\+to\+\_\+add, nb\+\_\+total\+\_\+modif, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by get\+\_\+formula\+\_\+to\+\_\+add().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{modification__table_8h_a850b2a79e023d1d979f6cc4c26fcfacf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modification__table_8h_aba646f6f85ed365f229f046b3dfcd568}} 
+\index{modification\_table.h@{modification\_table.h}!get\_modification\_formula\_to\_sub@{get\_modification\_formula\_to\_sub}}
+\index{get\_modification\_formula\_to\_sub@{get\_modification\_formula\_to\_sub}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{get\_modification\_formula\_to\_sub()}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t} $\ast$ get\+\_\+modification\+\_\+formula\+\_\+to\+\_\+sub (\begin{DoxyParamCaption}\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Function which returns the formula to sub when we want to apply a wanted modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The wanted modification. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The formula to sub to apply the modification. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+This function return directly a pointer on the formula, so do not modify it, if you want this formula and make modification on it, call copy\+\_\+formula(get\+\_\+modification\+\_\+formula\+\_\+to\+\_\+sub(modif)) in order to have a copy. 
+\end{DoxyWarning}
+
+
+Definition at line 132 of file modification\+\_\+table.\+cpp.
+
+
+
+References error(), formula\+\_\+to\+\_\+sub, nb\+\_\+total\+\_\+modif, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by get\+\_\+formula\+\_\+to\+\_\+sub().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{modification__table_8h_aba646f6f85ed365f229f046b3dfcd568_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modification__table_8h_a2033f5c347fcf58f8897cf4f9de9bf56}} 
+\index{modification\_table.h@{modification\_table.h}!get\_modification\_name@{get\_modification\_name}}
+\index{get\_modification\_name@{get\_modification\_name}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{get\_modification\_name()}
+{\footnotesize\ttfamily char $\ast$ get\+\_\+modification\+\_\+name (\begin{DoxyParamCaption}\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the complete name of a modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The wanted modification. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modification complete name. 
+\end{DoxyReturn}
+
+
+Definition at line 171 of file modification\+\_\+table.\+cpp.
+
+
+
+References error(), modifications\+\_\+name, nb\+\_\+total\+\_\+modif, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by fprint\+\_\+modification\+\_\+configuration(), fprint\+\_\+xml\+\_\+modification\+\_\+configuration(), get\+\_\+activated\+\_\+modification\+\_\+name(), and print\+\_\+modification\+\_\+configuration().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{modification__table_8h_a2033f5c347fcf58f8897cf4f9de9bf56_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modification__table_8h_a0eface3fd76ae3afa21919d0d7f37040}} 
+\index{modification\_table.h@{modification\_table.h}!get\_modification\_side@{get\_modification\_side}}
+\index{get\_modification\_side@{get\_modification\_side}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{get\_modification\_side()}
+{\footnotesize\ttfamily int get\+\_\+modification\+\_\+side (\begin{DoxyParamCaption}\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Function which returns the side corresponding to the modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The wanted modif. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding side. 
+\end{DoxyReturn}
+
+
+Definition at line 182 of file modification\+\_\+table.\+cpp.
+
+
+
+References error(), nb\+\_\+total\+\_\+modif, side, and USAGE\+\_\+\+ERROR.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{modification__table_8h_a0eface3fd76ae3afa21919d0d7f37040_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modification__table_8h_a127d92501b1fadaa59c4ebb89cf4f1e7}} 
+\index{modification\_table.h@{modification\_table.h}!get\_modification\_symbol@{get\_modification\_symbol}}
+\index{get\_modification\_symbol@{get\_modification\_symbol}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{get\_modification\_symbol()}
+{\footnotesize\ttfamily char $\ast$ get\+\_\+modification\+\_\+symbol (\begin{DoxyParamCaption}\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the corresponding symbol according a wanted modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modif} & The wanted modification. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding char$\ast$ 
+\end{DoxyReturn}
+
+
+Definition at line 143 of file modification\+\_\+table.\+cpp.
+
+
+
+References error(), nb\+\_\+total\+\_\+modif, symbol, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by get\+\_\+activated\+\_\+modification\+\_\+symbol().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{modification__table_8h_a127d92501b1fadaa59c4ebb89cf4f1e7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{modification__table_8h_a560a3281a425d851c2a80054aca5a05c}} 
+\index{modification\_table.h@{modification\_table.h}!get\_total\_number\_of\_modifications@{get\_total\_number\_of\_modifications}}
+\index{get\_total\_number\_of\_modifications@{get\_total\_number\_of\_modifications}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{get\_total\_number\_of\_modifications()}
+{\footnotesize\ttfamily int get\+\_\+total\+\_\+number\+\_\+of\+\_\+modifications (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the total number of available modifications. 
+
+\begin{DoxyReturn}{Returns}
+the modification number. 
+\end{DoxyReturn}
+
+
+Definition at line 165 of file modification\+\_\+table.\+cpp.
+
+
+
+References nb\+\_\+total\+\_\+modif.
+
+
+
+Referenced by add\+\_\+modification().
+
+\mbox{\label{modification__table_8h_a80736596142ca74133cdad9e0517a621}} 
+\index{modification\_table.h@{modification\_table.h}!load\_modifications@{load\_modifications}}
+\index{load\_modifications@{load\_modifications}!modification\_table.h@{modification\_table.h}}
+\doxysubsubsection{load\_modifications()}
+{\footnotesize\ttfamily void load\+\_\+modifications (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Procedure which loads the available modifications from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file for the loading. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 273 of file modification\+\_\+table.\+cpp.
+
+
+
+References BOTH\+\_\+\+TERM, C\+\_\+\+TERM, formula\+::comps, error(), formula\+\_\+to\+\_\+add, formula\+\_\+to\+\_\+sub, get\+\_\+element\+\_\+table(), get\+\_\+element\+\_\+table\+\_\+size(), INDEPENDANT\+\_\+\+TERM, IO\+\_\+\+ERROR, jump\+\_\+a\+\_\+line(), jump\+\_\+commentaries(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, modifications\+\_\+name, modifications\+\_\+on\+\_\+amino\+\_\+acids, N\+\_\+\+TERM, formula\+::nb\+\_\+comp, nb\+\_\+total\+\_\+modif, PROTEIN, read\+\_\+formula(), read\+\_\+until(), side, symbol, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by load\+\_\+configuration().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{modification__table_8h_a80736596142ca74133cdad9e0517a621_cgraph}
+\end{center}
+\end{figure}

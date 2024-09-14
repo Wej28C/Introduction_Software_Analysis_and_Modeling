@@ -1,0 +1,5 @@
+<map id="can_be_used_on_for_digestion" name="can_be_used_on_for_digestion">
+<area shape="rect" id="node1" title="Function which indicates if the given amino acid can have the indicated modification." alt="" coords="5,23,160,65"/>
+<area shape="rect" id="node2" href="$modification__table_8h.html#a2d2aebfd756a3421cb0ad046fd099206" title="Function which indicates if the amino acid given can have the indicated modification." alt="" coords="208,5,337,32"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="385,31,439,57"/>
+</map>

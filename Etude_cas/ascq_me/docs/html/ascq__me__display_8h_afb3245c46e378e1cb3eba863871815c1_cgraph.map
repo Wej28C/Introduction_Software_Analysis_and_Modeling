@@ -1,0 +1,5 @@
+<map id="init_ascq_me_display" name="init_ascq_me_display">
+<area shape="rect" id="node1" title="Procedure which inits all the useful structure for ASCQ_ME display." alt="" coords="5,31,168,57"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="287,5,341,32"/>
+<area shape="rect" id="node3" href="$ascq__me__configuration_8cpp.html#ab3bd3d4a93114c7d13ac56c790d562fb" title="Function which returns the number of displayed proteins." alt="" coords="216,56,412,83"/>
+</map>

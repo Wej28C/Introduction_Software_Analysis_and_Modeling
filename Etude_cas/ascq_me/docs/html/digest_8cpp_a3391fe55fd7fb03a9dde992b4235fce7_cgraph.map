@@ -1,0 +1,8 @@
+<map id="fusion_peptide" name="fusion_peptide">
+<area shape="rect" id="node1" title="Function which makes the fusion of two CONTIGUOUS (!!!) peptides." alt="" coords="5,107,124,133"/>
+<area shape="rect" id="node2" href="$digest_8cpp.html#a80275fa3e1e4d9b11b240cff99b42937" title="Function which makes a copy of a peptide." alt="" coords="393,5,503,32"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="551,107,604,133"/>
+<area shape="rect" id="node4" href="$aa_8cpp.html#a7051accbc420772e52a6f065906ef3b0" title="Function which allows to get a already calculated formula." alt="" coords="194,107,323,133"/>
+<area shape="rect" id="node5" href="$formula_8cpp.html#a77a6756752caf55587c228c4e51b8c7e" title="Get the weight of a formula." alt="" coords="401,157,495,184"/>
+<area shape="rect" id="node6" href="$digest_8cpp.html#ad6dc127f385bbc97c80f50d2f3a98678" title="Function which allows to get the weight of the atom charge." alt="" coords="172,208,345,235"/>
+</map>

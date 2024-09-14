@@ -1,0 +1,1661 @@
+\doxysection{digest.\+cpp File Reference}
+\label{digest_8cpp}\index{digest.cpp@{digest.cpp}}
+
+
+Implementation of the methods defined in \doxyref{digest.\+h}{p.}{digest_8h}.  
+
+
+{\ttfamily \#include \char`\"{}digest.\+h\char`\"{}}\newline
+Include dependency graph for digest.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ digest} ()
+\begin{DoxyCompactList}\small\item\em Procedure which realises the digestion with 0 miss-\/cleavage. \end{DoxyCompactList}\item 
+\textbf{ peptide\+\_\+t} $\ast$ \textbf{ get\+\_\+result\+\_\+of\+\_\+digestion} (int $\ast$nb\+\_\+peptides)
+\begin{DoxyCompactList}\small\item\em Function which returns the peptides resulting of the digestion. \end{DoxyCompactList}\item 
+\textbf{ peptide\+\_\+t} $\ast$ \textbf{ get\+\_\+copie\+\_\+of\+\_\+digestion\+\_\+result} (int $\ast$nb\+\_\+peptides)
+\begin{DoxyCompactList}\small\item\em Function which allows to gain a copie of the result of the digestion. \end{DoxyCompactList}\item 
+void \textbf{ print\+\_\+result\+\_\+of\+\_\+digestion} (\textbf{ peptide\+\_\+t} $\ast$\textbf{ peptides}, int nb\+\_\+peptides)
+\begin{DoxyCompactList}\small\item\em Procedure which prints on stdout the result of the digestion. \end{DoxyCompactList}\item 
+void \textbf{ fprint\+\_\+result\+\_\+of\+\_\+digestion} (FILE $\ast$file, \textbf{ peptide\+\_\+t} $\ast$\textbf{ peptides}, int nb\+\_\+peptides)
+\begin{DoxyCompactList}\small\item\em Procedure which prints in a file the result of the digestion. \end{DoxyCompactList}\item 
+void \textbf{ fprint\+\_\+result\+\_\+of\+\_\+digestion\+\_\+table\+\_\+format} (FILE $\ast$file, \textbf{ peptide\+\_\+t} $\ast$\textbf{ peptides}, int nb\+\_\+peptides)
+\begin{DoxyCompactList}\small\item\em Procedure which prints in a file a result of the digestion in a format useful for speadsheet programs. \end{DoxyCompactList}\item 
+\textbf{ peptide\+\_\+t} $\ast$ \textbf{ copy\+\_\+peptide} (\textbf{ peptide\+\_\+t} $\ast$original)
+\begin{DoxyCompactList}\small\item\em Function which makes a copy of a peptide. \end{DoxyCompactList}\item 
+\textbf{ peptide\+\_\+t} $\ast$ \textbf{ fusion\+\_\+peptide} (\textbf{ peptide\+\_\+t} $\ast$first, \textbf{ peptide\+\_\+t} $\ast$second)
+\begin{DoxyCompactList}\small\item\em Function which makes the fusion of two CONTIGUOUS (!!!) peptides. \end{DoxyCompactList}\item 
+void \textbf{ new\+\_\+peptides\+\_\+with\+\_\+missed\+\_\+cleavages} (int missed\+\_\+cleavage, int $\ast$nb\+\_\+new\+\_\+peptides\+\_\+total)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to compute the new peptides gained due to missed cleavages. \end{DoxyCompactList}\item 
+void \textbf{ real\+\_\+digest} (char $\ast$seq)
+\begin{DoxyCompactList}\small\item\em Procedure which realises the real digestion according the number of missed cleavages. \end{DoxyCompactList}\item 
+void \textbf{ activate\+\_\+full\+\_\+digestion} (int activation)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to activate or desactivate the full-\/digest process i.\+e. when it is activated, the digestion do not use the missed cleavage parameter and makes the digestion with all the possible missed cleavages (from 1 to n-\/1 missed cleavages with n the number of peptides gained without missed cleavages). \end{DoxyCompactList}\item 
+int \textbf{ compare\+\_\+peptides} (const void $\ast$first, const void $\ast$second)
+\begin{DoxyCompactList}\small\item\em Procedure which compares two peptides ==$>$ useful for qsort. \end{DoxyCompactList}\item 
+void \textbf{ sort\+\_\+peptides} ()
+\begin{DoxyCompactList}\small\item\em Procedure which sorts the current experimental peptides. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+peptide\+\_\+charge} (const char $\ast$\textbf{ formula})
+\begin{DoxyCompactList}\small\item\em Procedure which allows to set the value of the atom charge. \end{DoxyCompactList}\item 
+double \textbf{ peptide\+\_\+charge\+\_\+weight} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the weight of the atom charge. \end{DoxyCompactList}\item 
+void \textbf{ default\+\_\+peptide\+\_\+charge} ()
+\begin{DoxyCompactList}\small\item\em Procedure which sets the atom charge with the default value $<$=$>$ H formula. \end{DoxyCompactList}\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ get\+\_\+peptide\+\_\+charge\+\_\+formula} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the formula of the atom charge. \end{DoxyCompactList}\item 
+void \textbf{ init\+\_\+util\+\_\+digestion} ()
+\begin{DoxyCompactList}\small\item\em Procedure which initialises all the data useful for digestion (enzyme table for the moment). \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+used\+\_\+enzyme} (int chosen\+\_\+enzyme)
+\begin{DoxyCompactList}\small\item\em Procedure which sets the chosen enzyme (default is 0 for trypsine see others in enztable.\+aprot). \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+util\+\_\+digestion} ()
+\begin{DoxyCompactList}\small\item\em Procedure which frees all the data useful for the digestion (enzym table for the moment). \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+nb\+\_\+missed\+\_\+cleavages} (int missed\+\_\+cleavage)
+\begin{DoxyCompactList}\small\item\em Procedure which allows to set the number of authorized missed cleavage. \end{DoxyCompactList}\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ get\+\_\+formulae\+\_\+of\+\_\+peptides} (int $\ast$nb\+\_\+peptides)
+\begin{DoxyCompactList}\small\item\em Function which allows to obtain the result of the digestion in a formulae format. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+nb\+\_\+missed\+\_\+cleavages} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the number of authorized missed cleavages. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+activation\+\_\+full\+\_\+digest} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the state of the activation of full digestion. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+used\+\_\+enzyme} ()
+\begin{DoxyCompactList}\small\item\em Function which allows to get the name of the used enzyme. \end{DoxyCompactList}\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index} (int index)
+\begin{DoxyCompactList}\small\item\em Function which returns a formula corresponding to a peptide according to its place in the current digestion. \end{DoxyCompactList}\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ get\+\_\+peptide\+\_\+formula} (\textbf{ peptide\+\_\+t} $\ast$\textbf{ peptide})
+\begin{DoxyCompactList}\small\item\em Function which returns a formula corresponding to a wanted peptide of the current digested protein. \end{DoxyCompactList}\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein} (\textbf{ peptide\+\_\+t} $\ast$\textbf{ peptide}, char $\ast$protein\+\_\+sequence)
+\begin{DoxyCompactList}\small\item\em Function which returns a formula corresponding to a wanted peptide that not belongs to the current digested protein. \end{DoxyCompactList}\item 
+void \textbf{ free\+\_\+peptide} (\textbf{ peptide\+\_\+t} $\ast$\textbf{ peptide})
+\begin{DoxyCompactList}\small\item\em Procedure which free the memory allocated for the post-\/translational modifications of a peptide. \end{DoxyCompactList}\item 
+void \textbf{ add\+\_\+peptide\+\_\+modification} (\textbf{ peptide\+\_\+t} $\ast$\textbf{ peptide}, int amino\+\_\+acid, int modif)
+\begin{DoxyCompactList}\small\item\em Procedure which adds a modification on an amino acid of a peptide. \end{DoxyCompactList}\item 
+void \textbf{ compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+global} ()
+\begin{DoxyCompactList}\small\item\em Procedure which computes peptides gained with post-\/translational modifications. \end{DoxyCompactList}\item 
+\textbf{ peptide\+\_\+t} $\ast$ \textbf{ compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide} (\textbf{ peptide\+\_\+t} $\ast$\textbf{ peptide}, int $\ast$nb\+\_\+new)
+\begin{DoxyCompactList}\small\item\em Function which computes the peptides gained with post-\/translational modifications from one peptide. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+\_\+peptide\+\_\+sequence} (int index)
+\begin{DoxyCompactList}\small\item\em Function which returns the sequence of the wanted peptide, this sequence is only for making saves for printing because it can contains modifications name. \end{DoxyCompactList}\item 
+void \textbf{ print\+\_\+peptide} (\textbf{ peptide\+\_\+t} $\ast$\textbf{ peptide})
+\begin{DoxyCompactList}\small\item\em Procedure which allows to print directly a peptide on the stdout. \end{DoxyCompactList}\item 
+void \textbf{ print\+\_\+peptide\+\_\+index} (int index)
+\begin{DoxyCompactList}\small\item\em Procedure which prints directly on the screen a peptide of the current digestion (thanks to an index). \end{DoxyCompactList}\item 
+void \textbf{ fprint\+\_\+peptide} (FILE $\ast$file, \textbf{ peptide\+\_\+t} $\ast$\textbf{ peptide})
+\begin{DoxyCompactList}\small\item\em Procedure which allows to print a peptide in a file. \end{DoxyCompactList}\item 
+void \textbf{ fprint\+\_\+peptide\+\_\+index} (FILE $\ast$file, int index)
+\begin{DoxyCompactList}\small\item\em Procedure which prints in a file a peptide of the current digestion (thanks to an index). \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+peptide\+\_\+length\+\_\+at\+\_\+index} (int index)
+\begin{DoxyCompactList}\small\item\em Function which returns the sequence length of a wanted peptide. \end{DoxyCompactList}\item 
+int \textbf{ is\+\_\+equivalent\+\_\+to\+\_\+another} (int index)
+\begin{DoxyCompactList}\small\item\em Function which indicates if a peptide is equivalent to another one due to variable post-\/translational modifications. \end{DoxyCompactList}\item 
+void \textbf{ set\+\_\+maximum\+\_\+peptide\+\_\+length} (int new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Procedure which sets the maximum allowed length in amino acids for a peptide. \end{DoxyCompactList}\item 
+int \textbf{ get\+\_\+maximum\+\_\+peptide\+\_\+length} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the maximum allowed length in amino acids for a peptide. \end{DoxyCompactList}\item 
+void \textbf{ compute\+\_\+equivalent\+\_\+peptides} ()
+\begin{DoxyCompactList}\small\item\em Procedure which computes for the current digestion, the peptides which has to be marked has equivalent to another one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ peptide\+\_\+t} $\ast$ \textbf{ Peptides} = NULL
+\begin{DoxyCompactList}\small\item\em Result of the current digestion. \end{DoxyCompactList}\item 
+int \textbf{ Nb\+Peptides} =0
+\begin{DoxyCompactList}\small\item\em Current digestion peptide number. \end{DoxyCompactList}\item 
+int \textbf{ FULL\+\_\+\+DIGESTION} =\textbf{ FALSE}
+\begin{DoxyCompactList}\small\item\em Activation state of the full digest process, TRUE or FALSE (see \doxyref{util.\+h}{p.}{util_8h}). \end{DoxyCompactList}\item 
+\textbf{ formula\+\_\+t} $\ast$ \textbf{ peptide\+\_\+charge\+\_\+formula} =NULL
+\begin{DoxyCompactList}\small\item\em Formula to add for the peptide to be charged. \end{DoxyCompactList}\item 
+\textbf{ enztable\+\_\+t} $\ast$ \textbf{ enztable} =NULL
+\begin{DoxyCompactList}\small\item\em Enzyme table. \end{DoxyCompactList}\item 
+int \textbf{ enzyme} =0
+\begin{DoxyCompactList}\small\item\em Index of the current chosen enzyme in the enzyme table. \end{DoxyCompactList}\item 
+int \textbf{ nb\+\_\+missed\+\_\+cleavages} =0
+\begin{DoxyCompactList}\small\item\em Maximum number of missed cleavage. \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ sequence} =NULL
+\begin{DoxyCompactList}\small\item\em Sequence of the protein that i currently digested. \end{DoxyCompactList}\item 
+int \textbf{ maximum\+\_\+peptide\+\_\+length} =30
+\begin{DoxyCompactList}\small\item\em Maximum length in amino acids allowed for a peptide. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the methods defined in \doxyref{digest.\+h}{p.}{digest_8h}. 
+
+\begin{DoxyAuthor}{Author}
+Pierre LAURENCE and David BOENS (2003).~\newline
+ Modified and updated by Jean-\/\+Charles BOISSON (2005-\/2008). 
+\end{DoxyAuthor}
+\begin{DoxyWarning}{Warning}
+Copyright USTL~\newline
+ This software is governed by the Ce\+CILL-\/C license under French law and abiding by the rules of distribution of free software. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{digest_8cpp_a371995da51113e935483196d9522446b}} 
+\index{digest.cpp@{digest.cpp}!activate\_full\_digestion@{activate\_full\_digestion}}
+\index{activate\_full\_digestion@{activate\_full\_digestion}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{activate\_full\_digestion()}
+{\footnotesize\ttfamily void activate\+\_\+full\+\_\+digestion (\begin{DoxyParamCaption}\item[{int}]{activation }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to activate or desactivate the full-\/digest process i.\+e. when it is activated, the digestion do not use the missed cleavage parameter and makes the digestion with all the possible missed cleavages (from 1 to n-\/1 missed cleavages with n the number of peptides gained without missed cleavages). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em activation} & The parameter which activates (TRUE) or not (FALSE) the full digestion. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 693 of file digest.\+cpp.
+
+
+
+References error(), FALSE, FULL\+\_\+\+DIGESTION, TRUE, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by load\+\_\+boolean\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{digest_8cpp_a371995da51113e935483196d9522446b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_aa13a35874ea72a754db20466c5841440}} 
+\index{digest.cpp@{digest.cpp}!add\_peptide\_modification@{add\_peptide\_modification}}
+\index{add\_peptide\_modification@{add\_peptide\_modification}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{add\_peptide\_modification()}
+{\footnotesize\ttfamily void add\+\_\+peptide\+\_\+modification (\begin{DoxyParamCaption}\item[{\textbf{ peptide\+\_\+t} $\ast$}]{peptide,  }\item[{int}]{amino\+\_\+acid,  }\item[{int}]{modif }\end{DoxyParamCaption})}
+
+
+
+Procedure which adds a modification on an amino acid of a peptide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em peptide} & The peptide. \\
+\hline
+{\em amino\+\_\+acid} & The amino acid (its index). \\
+\hline
+{\em modif} & The wanted modification (its index). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 999 of file digest.\+cpp.
+
+
+
+References peptide\+::end\+Off, error(), get\+\_\+formula\+\_\+to\+\_\+add(), get\+\_\+formula\+\_\+to\+\_\+sub(), get\+\_\+number\+\_\+of\+\_\+activated\+\_\+modifications(), get\+\_\+weight(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, peptide\+::modifications, peptide\+::nb\+\_\+modif, peptide\+::start\+Off, USAGE\+\_\+\+ERROR, and peptide\+::weight.
+
+
+
+Referenced by compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_aa13a35874ea72a754db20466c5841440_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a0f9932b4e837de7ac9caba80bac79458}} 
+\index{digest.cpp@{digest.cpp}!compare\_peptides@{compare\_peptides}}
+\index{compare\_peptides@{compare\_peptides}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{compare\_peptides()}
+{\footnotesize\ttfamily int compare\+\_\+peptides (\begin{DoxyParamCaption}\item[{const void $\ast$}]{first,  }\item[{const void $\ast$}]{second }\end{DoxyParamCaption})}
+
+
+
+Procedure which compares two peptides ==$>$ useful for qsort. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & a void pointer that is in reality a peptide. \\
+\hline
+{\em second} & a void pointer that is also a peptide. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1, 0 or 1 $<$=$>$ the first is inferior,equal or superior to the second. 
+\end{DoxyReturn}
+
+
+Definition at line 707 of file digest.\+cpp.
+
+
+
+References peptide\+::weight.
+
+
+
+Referenced by compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide(), and sort\+\_\+peptides().
+
+\mbox{\label{digest_8cpp_a40823d60d4ceac44efbaec6df588a174}} 
+\index{digest.cpp@{digest.cpp}!compute\_equivalent\_peptides@{compute\_equivalent\_peptides}}
+\index{compute\_equivalent\_peptides@{compute\_equivalent\_peptides}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{compute\_equivalent\_peptides()}
+{\footnotesize\ttfamily void compute\+\_\+equivalent\+\_\+peptides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which computes for the current digestion, the peptides which has to be marked has equivalent to another one. 
+
+
+
+Definition at line 1447 of file digest.\+cpp.
+
+
+
+References peptide\+::end\+Off, equals(), peptide\+::equivalent\+\_\+to\+\_\+another, error(), EXECUTION\+\_\+\+ERROR, FALSE, get\+\_\+peptide\+\_\+sequence(), Nb\+Peptides, Peptides, peptide\+::start\+Off, TRUE, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by real\+\_\+digest().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_a40823d60d4ceac44efbaec6df588a174_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a23b4e4dec54f286c4baa4d48032f4052}} 
+\index{digest.cpp@{digest.cpp}!compute\_post\_traductional\_modifications\_global@{compute\_post\_traductional\_modifications\_global}}
+\index{compute\_post\_traductional\_modifications\_global@{compute\_post\_traductional\_modifications\_global}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{compute\_post\_traductional\_modifications\_global()}
+{\footnotesize\ttfamily void compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+global (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which computes peptides gained with post-\/translational modifications. 
+
+
+
+Definition at line 1084 of file digest.\+cpp.
+
+
+
+References compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide(), copy\+\_\+peptide(), error(), free\+\_\+peptide(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, Nb\+Peptides, and Peptides.
+
+
+
+Referenced by real\+\_\+digest().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_a23b4e4dec54f286c4baa4d48032f4052_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_ae8afcb59ab946b107b62f56a837bb3f4}} 
+\index{digest.cpp@{digest.cpp}!compute\_post\_traductional\_modifications\_one\_peptide@{compute\_post\_traductional\_modifications\_one\_peptide}}
+\index{compute\_post\_traductional\_modifications\_one\_peptide@{compute\_post\_traductional\_modifications\_one\_peptide}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{compute\_post\_traductional\_modifications\_one\_peptide()}
+{\footnotesize\ttfamily \textbf{ peptide\+\_\+t} $\ast$ compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide (\begin{DoxyParamCaption}\item[{\textbf{ peptide\+\_\+t} $\ast$}]{peptide,  }\item[{int $\ast$}]{nb\+\_\+new }\end{DoxyParamCaption})}
+
+
+
+Function which computes the peptides gained with post-\/translational modifications from one peptide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em peptide} & The peptide. \\
+\hline
+{\em nb\+\_\+new} & The number of new peptides generated (initialised by the function). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new peptides. 
+\end{DoxyReturn}
+
+
+Definition at line 1145 of file digest.\+cpp.
+
+
+
+References add\+\_\+peptide\+\_\+modification(), can\+\_\+be\+\_\+used\+\_\+on\+\_\+for\+\_\+digestion(), compare\+\_\+peptides(), copy\+\_\+peptide(), peptide\+::end\+Off, peptide\+::equivalent\+\_\+to\+\_\+another, error(), EXECUTION\+\_\+\+ERROR, FALSE, FIXED, get\+\_\+modification\+\_\+type(), get\+\_\+number\+\_\+of\+\_\+activated\+\_\+modifications(), maximum\+\_\+peptide\+\_\+length, MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, nb\+\_\+modifications, sequence, peptide\+::start\+Off, TRUE, USAGE\+\_\+\+ERROR, and peptide\+::weight.
+
+
+
+Referenced by compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+global().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_ae8afcb59ab946b107b62f56a837bb3f4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a80275fa3e1e4d9b11b240cff99b42937}} 
+\index{digest.cpp@{digest.cpp}!copy\_peptide@{copy\_peptide}}
+\index{copy\_peptide@{copy\_peptide}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{copy\_peptide()}
+{\footnotesize\ttfamily \textbf{ peptide\+\_\+t} $\ast$ copy\+\_\+peptide (\begin{DoxyParamCaption}\item[{\textbf{ peptide\+\_\+t} $\ast$}]{original }\end{DoxyParamCaption})}
+
+
+
+Function which makes a copy of a peptide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original} & The peptide we want to copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy. 
+\end{DoxyReturn}
+
+
+Definition at line 341 of file digest.\+cpp.
+
+
+
+References peptide\+::end\+Off, peptide\+::equivalent\+\_\+to\+\_\+another, error(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, peptide\+::modifications, peptide\+::nb\+\_\+missed\+\_\+cleavages, peptide\+::nb\+\_\+modif, peptide\+::start\+Off, USAGE\+\_\+\+ERROR, and peptide\+::weight.
+
+
+
+Referenced by compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+global(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide(), fusion\+\_\+peptide(), get\+\_\+copie\+\_\+of\+\_\+digestion\+\_\+result(), and new\+\_\+peptides\+\_\+with\+\_\+missed\+\_\+cleavages().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{digest_8cpp_a80275fa3e1e4d9b11b240cff99b42937_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_ab35e8bce9136a8056f8ec9d10abf681f}} 
+\index{digest.cpp@{digest.cpp}!default\_peptide\_charge@{default\_peptide\_charge}}
+\index{default\_peptide\_charge@{default\_peptide\_charge}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{default\_peptide\_charge()}
+{\footnotesize\ttfamily void default\+\_\+peptide\+\_\+charge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which sets the atom charge with the default value $<$=$>$ H formula. 
+
+
+
+Definition at line 755 of file digest.\+cpp.
+
+
+
+References set\+\_\+peptide\+\_\+charge().
+
+
+
+Referenced by init\+\_\+util\+\_\+digestion().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_ab35e8bce9136a8056f8ec9d10abf681f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_aea3db8d1e6c7164ef2b35423163aac4f}} 
+\index{digest.cpp@{digest.cpp}!digest@{digest}}
+\index{digest@{digest}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{digest()}
+{\footnotesize\ttfamily void digest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which realises the digestion with 0 miss-\/cleavage. 
+
+
+
+Definition at line 101 of file digest.\+cpp.
+
+
+
+References C\+\_\+\+SIDE, enzyme\+::cpl, cpl\+\_\+is\+Cleavage2(), peptide\+::end\+Off, enzyme\+\_\+list\+::enz, enztable, peptide\+::equivalent\+\_\+to\+\_\+another, error(), FALSE, amino\+\_\+acid\+\_\+\+CF\+::form, free\+\_\+peptide(), get\+\_\+amino\+\_\+acid(), get\+\_\+util\+\_\+formula(), get\+\_\+weight(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, peptide\+::modifications, N\+\_\+\+SIDE, peptide\+::nb\+\_\+missed\+\_\+cleavages, peptide\+::nb\+\_\+modif, Nb\+Peptides, peptide\+\_\+charge\+\_\+weight(), Peptides, sequence, enzyme\+::side, peptide\+::start\+Off, and peptide\+::weight.
+
+
+
+Referenced by real\+\_\+digest().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_aea3db8d1e6c7164ef2b35423163aac4f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_acf55d7859c8215e2d4755cac47d044b9}} 
+\index{digest.cpp@{digest.cpp}!fprint\_peptide@{fprint\_peptide}}
+\index{fprint\_peptide@{fprint\_peptide}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{fprint\_peptide()}
+{\footnotesize\ttfamily void fprint\+\_\+peptide (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file,  }\item[{\textbf{ peptide\+\_\+t} $\ast$}]{peptide }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to print a peptide in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file. \\
+\hline
+{\em peptide} & The peptide we want to print. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1368 of file digest.\+cpp.
+
+
+
+References peptide\+::end\+Off, error(), get\+\_\+activated\+\_\+modification\+\_\+symbol(), peptide\+::modifications, peptide\+::nb\+\_\+modif, sequence, peptide\+::start\+Off, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by fprint\+\_\+peptide\+\_\+index().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_acf55d7859c8215e2d4755cac47d044b9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_aabee6613028740f048b9bb1fa77d4fe5}} 
+\index{digest.cpp@{digest.cpp}!fprint\_peptide\_index@{fprint\_peptide\_index}}
+\index{fprint\_peptide\_index@{fprint\_peptide\_index}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{fprint\_peptide\_index()}
+{\footnotesize\ttfamily void fprint\+\_\+peptide\+\_\+index (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints in a file a peptide of the current digestion (thanks to an index). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file. \\
+\hline
+{\em index} & The index. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1394 of file digest.\+cpp.
+
+
+
+References error(), fprint\+\_\+peptide(), Nb\+Peptides, Peptides, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by fprint\+\_\+result\+\_\+of\+\_\+digestion(), and fprint\+\_\+result\+\_\+of\+\_\+digestion\+\_\+table\+\_\+format().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_aabee6613028740f048b9bb1fa77d4fe5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a0945e4d5e9ff7126ed51294868724239}} 
+\index{digest.cpp@{digest.cpp}!fprint\_result\_of\_digestion@{fprint\_result\_of\_digestion}}
+\index{fprint\_result\_of\_digestion@{fprint\_result\_of\_digestion}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{fprint\_result\_of\_digestion()}
+{\footnotesize\ttfamily void fprint\+\_\+result\+\_\+of\+\_\+digestion (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file,  }\item[{\textbf{ peptide\+\_\+t} $\ast$}]{peptides,  }\item[{int}]{nb\+\_\+peptides }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints in a file the result of the digestion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file where the result have to be put. \\
+\hline
+{\em peptides} & The peptide\+\_\+t$\ast$ we want to view to print. \\
+\hline
+{\em nb\+\_\+peptides} & The peptide number. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 288 of file digest.\+cpp.
+
+
+
+References formula\+\_\+tochar(), fprint\+\_\+peptide\+\_\+index(), free\+\_\+n\+\_\+formula(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), nb\+\_\+missed\+\_\+cleavages, peptides, and TRUE.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_a0945e4d5e9ff7126ed51294868724239_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_ad7079612fff45a7080c6c5559a765e1c}} 
+\index{digest.cpp@{digest.cpp}!fprint\_result\_of\_digestion\_table\_format@{fprint\_result\_of\_digestion\_table\_format}}
+\index{fprint\_result\_of\_digestion\_table\_format@{fprint\_result\_of\_digestion\_table\_format}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{fprint\_result\_of\_digestion\_table\_format()}
+{\footnotesize\ttfamily void fprint\+\_\+result\+\_\+of\+\_\+digestion\+\_\+table\+\_\+format (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{file,  }\item[{\textbf{ peptide\+\_\+t} $\ast$}]{peptides,  }\item[{int}]{nb\+\_\+peptides }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints in a file a result of the digestion in a format useful for speadsheet programs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file where the result have to be put. \\
+\hline
+{\em peptides} & The peptide\+\_\+t$\ast$ we want to print. \\
+\hline
+{\em nb\+\_\+peptides} & The peptide number. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 315 of file digest.\+cpp.
+
+
+
+References formula\+\_\+tochar(), fprint\+\_\+peptide\+\_\+index(), free\+\_\+n\+\_\+formula(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), nb\+\_\+missed\+\_\+cleavages, peptides, and TRUE.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_ad7079612fff45a7080c6c5559a765e1c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a11d3b212638a310c07b9ce18619d9456}} 
+\index{digest.cpp@{digest.cpp}!free\_peptide@{free\_peptide}}
+\index{free\_peptide@{free\_peptide}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{free\_peptide()}
+{\footnotesize\ttfamily void free\+\_\+peptide (\begin{DoxyParamCaption}\item[{\textbf{ peptide\+\_\+t} $\ast$}]{peptide }\end{DoxyParamCaption})}
+
+
+
+Procedure which free the memory allocated for the post-\/translational modifications of a peptide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em peptide} & The peptide we want to free the memory. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 966 of file digest.\+cpp.
+
+
+
+References peptide\+::end\+Off, error(), FREE\+\_\+\+MEMORY\+\_\+\+ERROR, peptide\+::modifications, peptide\+::nb\+\_\+modif, and peptide\+::start\+Off.
+
+
+
+Referenced by compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+global(), digest(), free\+\_\+util\+\_\+digestion(), and new\+\_\+peptides\+\_\+with\+\_\+missed\+\_\+cleavages().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{digest_8cpp_a11d3b212638a310c07b9ce18619d9456_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a8f0f410adfad486dc049da631baa29f4}} 
+\index{digest.cpp@{digest.cpp}!free\_util\_digestion@{free\_util\_digestion}}
+\index{free\_util\_digestion@{free\_util\_digestion}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{free\_util\_digestion()}
+{\footnotesize\ttfamily void free\+\_\+util\+\_\+digestion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which frees all the data useful for the digestion (enzym table for the moment). 
+
+
+
+Definition at line 781 of file digest.\+cpp.
+
+
+
+References enztable, free\+\_\+enzym\+\_\+table(), free\+\_\+formula(), free\+\_\+peptide(), Nb\+Peptides, peptide\+\_\+charge\+\_\+formula, Peptides, and sequence.
+
+
+
+Referenced by ascq\+\_\+me\+\_\+configuration\+\_\+cleaning().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_a8f0f410adfad486dc049da631baa29f4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a3391fe55fd7fb03a9dde992b4235fce7}} 
+\index{digest.cpp@{digest.cpp}!fusion\_peptide@{fusion\_peptide}}
+\index{fusion\_peptide@{fusion\_peptide}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{fusion\_peptide()}
+{\footnotesize\ttfamily \textbf{ peptide\+\_\+t} $\ast$ fusion\+\_\+peptide (\begin{DoxyParamCaption}\item[{\textbf{ peptide\+\_\+t} $\ast$}]{first,  }\item[{\textbf{ peptide\+\_\+t} $\ast$}]{second }\end{DoxyParamCaption})}
+
+
+
+Function which makes the fusion of two CONTIGUOUS (!!!) peptides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & The first peptide. \\
+\hline
+{\em second} & The second peptide. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+The two peptides must be contiguous. They are fusionned in this order (first is really before second in the peptidic sequence). 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+The new peptide result of the fusion. 
+\end{DoxyReturn}
+
+
+Definition at line 420 of file digest.\+cpp.
+
+
+
+References copy\+\_\+peptide(), peptide\+::end\+Off, peptide\+::equivalent\+\_\+to\+\_\+another, error(), FALSE, get\+\_\+util\+\_\+formula(), get\+\_\+weight(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, peptide\+::modifications, peptide\+::nb\+\_\+missed\+\_\+cleavages, peptide\+::nb\+\_\+modif, peptide\+\_\+charge\+\_\+weight(), peptide\+::start\+Off, USAGE\+\_\+\+ERROR, and peptide\+::weight.
+
+
+
+Referenced by new\+\_\+peptides\+\_\+with\+\_\+missed\+\_\+cleavages().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_a3391fe55fd7fb03a9dde992b4235fce7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a673770bf1f0f2b0a07655fa1b2c24e1b}} 
+\index{digest.cpp@{digest.cpp}!get\_activation\_full\_digest@{get\_activation\_full\_digest}}
+\index{get\_activation\_full\_digest@{get\_activation\_full\_digest}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{get\_activation\_full\_digest()}
+{\footnotesize\ttfamily int get\+\_\+activation\+\_\+full\+\_\+digest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the state of the activation of full digestion. 
+
+
+
+Definition at line 855 of file digest.\+cpp.
+
+
+
+References FULL\+\_\+\+DIGESTION.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{digest_8cpp_ac105878ab24ee1b5a04e47e0e8350346}} 
+\index{digest.cpp@{digest.cpp}!get\_copie\_of\_digestion\_result@{get\_copie\_of\_digestion\_result}}
+\index{get\_copie\_of\_digestion\_result@{get\_copie\_of\_digestion\_result}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{get\_copie\_of\_digestion\_result()}
+{\footnotesize\ttfamily \textbf{ peptide\+\_\+t} $\ast$ get\+\_\+copie\+\_\+of\+\_\+digestion\+\_\+result (\begin{DoxyParamCaption}\item[{int $\ast$}]{nb\+\_\+peptides }\end{DoxyParamCaption})}
+
+
+
+Function which allows to gain a copie of the result of the digestion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb\+\_\+peptides} & The number of peptides, initialised by the function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The peptide list obtained after the digestion. 
+\end{DoxyReturn}
+
+
+Definition at line 239 of file digest.\+cpp.
+
+
+
+References copy\+\_\+peptide(), error(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, Nb\+Peptides, and Peptides.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_ac105878ab24ee1b5a04e47e0e8350346_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a0dfb82ba8c4fee3f33c8a98b0b8fdd20}} 
+\index{digest.cpp@{digest.cpp}!get\_formulae\_of\_peptides@{get\_formulae\_of\_peptides}}
+\index{get\_formulae\_of\_peptides@{get\_formulae\_of\_peptides}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{get\_formulae\_of\_peptides()}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t} $\ast$ get\+\_\+formulae\+\_\+of\+\_\+peptides (\begin{DoxyParamCaption}\item[{int $\ast$}]{nb\+\_\+peptides }\end{DoxyParamCaption})}
+
+
+
+Function which allows to obtain the result of the digestion in a formulae format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb\+\_\+peptides} & The peptide number (initialised by the function). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The peptides in a formulae format. 
+\end{DoxyReturn}
+
+
+Definition at line 807 of file digest.\+cpp.
+
+
+
+References add\+\_\+formula(), apply\+\_\+modification(), copy\+\_\+formula(), peptide\+::end\+Off, error(), amino\+\_\+acid\+\_\+\+CF\+::form, get\+\_\+amino\+\_\+acid(), get\+\_\+peptide\+\_\+charge\+\_\+formula(), get\+\_\+util\+\_\+formula(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, modifications, peptide\+::nb\+\_\+modif, Nb\+Peptides, peptides, Peptides, sequence, and peptide\+::start\+Off.
+
+
+
+Referenced by fprint\+\_\+result\+\_\+of\+\_\+digestion(), fprint\+\_\+result\+\_\+of\+\_\+digestion\+\_\+table\+\_\+format(), main(), and print\+\_\+result\+\_\+of\+\_\+digestion().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_a0dfb82ba8c4fee3f33c8a98b0b8fdd20_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a0f617d41fbc06de16b28ab0de326ee0c}} 
+\index{digest.cpp@{digest.cpp}!get\_maximum\_peptide\_length@{get\_maximum\_peptide\_length}}
+\index{get\_maximum\_peptide\_length@{get\_maximum\_peptide\_length}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{get\_maximum\_peptide\_length()}
+{\footnotesize\ttfamily int get\+\_\+maximum\+\_\+peptide\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the maximum allowed length in amino acids for a peptide. 
+
+\begin{DoxyReturn}{Returns}
+The maximum allowed length. 
+\end{DoxyReturn}
+
+
+Definition at line 1441 of file digest.\+cpp.
+
+
+
+References maximum\+\_\+peptide\+\_\+length.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{digest_8cpp_a5d77cfc05e381e5434ef78285c6ce5e7}} 
+\index{digest.cpp@{digest.cpp}!get\_nb\_missed\_cleavages@{get\_nb\_missed\_cleavages}}
+\index{get\_nb\_missed\_cleavages@{get\_nb\_missed\_cleavages}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{get\_nb\_missed\_cleavages()}
+{\footnotesize\ttfamily int get\+\_\+nb\+\_\+missed\+\_\+cleavages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the number of authorized missed cleavages. 
+
+
+
+Definition at line 849 of file digest.\+cpp.
+
+
+
+References nb\+\_\+missed\+\_\+cleavages.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{digest_8cpp_a6347f5f049f9632f9edb4bcf88f62e51}} 
+\index{digest.cpp@{digest.cpp}!get\_peptide\_charge\_formula@{get\_peptide\_charge\_formula}}
+\index{get\_peptide\_charge\_formula@{get\_peptide\_charge\_formula}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{get\_peptide\_charge\_formula()}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t} $\ast$ get\+\_\+peptide\+\_\+charge\+\_\+formula (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the formula of the atom charge. 
+
+\begin{DoxyReturn}{Returns}
+The formula of the atom charge (in formula\+\_\+t$\ast$ format). 
+\end{DoxyReturn}
+
+
+Definition at line 762 of file digest.\+cpp.
+
+
+
+References peptide\+\_\+charge\+\_\+formula.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index(), and print\+\_\+configuration().
+
+\mbox{\label{digest_8cpp_adc67fd380040c0c5e72b72530f7aedab}} 
+\index{digest.cpp@{digest.cpp}!get\_peptide\_formula@{get\_peptide\_formula}}
+\index{get\_peptide\_formula@{get\_peptide\_formula}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{get\_peptide\_formula()}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t} $\ast$ get\+\_\+peptide\+\_\+formula (\begin{DoxyParamCaption}\item[{\textbf{ peptide\+\_\+t} $\ast$}]{peptide }\end{DoxyParamCaption})}
+
+
+
+Function which returns a formula corresponding to a wanted peptide of the current digested protein. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em peptide} & The peptide. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding formula. 
+\end{DoxyReturn}
+
+
+Definition at line 913 of file digest.\+cpp.
+
+
+
+References get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein(), and sequence.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_adc67fd380040c0c5e72b72530f7aedab_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a0417c3bb3f4975eee214a2adb3a771f4}} 
+\index{digest.cpp@{digest.cpp}!get\_peptide\_formula\_from\_another\_protein@{get\_peptide\_formula\_from\_another\_protein}}
+\index{get\_peptide\_formula\_from\_another\_protein@{get\_peptide\_formula\_from\_another\_protein}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{get\_peptide\_formula\_from\_another\_protein()}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t} $\ast$ get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+another\+\_\+protein (\begin{DoxyParamCaption}\item[{\textbf{ peptide\+\_\+t} $\ast$}]{peptide,  }\item[{char $\ast$}]{protein\+\_\+sequence }\end{DoxyParamCaption})}
+
+
+
+Function which returns a formula corresponding to a wanted peptide that not belongs to the current digested protein. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em peptide} & The peptide. \\
+\hline
+{\em protein\+\_\+sequence} & The corresponding complete protein sequence. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The peptide formula. 
+\end{DoxyReturn}
+
+
+Definition at line 919 of file digest.\+cpp.
+
+
+
+References add\+\_\+formula(), apply\+\_\+modification(), copy\+\_\+formula(), peptide\+::end\+Off, error(), amino\+\_\+acid\+\_\+\+CF\+::form, get\+\_\+amino\+\_\+acid(), get\+\_\+peptide\+\_\+charge\+\_\+formula(), get\+\_\+util\+\_\+formula(), peptide\+::modifications, peptide\+::nb\+\_\+modif, peptide\+::start\+Off, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by get\+\_\+peptide\+\_\+formula().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_a0417c3bb3f4975eee214a2adb3a771f4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_ae1984146906069b73eababa0f1d782ba}} 
+\index{digest.cpp@{digest.cpp}!get\_peptide\_formula\_from\_index@{get\_peptide\_formula\_from\_index}}
+\index{get\_peptide\_formula\_from\_index@{get\_peptide\_formula\_from\_index}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{get\_peptide\_formula\_from\_index()}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t} $\ast$ get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Function which returns a formula corresponding to a peptide according to its place in the current digestion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the peptide in the current digestion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The peptide formula. 
+\end{DoxyReturn}
+
+
+Definition at line 867 of file digest.\+cpp.
+
+
+
+References add\+\_\+formula(), apply\+\_\+modification(), copy\+\_\+formula(), peptide\+::end\+Off, error(), amino\+\_\+acid\+\_\+\+CF\+::form, get\+\_\+amino\+\_\+acid(), get\+\_\+peptide\+\_\+charge\+\_\+formula(), get\+\_\+util\+\_\+formula(), modifications, peptide\+::nb\+\_\+modif, Nb\+Peptides, Peptides, sequence, peptide\+::start\+Off, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by sort\+\_\+and\+\_\+init\+\_\+with\+\_\+peptide\+\_\+scoring().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_ae1984146906069b73eababa0f1d782ba_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a16c78794f089a2b244db8fa8f782b3c6}} 
+\index{digest.cpp@{digest.cpp}!get\_peptide\_length\_at\_index@{get\_peptide\_length\_at\_index}}
+\index{get\_peptide\_length\_at\_index@{get\_peptide\_length\_at\_index}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{get\_peptide\_length\_at\_index()}
+{\footnotesize\ttfamily int get\+\_\+peptide\+\_\+length\+\_\+at\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Function which returns the sequence length of a wanted peptide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the wanted peptide. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The peptide length. 
+\end{DoxyReturn}
+
+
+Definition at line 1405 of file digest.\+cpp.
+
+
+
+References peptide\+::end\+Off, Nb\+Peptides, Peptides, and peptide\+::start\+Off.
+
+\mbox{\label{digest_8cpp_aae2a512344861d7bb03f3c79dd6ccc01}} 
+\index{digest.cpp@{digest.cpp}!get\_peptide\_sequence@{get\_peptide\_sequence}}
+\index{get\_peptide\_sequence@{get\_peptide\_sequence}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{get\_peptide\_sequence()}
+{\footnotesize\ttfamily char $\ast$ get\+\_\+peptide\+\_\+sequence (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Function which returns the sequence of the wanted peptide, this sequence is only for making saves for printing because it can contains modifications name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the wanted peptide. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sequence. 
+\end{DoxyReturn}
+
+
+Definition at line 1275 of file digest.\+cpp.
+
+
+
+References peptide\+::end\+Off, error(), get\+\_\+activated\+\_\+modification\+\_\+symbol(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, modifications, peptide\+::nb\+\_\+modif, Nb\+Peptides, Peptides, sequence, peptide\+::start\+Off, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by compute\+\_\+equivalent\+\_\+peptides(), and sort\+\_\+and\+\_\+init\+\_\+with\+\_\+peptide\+\_\+scoring().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_aae2a512344861d7bb03f3c79dd6ccc01_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a232baf71c7e22e834a0e0dbcb7bccf44}} 
+\index{digest.cpp@{digest.cpp}!get\_result\_of\_digestion@{get\_result\_of\_digestion}}
+\index{get\_result\_of\_digestion@{get\_result\_of\_digestion}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{get\_result\_of\_digestion()}
+{\footnotesize\ttfamily \textbf{ peptide\+\_\+t} $\ast$ get\+\_\+result\+\_\+of\+\_\+digestion (\begin{DoxyParamCaption}\item[{int $\ast$}]{nb\+\_\+peptides }\end{DoxyParamCaption})}
+
+
+
+Function which returns the peptides resulting of the digestion. 
+
+\begin{DoxyWarning}{Warning}
+get\+\_\+result\+\_\+of\+\_\+digestion gives a original pointer so if you want to keep this result and make other digestion, use the next function called get\+\_\+copie\+\_\+of\+\_\+digestion\+\_\+result (don\textquotesingle{}t forget to free the pointer after using it) 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em nb\+\_\+peptides} & The number of peptides, initialised by the function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The peptide list obtained after the digestion. 
+\end{DoxyReturn}
+
+
+Definition at line 232 of file digest.\+cpp.
+
+
+
+References Nb\+Peptides, and Peptides.
+
+\mbox{\label{digest_8cpp_a04f56b8b3aa3eaccf42a1e49d8fba8c7}} 
+\index{digest.cpp@{digest.cpp}!get\_used\_enzyme@{get\_used\_enzyme}}
+\index{get\_used\_enzyme@{get\_used\_enzyme}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{get\_used\_enzyme()}
+{\footnotesize\ttfamily char $\ast$ get\+\_\+used\+\_\+enzyme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the name of the used enzyme. 
+
+
+
+Definition at line 861 of file digest.\+cpp.
+
+
+
+References enzyme\+\_\+list\+::enz, enztable, enzyme, and enzyme\+::name.
+
+
+
+Referenced by fprint\+\_\+configuration(), fprint\+\_\+configuration\+\_\+xml(), and print\+\_\+configuration().
+
+\mbox{\label{digest_8cpp_a6e9d5ebed70dcc6cc7de741e47e0133d}} 
+\index{digest.cpp@{digest.cpp}!init\_util\_digestion@{init\_util\_digestion}}
+\index{init\_util\_digestion@{init\_util\_digestion}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{init\_util\_digestion()}
+{\footnotesize\ttfamily void init\+\_\+util\+\_\+digestion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which initialises all the data useful for digestion (enzyme table for the moment). 
+
+
+
+Definition at line 768 of file digest.\+cpp.
+
+
+
+References default\+\_\+peptide\+\_\+charge(), ENZFILENAME, enztable, and enzym\+\_\+load().
+
+
+
+Referenced by load\+\_\+configuration().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_a6e9d5ebed70dcc6cc7de741e47e0133d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a2d45ab8d8a6f3a67d9ae0370afca50fb}} 
+\index{digest.cpp@{digest.cpp}!is\_equivalent\_to\_another@{is\_equivalent\_to\_another}}
+\index{is\_equivalent\_to\_another@{is\_equivalent\_to\_another}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{is\_equivalent\_to\_another()}
+{\footnotesize\ttfamily int is\+\_\+equivalent\+\_\+to\+\_\+another (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Function which indicates if a peptide is equivalent to another one due to variable post-\/translational modifications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the wanted peptide. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE or FALSE (see \doxyref{util.\+h}{p.}{util_8h}). 
+\end{DoxyReturn}
+
+
+Definition at line 1417 of file digest.\+cpp.
+
+
+
+References peptide\+::equivalent\+\_\+to\+\_\+another, Nb\+Peptides, and Peptides.
+
+
+
+Referenced by optimized\+\_\+isotopic\+\_\+distribution().
+
+\mbox{\label{digest_8cpp_aee06075114a7b1530703c284e7f689b6}} 
+\index{digest.cpp@{digest.cpp}!new\_peptides\_with\_missed\_cleavages@{new\_peptides\_with\_missed\_cleavages}}
+\index{new\_peptides\_with\_missed\_cleavages@{new\_peptides\_with\_missed\_cleavages}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{new\_peptides\_with\_missed\_cleavages()}
+{\footnotesize\ttfamily void new\+\_\+peptides\+\_\+with\+\_\+missed\+\_\+cleavages (\begin{DoxyParamCaption}\item[{int}]{missed\+\_\+cleavage,  }\item[{int $\ast$}]{nb\+\_\+new\+\_\+peptides\+\_\+total }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to compute the new peptides gained due to missed cleavages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em missed\+\_\+cleavage} & The number of missed cleavage. \\
+\hline
+{\em nb\+\_\+new\+\_\+peptides\+\_\+total} & The total number of new peptides (modified by the procedure). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 567 of file digest.\+cpp.
+
+
+
+References copy\+\_\+peptide(), error(), free\+\_\+peptide(), fusion\+\_\+peptide(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, peptide\+::modifications, peptide\+::nb\+\_\+modif, Nb\+Peptides, Peptides, and peptide\+::weight.
+
+
+
+Referenced by real\+\_\+digest().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_aee06075114a7b1530703c284e7f689b6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_ad6dc127f385bbc97c80f50d2f3a98678}} 
+\index{digest.cpp@{digest.cpp}!peptide\_charge\_weight@{peptide\_charge\_weight}}
+\index{peptide\_charge\_weight@{peptide\_charge\_weight}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{peptide\_charge\_weight()}
+{\footnotesize\ttfamily double peptide\+\_\+charge\+\_\+weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which allows to get the weight of the atom charge. 
+
+\begin{DoxyReturn}{Returns}
+The weight of the atom charge. 
+\end{DoxyReturn}
+
+
+Definition at line 744 of file digest.\+cpp.
+
+
+
+References error(), get\+\_\+weight(), peptide\+\_\+charge\+\_\+formula, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by digest(), and fusion\+\_\+peptide().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_ad6dc127f385bbc97c80f50d2f3a98678_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_ac5efbe31a9f5aa392b5646084ff0bca6}} 
+\index{digest.cpp@{digest.cpp}!print\_peptide@{print\_peptide}}
+\index{print\_peptide@{print\_peptide}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{print\_peptide()}
+{\footnotesize\ttfamily void print\+\_\+peptide (\begin{DoxyParamCaption}\item[{\textbf{ peptide\+\_\+t} $\ast$}]{peptide }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to print directly a peptide on the stdout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em peptide} & The peptide we want to print. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1331 of file digest.\+cpp.
+
+
+
+References peptide\+::end\+Off, error(), get\+\_\+activated\+\_\+modification\+\_\+symbol(), peptide\+::modifications, peptide\+::nb\+\_\+modif, sequence, peptide\+::start\+Off, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by print\+\_\+peptide\+\_\+index().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_ac5efbe31a9f5aa392b5646084ff0bca6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a71b7337a25bc7e539c3e66111a7cd05f}} 
+\index{digest.cpp@{digest.cpp}!print\_peptide\_index@{print\_peptide\_index}}
+\index{print\_peptide\_index@{print\_peptide\_index}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{print\_peptide\_index()}
+{\footnotesize\ttfamily void print\+\_\+peptide\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints directly on the screen a peptide of the current digestion (thanks to an index). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the peptide. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1357 of file digest.\+cpp.
+
+
+
+References error(), Nb\+Peptides, Peptides, print\+\_\+peptide(), and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by print\+\_\+result\+\_\+of\+\_\+digestion().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_a71b7337a25bc7e539c3e66111a7cd05f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a46e2f4692e76cd0c4e8a8344c8f044ee}} 
+\index{digest.cpp@{digest.cpp}!print\_result\_of\_digestion@{print\_result\_of\_digestion}}
+\index{print\_result\_of\_digestion@{print\_result\_of\_digestion}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{print\_result\_of\_digestion()}
+{\footnotesize\ttfamily void print\+\_\+result\+\_\+of\+\_\+digestion (\begin{DoxyParamCaption}\item[{\textbf{ peptide\+\_\+t} $\ast$}]{peptides,  }\item[{int}]{nb\+\_\+peptides }\end{DoxyParamCaption})}
+
+
+
+Procedure which prints on stdout the result of the digestion. 
+
+
+
+Definition at line 261 of file digest.\+cpp.
+
+
+
+References formula\+\_\+tochar(), free\+\_\+n\+\_\+formula(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), nb\+\_\+missed\+\_\+cleavages, peptides, print\+\_\+peptide\+\_\+index(), and TRUE.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_a46e2f4692e76cd0c4e8a8344c8f044ee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a3ce635f2394b553629f83f0fd3f9255d}} 
+\index{digest.cpp@{digest.cpp}!real\_digest@{real\_digest}}
+\index{real\_digest@{real\_digest}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{real\_digest()}
+{\footnotesize\ttfamily void real\+\_\+digest (\begin{DoxyParamCaption}\item[{char $\ast$}]{seq }\end{DoxyParamCaption})}
+
+
+
+Procedure which realises the real digestion according the number of missed cleavages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & The sequence to digest. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 646 of file digest.\+cpp.
+
+
+
+References compute\+\_\+equivalent\+\_\+peptides(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+global(), digest(), error(), FULL\+\_\+\+DIGESTION, get\+\_\+number\+\_\+of\+\_\+activated\+\_\+modifications(), MEMORY\+\_\+\+ALLOCATION\+\_\+\+ERROR, nb\+\_\+missed\+\_\+cleavages, Nb\+Peptides, new\+\_\+peptides\+\_\+with\+\_\+missed\+\_\+cleavages(), sequence, and TRUE.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_a3ce635f2394b553629f83f0fd3f9255d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_af522006c82afda4b8b2e49db270090d6}} 
+\index{digest.cpp@{digest.cpp}!set\_maximum\_peptide\_length@{set\_maximum\_peptide\_length}}
+\index{set\_maximum\_peptide\_length@{set\_maximum\_peptide\_length}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{set\_maximum\_peptide\_length()}
+{\footnotesize\ttfamily void set\+\_\+maximum\+\_\+peptide\+\_\+length (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Procedure which sets the maximum allowed length in amino acids for a peptide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new value. If a peptide has a longer length, it will be not considered during the post-\/translational modification computation. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1429 of file digest.\+cpp.
+
+
+
+References error(), maximum\+\_\+peptide\+\_\+length, and USAGE\+\_\+\+ERROR.
+
+
+
+Referenced by load\+\_\+int\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{digest_8cpp_af522006c82afda4b8b2e49db270090d6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_a12ce39cde10ffd53c82533491b70af4c}} 
+\index{digest.cpp@{digest.cpp}!set\_nb\_missed\_cleavages@{set\_nb\_missed\_cleavages}}
+\index{set\_nb\_missed\_cleavages@{set\_nb\_missed\_cleavages}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{set\_nb\_missed\_cleavages()}
+{\footnotesize\ttfamily void set\+\_\+nb\+\_\+missed\+\_\+cleavages (\begin{DoxyParamCaption}\item[{int}]{missed\+\_\+cleavage }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to set the number of authorized missed cleavage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em missed\+\_\+cleavage} & The number of missed cleavages. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 801 of file digest.\+cpp.
+
+
+
+References nb\+\_\+missed\+\_\+cleavages.
+
+
+
+Referenced by load\+\_\+int\+\_\+keyword().
+
+\mbox{\label{digest_8cpp_a263ee1d3801a756de1324e3dacfd4ba1}} 
+\index{digest.cpp@{digest.cpp}!set\_peptide\_charge@{set\_peptide\_charge}}
+\index{set\_peptide\_charge@{set\_peptide\_charge}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{set\_peptide\_charge()}
+{\footnotesize\ttfamily void set\+\_\+peptide\+\_\+charge (\begin{DoxyParamCaption}\item[{const char $\ast$}]{formula }\end{DoxyParamCaption})}
+
+
+
+Procedure which allows to set the value of the atom charge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formula} & The formula (in char$\ast$ format). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 734 of file digest.\+cpp.
+
+
+
+References free\+\_\+formula(), get\+\_\+element\+\_\+table(), get\+\_\+element\+\_\+table\+\_\+size(), peptide\+\_\+charge\+\_\+formula, and read\+\_\+formula().
+
+
+
+Referenced by default\+\_\+peptide\+\_\+charge(), and load\+\_\+string\+\_\+keyword().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{digest_8cpp_a263ee1d3801a756de1324e3dacfd4ba1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{digest_8cpp_aaca1766b9ea71e55b9d815e2622b9139}} 
+\index{digest.cpp@{digest.cpp}!set\_used\_enzyme@{set\_used\_enzyme}}
+\index{set\_used\_enzyme@{set\_used\_enzyme}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{set\_used\_enzyme()}
+{\footnotesize\ttfamily void set\+\_\+used\+\_\+enzyme (\begin{DoxyParamCaption}\item[{int}]{chosen\+\_\+enzyme }\end{DoxyParamCaption})}
+
+
+
+Procedure which sets the chosen enzyme (default is 0 for trypsine see others in enztable.\+aprot). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chosen\+\_\+enzyme} & The chosen\+\_\+enzyme. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 775 of file digest.\+cpp.
+
+
+
+Referenced by load\+\_\+int\+\_\+keyword().
+
+\mbox{\label{digest_8cpp_ad4c58db84f5a8710491568a7ee2f542d}} 
+\index{digest.cpp@{digest.cpp}!sort\_peptides@{sort\_peptides}}
+\index{sort\_peptides@{sort\_peptides}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{sort\_peptides()}
+{\footnotesize\ttfamily void sort\+\_\+peptides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procedure which sorts the current experimental peptides. 
+
+It is simply a call of qsort with the function compare\+\_\+peptides. 
+
+Definition at line 728 of file digest.\+cpp.
+
+
+
+References compare\+\_\+peptides(), Nb\+Peptides, and Peptides.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{digest_8cpp_ad4c58db84f5a8710491568a7ee2f542d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{digest_8cpp_a6415bfe8fe7f6bdb2f6c6e992f254fcf}} 
+\index{digest.cpp@{digest.cpp}!enztable@{enztable}}
+\index{enztable@{enztable}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{enztable}
+{\footnotesize\ttfamily \textbf{ enztable\+\_\+t} $\ast$ enztable =NULL}
+
+
+
+Enzyme table. 
+
+
+
+Definition at line 76 of file digest.\+cpp.
+
+
+
+Referenced by digest(), free\+\_\+util\+\_\+digestion(), get\+\_\+used\+\_\+enzyme(), and init\+\_\+util\+\_\+digestion().
+
+\mbox{\label{digest_8cpp_ad157c5d35566a01254cece5c3d424be2}} 
+\index{digest.cpp@{digest.cpp}!enzyme@{enzyme}}
+\index{enzyme@{enzyme}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{enzyme}
+{\footnotesize\ttfamily int \textbf{ enzyme} =0}
+
+
+
+Index of the current chosen enzyme in the enzyme table. 
+
+The default value corresponds to the trypsine enzyme, see enztable.\+aprot to understand. 
+
+Definition at line 83 of file digest.\+cpp.
+
+
+
+Referenced by get\+\_\+used\+\_\+enzyme().
+
+\mbox{\label{digest_8cpp_a21df51ec60db338921f033a84ae833f6}} 
+\index{digest.cpp@{digest.cpp}!FULL\_DIGESTION@{FULL\_DIGESTION}}
+\index{FULL\_DIGESTION@{FULL\_DIGESTION}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{FULL\_DIGESTION}
+{\footnotesize\ttfamily int FULL\+\_\+\+DIGESTION =\textbf{ FALSE}}
+
+
+
+Activation state of the full digest process, TRUE or FALSE (see \doxyref{util.\+h}{p.}{util_8h}). 
+
+
+
+Definition at line 66 of file digest.\+cpp.
+
+
+
+Referenced by activate\+\_\+full\+\_\+digestion(), get\+\_\+activation\+\_\+full\+\_\+digest(), and real\+\_\+digest().
+
+\mbox{\label{digest_8cpp_aefe6f16f80973ec89b5c627b0992497a}} 
+\index{digest.cpp@{digest.cpp}!maximum\_peptide\_length@{maximum\_peptide\_length}}
+\index{maximum\_peptide\_length@{maximum\_peptide\_length}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{maximum\_peptide\_length}
+{\footnotesize\ttfamily int maximum\+\_\+peptide\+\_\+length =30}
+
+
+
+Maximum length in amino acids allowed for a peptide. 
+
+
+
+Definition at line 98 of file digest.\+cpp.
+
+
+
+Referenced by compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide(), get\+\_\+maximum\+\_\+peptide\+\_\+length(), and set\+\_\+maximum\+\_\+peptide\+\_\+length().
+
+\mbox{\label{digest_8cpp_ab4566343194bad0bd8fff4cf277ed2ec}} 
+\index{digest.cpp@{digest.cpp}!nb\_missed\_cleavages@{nb\_missed\_cleavages}}
+\index{nb\_missed\_cleavages@{nb\_missed\_cleavages}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{nb\_missed\_cleavages}
+{\footnotesize\ttfamily int nb\+\_\+missed\+\_\+cleavages =0}
+
+
+
+Maximum number of missed cleavage. 
+
+
+
+Definition at line 88 of file digest.\+cpp.
+
+
+
+Referenced by fprint\+\_\+result\+\_\+of\+\_\+digestion(), fprint\+\_\+result\+\_\+of\+\_\+digestion\+\_\+table\+\_\+format(), get\+\_\+nb\+\_\+missed\+\_\+cleavages(), print\+\_\+result\+\_\+of\+\_\+digestion(), real\+\_\+digest(), and set\+\_\+nb\+\_\+missed\+\_\+cleavages().
+
+\mbox{\label{digest_8cpp_ac938c3d31ee9f067ba85a40a58cf6b71}} 
+\index{digest.cpp@{digest.cpp}!NbPeptides@{NbPeptides}}
+\index{NbPeptides@{NbPeptides}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{NbPeptides}
+{\footnotesize\ttfamily int Nb\+Peptides =0}
+
+
+
+Current digestion peptide number. 
+
+
+
+Definition at line 61 of file digest.\+cpp.
+
+
+
+Referenced by compute\+\_\+equivalent\+\_\+peptides(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+global(), digest(), fprint\+\_\+peptide\+\_\+index(), free\+\_\+util\+\_\+digestion(), get\+\_\+copie\+\_\+of\+\_\+digestion\+\_\+result(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index(), get\+\_\+peptide\+\_\+length\+\_\+at\+\_\+index(), get\+\_\+peptide\+\_\+sequence(), get\+\_\+result\+\_\+of\+\_\+digestion(), is\+\_\+equivalent\+\_\+to\+\_\+another(), new\+\_\+peptides\+\_\+with\+\_\+missed\+\_\+cleavages(), print\+\_\+peptide\+\_\+index(), real\+\_\+digest(), and sort\+\_\+peptides().
+
+\mbox{\label{digest_8cpp_a876ca59afbf3c0cc343622afbf7eced1}} 
+\index{digest.cpp@{digest.cpp}!peptide\_charge\_formula@{peptide\_charge\_formula}}
+\index{peptide\_charge\_formula@{peptide\_charge\_formula}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{peptide\_charge\_formula}
+{\footnotesize\ttfamily \textbf{ formula\+\_\+t} $\ast$ peptide\+\_\+charge\+\_\+formula =NULL}
+
+
+
+Formula to add for the peptide to be charged. 
+
+
+
+Definition at line 71 of file digest.\+cpp.
+
+
+
+Referenced by free\+\_\+util\+\_\+digestion(), get\+\_\+peptide\+\_\+charge\+\_\+formula(), peptide\+\_\+charge\+\_\+weight(), and set\+\_\+peptide\+\_\+charge().
+
+\mbox{\label{digest_8cpp_ac5ef10757bd8a86a200bed6ee5e93708}} 
+\index{digest.cpp@{digest.cpp}!Peptides@{Peptides}}
+\index{Peptides@{Peptides}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{Peptides}
+{\footnotesize\ttfamily \textbf{ peptide\+\_\+t} $\ast$ Peptides = NULL}
+
+
+
+Result of the current digestion. 
+
+
+
+Definition at line 56 of file digest.\+cpp.
+
+
+
+Referenced by compute\+\_\+equivalent\+\_\+peptides(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+global(), digest(), fprint\+\_\+peptide\+\_\+index(), free\+\_\+util\+\_\+digestion(), get\+\_\+copie\+\_\+of\+\_\+digestion\+\_\+result(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index(), get\+\_\+peptide\+\_\+length\+\_\+at\+\_\+index(), get\+\_\+peptide\+\_\+sequence(), get\+\_\+result\+\_\+of\+\_\+digestion(), is\+\_\+equivalent\+\_\+to\+\_\+another(), new\+\_\+peptides\+\_\+with\+\_\+missed\+\_\+cleavages(), print\+\_\+peptide\+\_\+index(), and sort\+\_\+peptides().
+
+\mbox{\label{digest_8cpp_a5a5dd14f667524232ddc19ef0fb0807b}} 
+\index{digest.cpp@{digest.cpp}!sequence@{sequence}}
+\index{sequence@{sequence}!digest.cpp@{digest.cpp}}
+\doxysubsubsection{sequence}
+{\footnotesize\ttfamily char $\ast$ sequence =NULL}
+
+
+
+Sequence of the protein that i currently digested. 
+
+
+
+Definition at line 93 of file digest.\+cpp.
+
+
+
+Referenced by add\+\_\+protein(), compute\+\_\+post\+\_\+traductional\+\_\+modifications\+\_\+one\+\_\+peptide(), digest(), fprint\+\_\+peptide(), free\+\_\+util\+\_\+digestion(), get\+\_\+formula\+\_\+from\+\_\+sequence(), get\+\_\+formulae\+\_\+of\+\_\+peptides(), get\+\_\+peptide\+\_\+formula(), get\+\_\+peptide\+\_\+formula\+\_\+from\+\_\+index(), get\+\_\+peptide\+\_\+sequence(), main(), print\+\_\+peptide(), and real\+\_\+digest().
+

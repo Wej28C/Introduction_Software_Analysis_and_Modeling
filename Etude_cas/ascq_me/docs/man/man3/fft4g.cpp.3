@@ -1,0 +1,276 @@
+.TH "fft4g.cpp" 3 "Fri Nov 3 2023" "Version 1.0.6" "ASCQ_ME" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fft4g.cpp \- The complete fft package is also in the ASCQ_ME sources in fft_src\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <math\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcdft\fP (int n, int isgn, double *a, int *\fBip\fP, double *\fBw\fP)"
+.br
+.RI "Complex Discrete Fourier Transform\&. "
+.ti -1c
+.RI "void \fBrdft\fP (int n, int isgn, double *a, int *\fBip\fP, double *\fBw\fP)"
+.br
+.RI "Real Discrete Fourier Transform\&. "
+.ti -1c
+.RI "void \fBddct\fP (int n, int isgn, double *a, int *\fBip\fP, double *\fBw\fP)"
+.br
+.RI "Discrete Cosine Transform\&. "
+.ti -1c
+.RI "void \fBddst\fP (int n, int isgn, double *a, int *\fBip\fP, double *\fBw\fP)"
+.br
+.RI "Discrete Sine Transform\&. "
+.ti -1c
+.RI "void \fBdfct\fP (int n, double *a, double *t, int *\fBip\fP, double *\fBw\fP)"
+.br
+.RI "Cosine Transform of RDFT (Real Symmetric DFT)\&. "
+.ti -1c
+.RI "void \fBdfst\fP (int n, double *a, double *t, int *\fBip\fP, double *\fBw\fP)"
+.br
+.RI "Sine Transform of RDFT (Real Anti-symmetric DFT) "
+.ti -1c
+.RI "void \fBmakewt\fP (int nw, int *\fBip\fP, double *\fBw\fP)"
+.br
+.RI "One of the initializing routines\&. "
+.ti -1c
+.RI "void \fBmakect\fP (int nc, int *\fBip\fP, double *c)"
+.br
+.RI "One the initializing routines\&. "
+.ti -1c
+.RI "void \fBbitrv2\fP (int n, int *\fBip\fP, double *a)"
+.br
+.RI "One of the child routines\&. "
+.ti -1c
+.RI "void \fBbitrv2conj\fP (int n, int *\fBip\fP, double *a)"
+.br
+.RI "One of the child routines\&. "
+.ti -1c
+.RI "void \fBcftfsub\fP (int n, double *a, double *\fBw\fP)"
+.br
+.RI "One of the child routines\&. "
+.ti -1c
+.RI "void \fBcftbsub\fP (int n, double *a, double *\fBw\fP)"
+.br
+.RI "One of the child routines\&. "
+.ti -1c
+.RI "void \fBcft1st\fP (int n, double *a, double *\fBw\fP)"
+.br
+.RI "One of the child routines\&. "
+.ti -1c
+.RI "void \fBcftmdl\fP (int n, int l, double *a, double *\fBw\fP)"
+.br
+.RI "One of the child routines\&. "
+.ti -1c
+.RI "void \fBrftfsub\fP (int n, double *a, int nc, double *c)"
+.br
+.RI "One of the child routines\&. "
+.ti -1c
+.RI "void \fBrftbsub\fP (int n, double *a, int nc, double *c)"
+.br
+.RI "One the child rountines\&. "
+.ti -1c
+.RI "void \fBdctsub\fP (int n, double *a, int nc, double *c)"
+.br
+.RI "One of the child routines\&. "
+.ti -1c
+.RI "void \fBdstsub\fP (int n, double *a, int nc, double *c)"
+.br
+.RI "One of the child routines\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The complete fft package is also in the ASCQ_ME sources in fft_src\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+See http://momonga.t.u-tokyo.ac.jp/~ooura/fft.html where the fft package has been downloaded\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Copyright USTL
+.br
+ This software is governed by the CeCILL-C license under French law and abiding by the rules of distribution of free software\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBfft4g\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void bitrv2 (int n, int * ip, double * a)"
+
+.PP
+One of the child routines\&. 
+.PP
+Definition at line 775 of file fft4g\&.cpp\&.
+.PP
+References ip\&.
+.PP
+Referenced by cdft(), ddct(), ddst(), dfct(), dfst(), makewt(), and rdft()\&.
+.SS "void bitrv2conj (int n, int * ip, double * a)"
+
+.PP
+One of the child routines\&. 
+.PP
+Definition at line 877 of file fft4g\&.cpp\&.
+.PP
+References ip\&.
+.PP
+Referenced by cdft()\&.
+.SS "void cdft (int n, int isgn, double * a, int * ip, double * w)"
+
+.PP
+Complex Discrete Fourier Transform\&. 
+.PP
+Definition at line 328 of file fft4g\&.cpp\&.
+.PP
+References bitrv2(), bitrv2conj(), cftbsub(), cftfsub(), ip, makewt(), and w\&.
+.PP
+Referenced by init_distrib(), and optimized_isotopic_distribution()\&.
+.SS "void cft1st (int n, double * a, double * w)"
+
+.PP
+One of the child routines\&. 
+.PP
+Definition at line 1095 of file fft4g\&.cpp\&.
+.PP
+References w\&.
+.PP
+Referenced by cftbsub(), and cftfsub()\&.
+.SS "void cftbsub (int n, double * a, double * w)"
+
+.PP
+One of the child routines\&. 
+.PP
+Definition at line 1041 of file fft4g\&.cpp\&.
+.PP
+References cft1st(), cftmdl(), and w\&.
+.PP
+Referenced by cdft(), ddct(), ddst(), and rdft()\&.
+.SS "void cftfsub (int n, double * a, double * w)"
+
+.PP
+One of the child routines\&. 
+.PP
+Definition at line 987 of file fft4g\&.cpp\&.
+.PP
+References cft1st(), cftmdl(), and w\&.
+.PP
+Referenced by cdft(), ddct(), ddst(), dfct(), dfst(), and rdft()\&.
+.SS "void cftmdl (int n, int l, double * a, double * w)"
+
+.PP
+One of the child routines\&. 
+.PP
+Definition at line 1202 of file fft4g\&.cpp\&.
+.PP
+References w\&.
+.PP
+Referenced by cftbsub(), and cftfsub()\&.
+.SS "void dctsub (int n, double * a, int nc, double * c)"
+
+.PP
+One of the child routines\&. 
+.PP
+Definition at line 1387 of file fft4g\&.cpp\&.
+.PP
+Referenced by ddct(), and dfct()\&.
+.SS "void ddct (int n, int isgn, double * a, int * ip, double * w)"
+
+.PP
+Discrete Cosine Transform\&. 
+.PP
+Definition at line 404 of file fft4g\&.cpp\&.
+.PP
+References bitrv2(), cftbsub(), cftfsub(), dctsub(), ip, makect(), makewt(), rftbsub(), rftfsub(), and w\&.
+.SS "void ddst (int n, int isgn, double * a, int * ip, double * w)"
+
+.PP
+Discrete Sine Transform\&. 
+.PP
+Definition at line 465 of file fft4g\&.cpp\&.
+.PP
+References bitrv2(), cftbsub(), cftfsub(), dstsub(), ip, makect(), makewt(), rftbsub(), rftfsub(), and w\&.
+.SS "void dfct (int n, double * a, double * t, int * ip, double * w)"
+
+.PP
+Cosine Transform of RDFT (Real Symmetric DFT)\&. 
+.PP
+Definition at line 526 of file fft4g\&.cpp\&.
+.PP
+References bitrv2(), cftfsub(), dctsub(), ip, makect(), makewt(), rftfsub(), and w\&.
+.SS "void dfst (int n, double * a, double * t, int * ip, double * w)"
+
+.PP
+Sine Transform of RDFT (Real Anti-symmetric DFT) 
+.PP
+Definition at line 624 of file fft4g\&.cpp\&.
+.PP
+References bitrv2(), cftfsub(), dstsub(), ip, makect(), makewt(), rftfsub(), and w\&.
+.SS "void dstsub (int n, double * a, int nc, double * c)"
+
+.PP
+One of the child routines\&. 
+.PP
+Definition at line 1410 of file fft4g\&.cpp\&.
+.PP
+Referenced by ddst(), and dfst()\&.
+.SS "void makect (int nc, int * ip, double * c)"
+
+.PP
+One the initializing routines\&. 
+.PP
+Definition at line 751 of file fft4g\&.cpp\&.
+.PP
+References ip\&.
+.PP
+Referenced by ddct(), ddst(), dfct(), dfst(), and rdft()\&.
+.SS "void makewt (int nw, int * ip, double * w)"
+
+.PP
+One of the initializing routines\&. 
+.PP
+Definition at line 719 of file fft4g\&.cpp\&.
+.PP
+References bitrv2(), ip, and w\&.
+.PP
+Referenced by cdft(), ddct(), ddst(), dfct(), dfst(), and rdft()\&.
+.SS "void rdft (int n, int isgn, double * a, int * ip, double * w)"
+
+.PP
+Real Discrete Fourier Transform\&. 
+.PP
+Definition at line 355 of file fft4g\&.cpp\&.
+.PP
+References bitrv2(), cftbsub(), cftfsub(), ip, makect(), makewt(), rftbsub(), rftfsub(), and w\&.
+.SS "void rftbsub (int n, double * a, int nc, double * c)"
+
+.PP
+One the child rountines\&. 
+.PP
+Definition at line 1358 of file fft4g\&.cpp\&.
+.PP
+Referenced by ddct(), ddst(), and rdft()\&.
+.SS "void rftfsub (int n, double * a, int nc, double * c)"
+
+.PP
+One of the child routines\&. 
+.PP
+Definition at line 1331 of file fft4g\&.cpp\&.
+.PP
+Referenced by ddct(), ddst(), dfct(), dfst(), and rdft()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ASCQ_ME from the source code\&.

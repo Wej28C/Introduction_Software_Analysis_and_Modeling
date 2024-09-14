@@ -1,0 +1,10 @@
+<map id="add_peptide_modification" name="add_peptide_modification">
+<area shape="rect" id="node1" title="Procedure which adds a modification on an amino acid of a peptide." alt="" coords="5,129,196,156"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="717,100,771,126"/>
+<area shape="rect" id="node3" href="$modifications__for__digestion_8h.html#a84b6ed9c61d01949851a3e604f86c9fd" title="Function which returns the formula to add according to the indicated modification." alt="" coords="262,70,414,97"/>
+<area shape="rect" id="node5" href="$modifications__for__digestion_8h.html#a4345d817329fcc4866b055d7ff49f800" title="Function which returns the formula to sub according the indicated modification." alt="" coords="263,129,413,156"/>
+<area shape="rect" id="node7" href="$modifications__for__digestion_8h.html#a0e4b90ffeeaa3e701529e856321c0481" title="Function which returns the number of activated modifications." alt="" coords="244,180,432,222"/>
+<area shape="rect" id="node8" href="$formula_8cpp.html#a77a6756752caf55587c228c4e51b8c7e" title="Get the weight of a formula." alt="" coords="527,246,622,273"/>
+<area shape="rect" id="node4" href="$modification__table_8h.html#a850b2a79e023d1d979f6cc4c26fcfacf" title="Function which returns the formula to add when we want to apply a wanted modification." alt="" coords="480,63,669,104"/>
+<area shape="rect" id="node6" href="$modification__table_8h.html#aba646f6f85ed365f229f046b3dfcd568" title="Function which returns the formula to sub when we want to apply a wanted modification." alt="" coords="480,180,669,222"/>
+</map>

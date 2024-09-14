@@ -1,0 +1,10 @@
+<map id="digest" name="digest">
+<area shape="rect" id="node1" title="Procedure which realises the digestion with 0 miss&#45;cleavage." alt="" coords="5,157,68,184"/>
+<area shape="rect" id="node2" href="$cleavage_8cpp.html#a2f9252562ba27a34ccc1d1bc3cddd238" title="Function which indicates if we are in a good cleavage situation according to the cleavage rules." alt="" coords="139,5,267,32"/>
+<area shape="rect" id="node3" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="511,183,564,209"/>
+<area shape="rect" id="node4" href="$digest_8cpp.html#a11d3b212638a310c07b9ce18619d9456" title="Procedure which free the memory allocated for the post&#45;translational modifications of a peptide." alt="" coords="348,107,452,133"/>
+<area shape="rect" id="node5" href="$tables_8h.html#ab1e4cb89e0628c675a7127e6d3618320" title="Function which returns the amino acid structure associated to a given char." alt="" coords="337,157,463,184"/>
+<area shape="rect" id="node6" href="$aa_8cpp.html#a7051accbc420772e52a6f065906ef3b0" title="Function which allows to get a already calculated formula." alt="" coords="138,208,267,235"/>
+<area shape="rect" id="node7" href="$formula_8cpp.html#a77a6756752caf55587c228c4e51b8c7e" title="Get the weight of a formula." alt="" coords="353,259,447,285"/>
+<area shape="rect" id="node8" href="$digest_8cpp.html#ad6dc127f385bbc97c80f50d2f3a98678" title="Function which allows to get the weight of the atom charge." alt="" coords="116,309,289,336"/>
+</map>

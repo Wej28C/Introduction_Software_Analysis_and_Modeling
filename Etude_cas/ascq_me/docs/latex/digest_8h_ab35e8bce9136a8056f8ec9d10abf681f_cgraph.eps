@@ -1,0 +1,1340 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.43.0 (0)
+%%Title: default_peptide_charge
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 984 441
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 948 405 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% Node1
+gsave
+0 0 0.74902 nodecolor
+newpath 0 209.5 moveto
+0 228.5 lineto
+131 228.5 lineto
+131 209.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 0 209.5 moveto
+0 228.5 lineto
+131 228.5 lineto
+131 209.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+8 216.5 moveto 115 (default_peptide_charge) alignedtext
+grestore
+% Node2
+gsave
+[ /Rect [ 167 209 279 229 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($digest_8cpp.html#a263ee1d3801a756de1324e3dacfd4ba1) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 167 209.5 moveto
+167 228.5 lineto
+279 228.5 lineto
+279 209.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 167 209.5 moveto
+167 228.5 lineto
+279 228.5 lineto
+279 209.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+175 216.5 moveto 96 (set_peptide_charge) alignedtext
+grestore
+% Node1->Node2
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 131.0951 219 moveto
+139.519 219 148.1552 219 156.5923 219 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 156.7575 222.5001 moveto
+166.7575 219 lineto
+156.7575 215.5001 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 156.7575 222.5001 moveto
+166.7575 219 lineto
+156.7575 215.5001 lineto
+closepath stroke
+grestore
+% Node3
+gsave
+[ /Rect [ 502.5 342 582.5 362 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($formula_8cpp.html#a4c746199d04b732d41c72f52bb05cdd9) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 502.5 342.5 moveto
+502.5 361.5 lineto
+582.5 361.5 lineto
+582.5 342.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 502.5 342.5 moveto
+502.5 361.5 lineto
+582.5 361.5 lineto
+582.5 342.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+510.5 349.5 moveto 64 (free_formula) alignedtext
+grestore
+% Node2->Node3
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 246.9497 228.6354 moveto
+292.2569 247.6544 396.4018 291.3568 484 328 curveto
+492.1768 331.4205 501.0099 335.11 509.2415 338.546 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 507.9763 341.8105 moveto
+518.5529 342.4317 lineto
+510.6722 335.3504 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 507.9763 341.8105 moveto
+518.5529 342.4317 lineto
+510.6722 335.3504 lineto
+closepath stroke
+grestore
+% Node7
+gsave
+[ /Rect [ 327.5 228 435.5 248 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($formula_8cpp.html#a2e96927511f60e9cad544aaff8bc33f1) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 327.5 228.5 moveto
+327.5 247.5 lineto
+435.5 247.5 lineto
+435.5 228.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 327.5 228.5 moveto
+327.5 247.5 lineto
+435.5 247.5 lineto
+435.5 228.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+335.5 235.5 moveto 92 (get_element_table) alignedtext
+grestore
+% Node2->Node7
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 279.176 225.6987 moveto
+291.5363 227.1993 304.74 228.8023 317.3944 230.3386 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 317.0496 233.8224 moveto
+327.3985 231.5532 lineto
+317.8933 226.8734 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 317.0496 233.8224 moveto
+327.3985 231.5532 lineto
+317.8933 226.8734 lineto
+closepath stroke
+grestore
+% Node15
+gsave
+[ /Rect [ 315 190 448 210 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($tables_8h.html#a36cb3093f11f7c112626c4668380a974) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 315 190.5 moveto
+315 209.5 lineto
+448 209.5 lineto
+448 190.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 315 190.5 moveto
+315 209.5 lineto
+448 209.5 lineto
+448 190.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+323 197.5 moveto 117 (get_element_table_size) alignedtext
+grestore
+% Node2->Node15
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 279.176 212.3013 moveto
+287.462 211.2953 296.1271 210.2434 304.7516 209.1963 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 305.327 212.6522 moveto
+314.8323 207.9724 lineto
+304.4833 205.7032 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 305.327 212.6522 moveto
+314.8323 207.9724 lineto
+304.4833 205.7032 lineto
+closepath stroke
+grestore
+% Node16
+gsave
+[ /Rect [ 340.5 114 422.5 134 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($formula_8cpp.html#ac758acc73decf9d338119936c70f6794) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 340.5 114.5 moveto
+340.5 133.5 lineto
+422.5 133.5 lineto
+422.5 114.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 340.5 114.5 moveto
+340.5 133.5 lineto
+422.5 133.5 lineto
+422.5 114.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+348.5 121.5 moveto 66 (read_formula) alignedtext
+grestore
+% Node2->Node16
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 239.8673 209.3681 moveto
+267.1679 192.7958 323.2172 158.7723 355.7079 139.0495 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 357.8586 141.8384 moveto
+364.5907 133.6574 lineto
+354.2262 135.8546 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 357.8586 141.8384 moveto
+364.5907 133.6574 lineto
+354.2262 135.8546 lineto
+closepath stroke
+grestore
+% Node4
+gsave
+[ /Rect [ 900 190 940 210 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 900 190.5 moveto
+900 209.5 lineto
+940 209.5 lineto
+940 190.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 900 190.5 moveto
+900 209.5 lineto
+940 209.5 lineto
+940 190.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+908 197.5 moveto 24 (error) alignedtext
+grestore
+% Node3->Node4
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 567.2045 361.6314 moveto
+625.0514 383.4078 775.1938 429.2931 864 359 curveto
+907.2109 324.7971 916.6032 254.6455 918.5547 220.1115 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 922.0619 220.0022 moveto
+918.9694 209.8688 lineto
+915.0677 219.719 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 922.0619 220.0022 moveto
+918.9694 209.8688 lineto
+915.0677 219.719 lineto
+closepath stroke
+grestore
+% Node5
+gsave
+[ /Rect [ 641 342 742 362 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($formula_8cpp.html#a6a81bdde62cda8c4d6ed43d9b16b4c26) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 641 342.5 moveto
+641 361.5 lineto
+742 361.5 lineto
+742 342.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 641 342.5 moveto
+641 361.5 lineto
+742 361.5 lineto
+742 342.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+649 349.5 moveto 85 (free_composition) alignedtext
+grestore
+% Node3->Node5
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 582.5074 352 moveto
+597.1599 352 614.1776 352 630.3102 352 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 630.7502 355.5001 moveto
+640.7501 352 lineto
+630.7501 348.5001 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 630.7502 355.5001 moveto
+640.7501 352 lineto
+630.7501 348.5001 lineto
+closepath stroke
+grestore
+% Node5->Node4
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 742.0683 359.1275 moveto
+779.2159 361.7082 829.3965 359.0071 864 333 curveto
+900.4859 305.5782 912.9061 249.5751 917.0279 219.7392 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 920.5162 220.0459 moveto
+918.2342 209.6997 lineto
+913.5662 219.2107 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 920.5162 220.0459 moveto
+918.2342 209.6997 lineto
+913.5662 219.2107 lineto
+closepath stroke
+grestore
+% Node6
+gsave
+[ /Rect [ 782 304 864 324 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($formula_8cpp.html#aa924d9fff6ed2c0d2168efc91d41e03a) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 782 304.5 moveto
+782 323.5 lineto
+864 323.5 lineto
+864 304.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 782 304.5 moveto
+782 323.5 lineto
+864 323.5 lineto
+864 304.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+790 311.5 moveto 66 (free_element) alignedtext
+grestore
+% Node5->Node6
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 725.1783 342.411 moveto
+741.5888 337.5956 761.6763 331.7012 779.2922 326.532 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 780.7222 329.7601 moveto
+789.3321 323.5859 lineto
+778.7512 323.0433 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 780.7222 329.7601 moveto
+789.3321 323.5859 lineto
+778.7512 323.0433 lineto
+closepath stroke
+grestore
+% Node6->Node4
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 844.0525 304.4788 moveto
+850.889 300.6129 858.2502 295.7032 864 290 curveto
+885.1456 269.0256 901.6232 238.3734 910.8287 218.8076 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 914.0181 220.2488 moveto
+914.9659 209.6964 lineto
+907.6444 217.3546 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 914.0181 220.2488 moveto
+914.9659 209.6964 lineto
+907.6444 217.3546 lineto
+closepath stroke
+grestore
+% Node7->Node4
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 435.5094 246.9888 moveto
+439.8787 248.6621 444.1062 250.6466 448 253 curveto
+469.0409 265.7171 461.6638 284.7268 484 295 curveto
+531.2427 316.7286 549.3373 300.9128 601 295 curveto
+720.2135 281.356 753.0548 279.7077 864 234 curveto
+875.7612 229.1546 887.8863 221.9373 897.7489 215.3973 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 899.8307 218.2135 moveto
+906.095 209.6689 lineto
+895.8695 212.4421 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 899.8307 218.2135 moveto
+906.095 209.6689 lineto
+895.8695 212.4421 lineto
+closepath stroke
+grestore
+% Node8
+gsave
+[ /Rect [ 504.5 266 580.5 286 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($util_8h.html#a0a8fd6188fa02e1d59178d8e88c235c4) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 504.5 266.5 moveto
+504.5 285.5 lineto
+580.5 285.5 lineto
+580.5 266.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 504.5 266.5 moveto
+504.5 285.5 lineto
+580.5 285.5 lineto
+580.5 266.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+512.5 273.5 moveto 60 (jump_a_line) alignedtext
+grestore
+% Node7->Node8
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 422.6224 247.589 moveto
+444.5001 252.8176 471.7004 259.3183 494.5593 264.7815 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 493.8512 268.2107 moveto
+504.3909 267.1312 lineto
+495.4784 261.4025 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 493.8512 268.2107 moveto
+504.3909 267.1312 lineto
+495.4784 261.4025 lineto
+closepath stroke
+grestore
+% Node9
+gsave
+[ /Rect [ 484 228 601 248 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($util_8h.html#a9ce39f0e4832bfdd973a4715b42df3b3) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 484 228.5 moveto
+484 247.5 lineto
+601 247.5 lineto
+601 228.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 484 228.5 moveto
+484 247.5 lineto
+601 247.5 lineto
+601 228.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+492 235.5 moveto 101 (jump_commentaries) alignedtext
+grestore
+% Node7->Node9
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 435.887 238 moveto
+448.06 238 461.1518 238 473.8328 238 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 473.8893 241.5001 moveto
+483.8892 238 lineto
+473.8892 234.5001 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 473.8893 241.5001 moveto
+483.8892 238 lineto
+473.8892 234.5001 lineto
+closepath stroke
+grestore
+% Node11
+gsave
+[ /Rect [ 511.5 190 573.5 210 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($util_8h.html#a1d08e0f99bc95efbc389136a48eac477) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 511.5 190.5 moveto
+511.5 209.5 lineto
+573.5 209.5 lineto
+573.5 190.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 511.5 190.5 moveto
+511.5 209.5 lineto
+573.5 209.5 lineto
+573.5 190.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+519.5 197.5 moveto 46 (read_line) alignedtext
+grestore
+% Node7->Node11
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 422.6224 228.411 moveto
+446.7716 222.6395 477.4062 215.318 501.5283 209.553 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 502.5173 212.9153 moveto
+511.4298 207.1866 lineto
+500.8901 206.107 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 502.5173 212.9153 moveto
+511.4298 207.1866 lineto
+500.8901 206.107 lineto
+closepath stroke
+grestore
+% Node14
+gsave
+[ /Rect [ 659 152 724 172 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($util_8h.html#a58b9836425eb912a8bbcd5e040e28349) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 659 152.5 moveto
+659 171.5 lineto
+724 171.5 lineto
+724 152.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 659 152.5 moveto
+659 171.5 lineto
+724 171.5 lineto
+724 152.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+667 159.5 moveto 49 (read_until) alignedtext
+grestore
+% Node7->Node14
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 427.5358 228.3858 moveto
+434.6575 225.905 441.7316 222.8206 448 219 curveto
+467.8654 206.8921 463.0727 191.1629 484 181 curveto
+536.5069 155.5011 605.3336 154.6796 648.7478 157.5054 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 648.712 161.0123 moveto
+658.9449 158.2669 lineto
+649.2334 154.0318 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 648.712 161.0123 moveto
+658.9449 158.2669 lineto
+649.2334 154.0318 lineto
+closepath stroke
+grestore
+% Node10
+gsave
+[ /Rect [ 653.5 228 729.5 248 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($util_8cpp.html#a0a8fd6188fa02e1d59178d8e88c235c4) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 653.5 228.5 moveto
+653.5 247.5 lineto
+729.5 247.5 lineto
+729.5 228.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 653.5 228.5 moveto
+653.5 247.5 lineto
+729.5 247.5 lineto
+729.5 228.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+661.5 235.5 moveto 60 (jump_a_line) alignedtext
+grestore
+% Node9->Node10
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 601.1764 238 moveto
+615.0125 238 629.634 238 642.9514 238 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 643.3122 241.5001 moveto
+653.3122 238 lineto
+643.3122 234.5001 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 643.3122 241.5001 moveto
+653.3122 238 lineto
+643.3122 234.5001 lineto
+closepath stroke
+grestore
+% Node12
+gsave
+[ /Rect [ 659 190 724 210 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($util_8cpp.html#ae77d8b2f8e8bfec6dd7dbb836f5ee2f3) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 659 190.5 moveto
+659 209.5 lineto
+724 209.5 lineto
+724 190.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 659 190.5 moveto
+659 209.5 lineto
+724 209.5 lineto
+724 190.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+667 197.5 moveto 49 (read_until) alignedtext
+grestore
+% Node11->Node12
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 573.6024 200 moveto
+595.2606 200 624.7515 200 648.6932 200 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 648.9141 203.5001 moveto
+658.914 200 lineto
+648.914 196.5001 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 648.9141 203.5001 moveto
+658.914 200 lineto
+648.914 196.5001 lineto
+closepath stroke
+grestore
+% Node12->Node4
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 724.2558 208.749 moveto
+758.7924 217.048 815.5492 227.133 864 219 curveto
+872.7121 217.5376 881.8898 214.8573 890.1984 211.9619 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 891.6569 215.1538 moveto
+899.8123 208.3907 lineto
+889.2194 208.5919 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 891.6569 215.1538 moveto
+899.8123 208.3907 lineto
+889.2194 208.5919 lineto
+closepath stroke
+grestore
+% Node13
+gsave
+[ /Rect [ 783.5 190 862.5 210 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($util_8cpp.html#a8deed219368df958f27871ec0d0d45e8) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 783.5 190.5 moveto
+783.5 209.5 lineto
+862.5 209.5 lineto
+862.5 190.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 783.5 190.5 moveto
+783.5 209.5 lineto
+862.5 209.5 lineto
+862.5 190.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+791.5 197.5 moveto 63 (jump_blanks) alignedtext
+grestore
+% Node12->Node13
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 724.1793 200 moveto
+738.7983 200 756.4918 200 772.7894 200 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 773.2513 203.5001 moveto
+783.2513 200 lineto
+773.2512 196.5001 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 773.2513 203.5001 moveto
+783.2513 200 lineto
+773.2512 196.5001 lineto
+closepath stroke
+grestore
+% Node13->Node4
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 862.6401 200 moveto
+871.67 200 881.1427 200 889.6898 200 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 889.9182 203.5001 moveto
+899.9181 200 lineto
+889.9181 196.5001 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 889.9182 203.5001 moveto
+899.9181 200 lineto
+889.9181 196.5001 lineto
+closepath stroke
+grestore
+% Node14->Node4
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 724.1412 163.3979 moveto
+758.8206 165.4165 815.9253 170.1749 864 181 curveto
+872.7838 182.9779 882.1177 185.8814 890.5542 188.8265 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 889.3648 192.1181 moveto
+899.9588 192.2497 lineto
+891.7591 185.5403 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 889.3648 192.1181 moveto
+899.9588 192.2497 lineto
+891.7591 185.5403 lineto
+closepath stroke
+grestore
+% Node14->Node13
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 724.1793 171.2958 moveto
+740.8587 176.1902 761.5402 182.2589 779.5844 187.5537 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 778.7146 190.946 moveto
+789.2955 190.4033 lineto
+780.6856 184.2292 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 778.7146 190.946 moveto
+789.2955 190.4033 lineto
+780.6856 184.2292 lineto
+closepath stroke
+grestore
+% Node16->Node4
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 422.7075 124.4766 moveto
+489.8758 125.6364 629.0679 129.5913 746 143 curveto
+798.9217 149.0686 814.4889 144.3484 864 164 curveto
+876.6342 169.0147 889.418 177.1562 899.4771 184.4293 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 897.4479 187.2825 moveto
+907.5434 190.4968 lineto
+901.6558 181.6884 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 897.4479 187.2825 moveto
+907.5434 190.4968 lineto
+901.6558 181.6884 lineto
+closepath stroke
+grestore
+% Node17
+gsave
+[ /Rect [ 505 57 580 77 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($formula_8cpp.html#a499402e9c41a7629571b9f17dee38d86) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 505 57.5 moveto
+505 76.5 lineto
+580 76.5 lineto
+580 57.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 505 57.5 moveto
+505 76.5 lineto
+580 76.5 lineto
+580 57.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+513 64.5 moveto 59 (affect_atom) alignedtext
+grestore
+% Node16->Node17
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 409.113 114.4595 moveto
+435.4826 105.0062 476.0595 90.4598 505.3401 79.963 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 506.5679 83.241 moveto
+514.8002 76.5716 lineto
+504.2056 76.6516 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 506.5679 83.241 moveto
+514.8002 76.5716 lineto
+504.2056 76.6516 lineto
+closepath stroke
+grestore
+% Node17->Node4
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 580.1864 68.0166 moveto
+654.1087 70.6846 817.8546 79.9114 864 110 curveto
+889.5879 126.6843 905.1823 159.8403 912.9421 180.9168 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 909.6513 182.1103 moveto
+916.2147 190.4272 lineto
+916.2704 179.8326 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 909.6513 182.1103 moveto
+916.2147 190.4272 lineto
+916.2704 179.8326 lineto
+closepath stroke
+grestore
+% Node18
+gsave
+[ /Rect [ 657 38 726 58 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($formula_8cpp.html#a24b1ac4e1e5e074dbf381e2f5155cca9) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 657 38.5 moveto
+657 57.5 lineto
+726 57.5 lineto
+726 38.5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 657 38.5 moveto
+657 57.5 lineto
+726 57.5 lineto
+726 38.5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+665 45.5 moveto 53 (closest_int) alignedtext
+grestore
+% Node17->Node18
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 580.2151 62.2545 moveto
+600.3855 59.6475 625.5356 56.3968 646.723 53.6582 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 647.2978 57.1132 moveto
+656.7666 52.3601 lineto
+646.4004 50.1709 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 647.2978 57.1132 moveto
+656.7666 52.3601 lineto
+646.4004 50.1709 lineto
+closepath stroke
+grestore
+% Node19
+gsave
+[ /Rect [ 637 0 746 20 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($formula_8cpp.html#a1b353bcd70fedc65de083af2d954e594) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 637 .5 moveto
+637 19.5 lineto
+746 19.5 lineto
+746 .5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 637 .5 moveto
+637 19.5 lineto
+746 19.5 lineto
+746 .5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+645 7.5 moveto 93 (copy_one_element) alignedtext
+grestore
+% Node17->Node19
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 566.4412 57.3417 moveto
+585.2998 49.4831 612.7631 38.2236 637 29 curveto
+642.2393 27.0061 647.7913 24.9604 653.2585 22.9842 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 654.6843 26.1915 moveto
+662.9217 19.5286 lineto
+652.3272 19.6003 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 654.6843 26.1915 moveto
+662.9217 19.5286 lineto
+652.3272 19.6003 lineto
+closepath stroke
+grestore
+% Node19->Node4
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 729.3852 19.6043 moveto
+773.5963 31.7386 844.212 53.2974 864 72 curveto
+895.5167 101.788 909.8653 152.6381 915.6343 180.4355 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 912.2416 181.3294 moveto
+917.5526 190.4969 lineto
+919.1177 180.0183 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 912.2416 181.3294 moveto
+917.5526 190.4969 lineto
+919.1177 180.0183 lineto
+closepath stroke
+grestore
+% Node20
+gsave
+[ /Rect [ 785.5 0 860.5 20 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($formula_8cpp.html#aa2cff9d5e8bd11bacae69d478368fde7) >>
+  /Subtype /Link
+/ANN pdfmark
+0 0 1 nodecolor
+newpath 785.5 .5 moveto
+785.5 19.5 lineto
+860.5 19.5 lineto
+860.5 .5 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 785.5 .5 moveto
+785.5 19.5 lineto
+860.5 19.5 lineto
+860.5 .5 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+793.5 7.5 moveto 59 (copy_isotop) alignedtext
+grestore
+% Node19->Node20
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 746.2946 10 moveto
+755.7868 10 765.6025 10 774.8935 10 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 775.1152 13.5001 moveto
+785.1152 10 lineto
+775.1152 6.5001 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 775.1152 13.5001 moveto
+785.1152 10 lineto
+775.1152 6.5001 lineto
+closepath stroke
+grestore
+% Node20->Node4
+gsave
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 846.0652 19.5298 moveto
+852.585 23.2432 859.2419 28.0575 864 34 curveto
+899.4765 78.3076 912.4696 146.4338 916.8976 179.9581 curveto
+stroke
+0.66667 0.77647 0.43922 edgecolor
+newpath 913.4687 180.7626 moveto
+918.1295 190.2772 lineto
+920.4194 179.9328 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 0.77647 0.43922 edgecolor
+newpath 913.4687 180.7626 moveto
+918.1295 190.2772 lineto
+920.4194 179.9328 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 984 441
+end
+restore
+%%EOF

@@ -1,0 +1,987 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 34.29      0.12     0.12        1   120.00   169.67  init_distrib()
+ 25.71      0.21     0.09        7    12.86    24.30  optimized_isotopic_distribution(formula*, int)
+ 20.00      0.28     0.07      281     0.25     0.25  integral_normalization(double, int, complex*)
+ 17.14      0.34     0.06 14782464     0.00     0.00  complex_multiplication(complex, complex)
+  2.86      0.35     0.01    28802     0.00     0.00  get_step()
+  0.00      0.35     0.00   236817     0.00     0.00  compute_correlation(int, complex*)
+  0.00      0.35     0.00   115938     0.00     0.00  add_element(formula*, composition*)
+  0.00      0.35     0.00    36266     0.00     0.00  add_formula(formula*, formula*)
+  0.00      0.35     0.00    24073     0.00     0.00  get_util_formula(char const*)
+  0.00      0.35     0.00    21270     0.00     0.00  get_amino_acid(char)
+  0.00      0.35     0.00    10963     0.00     0.00  get_weight(formula*)
+  0.00      0.35     0.00     9787     0.00     0.00  copy_isotop(isotop*, int)
+  0.00      0.35     0.00     9787     0.00     0.00  free_element(element*)
+  0.00      0.35     0.00     9787     0.00     0.00  copy_one_element(element*)
+  0.00      0.35     0.00     4254     0.00     0.00  cpl_isCleavage2(cleavePointList*, char, char, char)
+  0.00      0.35     0.00     3646     0.00     0.00  read_until(_IO_FILE*, char)
+  0.00      0.35     0.00     3646     0.00     0.00  jump_blanks(_IO_FILE*)
+  0.00      0.35     0.00     2559     0.00     0.00  jump_commentaries(_IO_FILE*, char)
+  0.00      0.35     0.00     2306     0.00     0.00  get_peptide_sequence(int)
+  0.00      0.35     0.00     2297     0.00     0.00  jump_a_line(_IO_FILE*)
+  0.00      0.35     0.00     2287     0.00     0.00  free_composition(composition*, int)
+  0.00      0.35     0.00     2192     0.00     0.00  copy_composition(composition*, int)
+  0.00      0.35     0.00     1682     0.00     0.00  copy_formula(formula*)
+  0.00      0.35     0.00     1249     0.00     0.00  get_atom_quantity(char const*)
+  0.00      0.35     0.00     1243     0.00     0.00  get_X_atom(char*)
+  0.00      0.35     0.00     1111     0.00     0.00  get_peptide_charge_formula()
+  0.00      0.35     0.00      840     0.00     0.00  cftmdl(int, int, double*, double*)
+  0.00      0.35     0.00      719     0.00     0.00  read_line(_IO_FILE*)
+  0.00      0.35     0.00      555     0.00     0.00  free_peptide(peptide*)
+  0.00      0.35     0.00      555     0.00     0.00  peptide_charge_weight()
+  0.00      0.35     0.00      555     0.00     0.00  is_equivalent_to_another(int)
+  0.00      0.35     0.00      555     0.00     0.00  get_peptide_formula_from_index(int)
+  0.00      0.35     0.00      280     0.00     0.00  cdft(int, int, double*, int*, double*)
+  0.00      0.35     0.00      280     0.00     0.00  cft1st(int, double*, double*)
+  0.00      0.35     0.00      273     0.00     0.00  bitrv2conj(int, int*, double*)
+  0.00      0.35     0.00      273     0.00     0.00  cftbsub(int, double*, double*)
+  0.00      0.35     0.00      245     0.00     0.00  affect_atom(char*, int, int, composition*, element*, int)
+  0.00      0.35     0.00      195     0.00     0.00  is_verbose_mode_activated()
+  0.00      0.35     0.00      157     0.00     0.00  get_peptide_score_threshold()
+  0.00      0.35     0.00      139     0.00     0.00  read_formula(char const*, element*, int)
+  0.00      0.35     0.00       64     0.00     0.00  get_element_table()
+  0.00      0.35     0.00       64     0.00     0.00  get_element_table_size()
+  0.00      0.35     0.00       56     0.00     0.00  free_formula(formula*)
+  0.00      0.35     0.00       28     0.00     0.00  get_nb_displayed_proteins()
+  0.00      0.35     0.00       23     0.00     0.00  closest_int(double)
+  0.00      0.35     0.00       21     0.00     0.00  free_n_formula(formula*, int)
+  0.00      0.35     0.00       14     0.00     0.00  get_formula_from_sequence(char*)
+  0.00      0.35     0.00       11     0.00     0.00  get_distribution_activation()
+  0.00      0.35     0.00       10     0.00    16.99  load_string_keyword(_IO_FILE*, char const*)
+  0.00      0.35     0.00       10     0.00     0.00  is_decoy_mode_activated()
+  0.00      0.35     0.00       10     0.00     0.00  free_cpt(cleavePoint*)
+  0.00      0.35     0.00        9     0.00     0.00  load_int_keyword(_IO_FILE*, char*)
+  0.00      0.35     0.00        8     0.00     0.00  stringToCpl(char*)
+  0.00      0.35     0.00        8     0.00     0.00  get_number_of_activated_modifications()
+  0.00      0.35     0.00        8     0.00     0.00  bitrv2(int, int*, double*)
+  0.00      0.35     0.00        8     0.00     0.00  free_cplt(cleavePointList*)
+  0.00      0.35     0.00        8     0.00     0.00  free_enzt(enzyme*)
+  0.00      0.35     0.00        8     0.00     0.00  nextEntry(long*)
+  0.00      0.35     0.00        7     0.00     0.00  add_protein(char*, char*, complex*, double)
+  0.00      0.35     0.00        7     0.00     0.00  real_digest(char*)
+  0.00      0.35     0.00        7     0.00     0.00  copy_spectrum(complex*)
+  0.00      0.35     0.00        7     0.00     0.00  get_theo_spectrum()
+  0.00      0.35     0.00        7     0.00     0.00  is_a_wanted_protein()
+  0.00      0.35     0.00        7     0.00     0.00  get_formulae_of_peptides(int*)
+  0.00      0.35     0.00        7     0.00     0.00  compute_equivalent_peptides()
+  0.00      0.35     0.00        7     0.00     0.00  save_partial_peptide_scoring(double*, int)
+  0.00      0.35     0.00        7     0.00     0.00  get_current_peptide_score_save()
+  0.00      0.35     0.00        7     0.00     0.00  get_current_peptide_score_size()
+  0.00      0.35     0.00        7     0.00     0.00  sort_and_init_with_peptide_scoring()
+  0.00      0.35     0.00        7     0.00     0.00  digest()
+  0.00      0.35     0.00        7     0.00     0.00  getSeq()
+  0.00      0.35     0.00        7     0.00     0.00  cftfsub(int, double*, double*)
+  0.00      0.35     0.00        7     0.00     0.00  getDesc()
+  0.00      0.35     0.00        6     0.00     0.00  load_float_keyword(_IO_FILE*, char*)
+  0.00      0.35     0.00        3     0.00     0.00  add_chains(char const*, char const*)
+  0.00      0.35     0.00        3     0.00     0.00  get_base_name()
+  0.00      0.35     0.00        3     0.00     0.00  is_fasta_chosen()
+  0.00      0.35     0.00        2     0.00     0.00  get_maximum_mass()
+  0.00      0.35     0.00        2     0.00     0.00  get_minimum_mass()
+  0.00      0.35     0.00        2     0.00     0.00  load_boolean_keyword(_IO_FILE*, char*)
+  0.00      0.35     0.00        2     0.00     0.00  get_maximum_peptide_length()
+  0.00      0.35     0.00        2     0.00     0.00  is_exp_protein_mass_activated()
+  0.00      0.35     0.00        1     0.00     0.00  enzym_load(char const*)
+  0.00      0.35     0.00        1     0.00     0.00  fastafopen(char const*, long*)
+  0.00      0.35     0.00        1     0.00     0.00  get_specie()
+  0.00      0.35     0.00        1     0.00     0.00  fastafclose()
+  0.00      0.35     0.00        1     0.00     0.00  free_tables()
+  0.00      0.35     0.00        1     0.00     0.00  get_threshold()
+  0.00      0.35     0.00        1     0.00     0.25  read_spectrum(char const*)
+  0.00      0.35     0.00        1     0.00     0.00  formula_tochar(formula*)
+  0.00      0.35     0.00        1     0.00     0.00  free_isodistrib()
+  0.00      0.35     0.00        1     0.00     0.00  get_used_enzyme()
+  0.00      0.35     0.00        1     0.00     0.00  ascq_me_cleaning()
+  0.00      0.35     0.00        1     0.00     0.00  free_enzym_table(enzyme_list*)
+  0.00      0.35     0.00        1     0.00     0.00  get_exp_spectrum()
+  0.00      0.35     0.00        1     0.00     0.00  init_peptid_link(element*, int)
+  0.00      0.35     0.00        1     0.00     0.00  free_peptide_link()
+  0.00      0.35     0.00        1     0.00     0.00  get_element_table(char const*, int*)
+  0.00      0.35     0.00        1     0.00     0.00  free_element_table(element*, int)
+  0.00      0.35     0.00        1     0.00     0.00  get_fasta_filename()
+  0.00      0.35     0.00        1     0.00     0.00  get_gaussian_value()
+  0.00      0.35     0.00        1     0.00   169.92  load_configuration(char*)
+  0.00      0.35     0.00        1     0.00     0.00  load_modifications(char const*)
+  0.00      0.35     0.00        1     0.00     0.00  set_peptide_charge(char const*)
+  0.00      0.35     0.00        1     0.00     0.00  free_util_digestion()
+  0.00      0.35     0.00        1     0.00     0.00  init_util_digestion()
+  0.00      0.35     0.00        1     0.00     0.00  fprint_configuration(_IO_FILE*)
+  0.00      0.35     0.00        1     0.00     0.00  get_amino_acid_table(char const*, element*, int)
+  0.00      0.35     0.00        1     0.00     0.00  init_ascq_me_display()
+  0.00      0.35     0.00        1     0.00     0.00  free_amino_acid_table(amino_acid_CF*)
+  0.00      0.35     0.00        1     0.00     0.00  get_peptide_precision()
+  0.00      0.35     0.00        1     0.00     0.00  tables_initialisation()
+  0.00      0.35     0.00        1     0.00     0.00  default_peptide_charge()
+  0.00      0.35     0.00        1     0.00     0.00  free_all_modifications()
+  0.00      0.35     0.00        1     0.00     0.00  get_spectrum_precision()
+  0.00      0.35     0.00        1     0.00     0.00  fprintf_ascq_me_results(_IO_FILE*)
+  0.00      0.35     0.00        1     0.00     0.00  get_nb_missed_cleavages()
+  0.00      0.35     0.00        1     0.00     0.00  get_scoring_sensitivity()
+  0.00      0.35     0.00        1     0.00     0.00  get_peptide_maximum_mass()
+  0.00      0.35     0.00        1     0.00     0.00  get_experimental_filename()
+  0.00      0.35     0.00        1     0.00     0.00  get_spectrum_maximum_mass()
+  0.00      0.35     0.00        1     0.00     0.00  get_activation_full_digest()
+  0.00      0.35     0.00        1     0.00     0.00  get_minimum_peptide_number()
+  0.00      0.35     0.00        1     0.00     0.00  free_activated_modification()
+  0.00      0.35     0.00        1     0.00     0.00  ascq_me_configuration_cleaning()
+  0.00      0.35     0.00        1     0.00     0.00  fprintf_ascq_me_peptide_scoring(_IO_FILE*)
+  0.00      0.35     0.00        1     0.00    10.00  fprintf_ascq_me_results_table_form(_IO_FILE*)
+  0.00      0.35     0.00        1     0.00     0.00  get_minimum_matched_peptide_number()
+  0.00      0.35     0.00        1     0.00     0.00  makewt(int, int*, double*)
+  0.00      0.35     0.00        1     0.00     0.00  __gnu_cxx::__enable_if<std::__is_integer<int>::__value, double>::__type std::sqrt<int>(int)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 2.86% of 0.35 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.00    0.35                 main [1]
+                0.09    0.08       7/7           optimized_isotopic_distribution(formula*, int) [2]
+                0.00    0.17       1/1           load_configuration(char*) [4]
+                0.00    0.01       1/1           fprintf_ascq_me_results_table_form(_IO_FILE*) [9]
+                0.00    0.00       9/195         is_verbose_mode_activated() [49]
+                0.00    0.00       8/10          is_decoy_mode_activated() [60]
+                0.00    0.00       8/8           nextEntry(long*) [68]
+                0.00    0.00       7/7           is_a_wanted_protein() [73]
+                0.00    0.00       7/7           getSeq() [81]
+                0.00    0.00       7/7           real_digest(char*) [70]
+                0.00    0.00       7/7           get_formulae_of_peptides(int*) [74]
+                0.00    0.00       7/7           get_current_peptide_score_save() [77]
+                0.00    0.00       7/7           get_current_peptide_score_size() [78]
+                0.00    0.00       7/7           get_theo_spectrum() [72]
+                0.00    0.00       7/7           save_partial_peptide_scoring(double*, int) [76]
+                0.00    0.00       7/7           getDesc() [83]
+                0.00    0.00       7/7           add_protein(char*, char*, complex*, double) [69]
+                0.00    0.00       7/21          free_n_formula(formula*, int) [57]
+                0.00    0.00       3/3           add_chains(char const*, char const*) [85]
+                0.00    0.00       3/3           get_base_name() [86]
+                0.00    0.00       1/1           init_ascq_me_display() [117]
+                0.00    0.00       1/3           is_fasta_chosen() [87]
+                0.00    0.00       1/1           fprintf_ascq_me_results(_IO_FILE*) [124]
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+                0.00    0.00       1/1           ascq_me_configuration_cleaning() [133]
+                0.00    0.00       1/1           ascq_me_cleaning() [102]
+                0.00    0.00       1/1           fprintf_ascq_me_peptide_scoring(_IO_FILE*) [134]
+-----------------------------------------------
+                0.09    0.08       7/7           main [1]
+[2]     48.6    0.09    0.08       7         optimized_isotopic_distribution(formula*, int) [2]
+                0.07    0.00     280/281         integral_normalization(double, int, complex*) [6]
+                0.01    0.00 2545664/14782464     complex_multiplication(complex, complex) [7]
+                0.00    0.00   35217/236817      compute_correlation(int, complex*) [17]
+                0.00    0.00    1243/1249        get_atom_quantity(char const*) [35]
+                0.00    0.00    1243/1243        get_X_atom(char*) [36]
+                0.00    0.00     555/555         is_equivalent_to_another(int) [42]
+                0.00    0.00     510/2192        copy_composition(composition*, int) [33]
+                0.00    0.00     510/10963       get_weight(formula*) [22]
+                0.00    0.00     510/2287        free_composition(composition*, int) [32]
+                0.00    0.00     273/280         cdft(int, int, double*, int*, double*) [44]
+                0.00    0.00      21/195         is_verbose_mode_activated() [49]
+-----------------------------------------------
+                0.00    0.17      10/10          load_configuration(char*) [4]
+[3]     48.5    0.00    0.17      10         load_string_keyword(_IO_FILE*, char const*) [3]
+                0.12    0.05       1/1           init_distrib() [5]
+                0.00    0.00       1/1           read_spectrum(char const*) [10]
+                0.00    0.00      10/719         read_line(_IO_FILE*) [39]
+                0.00    0.00       1/1           fastafopen(char const*, long*) [94]
+-----------------------------------------------
+                0.00    0.17       1/1           main [1]
+[4]     48.5    0.00    0.17       1         load_configuration(char*) [4]
+                0.00    0.17      10/10          load_string_keyword(_IO_FILE*, char const*) [3]
+                0.00    0.00      28/2559        jump_commentaries(_IO_FILE*, char) [29]
+                0.00    0.00       9/9           load_int_keyword(_IO_FILE*, char*) [62]
+                0.00    0.00       6/6           load_float_keyword(_IO_FILE*, char*) [84]
+                0.00    0.00       2/2           load_boolean_keyword(_IO_FILE*, char*) [90]
+                0.00    0.00       1/1           tables_initialisation() [120]
+                0.00    0.00       1/1           load_modifications(char const*) [111]
+                0.00    0.00       1/1           init_util_digestion() [114]
+                0.00    0.00       1/11          get_distribution_activation() [59]
+-----------------------------------------------
+                0.12    0.05       1/1           load_string_keyword(_IO_FILE*, char const*) [3]
+[5]     48.5    0.12    0.05       1         init_distrib() [5]
+                0.05    0.00 12236800/14782464     complex_multiplication(complex, complex) [7]
+                0.00    0.00     164/195         is_verbose_mode_activated() [49]
+                0.00    0.00       7/280         cdft(int, int, double*, int*, double*) [44]
+                0.00    0.00       6/64          get_element_table_size() [53]
+                0.00    0.00       6/64          get_element_table() [52]
+                0.00    0.00       6/139         read_formula(char const*, element*, int) [51]
+                0.00    0.00       6/56          free_formula(formula*) [54]
+                0.00    0.00       1/1           __gnu_cxx::__enable_if<std::__is_integer<int>::__value, double>::__type std::sqrt<int>(int) [137]
+-----------------------------------------------
+                0.00    0.00       1/281         read_spectrum(char const*) [10]
+                0.07    0.00     280/281         optimized_isotopic_distribution(formula*, int) [2]
+[6]     20.0    0.07    0.00     281         integral_normalization(double, int, complex*) [6]
+-----------------------------------------------
+                0.01    0.00 2545664/14782464     optimized_isotopic_distribution(formula*, int) [2]
+                0.05    0.00 12236800/14782464     init_distrib() [5]
+[7]     17.1    0.06    0.00 14782464         complex_multiplication(complex, complex) [7]
+-----------------------------------------------
+                0.01    0.00   28802/28802       fprintf_ascq_me_results_table_form(_IO_FILE*) [9]
+[8]      2.9    0.01    0.00   28802         get_step() [8]
+-----------------------------------------------
+                0.00    0.01       1/1           main [1]
+[9]      2.9    0.00    0.01       1         fprintf_ascq_me_results_table_form(_IO_FILE*) [9]
+                0.01    0.00   28802/28802       get_step() [8]
+                0.00    0.00  201600/236817      compute_correlation(int, complex*) [17]
+                0.00    0.00       7/14          get_formula_from_sequence(char*) [58]
+                0.00    0.00       7/10963       get_weight(formula*) [22]
+                0.00    0.00       7/56          free_formula(formula*) [54]
+                0.00    0.00       1/2           get_minimum_mass() [89]
+                0.00    0.00       1/2           get_maximum_mass() [88]
+                0.00    0.00       1/1           get_exp_spectrum() [104]
+-----------------------------------------------
+                0.00    0.00       1/1           load_string_keyword(_IO_FILE*, char const*) [3]
+[10]     0.1    0.00    0.00       1         read_spectrum(char const*) [10]
+                0.00    0.00       1/281         integral_normalization(double, int, complex*) [6]
+                0.00    0.00       1/2559        jump_commentaries(_IO_FILE*, char) [29]
+                0.00    0.00       1/195         is_verbose_mode_activated() [49]
+-----------------------------------------------
+                0.00    0.00   35217/236817      optimized_isotopic_distribution(formula*, int) [2]
+                0.00    0.00  201600/236817      fprintf_ascq_me_results_table_form(_IO_FILE*) [9]
+[17]     0.0    0.00    0.00  236817         compute_correlation(int, complex*) [17]
+-----------------------------------------------
+                0.00    0.00  115938/115938      add_formula(formula*, formula*) [19]
+[18]     0.0    0.00    0.00  115938         add_element(formula*, composition*) [18]
+                0.00    0.00    3770/9787        copy_one_element(element*) [25]
+-----------------------------------------------
+                0.00    0.00    9618/36266       get_formulae_of_peptides(int*) [74]
+                0.00    0.00    9618/36266       get_peptide_formula_from_index(int) [43]
+                0.00    0.00   17030/36266       get_formula_from_sequence(char*) [58]
+[19]     0.0    0.00    0.00   36266         add_formula(formula*, formula*) [19]
+                0.00    0.00  115938/115938      add_element(formula*, composition*) [18]
+-----------------------------------------------
+                0.00    0.00    4809/24073       digest() [80]
+                0.00    0.00    5364/24073       get_formulae_of_peptides(int*) [74]
+                0.00    0.00    5364/24073       get_peptide_formula_from_index(int) [43]
+                0.00    0.00    8536/24073       get_formula_from_sequence(char*) [58]
+[20]     0.0    0.00    0.00   24073         get_util_formula(char const*) [20]
+-----------------------------------------------
+                0.00    0.00    4254/21270       digest() [80]
+                0.00    0.00    4254/21270       get_formulae_of_peptides(int*) [74]
+                0.00    0.00    4254/21270       get_peptide_formula_from_index(int) [43]
+                0.00    0.00    8508/21270       get_formula_from_sequence(char*) [58]
+[21]     0.0    0.00    0.00   21270         get_amino_acid(char) [21]
+-----------------------------------------------
+                0.00    0.00       7/10963       fprintf_ascq_me_results_table_form(_IO_FILE*) [9]
+                0.00    0.00     266/10963       fprintf_ascq_me_peptide_scoring(_IO_FILE*) [134]
+                0.00    0.00     510/10963       optimized_isotopic_distribution(formula*, int) [2]
+                0.00    0.00     555/10963       peptide_charge_weight() [41]
+                0.00    0.00     562/10963       fprintf_ascq_me_results(_IO_FILE*) [124]
+                0.00    0.00    9063/10963       digest() [80]
+[22]     0.0    0.00    0.00   10963         get_weight(formula*) [22]
+-----------------------------------------------
+                0.00    0.00    9787/9787        copy_one_element(element*) [25]
+[23]     0.0    0.00    0.00    9787         copy_isotop(isotop*, int) [23]
+-----------------------------------------------
+                0.00    0.00    9787/9787        free_composition(composition*, int) [32]
+[24]     0.0    0.00    0.00    9787         free_element(element*) [24]
+-----------------------------------------------
+                0.00    0.00     245/9787        affect_atom(char*, int, int, composition*, element*, int) [48]
+                0.00    0.00    3770/9787        add_element(formula*, composition*) [18]
+                0.00    0.00    5772/9787        copy_composition(composition*, int) [33]
+[25]     0.0    0.00    0.00    9787         copy_one_element(element*) [25]
+                0.00    0.00    9787/9787        copy_isotop(isotop*, int) [23]
+-----------------------------------------------
+                0.00    0.00    4254/4254        digest() [80]
+[26]     0.0    0.00    0.00    4254         cpl_isCleavage2(cleavePointList*, char, char, char) [26]
+-----------------------------------------------
+                0.00    0.00     150/3646        load_modifications(char const*) [111]
+                0.00    0.00     719/3646        read_line(_IO_FILE*) [39]
+                0.00    0.00    2777/3646        get_element_table(char const*, int*) [107]
+[27]     0.0    0.00    0.00    3646         read_until(_IO_FILE*, char) [27]
+                0.00    0.00    3646/3646        jump_blanks(_IO_FILE*) [28]
+-----------------------------------------------
+                0.00    0.00    3646/3646        read_until(_IO_FILE*, char) [27]
+[28]     0.0    0.00    0.00    3646         jump_blanks(_IO_FILE*) [28]
+-----------------------------------------------
+                0.00    0.00       1/2559        read_spectrum(char const*) [10]
+                0.00    0.00      28/2559        load_configuration(char*) [4]
+                0.00    0.00     100/2559        load_modifications(char const*) [111]
+                0.00    0.00    2430/2559        get_element_table(char const*, int*) [107]
+[29]     0.0    0.00    0.00    2559         jump_commentaries(_IO_FILE*, char) [29]
+                0.00    0.00     510/2297        jump_a_line(_IO_FILE*) [31]
+-----------------------------------------------
+                0.00    0.00     555/2306        sort_and_init_with_peptide_scoring() [79]
+                0.00    0.00    1751/2306        compute_equivalent_peptides() [75]
+[30]     0.0    0.00    0.00    2306         get_peptide_sequence(int) [30]
+-----------------------------------------------
+                0.00    0.00      50/2297        load_modifications(char const*) [111]
+                0.00    0.00     510/2297        jump_commentaries(_IO_FILE*, char) [29]
+                0.00    0.00    1737/2297        get_element_table(char const*, int*) [107]
+[31]     0.0    0.00    0.00    2297         jump_a_line(_IO_FILE*) [31]
+-----------------------------------------------
+                0.00    0.00      56/2287        free_formula(formula*) [54]
+                0.00    0.00      56/2287        free_all_modifications() [122]
+                0.00    0.00     510/2287        optimized_isotopic_distribution(formula*, int) [2]
+                0.00    0.00    1665/2287        free_n_formula(formula*, int) [57]
+[32]     0.0    0.00    0.00    2287         free_composition(composition*, int) [32]
+                0.00    0.00    9787/9787        free_element(element*) [24]
+-----------------------------------------------
+                0.00    0.00     510/2192        optimized_isotopic_distribution(formula*, int) [2]
+                0.00    0.00    1682/2192        copy_formula(formula*) [34]
+[33]     0.0    0.00    0.00    2192         copy_composition(composition*, int) [33]
+                0.00    0.00    5772/9787        copy_one_element(element*) [25]
+-----------------------------------------------
+                0.00    0.00       3/1682        get_amino_acid_table(char const*, element*, int) [116]
+                0.00    0.00      14/1682        get_formula_from_sequence(char*) [58]
+                0.00    0.00     555/1682        get_formulae_of_peptides(int*) [74]
+                0.00    0.00     555/1682        get_peptide_formula_from_index(int) [43]
+                0.00    0.00     555/1682        add_protein(char*, char*, complex*, double) [69]
+[34]     0.0    0.00    0.00    1682         copy_formula(formula*) [34]
+                0.00    0.00    1682/2192        copy_composition(composition*, int) [33]
+-----------------------------------------------
+                0.00    0.00       6/1249        fprint_configuration(_IO_FILE*) [115]
+                0.00    0.00    1243/1249        optimized_isotopic_distribution(formula*, int) [2]
+[35]     0.0    0.00    0.00    1249         get_atom_quantity(char const*) [35]
+-----------------------------------------------
+                0.00    0.00    1243/1243        optimized_isotopic_distribution(formula*, int) [2]
+[36]     0.0    0.00    0.00    1243         get_X_atom(char*) [36]
+-----------------------------------------------
+                0.00    0.00       1/1111        fprint_configuration(_IO_FILE*) [115]
+                0.00    0.00     555/1111        get_formulae_of_peptides(int*) [74]
+                0.00    0.00     555/1111        get_peptide_formula_from_index(int) [43]
+[37]     0.0    0.00    0.00    1111         get_peptide_charge_formula() [37]
+-----------------------------------------------
+                0.00    0.00      21/840         cftfsub(int, double*, double*) [82]
+                0.00    0.00     819/840         cftbsub(int, double*, double*) [47]
+[38]     0.0    0.00    0.00     840         cftmdl(int, int, double*, double*) [38]
+-----------------------------------------------
+                0.00    0.00       2/719         load_boolean_keyword(_IO_FILE*, char*) [90]
+                0.00    0.00       6/719         load_float_keyword(_IO_FILE*, char*) [84]
+                0.00    0.00       9/719         load_int_keyword(_IO_FILE*, char*) [62]
+                0.00    0.00      10/719         load_string_keyword(_IO_FILE*, char const*) [3]
+                0.00    0.00     692/719         get_element_table(char const*, int*) [107]
+[39]     0.0    0.00    0.00     719         read_line(_IO_FILE*) [39]
+                0.00    0.00     719/3646        read_until(_IO_FILE*, char) [27]
+-----------------------------------------------
+                0.00    0.00      80/555         free_util_digestion() [113]
+                0.00    0.00     475/555         digest() [80]
+[40]     0.0    0.00    0.00     555         free_peptide(peptide*) [40]
+-----------------------------------------------
+                0.00    0.00     555/555         digest() [80]
+[41]     0.0    0.00    0.00     555         peptide_charge_weight() [41]
+                0.00    0.00     555/10963       get_weight(formula*) [22]
+-----------------------------------------------
+                0.00    0.00     555/555         optimized_isotopic_distribution(formula*, int) [2]
+[42]     0.0    0.00    0.00     555         is_equivalent_to_another(int) [42]
+-----------------------------------------------
+                0.00    0.00     555/555         sort_and_init_with_peptide_scoring() [79]
+[43]     0.0    0.00    0.00     555         get_peptide_formula_from_index(int) [43]
+                0.00    0.00    9618/36266       add_formula(formula*, formula*) [19]
+                0.00    0.00    5364/24073       get_util_formula(char const*) [20]
+                0.00    0.00    4254/21270       get_amino_acid(char) [21]
+                0.00    0.00     555/1682        copy_formula(formula*) [34]
+                0.00    0.00     555/1111        get_peptide_charge_formula() [37]
+-----------------------------------------------
+                0.00    0.00       7/280         init_distrib() [5]
+                0.00    0.00     273/280         optimized_isotopic_distribution(formula*, int) [2]
+[44]     0.0    0.00    0.00     280         cdft(int, int, double*, int*, double*) [44]
+                0.00    0.00     273/273         bitrv2conj(int, int*, double*) [46]
+                0.00    0.00     273/273         cftbsub(int, double*, double*) [47]
+                0.00    0.00       7/8           bitrv2(int, int*, double*) [65]
+                0.00    0.00       7/7           cftfsub(int, double*, double*) [82]
+                0.00    0.00       1/1           makewt(int, int*, double*) [136]
+-----------------------------------------------
+                0.00    0.00       7/280         cftfsub(int, double*, double*) [82]
+                0.00    0.00     273/280         cftbsub(int, double*, double*) [47]
+[45]     0.0    0.00    0.00     280         cft1st(int, double*, double*) [45]
+-----------------------------------------------
+                0.00    0.00     273/273         cdft(int, int, double*, int*, double*) [44]
+[46]     0.0    0.00    0.00     273         bitrv2conj(int, int*, double*) [46]
+-----------------------------------------------
+                0.00    0.00     273/273         cdft(int, int, double*, int*, double*) [44]
+[47]     0.0    0.00    0.00     273         cftbsub(int, double*, double*) [47]
+                0.00    0.00     819/840         cftmdl(int, int, double*, double*) [38]
+                0.00    0.00     273/280         cft1st(int, double*, double*) [45]
+-----------------------------------------------
+                0.00    0.00     245/245         read_formula(char const*, element*, int) [51]
+[48]     0.0    0.00    0.00     245         affect_atom(char*, int, int, composition*, element*, int) [48]
+                0.00    0.00     245/9787        copy_one_element(element*) [25]
+                0.00    0.00      23/23          closest_int(double) [56]
+-----------------------------------------------
+                0.00    0.00       1/195         read_spectrum(char const*) [10]
+                0.00    0.00       9/195         main [1]
+                0.00    0.00      21/195         optimized_isotopic_distribution(formula*, int) [2]
+                0.00    0.00     164/195         init_distrib() [5]
+[49]     0.0    0.00    0.00     195         is_verbose_mode_activated() [49]
+-----------------------------------------------
+                0.00    0.00     157/157         fprintf_ascq_me_results(_IO_FILE*) [124]
+[50]     0.0    0.00    0.00     157         get_peptide_score_threshold() [50]
+-----------------------------------------------
+                0.00    0.00       1/139         set_peptide_charge(char const*) [112]
+                0.00    0.00       6/139         init_distrib() [5]
+                0.00    0.00      10/139         init_peptid_link(element*, int) [105]
+                0.00    0.00      56/139         load_modifications(char const*) [111]
+                0.00    0.00      66/139         get_amino_acid_table(char const*, element*, int) [116]
+[51]     0.0    0.00    0.00     139         read_formula(char const*, element*, int) [51]
+                0.00    0.00     245/245         affect_atom(char*, int, int, composition*, element*, int) [48]
+-----------------------------------------------
+                0.00    0.00       1/64          set_peptide_charge(char const*) [112]
+                0.00    0.00       1/64          tables_initialisation() [120]
+                0.00    0.00       6/64          init_distrib() [5]
+                0.00    0.00      56/64          load_modifications(char const*) [111]
+[52]     0.0    0.00    0.00      64         get_element_table() [52]
+-----------------------------------------------
+                0.00    0.00       1/64          set_peptide_charge(char const*) [112]
+                0.00    0.00       1/64          tables_initialisation() [120]
+                0.00    0.00       6/64          init_distrib() [5]
+                0.00    0.00      56/64          load_modifications(char const*) [111]
+[53]     0.0    0.00    0.00      64         get_element_table_size() [53]
+-----------------------------------------------
+                0.00    0.00       1/56          free_util_digestion() [113]
+                0.00    0.00       6/56          init_distrib() [5]
+                0.00    0.00       7/56          fprintf_ascq_me_results(_IO_FILE*) [124]
+                0.00    0.00       7/56          fprintf_ascq_me_results_table_form(_IO_FILE*) [9]
+                0.00    0.00      10/56          free_peptide_link() [106]
+                0.00    0.00      25/56          free_amino_acid_table(amino_acid_CF*) [118]
+[54]     0.0    0.00    0.00      56         free_formula(formula*) [54]
+                0.00    0.00      56/2287        free_composition(composition*, int) [32]
+-----------------------------------------------
+                0.00    0.00       1/28          fprint_configuration(_IO_FILE*) [115]
+                0.00    0.00       7/28          add_protein(char*, char*, complex*, double) [69]
+                0.00    0.00      20/28          init_ascq_me_display() [117]
+[55]     0.0    0.00    0.00      28         get_nb_displayed_proteins() [55]
+-----------------------------------------------
+                0.00    0.00      23/23          affect_atom(char*, int, int, composition*, element*, int) [48]
+[56]     0.0    0.00    0.00      23         closest_int(double) [56]
+-----------------------------------------------
+                0.00    0.00       7/21          main [1]
+                0.00    0.00       7/21          add_protein(char*, char*, complex*, double) [69]
+                0.00    0.00       7/21          ascq_me_cleaning() [102]
+[57]     0.0    0.00    0.00      21         free_n_formula(formula*, int) [57]
+                0.00    0.00    1665/2287        free_composition(composition*, int) [32]
+-----------------------------------------------
+                0.00    0.00       7/14          fprintf_ascq_me_results(_IO_FILE*) [124]
+                0.00    0.00       7/14          fprintf_ascq_me_results_table_form(_IO_FILE*) [9]
+[58]     0.0    0.00    0.00      14         get_formula_from_sequence(char*) [58]
+                0.00    0.00   17030/36266       add_formula(formula*, formula*) [19]
+                0.00    0.00    8536/24073       get_util_formula(char const*) [20]
+                0.00    0.00    8508/21270       get_amino_acid(char) [21]
+                0.00    0.00      14/1682        copy_formula(formula*) [34]
+-----------------------------------------------
+                0.00    0.00       1/11          load_configuration(char*) [4]
+                0.00    0.00       5/11          load_int_keyword(_IO_FILE*, char*) [62]
+                0.00    0.00       5/11          load_float_keyword(_IO_FILE*, char*) [84]
+[59]     0.0    0.00    0.00      11         get_distribution_activation() [59]
+-----------------------------------------------
+                0.00    0.00       1/10          fprintf_ascq_me_results(_IO_FILE*) [124]
+                0.00    0.00       1/10          fprint_configuration(_IO_FILE*) [115]
+                0.00    0.00       8/10          main [1]
+[60]     0.0    0.00    0.00      10         is_decoy_mode_activated() [60]
+-----------------------------------------------
+                0.00    0.00      10/10          free_cplt(cleavePointList*) [66]
+[61]     0.0    0.00    0.00      10         free_cpt(cleavePoint*) [61]
+-----------------------------------------------
+                0.00    0.00       9/9           load_configuration(char*) [4]
+[62]     0.0    0.00    0.00       9         load_int_keyword(_IO_FILE*, char*) [62]
+                0.00    0.00       9/719         read_line(_IO_FILE*) [39]
+                0.00    0.00       5/11          get_distribution_activation() [59]
+-----------------------------------------------
+                0.00    0.00       8/8           enzym_load(char const*) [93]
+[63]     0.0    0.00    0.00       8         stringToCpl(char*) [63]
+-----------------------------------------------
+                0.00    0.00       1/8           fprint_configuration(_IO_FILE*) [115]
+                0.00    0.00       7/8           real_digest(char*) [70]
+[64]     0.0    0.00    0.00       8         get_number_of_activated_modifications() [64]
+-----------------------------------------------
+                0.00    0.00       1/8           makewt(int, int*, double*) [136]
+                0.00    0.00       7/8           cdft(int, int, double*, int*, double*) [44]
+[65]     0.0    0.00    0.00       8         bitrv2(int, int*, double*) [65]
+-----------------------------------------------
+                0.00    0.00       8/8           free_enzt(enzyme*) [67]
+[66]     0.0    0.00    0.00       8         free_cplt(cleavePointList*) [66]
+                0.00    0.00      10/10          free_cpt(cleavePoint*) [61]
+-----------------------------------------------
+                0.00    0.00       8/8           free_enzym_table(enzyme_list*) [103]
+[67]     0.0    0.00    0.00       8         free_enzt(enzyme*) [67]
+                0.00    0.00       8/8           free_cplt(cleavePointList*) [66]
+-----------------------------------------------
+                0.00    0.00       8/8           main [1]
+[68]     0.0    0.00    0.00       8         nextEntry(long*) [68]
+-----------------------------------------------
+                0.00    0.00       7/7           main [1]
+[69]     0.0    0.00    0.00       7         add_protein(char*, char*, complex*, double) [69]
+                0.00    0.00     555/1682        copy_formula(formula*) [34]
+                0.00    0.00       7/28          get_nb_displayed_proteins() [55]
+                0.00    0.00       7/7           copy_spectrum(complex*) [71]
+                0.00    0.00       7/7           sort_and_init_with_peptide_scoring() [79]
+                0.00    0.00       7/21          free_n_formula(formula*, int) [57]
+-----------------------------------------------
+                0.00    0.00       7/7           main [1]
+[70]     0.0    0.00    0.00       7         real_digest(char*) [70]
+                0.00    0.00       7/7           digest() [80]
+                0.00    0.00       7/8           get_number_of_activated_modifications() [64]
+                0.00    0.00       7/7           compute_equivalent_peptides() [75]
+-----------------------------------------------
+                0.00    0.00       7/7           add_protein(char*, char*, complex*, double) [69]
+[71]     0.0    0.00    0.00       7         copy_spectrum(complex*) [71]
+-----------------------------------------------
+                0.00    0.00       7/7           main [1]
+[72]     0.0    0.00    0.00       7         get_theo_spectrum() [72]
+-----------------------------------------------
+                0.00    0.00       7/7           main [1]
+[73]     0.0    0.00    0.00       7         is_a_wanted_protein() [73]
+-----------------------------------------------
+                0.00    0.00       7/7           main [1]
+[74]     0.0    0.00    0.00       7         get_formulae_of_peptides(int*) [74]
+                0.00    0.00    9618/36266       add_formula(formula*, formula*) [19]
+                0.00    0.00    5364/24073       get_util_formula(char const*) [20]
+                0.00    0.00    4254/21270       get_amino_acid(char) [21]
+                0.00    0.00     555/1682        copy_formula(formula*) [34]
+                0.00    0.00     555/1111        get_peptide_charge_formula() [37]
+-----------------------------------------------
+                0.00    0.00       7/7           real_digest(char*) [70]
+[75]     0.0    0.00    0.00       7         compute_equivalent_peptides() [75]
+                0.00    0.00    1751/2306        get_peptide_sequence(int) [30]
+-----------------------------------------------
+                0.00    0.00       7/7           main [1]
+[76]     0.0    0.00    0.00       7         save_partial_peptide_scoring(double*, int) [76]
+-----------------------------------------------
+                0.00    0.00       7/7           main [1]
+[77]     0.0    0.00    0.00       7         get_current_peptide_score_save() [77]
+-----------------------------------------------
+                0.00    0.00       7/7           main [1]
+[78]     0.0    0.00    0.00       7         get_current_peptide_score_size() [78]
+-----------------------------------------------
+                0.00    0.00       7/7           add_protein(char*, char*, complex*, double) [69]
+[79]     0.0    0.00    0.00       7         sort_and_init_with_peptide_scoring() [79]
+                0.00    0.00     555/2306        get_peptide_sequence(int) [30]
+                0.00    0.00     555/555         get_peptide_formula_from_index(int) [43]
+-----------------------------------------------
+                0.00    0.00       7/7           real_digest(char*) [70]
+[80]     0.0    0.00    0.00       7         digest() [80]
+                0.00    0.00    9063/10963       get_weight(formula*) [22]
+                0.00    0.00    4809/24073       get_util_formula(char const*) [20]
+                0.00    0.00    4254/4254        cpl_isCleavage2(cleavePointList*, char, char, char) [26]
+                0.00    0.00    4254/21270       get_amino_acid(char) [21]
+                0.00    0.00     555/555         peptide_charge_weight() [41]
+                0.00    0.00     475/555         free_peptide(peptide*) [40]
+-----------------------------------------------
+                0.00    0.00       7/7           main [1]
+[81]     0.0    0.00    0.00       7         getSeq() [81]
+-----------------------------------------------
+                0.00    0.00       7/7           cdft(int, int, double*, int*, double*) [44]
+[82]     0.0    0.00    0.00       7         cftfsub(int, double*, double*) [82]
+                0.00    0.00      21/840         cftmdl(int, int, double*, double*) [38]
+                0.00    0.00       7/280         cft1st(int, double*, double*) [45]
+-----------------------------------------------
+                0.00    0.00       7/7           main [1]
+[83]     0.0    0.00    0.00       7         getDesc() [83]
+-----------------------------------------------
+                0.00    0.00       6/6           load_configuration(char*) [4]
+[84]     0.0    0.00    0.00       6         load_float_keyword(_IO_FILE*, char*) [84]
+                0.00    0.00       6/719         read_line(_IO_FILE*) [39]
+                0.00    0.00       5/11          get_distribution_activation() [59]
+-----------------------------------------------
+                0.00    0.00       3/3           main [1]
+[85]     0.0    0.00    0.00       3         add_chains(char const*, char const*) [85]
+-----------------------------------------------
+                0.00    0.00       3/3           main [1]
+[86]     0.0    0.00    0.00       3         get_base_name() [86]
+-----------------------------------------------
+                0.00    0.00       1/3           main [1]
+                0.00    0.00       2/3           fprint_configuration(_IO_FILE*) [115]
+[87]     0.0    0.00    0.00       3         is_fasta_chosen() [87]
+-----------------------------------------------
+                0.00    0.00       1/2           fprintf_ascq_me_results_table_form(_IO_FILE*) [9]
+                0.00    0.00       1/2           fprint_configuration(_IO_FILE*) [115]
+[88]     0.0    0.00    0.00       2         get_maximum_mass() [88]
+-----------------------------------------------
+                0.00    0.00       1/2           fprintf_ascq_me_results_table_form(_IO_FILE*) [9]
+                0.00    0.00       1/2           fprint_configuration(_IO_FILE*) [115]
+[89]     0.0    0.00    0.00       2         get_minimum_mass() [89]
+-----------------------------------------------
+                0.00    0.00       2/2           load_configuration(char*) [4]
+[90]     0.0    0.00    0.00       2         load_boolean_keyword(_IO_FILE*, char*) [90]
+                0.00    0.00       2/719         read_line(_IO_FILE*) [39]
+-----------------------------------------------
+                0.00    0.00       2/2           fprint_configuration(_IO_FILE*) [115]
+[91]     0.0    0.00    0.00       2         get_maximum_peptide_length() [91]
+-----------------------------------------------
+                0.00    0.00       2/2           fprint_configuration(_IO_FILE*) [115]
+[92]     0.0    0.00    0.00       2         is_exp_protein_mass_activated() [92]
+-----------------------------------------------
+                0.00    0.00       1/1           init_util_digestion() [114]
+[93]     0.0    0.00    0.00       1         enzym_load(char const*) [93]
+                0.00    0.00       8/8           stringToCpl(char*) [63]
+-----------------------------------------------
+                0.00    0.00       1/1           load_string_keyword(_IO_FILE*, char const*) [3]
+[94]     0.0    0.00    0.00       1         fastafopen(char const*, long*) [94]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[95]     0.0    0.00    0.00       1         get_specie() [95]
+-----------------------------------------------
+                0.00    0.00       1/1           ascq_me_configuration_cleaning() [133]
+[96]     0.0    0.00    0.00       1         fastafclose() [96]
+-----------------------------------------------
+                0.00    0.00       1/1           ascq_me_configuration_cleaning() [133]
+[97]     0.0    0.00    0.00       1         free_tables() [97]
+                0.00    0.00       1/1           free_element_table(element*, int) [108]
+                0.00    0.00       1/1           free_peptide_link() [106]
+                0.00    0.00       1/1           free_amino_acid_table(amino_acid_CF*) [118]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[98]     0.0    0.00    0.00       1         get_threshold() [98]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[99]     0.0    0.00    0.00       1         formula_tochar(formula*) [99]
+-----------------------------------------------
+                0.00    0.00       1/1           ascq_me_configuration_cleaning() [133]
+[100]    0.0    0.00    0.00       1         free_isodistrib() [100]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[101]    0.0    0.00    0.00       1         get_used_enzyme() [101]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[102]    0.0    0.00    0.00       1         ascq_me_cleaning() [102]
+                0.00    0.00       7/21          free_n_formula(formula*, int) [57]
+-----------------------------------------------
+                0.00    0.00       1/1           free_util_digestion() [113]
+[103]    0.0    0.00    0.00       1         free_enzym_table(enzyme_list*) [103]
+                0.00    0.00       8/8           free_enzt(enzyme*) [67]
+-----------------------------------------------
+                0.00    0.00       1/1           fprintf_ascq_me_results_table_form(_IO_FILE*) [9]
+[104]    0.0    0.00    0.00       1         get_exp_spectrum() [104]
+-----------------------------------------------
+                0.00    0.00       1/1           tables_initialisation() [120]
+[105]    0.0    0.00    0.00       1         init_peptid_link(element*, int) [105]
+                0.00    0.00      10/139         read_formula(char const*, element*, int) [51]
+-----------------------------------------------
+                0.00    0.00       1/1           free_tables() [97]
+[106]    0.0    0.00    0.00       1         free_peptide_link() [106]
+                0.00    0.00      10/56          free_formula(formula*) [54]
+-----------------------------------------------
+                0.00    0.00       1/1           tables_initialisation() [120]
+[107]    0.0    0.00    0.00       1         get_element_table(char const*, int*) [107]
+                0.00    0.00    2777/3646        read_until(_IO_FILE*, char) [27]
+                0.00    0.00    2430/2559        jump_commentaries(_IO_FILE*, char) [29]
+                0.00    0.00    1737/2297        jump_a_line(_IO_FILE*) [31]
+                0.00    0.00     692/719         read_line(_IO_FILE*) [39]
+-----------------------------------------------
+                0.00    0.00       1/1           free_tables() [97]
+[108]    0.0    0.00    0.00       1         free_element_table(element*, int) [108]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[109]    0.0    0.00    0.00       1         get_fasta_filename() [109]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[110]    0.0    0.00    0.00       1         get_gaussian_value() [110]
+-----------------------------------------------
+                0.00    0.00       1/1           load_configuration(char*) [4]
+[111]    0.0    0.00    0.00       1         load_modifications(char const*) [111]
+                0.00    0.00     150/3646        read_until(_IO_FILE*, char) [27]
+                0.00    0.00     100/2559        jump_commentaries(_IO_FILE*, char) [29]
+                0.00    0.00      56/64          get_element_table() [52]
+                0.00    0.00      56/64          get_element_table_size() [53]
+                0.00    0.00      56/139         read_formula(char const*, element*, int) [51]
+                0.00    0.00      50/2297        jump_a_line(_IO_FILE*) [31]
+-----------------------------------------------
+                0.00    0.00       1/1           default_peptide_charge() [121]
+[112]    0.0    0.00    0.00       1         set_peptide_charge(char const*) [112]
+                0.00    0.00       1/64          get_element_table_size() [53]
+                0.00    0.00       1/64          get_element_table() [52]
+                0.00    0.00       1/139         read_formula(char const*, element*, int) [51]
+-----------------------------------------------
+                0.00    0.00       1/1           ascq_me_configuration_cleaning() [133]
+[113]    0.0    0.00    0.00       1         free_util_digestion() [113]
+                0.00    0.00      80/555         free_peptide(peptide*) [40]
+                0.00    0.00       1/1           free_enzym_table(enzyme_list*) [103]
+                0.00    0.00       1/56          free_formula(formula*) [54]
+-----------------------------------------------
+                0.00    0.00       1/1           load_configuration(char*) [4]
+[114]    0.0    0.00    0.00       1         init_util_digestion() [114]
+                0.00    0.00       1/1           default_peptide_charge() [121]
+                0.00    0.00       1/1           enzym_load(char const*) [93]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[115]    0.0    0.00    0.00       1         fprint_configuration(_IO_FILE*) [115]
+                0.00    0.00       6/1249        get_atom_quantity(char const*) [35]
+                0.00    0.00       2/2           get_maximum_peptide_length() [91]
+                0.00    0.00       2/3           is_fasta_chosen() [87]
+                0.00    0.00       2/2           is_exp_protein_mass_activated() [92]
+                0.00    0.00       1/1           get_nb_missed_cleavages() [125]
+                0.00    0.00       1/1           get_activation_full_digest() [130]
+                0.00    0.00       1/10          is_decoy_mode_activated() [60]
+                0.00    0.00       1/1111        get_peptide_charge_formula() [37]
+                0.00    0.00       1/1           formula_tochar(formula*) [99]
+                0.00    0.00       1/1           get_used_enzyme() [101]
+                0.00    0.00       1/8           get_number_of_activated_modifications() [64]
+                0.00    0.00       1/1           get_fasta_filename() [109]
+                0.00    0.00       1/1           get_specie() [95]
+                0.00    0.00       1/28          get_nb_displayed_proteins() [55]
+                0.00    0.00       1/1           get_spectrum_precision() [123]
+                0.00    0.00       1/1           get_spectrum_maximum_mass() [129]
+                0.00    0.00       1/1           get_peptide_precision() [119]
+                0.00    0.00       1/1           get_peptide_maximum_mass() [127]
+                0.00    0.00       1/1           get_gaussian_value() [110]
+                0.00    0.00       1/1           get_experimental_filename() [128]
+                0.00    0.00       1/2           get_minimum_mass() [89]
+                0.00    0.00       1/2           get_maximum_mass() [88]
+                0.00    0.00       1/1           get_scoring_sensitivity() [126]
+                0.00    0.00       1/1           get_threshold() [98]
+                0.00    0.00       1/1           get_minimum_peptide_number() [131]
+                0.00    0.00       1/1           get_minimum_matched_peptide_number() [135]
+-----------------------------------------------
+                0.00    0.00       1/1           tables_initialisation() [120]
+[116]    0.0    0.00    0.00       1         get_amino_acid_table(char const*, element*, int) [116]
+                0.00    0.00      66/139         read_formula(char const*, element*, int) [51]
+                0.00    0.00       3/1682        copy_formula(formula*) [34]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[117]    0.0    0.00    0.00       1         init_ascq_me_display() [117]
+                0.00    0.00      20/28          get_nb_displayed_proteins() [55]
+-----------------------------------------------
+                0.00    0.00       1/1           free_tables() [97]
+[118]    0.0    0.00    0.00       1         free_amino_acid_table(amino_acid_CF*) [118]
+                0.00    0.00      25/56          free_formula(formula*) [54]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[119]    0.0    0.00    0.00       1         get_peptide_precision() [119]
+-----------------------------------------------
+                0.00    0.00       1/1           load_configuration(char*) [4]
+[120]    0.0    0.00    0.00       1         tables_initialisation() [120]
+                0.00    0.00       1/1           get_element_table(char const*, int*) [107]
+                0.00    0.00       1/64          get_element_table_size() [53]
+                0.00    0.00       1/1           get_amino_acid_table(char const*, element*, int) [116]
+                0.00    0.00       1/1           init_peptid_link(element*, int) [105]
+                0.00    0.00       1/64          get_element_table() [52]
+-----------------------------------------------
+                0.00    0.00       1/1           init_util_digestion() [114]
+[121]    0.0    0.00    0.00       1         default_peptide_charge() [121]
+                0.00    0.00       1/1           set_peptide_charge(char const*) [112]
+-----------------------------------------------
+                0.00    0.00       1/1           ascq_me_configuration_cleaning() [133]
+[122]    0.0    0.00    0.00       1         free_all_modifications() [122]
+                0.00    0.00      56/2287        free_composition(composition*, int) [32]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[123]    0.0    0.00    0.00       1         get_spectrum_precision() [123]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[124]    0.0    0.00    0.00       1         fprintf_ascq_me_results(_IO_FILE*) [124]
+                0.00    0.00     562/10963       get_weight(formula*) [22]
+                0.00    0.00     157/157         get_peptide_score_threshold() [50]
+                0.00    0.00       7/14          get_formula_from_sequence(char*) [58]
+                0.00    0.00       7/56          free_formula(formula*) [54]
+                0.00    0.00       1/10          is_decoy_mode_activated() [60]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[125]    0.0    0.00    0.00       1         get_nb_missed_cleavages() [125]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[126]    0.0    0.00    0.00       1         get_scoring_sensitivity() [126]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[127]    0.0    0.00    0.00       1         get_peptide_maximum_mass() [127]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[128]    0.0    0.00    0.00       1         get_experimental_filename() [128]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[129]    0.0    0.00    0.00       1         get_spectrum_maximum_mass() [129]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[130]    0.0    0.00    0.00       1         get_activation_full_digest() [130]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[131]    0.0    0.00    0.00       1         get_minimum_peptide_number() [131]
+-----------------------------------------------
+                0.00    0.00       1/1           ascq_me_configuration_cleaning() [133]
+[132]    0.0    0.00    0.00       1         free_activated_modification() [132]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[133]    0.0    0.00    0.00       1         ascq_me_configuration_cleaning() [133]
+                0.00    0.00       1/1           free_activated_modification() [132]
+                0.00    0.00       1/1           fastafclose() [96]
+                0.00    0.00       1/1           free_util_digestion() [113]
+                0.00    0.00       1/1           free_isodistrib() [100]
+                0.00    0.00       1/1           free_all_modifications() [122]
+                0.00    0.00       1/1           free_tables() [97]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[134]    0.0    0.00    0.00       1         fprintf_ascq_me_peptide_scoring(_IO_FILE*) [134]
+                0.00    0.00     266/10963       get_weight(formula*) [22]
+-----------------------------------------------
+                0.00    0.00       1/1           fprint_configuration(_IO_FILE*) [115]
+[135]    0.0    0.00    0.00       1         get_minimum_matched_peptide_number() [135]
+-----------------------------------------------
+                0.00    0.00       1/1           cdft(int, int, double*, int*, double*) [44]
+[136]    0.0    0.00    0.00       1         makewt(int, int*, double*) [136]
+                0.00    0.00       1/8           bitrv2(int, int*, double*) [65]
+-----------------------------------------------
+                0.00    0.00       1/1           init_distrib() [5]
+[137]    0.0    0.00    0.00       1         __gnu_cxx::__enable_if<std::__is_integer<int>::__value, double>::__type std::sqrt<int>(int) [137]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [85] add_chains(char const*, char const*) [89] get_minimum_mass() [128] get_experimental_filename()
+  [46] bitrv2conj(int, int*, double*) [20] get_util_formula(char const*) [58] get_formula_from_sequence(char*)
+  [93] enzym_load(char const*) [105] init_peptid_link(element*, int) [55] get_nb_displayed_proteins()
+  [94] fastafopen(char const*, long*) [62] load_int_keyword(_IO_FILE*, char*) [129] get_spectrum_maximum_mass()
+  [36] get_X_atom(char*)     [106] free_peptide_link()    [49] is_verbose_mode_activated()
+  [95] get_specie()           [35] get_atom_quantity(char const*) [130] get_activation_full_digest()
+  [22] get_weight(formula*)  [107] get_element_table(char const*, int*) [91] get_maximum_peptide_length()
+  [27] read_until(_IO_FILE*, char) [52] get_element_table() [131] get_minimum_peptide_number()
+  [18] add_element(formula*, composition*) [72] get_theo_spectrum() [37] get_peptide_charge_formula()
+  [19] add_formula(formula*, formula*) [29] jump_commentaries(_IO_FILE*, char) [75] compute_equivalent_peptides()
+  [69] add_protein(char*, char*, complex*, double) [108] free_element_table(element*, int) [132] free_activated_modification()
+  [48] affect_atom(char*, int, int, composition*, element*, int) [109] get_fasta_filename() [59] get_distribution_activation()
+  [56] closest_int(double)   [110] get_gaussian_value()   [50] get_peptide_score_threshold()
+  [23] copy_isotop(isotop*, int) [4] load_configuration(char*) [76] save_partial_peptide_scoring(double*, int)
+  [96] fastafclose()          [84] load_float_keyword(_IO_FILE*, char*) [92] is_exp_protein_mass_activated()
+  [97] free_tables()         [111] load_modifications(char const*) [133] ascq_me_configuration_cleaning()
+  [31] jump_a_line(_IO_FILE*) [112] set_peptide_charge(char const*) [77] get_current_peptide_score_save()
+  [28] jump_blanks(_IO_FILE*) [17] compute_correlation(int, complex*) [78] get_current_peptide_score_size()
+  [70] real_digest(char*)    [113] free_util_digestion()  [43] get_peptide_formula_from_index(int)
+  [63] stringToCpl(char*)    [114] init_util_digestion() [134] fprintf_ascq_me_peptide_scoring(_IO_FILE*)
+  [34] copy_formula(formula*) [73] is_a_wanted_protein()   [2] optimized_isotopic_distribution(formula*, int)
+  [24] free_element(element*)  [3] load_string_keyword(_IO_FILE*, char const*) [9] fprintf_ascq_me_results_table_form(_IO_FILE*)
+  [54] free_formula(formula*) [115] fprint_configuration(_IO_FILE*) [135] get_minimum_matched_peptide_number()
+  [40] free_peptide(peptide*) [116] get_amino_acid_table(char const*, element*, int) [79] sort_and_init_with_peptide_scoring()
+   [5] init_distrib()         [30] get_peptide_sequence(int) [64] get_number_of_activated_modifications()
+  [51] read_formula(char const*, element*, int) [117] init_ascq_me_display() [44] cdft(int, int, double*, int*, double*)
+  [71] copy_spectrum(complex*) [90] load_boolean_keyword(_IO_FILE*, char*) [65] bitrv2(int, int*, double*)
+  [86] get_base_name()       [118] free_amino_acid_table(amino_acid_CF*) [45] cft1st(int, double*, double*)
+  [98] get_threshold()       [119] get_peptide_precision() [38] cftmdl(int, int, double*, double*)
+  [10] read_spectrum(char const*) [41] peptide_charge_weight() [80] digest()
+  [99] formula_tochar(formula*) [120] tables_initialisation() [81] getSeq()
+  [57] free_n_formula(formula*, int) [7] complex_multiplication(complex, complex) [136] makewt(int, int*, double*)
+  [21] get_amino_acid(char)  [121] default_peptide_charge() [47] cftbsub(int, double*, double*)
+  [26] cpl_isCleavage2(cleavePointList*, char, char, char) [122] free_all_modifications() [82] cftfsub(int, double*, double*)
+ [100] free_isodistrib()      [53] get_element_table_size() [83] getDesc()
+ [101] get_used_enzyme()     [123] get_spectrum_precision() [61] free_cpt(cleavePoint*)
+  [87] is_fasta_chosen()       [6] integral_normalization(double, int, complex*) [8] get_step()
+ [102] ascq_me_cleaning()    [124] fprintf_ascq_me_results(_IO_FILE*) [66] free_cplt(cleavePointList*)
+  [33] copy_composition(composition*, int) [125] get_nb_missed_cleavages() [67] free_enzt(enzyme*)
+  [25] copy_one_element(element*) [126] get_scoring_sensitivity() [68] nextEntry(long*)
+  [32] free_composition(composition*, int) [60] is_decoy_mode_activated() [39] read_line(_IO_FILE*)
+ [103] free_enzym_table(enzyme_list*) [74] get_formulae_of_peptides(int*) [137] __gnu_cxx::__enable_if<std::__is_integer<int>::__value, double>::__type std::sqrt<int>(int)
+ [104] get_exp_spectrum()    [127] get_peptide_maximum_mass()
+  [88] get_maximum_mass()     [42] is_equivalent_to_another(int)

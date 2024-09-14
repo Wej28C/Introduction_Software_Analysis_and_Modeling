@@ -1,0 +1,16 @@
+<map id="load_int_keyword" name="load_int_keyword">
+<area shape="rect" id="node1" title="Procedure which reads the value of a parameter that requires an int value." alt="" coords="5,286,141,312"/>
+<area shape="rect" id="node2" href="$error_8cpp.html#a5488d9b4d7fc51e0242d827bddd32374" title="procedure which allows to throw an error." alt="" coords="971,278,1024,304"/>
+<area shape="rect" id="node3" href="$isodistrib_8h.html#a276facbe926ddf3d1fb564a5c0377b36" title=" " alt="" coords="189,83,385,110"/>
+<area shape="rect" id="node4" href="$util_8h.html#a1d08e0f99bc95efbc389136a48eac477" title="Function which allows to read a line and put it in a char*." alt="" coords="246,134,329,160"/>
+<area shape="rect" id="node7" href="$isodistrib_8h.html#ac45d49a9241f2d73d4e4dd775c990da0" title="Procedure which allows to modify the quantity of C atom for the initialisation process." alt="" coords="461,184,621,211"/>
+<area shape="rect" id="node8" href="$digest_8cpp.html#af522006c82afda4b8b2e49db270090d6" title="Procedure which sets the maximum allowed length in amino acids for a peptide." alt="" coords="723,270,895,312"/>
+<area shape="rect" id="node9" href="$digest_8cpp.html#a12ce39cde10ffd53c82533491b70af4c" title="Procedure which allows to set the number of authorized missed cleavage." alt="" coords="191,286,383,312"/>
+<area shape="rect" id="node10" href="$isodistrib_8h.html#acc24be590f61c9cd63c3370db57d5386" title="Procedure which allows to modify the peptide maximum mass." alt="" coords="433,336,648,363"/>
+<area shape="rect" id="node11" href="$isodistrib_8h.html#a3a73796c6c68c9a716a277ad852c2f91" title="Procedure which allows to modify the peptide precision." alt="" coords="727,387,891,414"/>
+<area shape="rect" id="node12" href="$isodistrib_8h.html#a9288cdfca8bb7bda77082a96aeccdffc" title="Procedure which allows to modify the spectrum precision." alt="" coords="487,438,595,464"/>
+<area shape="rect" id="node13" href="$isodistrib_8h.html#a9afe717f063001dc81c4fdb96cd71b26" title="Procedure which allows to modify the spectrum maximum mass." alt="" coords="696,488,923,515"/>
+<area shape="rect" id="node14" href="$digest_8cpp.html#aaca1766b9ea71e55b9d815e2622b9139" title="Procedure which sets the chosen enzyme (default is 0 for trypsine see others in enztable...." alt="" coords="218,539,357,566"/>
+<area shape="rect" id="node5" href="$util_8cpp.html#ae77d8b2f8e8bfec6dd7dbb836f5ee2f3" title="Function which allows to read a char* until a special separator, EOF or the end of the line." alt="" coords="497,134,584,160"/>
+<area shape="rect" id="node6" href="$util_8cpp.html#a8deed219368df958f27871ec0d0d45e8" title="Function which allows to not take the blanks of a file." alt="" coords="757,168,862,195"/>
+</map>
